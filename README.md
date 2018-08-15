@@ -7,10 +7,17 @@ This server resources was updated on 2016 & 2017. This open source resources mig
 
 **Introducing developers that developed AuroraRPG.**
 
- - List Coming Soon
- - List Coming Soon
- - List Coming Soon
-
+ - Dennis
+ - Nicolas
+ - Jack
+ - Callum
+ - Noki
+ - Prime
+ - Priyen
+ - Curt
+ - Samer
+ - Anubhav
+ - **If you are not on this list, please contact me.**
 # Server Exports
 
 > **Note:** Coming Soon

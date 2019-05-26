@@ -1,0 +1,11 @@
+<meta>
+	<info author="Nicolas" version="1.1" type="script" name="Driver Mission" description="Driver Mission" />
+	<file src="missionDone.mp3" />
+	<file src="fail.mp3" />
+	<file src="driver.png" />
+	<file src="proxys.png" />
+	<include resource="easytext" />
+	<script src="Server.lua" type="server" />
+	<script src="Client.lua" type="client" />
+	<script src="Settings.lua" type="server" />
+</meta>

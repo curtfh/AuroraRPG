@@ -1,0 +1,246 @@
+local h = {
+
+	createObject(14846,1996.2401123,2470.1965332,10.9309845,0.0000000,0.0000000,0.0000000), --object(int_ppol),(1),
+	createObject(2164,1996.3740234,2485.8950195,9.8919220,0.0000000,0.0000000,0.0000000), --object(med_office_unit_5),(1),
+	createObject(2163,1998.4412842,2485.8950195,9.8919220,0.0000000,0.0000000,0.0000000), --object(med_office_unit_2),(1),
+	createObject(2161,2000.4813232,2485.8950195,9.8919220,0.0000000,0.0000000,0.0000000), --object(med_office_unit_4),(1),
+	createObject(2163,1992.3408203,2485.8950195,9.8919220,0.0000000,0.0000000,0.0000000), --object(med_office_unit_2),(2),
+	createObject(2608,2001.2976074,2472.7924805,10.6033945,0.0000000,0.0000000,270.0000000), --object(polce_shelf),(1),
+	createObject(2604,1999.5273438,2482.4289551,10.6887970,0.0000000,0.0000000,0.0000000), --object(cj_police_counter),(1),
+	createObject(2737,1999.0313721,2485.9028320,11.7065887,0.0000000,0.0000000,0.0000000), --object(police_nb_car),(1),
+	createObject(2208,1991.5097656,2479.8427734,9.8919220,0.0000000,0.0000000,90.0000000), --object(med_office7_unit_1),(1),
+	createObject(2208,1991.5097656,2474.3906250,9.8919220,0.0000000,0.0000000,90.0000000), --object(med_office7_unit_1),(2),
+	createObject(2434,1994.1490479,2474.4899902,9.8919220,0.0000000,0.0000000,270.0000000), --object(cj_ff_conter_2b),(1),
+	createObject(2435,1995.2824707,2474.3256836,9.8919220,0.0000000,0.0000000,0.0000000), --object(cj_ff_conter_2),(1),
+	createObject(2435,1996.2138672,2474.3256836,9.8919220,0.0000000,0.0000000,0.0000000), --object(cj_ff_conter_2),(2),
+	createObject(2435,1997.1440430,2474.3256836,9.8919220,0.0000000,0.0000000,0.0000000), --object(cj_ff_conter_2),(3),
+	createObject(2435,1998.0755615,2474.3256836,9.8919220,0.0000000,0.0000000,0.0000000), --object(cj_ff_conter_2),(4),
+	createObject(2435,1999.0070801,2474.3256836,9.8919220,0.0000000,0.0000000,0.0000000), --object(cj_ff_conter_2),(5),
+	createObject(2435,1999.9383545,2474.3256836,9.8919220,0.0000000,0.0000000,0.0000000), --object(cj_ff_conter_2),(6),
+	createObject(2435,2000.8699951,2474.3256836,9.8919220,0.0000000,0.0000000,0.0000000), --object(cj_ff_conter_2),(7),
+	createObject(2435,2001.7938232,2474.3259277,9.8919220,0.0000000,0.0000000,0.0000000), --object(cj_ff_conter_2),(9),
+	createObject(2434,1994.3129883,2482.5590820,9.8919220,0.0000000,0.0000000,180.0000000), --object(cj_ff_conter_2b),(3),
+	createObject(2435,1995.2442627,2482.5568848,9.8919220,0.0000000,0.0000000,180.0000000), --object(cj_ff_conter_2),(10),
+	createObject(2435,1996.1760254,2482.5568848,9.8919220,0.0000000,0.0000000,179.9945068), --object(cj_ff_conter_2),(11),
+	createObject(2435,1997.1080322,2482.5568848,9.8919220,0.0000000,0.0000000,179.9945068), --object(cj_ff_conter_2),(12),
+	createObject(2165,2000.0305176,2477.8085938,9.8919220,0.0000000,0.0000000,0.0000000), --object(med_office_desk_1),(1),
+	createObject(2165,2001.0234375,2478.7841797,9.8919220,0.0000000,0.0000000,180.0000000), --object(med_office_desk_1),(2),
+	createObject(2166,1998.0698242,2476.8107910,9.8919220,0.0000000,0.0000000,0.0000000), --object(med_office_desk_2),(1),
+	createObject(2166,1999.0604248,2478.7741699,9.8919220,0.0000000,0.0000000,90.0000000), --object(med_office_desk_2),(2),
+	createObject(2165,1997.0992432,2477.8061523,9.8919220,0.0000000,0.0000000,270.0000000), --object(med_office_desk_1),(3),
+	createObject(2186,1997.0810547,2479.7551270,9.8919220,0.0000000,0.0000000,270.0000000), --object(photocopier_1),(1),
+	createObject(1808,2001.1091309,2471.4348145,9.8919220,0.0000000,0.0000000,225.0000000), --object(cj_watercooler2),(1),
+	createObject(2240,1991.4877930,2475.6330566,11.2804327,0.0000000,0.0000000,0.0000000), --object(plant_pot_8),(1),
+	createObject(2240,1991.4877930,2481.1616211,11.2804327,0.0000000,0.0000000,0.0000000), --object(plant_pot_8),(2),
+	createObject(2855,1991.4709473,2476.7006836,10.7572155,0.0000000,0.0000000,120.0000000), --object(gb_bedmags05),(1),
+	createObject(2852,1991.4681396,2480.1872559,10.7572155,0.0000000,0.0000000,0.0000000), --object(gb_bedmags02),(1),
+	createObject(2816,1991.5172119,2474.6970215,10.7572155,0.0000000,0.0000000,80.0000000), --object(gb_bedmags01),(1),
+	createObject(2813,1991.4675293,2482.1501465,10.7572155,0.0000000,0.0000000,290.0000000), --object(gb_novels01),(1),
+	createObject(3034,1989.2921143,2481.4614258,11.6541128,0.0000000,0.0000000,90.0000000), --object(bd_window),(1),
+	createObject(3034,1989.2921143,2477.8374023,11.6541128,0.0000000,0.0000000,90.0000000), --object(bd_window),(2),
+	createObject(1721,2000.0566406,2471.0395508,9.8919220,0.0000000,0.0000000,0.0000000), --object(est_chair1),(2),
+	createObject(1721,1999.4313965,2471.0395508,9.8919220,0.0000000,0.0000000,0.0000000), --object(est_chair1),(3),
+	createObject(1721,1998.8050537,2471.0395508,9.8919220,0.0000000,0.0000000,0.0000000), --object(est_chair1),(4),
+	createObject(1721,1998.1796875,2471.0395508,9.8919220,0.0000000,0.0000000,0.0000000), --object(est_chair1),(5),
+	createObject(1721,1997.5538330,2471.0395508,9.8919220,0.0000000,0.0000000,0.0000000), --object(est_chair1),(6),
+	createObject(1721,1996.9282227,2471.0395508,9.8919220,0.0000000,0.0000000,0.0000000), --object(est_chair1),(7),
+	createObject(948,1996.1864014,2471.1694336,9.8919220,0.0000000,0.0000000,0.0000000), --object(plant_pot_10),(1),
+	createObject(948,1993.2856445,2471.1694336,9.8919220,0.0000000,0.0000000,0.0000000), --object(plant_pot_10),(2),
+	createObject(2258,2001.4641113,2478.3671875,12.1192808,0.0000000,0.0000000,270.0000000), --object(frame_clip_5),(1),
+	createObject(2261,1992.7365723,2485.4167480,11.3255167,0.0000000,0.0000000,0.0000000), --object(frame_slim_2),(1),
+	createObject(2267,1998.6026611,2470.9736328,11.8383026,0.0000000,0.0000000,180.0000000), --object(frame_wood_3),(1),
+	createObject(2435,1994.1479492,2481.4260254,9.8919220,0.0000000,0.0000000,269.9945068), --object(cj_ff_conter_2),(13),
+	createObject(2435,1994.1475830,2475.4199219,9.8919220,0.0000000,0.0000000,269.9890137), --object(cj_ff_conter_2),(14),
+	createObject(2435,1994.1479492,2476.3510742,9.8919220,0.0000000,0.0000000,269.9890137), --object(cj_ff_conter_2),(15),
+	createObject(2435,1994.1479492,2477.2829590,9.8919220,0.0000000,0.0000000,269.9890137), --object(cj_ff_conter_2),(16),
+	createObject(2435,1994.1479492,2478.2141113,9.8919220,0.0000000,0.0000000,269.9890137), --object(cj_ff_conter_2),(17),
+	createObject(2435,1994.1479492,2479.1457520,9.8919220,0.0000000,0.0000000,269.9890137), --object(cj_ff_conter_2),(18),
+	createObject(2007,2001.0440674,2475.6386719,9.8919220,0.0000000,0.0000000,270.0000000), --object(filing_cab_nu01),(1),
+	createObject(1806,2000.7172852,2476.6364746,9.8919220,0.0000000,0.0000000,0.0000000), --object(med_office_chair),(1),
+	createObject(1806,1999.0262451,2476.6806641,9.8919220,0.0000000,0.0000000,45.0000000), --object(med_office_chair),(2),
+	createObject(1806,2000.6011963,2479.8613281,9.8919220,0.0000000,0.0000000,180.0000000), --object(med_office_chair),(3),
+	createObject(1806,1999.1943359,2479.7011719,9.8919220,0.0000000,0.0000000,135.0000000), --object(med_office_chair),(4),
+	createObject(1806,1995.9680176,2477.2211914,9.8919220,0.0000000,0.0000000,270.0000000), --object(med_office_chair),(5),
+	createObject(2946,1991.3391113,2486.0649414,9.9169216,0.0000000,0.0000000,269.9945068), --object(cr_door_03),(3),
+	createObject(2946,1989.7880859,2486.0478516,9.9169216,0.0000000,0.0000000,269.9945068), --object(cr_door_03),(4),
+	createObject(2946,1993.8388672,2486.0874023,9.9169216,0.0000000,0.0000000,269.9945068), --object(cr_door_03),(5),
+	createObject(2946,1995.3889160,2486.1020508,9.9169216,0.0000000,0.0000000,269.9945068), --object(cr_door_03),(6),
+	createObject(1569,1993.2379150,2470.8173828,9.8919220,0.0000000,0.0000000,0.0000000), --object(adam_v_door),(1),
+	createObject(1569,1996.2380371,2470.8125000,9.8919220,0.0000000,0.0000000,180.0000000), --object(adam_v_door),(2),
+	createObject(2290,1992.2607422,2471.5512695,9.8919220,0.0000000,0.0000000,180.0000000), --object(swk_couch_1),(1),
+	createObject(14594,1960.5654297,2459.0615234,10.1782494,0.0000000,0.0000000,0.0000000), --object(paperchase03),(2),
+	createObject(2108,1981.8585205,2484.2087402,10.1938744,0.0000000,0.0000000,0.0000000), --object(cj_mlight13),(2),
+	createObject(2108,1981.8959961,2475.0529785,10.1860638,0.0000000,0.0000000,0.0000000), --object(cj_mlight13),(3),
+	createObject(2108,1974.7237549,2475.0341797,10.1938744,0.0000000,0.0000000,0.0000000), --object(cj_mlight13),(4),
+	createObject(14455,1980.6099854,2484.3876953,11.5318155,0.0000000,0.0000000,180.0000000), --object(gs_bookcase),(1),
+	createObject(2126,1977.6333008,2475.5019531,10.1860638,0.0000000,0.0000000,0.0000000), --object(coffee_swank_5),(1),
+	createObject(1744,1982.3480225,2481.6281738,11.3438759,0.0000000,0.0000000,270.0000000), --object(med_shelf),(1),
+	createObject(16780,1978.3917236,2479.5402832,14.3429289,0.0000000,0.0000000,0.0000000), --object(ufo_light03),(1),
+	createObject(1703,1977.1164551,2477.7563477,10.1938744,0.0000000,0.0000000,0.0000000), --object(kb_couch02),(1),
+	createObject(14705,1981.9848633,2481.8811035,11.9333401,0.0000000,0.0000000,0.0000000), --object(int2vase),(1),
+	createObject(2870,1982.0133057,2480.4943848,11.6843739,0.0000000,0.0000000,52.0000000), --object(gb_ornament05),(1),
+	createObject(2828,1982.0029297,2481.2207031,11.6617870,0.0000000,0.0000000,70.0000000), --object(gb_ornament02),(1),
+	createObject(2332,1975.0260010,2484.0935059,10.6567593,0.0000000,0.0000000,0.0000000), --object(kev_safe),(1),
+	createObject(1828,1978.2039795,2476.1230469,10.2062340,0.0000000,0.0000000,0.0000000), --object(man_sdr_rug),(1),
+	createObject(1736,1978.1966553,2475.0966797,13.2251911,0.0000000,0.0000000,180.0000000), --object(cj_stags_head),(1),
+	createObject(1704,1976.0781250,2475.5930176,10.1938744,0.0000000,0.0000000,90.0000000), --object(kb_chair03),(1),
+	createObject(1704,1980.1702881,2476.4184570,10.1938744,0.0000000,0.0000000,270.0000000), --object(kb_chair03),(2),
+	createObject(2946,1974.2305908,2477.2883301,10.1669178,0.0000000,0.0000000,359.9945068), --object(cr_door_03),(7),
+	createObject(2946,1974.2220459,2478.8623047,10.1669178,0.0000000,0.0000000,359.9890137), --object(cr_door_03),(9),
+	createObject(2946,1974.2480469,2479.1811523,12.4168949,90.0000000,0.0000000,0.0000000), --object(cr_door_03),(10),
+	createObject(1714,1978.2768555,2482.9448242,10.1938744,0.0000000,0.0000000,0.0000000), --object(kb_swivelchair1),(1),
+	createObject(1715,1977.3337402,2479.8911133,10.1938744,0.0000000,0.0000000,162.0000000), --object(kb_swivelchair2),(1),
+	createObject(2184,1977.2155762,2481.2844238,10.1938744,0.0000000,0.0000000,0.0000000), --object(med_office6_desk_2),(1),
+	createObject(1715,1979.0789795,2479.8933105,10.1938744,0.0000000,0.0000000,201.9989014), --object(kb_swivelchair2),(2),
+	createObject(2190,1978.9169922,2481.3461914,10.9696121,0.0000000,0.0000000,191.9970703), --object(pc_1),(1),
+	createObject(2855,1977.3237305,2481.6630859,10.9696121,0.0000000,0.0000000,150.7489014), --object(gb_bedmags05),(2),
+	createObject(2196,1977.9313965,2481.8422852,10.9696121,0.0000000,0.0000000,39.9981689), --object(work_lamp1),(1),
+	createObject(2894,1978.2026367,2481.7626953,10.9696121,0.0000000,0.0000000,0.0000000), --object(kmb_rhymesbook),(1),
+	createObject(2207,1981.7562256,2479.9108887,10.1938744,0.0000000,0.0000000,270.0000000), --object(med_office7_desk_1),(1),
+	createObject(1510,1981.5755615,2479.4614258,10.9962473,0.0000000,0.0000000,0.0000000), --object(dyn_ashtry),(1),
+	createObject(1668,1981.8038330,2479.3754883,11.1379509,0.0000000,0.0000000,0.0000000), --object(propvodkabotl1),(1),
+	createObject(1669,1981.8012695,2479.2512207,11.1379509,0.0000000,0.0000000,0.0000000), --object(propwinebotl1),(1),
+	createObject(1664,1981.7956543,2479.1252441,11.1379509,0.0000000,0.0000000,0.0000000), --object(propwinebotl2),(1),
+	createObject(1520,1981.8062744,2478.9870605,10.9712477,0.0000000,0.0000000,0.0000000), --object(dyn_wine_bounce),(1),
+	createObject(1455,1981.6071777,2479.2456055,11.0429363,0.0000000,0.0000000,0.0000000), --object(dyn_glass),(1),
+	createObject(1455,1981.6123047,2479.0957031,11.0429363,0.0000000,0.0000000,0.0000000), --object(dyn_glass),(2),
+	createObject(1455,1981.6181641,2478.9462891,11.0429363,0.0000000,0.0000000,0.0000000), --object(dyn_glass),(3),
+	createObject(2816,1981.8461914,2478.3959961,10.9712477,0.0000000,0.0000000,284.0000000), --object(gb_bedmags01),(2),
+	createObject(2868,1981.9337158,2479.7731934,10.9712477,0.0000000,0.0000000,0.0000000), --object(gb_ornament03),(1),
+	createObject(3034,1978.1965332,2474.7998047,11.8260612,0.0000000,0.0000000,180.0000000), --object(bd_window),(3),
+	createObject(3034,1984.7342529,2492.9260254,11.8260612,0.0000000,0.0000000,89.9945068), --object(bd_window),(4),
+	createObject(2946,1987.7462158,2490.2929688,9.9169216,0.0000000,0.0000000,269.9945068), --object(cr_door_03),(11),
+	createObject(2946,1989.3215332,2490.2729492,9.9169216,0.0000000,0.0000000,269.9945068), --object(cr_door_03),(12),
+	createObject(2205,1989.2119141,2493.5722656,9.8919220,0.0000000,0.0000000,180.0000000), --object(med_office8_desk_1),(1),
+	createObject(1714,1988.5280762,2494.9245605,9.8919220,0.0000000,0.0000000,0.0000000), --object(kb_swivelchair1),(2),
+	createObject(1715,1987.8500977,2491.9824219,9.8919220,0.0000000,0.0000000,162.0000000), --object(kb_swivelchair2),(3),
+	createObject(1715,1989.3092041,2491.9743652,9.8919220,0.0000000,0.0000000,203.9989014), --object(kb_swivelchair2),(4),
+	createObject(2190,1988.9830322,2493.3181152,10.8283844,0.0000000,0.0000000,190.0000000), --object(pc_1),(2),
+	createObject(2164,1991.6949463,2494.9260254,9.8919220,0.0000000,0.0000000,270.0000000), --object(med_office_unit_5),(2),
+	createObject(2167,1991.6949463,2492.9204102,9.8919220,0.0000000,0.0000000,270.0000000), --object(med_office_unit_7),(14),
+	createObject(2163,1991.6949463,2491.7617188,9.8919220,0.0000000,0.0000000,270.0000000), --object(med_office_unit_2),(3),
+	createObject(2201,1991.7479248,2491.5549316,10.8106155,0.0000000,0.0000000,0.0000000), --object(printer_1),(1),
+	createObject(2828,1987.7207031,2493.3759766,10.8283844,0.0000000,0.0000000,303.9987793), --object(gb_ornament02),(2),
+	createObject(2894,1988.3564453,2493.7526855,10.8283844,0.0000000,0.0000000,0.0000000), --object(kmb_rhymesbook),(2),
+	createObject(2196,1988.0345459,2494.0178223,10.8283844,0.0000000,0.0000000,40.0000000), --object(work_lamp1),(2),
+	createObject(2290,1985.3029785,2492.4887695,9.9469318,0.0000000,0.0000000,90.0000000), --object(swk_couch_1),(2),
+	createObject(1822,1984.7885742,2490.7609863,9.8994827,0.0000000,0.0000000,0.0000000), --object(coffee_swank_6),(1),
+	createObject(2852,1985.2540283,2491.2614746,10.3986187,0.0000000,0.0000000,0.0000000), --object(gb_bedmags02),(2),
+	createObject(2267,1988.4981689,2495.4174805,11.9563370,0.0000000,0.0000000,0.0000000), --object(frame_wood_3),(2),
+	createObject(2261,1986.3387451,2490.9428711,11.3833542,0.0000000,0.0000000,180.0000000), --object(frame_slim_2),(2),
+	createObject(2614,1974.5159912,2481.4504395,12.1781483,0.0000000,0.0000000,90.0000000), --object(cj_us_flag),(1),
+	createObject(2258,1982.1773682,2479.0446777,12.3430672,0.0000000,0.0000000,270.0000000), --object(frame_clip_5),(2),
+	createObject(2260,1974.9479980,2476.0720215,11.7026091,0.0000000,0.0000000,90.0000000), --object(frame_slim_1),(1),
+
+}
+
+for k,v in ipairs(h) do
+	setElementDimension(v,3000)
+end
+
+addEvent("synceAFKLobby",true)
+addEventHandler("synceAFKLobby",root,function(id)
+	for k,v in ipairs(h) do
+		setElementDimension(v,id)
+	end
+	for i=1,12 do
+		setWeaponSlotDisabled(i,true)
+	end
+end)
+
+addEventHandler("onClientResourceStart",resourceRoot,function()
+	setTimer(function()
+		if getElementData(localPlayer,"wantedPoints") and getElementData(localPlayer,"wantedPoints") >= 10 then return false end
+		if getPlayerTeam(localPlayer) and getTeamName(getPlayerTeam(localPlayer)) ~= "Staff" then
+			if getElementDimension(localPlayer) == 0 then
+				if not isPedInVehicle(localPlayer) then
+					local x,y,z = getElementPosition(localPlayer)
+					if z >= 8550 then
+						triggerServerEvent("checkIdleTime",localPlayer,localPlayer)
+					end
+				end
+			end
+		end
+	end,60000,0)
+end)
+
+local sx,sy = guiGetScreenSize()
+
+function rWarn()
+	if getElementData(localPlayer,"isPlayerAFK") then
+		dxDrawImage( sx/2 - 300, sy/2 - 100, 600, 200, 'AFK.png' )
+	end
+end
+addEventHandler("onClientRender",root,rWarn)
+
+
+
+weapons = {
+	[1] = {2, 4, 5, 6, 7, 8, 9},
+	[2] = {22, 23, 24},
+	[3] = {25, 26, 27},
+	[4] = {28, 29, 32},
+	[5] = {30, 31},
+	[6] = {33, 34},
+	[7] = {35, 36, 37,38},
+	[8] = {16, 17, 18, 39},
+	[9] = {41, 42, 43},
+	[10] = {10, 11, 12, 13, 14, 15},
+	[11] = {44, 45, 46},
+	[12] = {40},
+	[13] = {3},
+}
+
+restrictedWeapons = {}
+
+function onClientPreRender()
+	if getElementDimension(localPlayer) ~= 0 then
+		if getElementData(localPlayer,"isPlayerAFK") then
+			local weapon = getPedWeapon(localPlayer)
+			local slot = getPedWeaponSlot(localPlayer)
+			if (restrictedWeapons[weapon]) then
+				local weapons = {}
+				for i=1, 30 do
+					if (getControlState("next_weapon")) then
+						slot = slot + 1
+					else
+						slot = slot - 1
+					end
+					if (slot == 14) then
+						slot = 0
+					elseif (slot == -1) then
+						slot = 13
+					end
+
+					local w = getPedWeapon(localPlayer, slot)
+					if (((w ~= 0 and slot ~= 0) or (w == 0 and slot == 0)) and not restrictedWeapons[w]) then
+						setPedWeaponSlot(localPlayer, slot)
+						break
+					end
+				end
+			end
+		end
+	end
+end
+addEventHandler("onClientPreRender", root, onClientPreRender)
+
+function onClientPlayerWeaponFire(weapon)
+	if (restrictedWeapons[weapon]) then return end
+end
+addEventHandler("onClientPlayerWeaponFire", localPlayer, onClientPlayerWeaponFire)
+
+function setWeaponDisabled(id, bool)
+	if (id == 0) then return end
+	restrictedWeapons[id] = bool
+end
+
+function isWeaponDisabled(id)
+	return restrictedWeapons[id]
+end
+
+function setWeaponSlotDisabled(slot, bool)
+	if (not weapons[slot]) then return end
+	for k, v in ipairs(weapons[slot]) do
+		setWeaponDisabled(v, bool)
+	end
+end

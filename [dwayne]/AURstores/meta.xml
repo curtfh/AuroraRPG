@@ -1,0 +1,19 @@
+<meta>
+    <min_mta_version server="1.3.4-0.00000" client="1.3.4-0.00000"></min_mta_version>
+
+	<script src="client.luac" type="client" />
+    <script src="server.lua" type="server" />
+	<file src="Images/button.png" />
+	<file src="Images/background.png" />
+	<file src="Images/burger.png" />
+    <file src="Images/coke.png" />
+    <file src="Images/pizza.png" />
+    <file src="Images/chicken.png" />
+    <file src="Images/salad.png" />
+    <file src="Images/fries.png" />
+
+	<export function='removePlayerInterior' type='server' />
+	<export function='savePlayerInterior' type='server' />
+	<export function='returnPlayerInterior' type='server' />
+
+</meta>

@@ -1,0 +1,292 @@
+<map>
+	<theMap name="deneme" author="Unknown"></theMap>
+    <object id="object (sfe_park) (1)" model="9915" interior="0" dimension="0" posX="-2985.4453125" posY="2413.6171875" posZ="31.889060974121" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (cxrf_savhusgar1_) (1)" model="3359" interior="0" dimension="0" posX="-2946.8146972656" posY="2412.8405761719" posZ="16.889060974121" rotX="0" rotY="0" rotZ="270" />
+    <object id="object (vgbndsign01_lvs) (1)" model="8526" interior="0" dimension="0" posX="-2947.0104980469" posY="2404.7358398438" posZ="21.932189941406" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (road_SFW50) (1)" model="9732" interior="0" dimension="0" posX="-3126.5209960938" posY="2413.7958984375" posZ="42.456130981445" rotX="0" rotY="0" rotZ="180" />
+    <object id="object (cs_roadbridge04) (2)" model="18450" interior="0" dimension="0" posX="-3269.1110839844" posY="2413.7861328125" posZ="50.395706176758" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (cuntw_weechurch_) (1)" model="18235" interior="0" dimension="0" posX="-2997.5358886719" posY="2413.5905761719" posZ="23.58780670166" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (des_ruin2_) (1)" model="3362" interior="0" dimension="0" posX="-3020.0778808594" posY="2430.5705566406" posZ="26.756248474121" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (des_ruin2_) (2)" model="3362" interior="0" dimension="0" posX="-3020.0969238281" posY="2396.5815429688" posZ="26.756248474121" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (ClubGate01_LAx) (1)" model="3749" interior="0" dimension="0" posX="-3026.404296875" posY="2413.7978515625" posZ="28.418430328369" rotX="0" rotY="0" rotZ="270" />
+    <object id="object (stuntramp7_las2) (1)" model="5153" interior="0" dimension="0" posX="-2980.65234375" posY="2414.9272460938" posZ="20.759099960327" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (stuntramp7_las2) (2)" model="5153" interior="0" dimension="0" posX="-2980.6574707031" posY="2412.8615722656" posZ="20.759122848511" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (stuntramp7_las2) (3)" model="5153" interior="0" dimension="0" posX="-2980.6772460938" posY="2410.7302246094" posZ="20.759122848511" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (landjump) (1)" model="1633" interior="0" dimension="0" posX="-2978.73046875" posY="2413.1079101563" posZ="29.840656280518" rotX="344" rotY="0" rotZ="270" />
+    <object id="object (landjump) (2)" model="1633" interior="0" dimension="0" posX="-2978.4370117188" posY="2409.9135742188" posZ="29.844274520874" rotX="343.99841308594" rotY="0" rotZ="280" />
+    <object id="object (landjump) (6)" model="1633" interior="0" dimension="0" posX="-2978.4816894531" posY="2416.3283691406" posZ="29.842147827148" rotX="343.99291992188" rotY="0" rotZ="260" />
+    <object id="object (LAskyscrap1_LAn) (1)" model="4563" interior="0" dimension="0" posX="-3419.0046386719" posY="2417.2565917969" posZ="-46.807651519775" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (cs_roadbridge04) (3)" model="18450" interior="0" dimension="0" posX="-3348.8391113281" posY="2413.7731933594" posZ="50.38256072998" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (cs_roadbridge04) (4)" model="18450" interior="0" dimension="0" posX="-3381.4340820313" posY="2474.9809570313" posZ="85.870826721191" rotX="0" rotY="0" rotZ="90" />
+    <object id="object (cs_roadbridge04) (5)" model="18450" interior="0" dimension="0" posX="-3411.3352050781" posY="2413.7741699219" posZ="53.244499206543" rotX="0" rotY="5" rotZ="0" />
+    <object id="object (cs_roadbridge04) (6)" model="18450" interior="0" dimension="0" posX="-3397.5834960938" posY="2413.7810058594" posZ="53.633514404297" rotX="0" rotY="10" rotZ="0" />
+    <object id="object (cs_roadbridge04) (7)" model="18450" interior="0" dimension="0" posX="-3392.5466308594" posY="2413.8022460938" posZ="53.828357696533" rotX="0" rotY="15" rotZ="0" />
+    <object id="object (cs_roadbridge04) (8)" model="18450" interior="0" dimension="0" posX="-3389.1171875" posY="2413.8005371094" posZ="53.626293182373" rotX="0" rotY="20" rotZ="0" />
+    <object id="object (cs_roadbridge04) (9)" model="18450" interior="0" dimension="0" posX="-3392.0048828125" posY="2413.7807617188" posZ="55.644744873047" rotX="0" rotY="25" rotZ="0" />
+    <object id="object (cs_roadbridge04) (10)" model="18450" interior="0" dimension="0" posX="-3389.6926269531" posY="2413.7885742188" posZ="55.266883850098" rotX="0" rotY="30" rotZ="0" />
+    <object id="object (cs_roadbridge04) (11)" model="18450" interior="0" dimension="0" posX="-3377.59765625" posY="2413.8198242188" posZ="47.439437866211" rotX="0" rotY="35" rotZ="0" />
+    <object id="object (cs_roadbridge04) (12)" model="18450" interior="0" dimension="0" posX="-3391.2451171875" posY="2413.7934570313" posZ="58.001735687256" rotX="0" rotY="40" rotZ="0" />
+    <object id="object (cs_roadbridge04) (13)" model="18450" interior="0" dimension="0" posX="-3388.8330078125" posY="2413.791015625" posZ="56.591335296631" rotX="0" rotY="45" rotZ="0" />
+    <object id="object (cs_roadbridge04) (14)" model="18450" interior="0" dimension="0" posX="-3389.9514160156" posY="2413.8217773438" posZ="58.511116027832" rotX="0" rotY="50" rotZ="0" />
+    <object id="object (cs_roadbridge04) (15)" model="18450" interior="0" dimension="0" posX="-3389.3854980469" posY="2413.8212890625" posZ="58.580406188965" rotX="0" rotY="55" rotZ="0" />
+    <object id="object (cs_roadbridge04) (16)" model="18450" interior="0" dimension="0" posX="-3389.4677734375" posY="2413.8498535156" posZ="59.485969543457" rotX="0" rotY="60" rotZ="0" />
+    <object id="object (cs_roadbridge04) (17)" model="18450" interior="0" dimension="0" posX="-3390.935546875" posY="2413.8664550781" posZ="63.471649169922" rotX="0" rotY="65" rotZ="0" />
+    <object id="object (cs_roadbridge04) (18)" model="18450" interior="0" dimension="0" posX="-3390.640625" posY="2413.837890625" posZ="64.297920227051" rotX="0" rotY="70" rotZ="0" />
+    <object id="object (cs_roadbridge04) (19)" model="18450" interior="0" dimension="0" posX="-3388.3149414063" posY="2413.8349609375" posZ="57.300186157227" rotX="0" rotY="75" rotZ="0" />
+    <object id="object (cs_roadbridge04) (20)" model="18450" interior="0" dimension="0" posX="-3384.8701171875" posY="2413.8681640625" posZ="35.961917877197" rotX="0" rotY="80" rotZ="0" />
+    <object id="object (cs_roadbridge04) (21)" model="18450" interior="0" dimension="0" posX="-3389.76953125" posY="2413.8010253906" posZ="64.27661895752" rotX="0" rotY="85" rotZ="0" />
+    <object id="object (cs_roadbridge04) (24)" model="18450" interior="0" dimension="0" posX="-3381.4208984375" posY="2554.52734375" posZ="85.857772827148" rotX="0" rotY="0" rotZ="90" />
+    <object id="object (cs_roadbridge04) (25)" model="18450" interior="0" dimension="0" posX="-3333.8916015625" posY="2602.4921875" posZ="85.869613647461" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (vgEhshade01_lvs) (3)" model="8838" interior="0" dimension="0" posX="-3372.74609375" posY="2597.0341796875" posZ="84.674018859863" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (vgEhshade01_lvs) (3)" model="8838" interior="0" dimension="0" posX="-3372.7436523438" posY="2602.0974121094" posZ="84.673988342285" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (vgEhshade01_lvs) (3)" model="8838" interior="0" dimension="0" posX="-3372.7514648438" posY="2607.2038574219" posZ="84.67407989502" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (VgsN_nitree_b01) (1)" model="3511" interior="0" dimension="0" posX="-3388.2194824219" posY="2597.2331542969" posZ="86.204620361328" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (VgsN_nitree_b01) (2)" model="3511" interior="0" dimension="0" posX="-3388.4194335938" posY="2608.7661132813" posZ="86.204681396484" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (VgsN_nitree_b01) (3)" model="3511" interior="0" dimension="0" posX="-3375.2810058594" posY="2608.69921875" posZ="86.204681396484" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (VgsN_nitree_b01) (4)" model="3511" interior="0" dimension="0" posX="-3381.3110351563" posY="2608.7346191406" posZ="86.204681396484" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (VgsN_nitree_b01) (5)" model="3511" interior="0" dimension="0" posX="-3388.4748535156" posY="2602.2817382813" posZ="86.20458984375" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (veg_treeb1) (1)" model="617" interior="0" dimension="0" posX="-3388.8759765625" posY="2599.4147949219" posZ="86.204620361328" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (veg_treeb1) (2)" model="617" interior="0" dimension="0" posX="-3388.9777832031" posY="2604.8615722656" posZ="86.204681396484" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (veg_treeb1) (3)" model="617" interior="0" dimension="0" posX="-3385.4919433594" posY="2608.4306640625" posZ="86.204681396484" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (veg_treeb1) (4)" model="617" interior="0" dimension="0" posX="-3378.3859863281" posY="2608.6459960938" posZ="86.204681396484" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (cs_roadbridge04) (25)" model="18450" interior="0" dimension="0" posX="-3254.0776367188" posY="2602.4816894531" posZ="85.862846374512" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (cs_roadbridge04) (25)" model="18450" interior="0" dimension="0" posX="-3224.8596191406" posY="2602.4833984375" posZ="84.024848937988" rotX="0" rotY="350" rotZ="0" />
+    <object id="object (cs_roadbridge04) (25)" model="18450" interior="0" dimension="0" posX="-3222.7756347656" posY="2602.4990234375" posZ="85.23112487793" rotX="0" rotY="355" rotZ="0" />
+    <object id="object (cs_roadbridge04) (25)" model="18450" interior="0" dimension="0" posX="-3217.6633300781" posY="2602.4777832031" posZ="84.027656555176" rotX="0" rotY="345" rotZ="0" />
+    <object id="object (cs_roadbridge04) (25)" model="18450" interior="0" dimension="0" posX="-3202.8017578125" posY="2602.4682617188" posZ="87.284729003906" rotX="0" rotY="340" rotZ="0" />
+    <object id="object (cs_roadbridge04) (25)" model="18450" interior="0" dimension="0" posX="-2966.8046875" posY="2602.3955078125" posZ="8.3783798217773" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (cs_roadbridge04) (25)" model="18450" interior="0" dimension="0" posX="-2952.2290039063" posY="2602.3586425781" posZ="40.820205688477" rotX="0" rotY="305" rotZ="0" />
+    <object id="object (cs_roadbridge04) (25)" model="18450" interior="0" dimension="0" posX="-2963.5004882813" posY="2602.3759765625" posZ="11.290320396423" rotX="0" rotY="350" rotZ="0" />
+    <object id="object (cs_roadbridge04) (25)" model="18450" interior="0" dimension="0" posX="-2978.5925292969" posY="2602.388671875" posZ="6.5071315765381" rotX="0" rotY="320" rotZ="0" />
+    <object id="object (cs_roadbridge04) (25)" model="18450" interior="0" dimension="0" posX="-2889.6179199219" posY="2602.3649902344" posZ="73.462432861328" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (cs_roadbridge04) (25)" model="18450" interior="0" dimension="0" posX="-3006.2458496094" posY="2602.3806152344" posZ="-31.329669952393" rotX="0" rotY="270" rotZ="0" />
+    <object id="object (searock04) (1)" model="900" interior="0" dimension="0" posX="-2919.5456542969" posY="2619.6970214844" posZ="71.533386230469" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (searock04) (2)" model="900" interior="0" dimension="0" posX="-2921.89453125" posY="2635.8054199219" posZ="71.175773620605" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (searock04) (3)" model="900" interior="0" dimension="0" posX="-2923.1657714844" posY="2650.8996582031" posZ="69.023826599121" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (searock04) (4)" model="900" interior="0" dimension="0" posX="-2924.4970703125" posY="2664.841796875" posZ="66.226692199707" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (searock04) (6)" model="900" interior="0" dimension="0" posX="-2925.5397949219" posY="2677.1787109375" posZ="63.743179321289" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (searock04) (7)" model="900" interior="0" dimension="0" posX="-2926.4809570313" posY="2689.2258300781" posZ="61.362041473389" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (searock04) (8)" model="900" interior="0" dimension="0" posX="-2927.3493652344" posY="2699.3542480469" posZ="58.644203186035" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (searock04) (9)" model="900" interior="0" dimension="0" posX="-2928.2458496094" posY="2709.8386230469" posZ="55.853519439697" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (searock04) (10)" model="900" interior="0" dimension="0" posX="-2930.0131835938" posY="2722.8227539063" posZ="52.740509033203" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (searock04) (11)" model="900" interior="0" dimension="0" posX="-2932.5571289063" posY="2735.1154785156" posZ="49.944530487061" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (searock04) (15)" model="900" interior="0" dimension="0" posX="-2934.1008300781" posY="2742.7924804688" posZ="48.476516723633" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (searock04) (16)" model="900" interior="0" dimension="0" posX="-2937.1984863281" posY="2758.5749511719" posZ="46.420944213867" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (searock04) (17)" model="900" interior="0" dimension="0" posX="-2939.1999511719" posY="2772.4946289063" posZ="43.766036987305" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (1)" model="905" interior="0" dimension="0" posX="-2945.8122558594" posY="2772.4367675781" posZ="48.516586303711" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (2)" model="905" interior="0" dimension="0" posX="-2952.9375" posY="2770.3986816406" posZ="47.984657287598" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (3)" model="905" interior="0" dimension="0" posX="-2949.73828125" posY="2761.9853515625" posZ="48.486663818359" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (4)" model="905" interior="0" dimension="0" posX="-2943.810546875" posY="2763.4777832031" posZ="49.798183441162" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (5)" model="905" interior="0" dimension="0" posX="-2941.3149414063" posY="2753.4794921875" posZ="50.237308502197" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (6)" model="905" interior="0" dimension="0" posX="-2951.2912597656" posY="2754.0434570313" posZ="50.160190582275" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (7)" model="905" interior="0" dimension="0" posX="-2952.2956542969" posY="2759.1979980469" posZ="49.241016387939" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (8)" model="905" interior="0" dimension="0" posX="-2948.2507324219" posY="2758.9074707031" posZ="50.525592803955" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (9)" model="905" interior="0" dimension="0" posX="-2943.6652832031" posY="2761.6459960938" posZ="50.555290222168" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (10)" model="905" interior="0" dimension="0" posX="-2938.0764160156" posY="2762.291015625" posZ="51.156379699707" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (11)" model="905" interior="0" dimension="0" posX="-2938.8935546875" posY="2770.0283203125" posZ="48.320808410645" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (12)" model="905" interior="0" dimension="0" posX="-2945.4965820313" posY="2775.8928222656" posZ="47.812599182129" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (13)" model="905" interior="0" dimension="0" posX="-2950.2438964844" posY="2776.6147460938" posZ="46.129829406738" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (14)" model="905" interior="0" dimension="0" posX="-2949.1784667969" posY="2765.7385253906" posZ="47.152450561523" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (15)" model="905" interior="0" dimension="0" posX="-2944.1008300781" posY="2731.4255371094" posZ="55.890209197998" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (16)" model="905" interior="0" dimension="0" posX="-2943.8190917969" posY="2729.8862304688" posZ="56.291297912598" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (17)" model="905" interior="0" dimension="0" posX="-2941.6552734375" posY="2723.4633789063" posZ="56.648719787598" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (18)" model="905" interior="0" dimension="0" posX="-2938.9035644531" posY="2714.349609375" posZ="58.127552032471" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (19)" model="905" interior="0" dimension="0" posX="-2936.9548339844" posY="2702.2602539063" posZ="62.08447265625" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (20)" model="905" interior="0" dimension="0" posX="-2938.4289550781" posY="2689.1828613281" posZ="65.398040771484" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (21)" model="905" interior="0" dimension="0" posX="-2936.5114746094" posY="2686.9521484375" posZ="65.6171875" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (22)" model="905" interior="0" dimension="0" posX="-2925.9333496094" posY="2671.5349121094" posZ="70.150146484375" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (23)" model="905" interior="0" dimension="0" posX="-2929.2915039063" posY="2653.4838867188" posZ="73.432540893555" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (24)" model="905" interior="0" dimension="0" posX="-2921.4772949219" posY="2638.0529785156" posZ="75.890113830566" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (25)" model="905" interior="0" dimension="0" posX="-2923.1164550781" posY="2629.3232421875" posZ="74.77417755127" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (26)" model="905" interior="0" dimension="0" posX="-2924.8369140625" posY="2630.9887695313" posZ="75.067420959473" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (27)" model="905" interior="0" dimension="0" posX="-2934.7160644531" posY="2637.3767089844" posZ="74.364265441895" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (28)" model="905" interior="0" dimension="0" posX="-2929.1594238281" posY="2655.0988769531" posZ="72.82795715332" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (29)" model="905" interior="0" dimension="0" posX="-2937.2075195313" posY="2662.2465820313" posZ="70.368118286133" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (30)" model="905" interior="0" dimension="0" posX="-2934.3359375" posY="2663.3469238281" posZ="70.636619567871" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (dyn_quarryrock02) (1)" model="1304" interior="0" dimension="0" posX="-2924.8181152344" posY="2616.3474121094" posZ="76.112098693848" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (dyn_quarryrock02) (2)" model="1304" interior="0" dimension="0" posX="-2926.0991210938" posY="2622.0090332031" posZ="76.387130737305" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (dyn_quarryrock02) (3)" model="1304" interior="0" dimension="0" posX="-2927.2778320313" posY="2625.8833007813" posZ="74.575057983398" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (dyn_quarryrock02) (4)" model="1304" interior="0" dimension="0" posX="-2924.0122070313" posY="2633.3676757813" posZ="75.986267089844" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (dyn_quarryrock02) (5)" model="1304" interior="0" dimension="0" posX="-2936.5244140625" posY="2634.9323730469" posZ="75.331481933594" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (dyn_quarryrock02) (6)" model="1304" interior="0" dimension="0" posX="-2932.6000976563" posY="2627.4582519531" posZ="74.680740356445" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (dyn_quarryrock02) (7)" model="1304" interior="0" dimension="0" posX="-2931.8139648438" posY="2637.1137695313" posZ="75.610992431641" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (dyn_quarryrock02) (8)" model="1304" interior="0" dimension="0" posX="-2923.9995117188" posY="2650.8549804688" posZ="74.322952270508" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (dyn_quarryrock02) (9)" model="1304" interior="0" dimension="0" posX="-2929.9340820313" posY="2652.5380859375" posZ="74.091087341309" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (dyn_quarryrock02) (10)" model="1304" interior="0" dimension="0" posX="-2939.1169433594" posY="2649.0571289063" posZ="73.242073059082" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (dyn_quarryrock02) (11)" model="1304" interior="0" dimension="0" posX="-2933.8205566406" posY="2643.736328125" posZ="72.759468078613" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (dyn_quarryrock02) (12)" model="1304" interior="0" dimension="0" posX="-2931.2033691406" posY="2670.2893066406" posZ="69.807662963867" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (dyn_quarryrock02) (13)" model="1304" interior="0" dimension="0" posX="-2938.8107910156" posY="2674.8002929688" posZ="68.357124328613" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (dyn_quarryrock02) (14)" model="1304" interior="0" dimension="0" posX="-2937.2016601563" posY="2680.5539550781" posZ="66.78776550293" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (dyn_quarryrock02) (15)" model="1304" interior="0" dimension="0" posX="-2935.435546875" posY="2691.0456542969" posZ="65.829032897949" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (dyn_quarryrock02) (16)" model="1304" interior="0" dimension="0" posX="-2933.2692871094" posY="2714.8015136719" posZ="60.032508850098" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (dyn_quarryrock02) (17)" model="1304" interior="0" dimension="0" posX="-2934.419921875" posY="2717.7338867188" posZ="58.452800750732" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (dyn_quarryrock02) (18)" model="1304" interior="0" dimension="0" posX="-2939.0854492188" posY="2703.4848632813" posZ="61.039134979248" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (dyn_quarryrock02) (19)" model="1304" interior="0" dimension="0" posX="-2939.3662109375" posY="2705.4174804688" posZ="60.1123046875" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (dyn_quarryrock02) (20)" model="1304" interior="0" dimension="0" posX="-2939.689453125" posY="2714.0734863281" posZ="58.334453582764" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (dyn_quarryrock02) (21)" model="1304" interior="0" dimension="0" posX="-2941.9943847656" posY="2726.6540527344" posZ="55.233562469482" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (dyn_quarryrock02) (22)" model="1304" interior="0" dimension="0" posX="-2943.8706054688" posY="2734.5405273438" posZ="54.784858703613" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (dyn_quarryrock02) (23)" model="1304" interior="0" dimension="0" posX="-2941.2634277344" posY="2751.4299316406" posZ="50.280628204346" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (dyn_quarryrock02) (24)" model="1304" interior="0" dimension="0" posX="-2946.5080566406" posY="2771.7009277344" posZ="48.80167388916" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (dyn_quarryrock02) (25)" model="1304" interior="0" dimension="0" posX="-2948.3972167969" posY="2778.4802246094" posZ="46.144565582275" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (dyn_quarryrock02) (26)" model="1304" interior="0" dimension="0" posX="-2952.8872070313" posY="2759.0893554688" posZ="49.426193237305" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (p69_rocks) (1)" model="10166" interior="0" dimension="0" posX="-2956.703125" posY="2807.2824707031" posZ="44.251556396484" rotX="0" rotY="0" rotZ="90" />
+    <object id="object (searock04) (18)" model="900" interior="0" dimension="0" posX="-2955.20703125" posY="2755.0654296875" posZ="47.577156066895" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (searock04) (19)" model="900" interior="0" dimension="0" posX="-2956.0849609375" posY="2745.2854003906" posZ="46.45970916748" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (searock04) (20)" model="900" interior="0" dimension="0" posX="-2945.8154296875" posY="2736.0778808594" posZ="47.721736907959" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (cunt_rockgp2_) (1)" model="17026" interior="0" dimension="0" posX="-2996.5964355469" posY="2862.4594726563" posZ="29.922122955322" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (rockbrkq) (31)" model="905" interior="0" dimension="0" posX="-2938.8835449219" posY="2773.734375" posZ="48.581344604492" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (searock04) (21)" model="900" interior="0" dimension="0" posX="-2923.4001464844" posY="2775.3483886719" posZ="50.103210449219" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (des_gravelpile05) (1)" model="16304" interior="0" dimension="0" posX="-2981.6264648438" posY="2865.1042480469" posZ="37.902019500732" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (des_gravelpile05) (2)" model="16304" interior="0" dimension="0" posX="-2990.388671875" posY="2870.8454589844" posZ="37.595531463623" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (des_gravelpile05) (3)" model="16304" interior="0" dimension="0" posX="-2982.720703125" posY="2874.0183105469" posZ="37.079864501953" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (cw_barnie) (1)" model="17061" interior="0" dimension="0" posX="-2982.3420410156" posY="2880.8303222656" posZ="40.193656921387" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (1)" model="1454" interior="0" dimension="0" posX="-2978.298828125" posY="2865.6743164063" posZ="39.983005523682" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (2)" model="1454" interior="0" dimension="0" posX="-2978.5178222656" posY="2865.4829101563" posZ="39.520374298096" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (4)" model="1454" interior="0" dimension="0" posX="-2977.5417480469" posY="2865.2312011719" posZ="40.416469573975" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (5)" model="1454" interior="0" dimension="0" posX="-2988.1459960938" posY="2864.4223632813" posZ="38.685932159424" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (6)" model="1454" interior="0" dimension="0" posX="-2986.8891601563" posY="2864.5654296875" posZ="38.570133209229" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (7)" model="1454" interior="0" dimension="0" posX="-2987.5163574219" posY="2865.1782226563" posZ="39.396492004395" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (8)" model="1454" interior="0" dimension="0" posX="-2987.9541015625" posY="2865.4372558594" posZ="39.447788238525" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (9)" model="1454" interior="0" dimension="0" posX="-2986.6799316406" posY="2865.9899902344" posZ="39.446495056152" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (10)" model="1454" interior="0" dimension="0" posX="-2978.9340820313" posY="2866.2446289063" posZ="39.498607635498" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (11)" model="1454" interior="0" dimension="0" posX="-2979.7744140625" posY="2866.4733886719" posZ="39.440532684326" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (12)" model="1454" interior="0" dimension="0" posX="-2980.7229003906" posY="2866.4582519531" posZ="39.39185333252" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (13)" model="1454" interior="0" dimension="0" posX="-2982.7006835938" posY="2866.150390625" posZ="39.377517700195" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (14)" model="1454" interior="0" dimension="0" posX="-2983.7790527344" posY="2866.2033691406" posZ="39.377738952637" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (15)" model="1454" interior="0" dimension="0" posX="-2985.1806640625" posY="2866.1979980469" posZ="39.32905960083" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (16)" model="1454" interior="0" dimension="0" posX="-2986.0261230469" posY="2865.3220214844" posZ="40.175300598145" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (17)" model="1454" interior="0" dimension="0" posX="-2987.0688476563" posY="2864.6594238281" posZ="40.997821807861" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (18)" model="1454" interior="0" dimension="0" posX="-2987.2065429688" posY="2863.8974609375" posZ="40.118381500244" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (19)" model="1454" interior="0" dimension="0" posX="-2986.0551757813" posY="2864.5134277344" posZ="39.618690490723" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (20)" model="1454" interior="0" dimension="0" posX="-2987.5405273438" posY="2862.9089355469" posZ="38.809684753418" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (21)" model="1454" interior="0" dimension="0" posX="-2986.3225097656" posY="2863.0368652344" posZ="39.375442504883" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (22)" model="1454" interior="0" dimension="0" posX="-2987.7048339844" posY="2862.7446289063" posZ="40.411014556885" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (23)" model="1454" interior="0" dimension="0" posX="-2988.2585449219" posY="2864.0769042969" posZ="41.881828308105" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (24)" model="1454" interior="0" dimension="0" posX="-2987.8630371094" posY="2861.3176269531" posZ="39.391803741455" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (25)" model="1454" interior="0" dimension="0" posX="-2988.3195800781" posY="2861.26953125" posZ="40.993133544922" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (26)" model="1454" interior="0" dimension="0" posX="-2988" posY="2862.666015625" posZ="42.012344360352" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (27)" model="1454" interior="0" dimension="0" posX="-2986.3725585938" posY="2863.5200195313" posZ="40.97677230835" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (28)" model="1454" interior="0" dimension="0" posX="-2985.0327148438" posY="2865.6818847656" posZ="40.930389404297" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (29)" model="1454" interior="0" dimension="0" posX="-2986.1833496094" posY="2865.6259765625" posZ="41.776630401611" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (30)" model="1454" interior="0" dimension="0" posX="-2977.0932617188" posY="2865.2028808594" posZ="42.017799377441" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (31)" model="1454" interior="0" dimension="0" posX="-2978.5805664063" posY="2865.2607421875" posZ="41.584335327148" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (32)" model="1454" interior="0" dimension="0" posX="-2977.8420410156" posY="2863.3466796875" posZ="39.912342071533" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (33)" model="1454" interior="0" dimension="0" posX="-2975.9912109375" posY="2864.2199707031" posZ="40.766033172607" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (34)" model="1454" interior="0" dimension="0" posX="-2977.3374023438" posY="2864.3923339844" posZ="40.738624572754" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (35)" model="1454" interior="0" dimension="0" posX="-2978.8327636719" posY="2864.3664550781" posZ="40.288005828857" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (36)" model="1454" interior="0" dimension="0" posX="-2976.6059570313" posY="2862.9340820313" posZ="39.878471374512" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (37)" model="1454" interior="0" dimension="0" posX="-2974.6999511719" posY="2863.0397949219" posZ="40.321269989014" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (38)" model="1454" interior="0" dimension="0" posX="-2975.6157226563" posY="2864.4348144531" posZ="42.367362976074" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (DYN_H_BALE2) (39)" model="1454" interior="0" dimension="0" posX="-2975.0942382813" posY="2863.6279296875" posZ="41.672584533691" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (TwrCrane_L_03) (1)" model="1395" interior="0" dimension="0" posX="-2989.5715332031" posY="2894.3337402344" posZ="-12.074983596802" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (TwrCrane_L_03) (2)" model="1395" interior="0" dimension="0" posX="-2976.5043945313" posY="2894.2937011719" posZ="-12.060607910156" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (vgsSairportland06) (1)" model="8171" interior="0" dimension="0" posX="-2990.8515625" posY="2962.322265625" posZ="14.869449615479" rotX="0" rotY="270" rotZ="0" />
+    <object id="object (vgsSairportland06) (2)" model="8171" interior="0" dimension="0" posX="-2975.3310546875" posY="2962.8935546875" posZ="14.962097167969" rotX="0" rotY="90" rotZ="0" />
+    <object id="object (vgsSairportland06) (3)" model="8171" interior="0" dimension="0" posX="-2975.619140625" posY="2962.927734375" posZ="14.898954391479" rotX="0" rotY="270" rotZ="0" />
+    <object id="object (vgsSairportland06) (4)" model="8171" interior="0" dimension="0" posX="-2990.6496582031" posY="2962.228515625" posZ="14.92140007019" rotX="0" rotY="90" rotZ="0" />
+    <object id="object (vgsSairportland06) (5)" model="8171" interior="0" dimension="0" posX="-2983.0539550781" posY="2896.2121582031" posZ="-36.80052947998" rotX="270" rotY="0" rotZ="0" />
+    <object id="object (vgsSairportland06) (6)" model="8171" interior="0" dimension="0" posX="-2983.0190429688" posY="2827.1518554688" posZ="32.326740264893" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (vgsSairportland06) (5)" model="8171" interior="0" dimension="0" posX="-2983.0439453125" posY="2940.7607421875" posZ="-20.649963378906" rotX="309.99572753906" rotY="0" rotZ="0" />
+    <object id="object (vgsSairportland06) (5)" model="8171" interior="0" dimension="0" posX="-2983.03125" posY="2972.03125" posZ="-33.375007629395" rotX="29.998168945313" rotY="0" rotZ="0" />
+    <object id="object (vgsSairportland06) (2)" model="8171" interior="0" dimension="0" posX="-2975.306640625" posY="3016.4597167969" posZ="14.997159957886" rotX="0" rotY="90" rotZ="0" />
+    <object id="object (vgsSairportland06) (1)" model="8171" interior="0" dimension="0" posX="-2990.7165527344" posY="2983.982421875" posZ="14.879957199097" rotX="0" rotY="90" rotZ="0" />
+    <object id="object (vgEhshade01_lvs) (4)" model="8838" interior="0" dimension="0" posX="-2982.8388671875" posY="3055.6259765625" posZ="0" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (vgEhshade01_lvs) (5)" model="8838" interior="0" dimension="0" posX="-2982.8295898438" posY="3060.7436523438" posZ="0" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (vgEhshade01_lvs) (6)" model="8838" interior="0" dimension="0" posX="-2982.82421875" posY="3065.8361816406" posZ="0" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (vgEhshade01_lvs) (7)" model="8838" interior="0" dimension="0" posX="-2982.8217773438" posY="3070.9494628906" posZ="0" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (vgEhshade01_lvs) (8)" model="8838" interior="0" dimension="0" posX="-2982.79296875" posY="3076.0451660156" posZ="0" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (vgEhshade01_lvs) (10)" model="8838" interior="0" dimension="0" posX="-2982.7858886719" posY="3081.1345214844" posZ="0" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (vgsSairportland06) (3)" model="8171" interior="0" dimension="0" posX="-2975.6086425781" posY="3014.5783691406" posZ="14.92395401001" rotX="0" rotY="270" rotZ="0" />
+    <object id="object (vgsSairportland06) (1)" model="8171" interior="0" dimension="0" posX="-2990.2351074219" posY="2984.0212402344" posZ="14.806018829346" rotX="0" rotY="270" rotZ="0" />
+    <object id="object (vgEhshade01_lvs) (11)" model="8838" interior="0" dimension="0" posX="-2982.7902832031" posY="3085.1904296875" posZ="4.0250005722046" rotX="90" rotY="0" rotZ="0" />
+    <object id="object (vgEhshade01_lvs) (12)" model="8838" interior="0" dimension="0" posX="-2982.7902832031" posY="3085.7678222656" posZ="8.6025238037109" rotX="75" rotY="0" rotZ="0" />
+    <object id="object (cs_roadbridge04) (25)" model="18450" interior="0" dimension="0" posX="-3039.2333984375" posY="3068.4052734375" posZ="4.6500034332275" rotX="0" rotY="5" rotZ="0" />
+    <object id="object (kb_planter_bush) (1)" model="638" interior="0" dimension="0" posX="-2999.1362304688" posY="3077.6645507813" posZ="2.2276320457458" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (kb_planter_bush) (2)" model="638" interior="0" dimension="0" posX="-2999.0102539063" posY="3082.2600097656" posZ="2.2276320457458" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (kb_planter_bush) (3)" model="638" interior="0" dimension="0" posX="-2999.0556640625" posY="3054.4753417969" posZ="2.2276320457458" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (kb_planter_bush) (4)" model="638" interior="0" dimension="0" posX="-2999.0397949219" posY="3058.9526367188" posZ="2.2276320457458" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (sjmcacti03) (1)" model="653" interior="0" dimension="0" posX="-2998.642578125" posY="3056.7622070313" posZ="1.5305981636047" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (sjmcacti03) (2)" model="653" interior="0" dimension="0" posX="-2998.7490234375" posY="3080.1838378906" posZ="1.5305981636047" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (cs_roadbridge04) (25)" model="18450" interior="0" dimension="0" posX="-3118.84375" posY="3068.3510742188" posZ="10.141260147095" rotX="0" rotY="3" rotZ="0" />
+    <object id="object (cs_roadbridge04) (25)" model="18450" interior="0" dimension="0" posX="-3198.51171875" posY="3068.3637695313" posZ="12.199996948242" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (vgEhshade01_lvs) (19)" model="8838" interior="0" dimension="0" posX="-3236.8337402344" posY="3068.2529296875" posZ="11.563148498535" rotX="350" rotY="0" rotZ="270" />
+    <object id="object (vgEhshade01_lvs) (20)" model="8838" interior="0" dimension="0" posX="-3234.478515625" posY="3068.2290039063" posZ="11.23814201355" rotX="355" rotY="0" rotZ="270" />
+    <object id="object (subwaygate) (1)" model="971" interior="0" dimension="0" posX="-2979.9653320313" posY="3081.3764648438" posZ="11.350502967834" rotX="270" rotY="0" rotZ="0" />
+    <object id="object (subwaygate) (2)" model="971" interior="0" dimension="0" posX="-2993.9831542969" posY="3089.578125" posZ="11.309541702271" rotX="270" rotY="0" rotZ="0" />
+    <object id="object (subwaygate) (3)" model="971" interior="0" dimension="0" posX="-2975.2221679688" posY="3088.3735351563" posZ="11.351917266846" rotX="270" rotY="0" rotZ="0" />
+    <object id="object (vgEhshade01_lvs) (22)" model="8838" interior="0" dimension="0" posX="-2995.7807617188" posY="3073.1318359375" posZ="-0.42499980330467" rotX="0" rotY="320" rotZ="90" />
+    <object id="object (subwaygate) (7)" model="971" interior="0" dimension="0" posX="-2970.8017578125" posY="3068.8342285156" posZ="5.1005158424377" rotX="270" rotY="0" rotZ="0" />
+    <object id="object (subwaygate) (8)" model="971" interior="0" dimension="0" posX="-2965.3376464844" posY="3059.5632324219" posZ="6.1170597076416" rotX="270" rotY="0" rotZ="0" />
+    <object id="object (subwaygate) (9)" model="971" interior="0" dimension="0" posX="-2950.4084472656" posY="3067.3083496094" posZ="9.4336080551147" rotX="270" rotY="0" rotZ="0" />
+    <object id="object (subwaygate) (10)" model="971" interior="0" dimension="0" posX="-2952.6359863281" posY="3057.9392089844" posZ="6.1501531600952" rotX="270" rotY="0" rotZ="0" />
+    <object id="object (vgEhshade01_lvs) (23)" model="8838" interior="0" dimension="0" posX="-2965.7404785156" posY="3067.8654785156" posZ="21.19118309021" rotX="0" rotY="50" rotZ="0" />
+    <spawnpoint id="spawnpoint (Sandking) (1)" vehicle="495" interior="0" posX="-2950.9816894531" posY="2394.7221679688" posZ="18.127555847168" rotX="0" rotY="0" rotZ="90" />
+    <spawnpoint id="spawnpoint (Sandking) (2)" vehicle="495" interior="0" posX="-2951.7082519531" posY="2397.9748535156" posZ="18.52725982666" rotX="0" rotY="0" rotZ="90" />
+    <spawnpoint id="spawnpoint (Sandking) (3)" vehicle="495" interior="0" posX="-2951.7900390625" posY="2401.1545410156" posZ="18.52725982666" rotX="0" rotY="0" rotZ="90" />
+    <spawnpoint id="spawnpoint (Sandking) (4)" vehicle="495" interior="0" posX="-2951.7297363281" posY="2404.6369628906" posZ="18.52725982666" rotX="0" rotY="0" rotZ="90" />
+    <spawnpoint id="spawnpoint (Sandking) (5)" vehicle="495" interior="0" posX="-2951.1870117188" posY="2411.4340820313" posZ="18.52725982666" rotX="0" rotY="0" rotZ="90" />
+    <spawnpoint id="spawnpoint (Sandking) (6)" vehicle="495" interior="0" posX="-2951.7807617188" posY="2421.0737304688" posZ="18.52725982666" rotX="0" rotY="0" rotZ="90" />
+    <spawnpoint id="spawnpoint (Sandking) (7)" vehicle="495" interior="0" posX="-2951.8723144531" posY="2424.6723632813" posZ="18.52725982666" rotX="0" rotY="0" rotZ="90" />
+    <spawnpoint id="spawnpoint (Sandking) (8)" vehicle="495" interior="0" posX="-2951.9677734375" posY="2428.4208984375" posZ="18.52725982666" rotX="0" rotY="0" rotZ="90" />
+    <spawnpoint id="spawnpoint (Sandking) (9)" vehicle="495" interior="0" posX="-2952.0632324219" posY="2432.1694335938" posZ="18.52725982666" rotX="0" rotY="0" rotZ="90" />
+    <spawnpoint id="spawnpoint (Sandking) (10)" vehicle="495" interior="0" posX="-2955.5686035156" posY="2416.6513671875" posZ="18.44913482666" rotX="0" rotY="0" rotZ="90" />
+    <spawnpoint id="spawnpoint (Sandking) (11)" vehicle="495" interior="0" posX="-2955.6557617188" posY="2408.26171875" posZ="18.44913482666" rotX="0" rotY="0" rotZ="90" />
+    <spawnpoint id="spawnpoint (Sandking) (12)" vehicle="495" interior="0" posX="-2957.8830566406" posY="2404.572265625" posZ="18.52725982666" rotX="0" rotY="0" rotZ="90" />
+    <spawnpoint id="spawnpoint (Sandking) (13)" vehicle="495" interior="0" posX="-2958.306640625" posY="2421.0729980469" posZ="18.531429290771" rotX="0" rotY="0" rotZ="90" />
+    <spawnpoint id="spawnpoint (Sandking) (14)" vehicle="495" interior="0" posX="-2957.384765625" posY="2411.8896484375" posZ="18.44913482666" rotX="0" rotY="0" rotZ="90" />
+    <spawnpoint id="spawnpoint (Sandking) (15)" vehicle="495" interior="0" posX="-2961.3432617188" posY="2416.8432617188" posZ="18.44913482666" rotX="0" rotY="0" rotZ="90" />
+    <spawnpoint id="spawnpoint (Sandking) (16)" vehicle="495" interior="0" posX="-2961.6345214844" posY="2408.2321777344" posZ="18.44913482666" rotX="0" rotY="0" rotZ="90" />
+    <spawnpoint id="spawnpoint (Sandking) (17)" vehicle="495" interior="0" posX="-2957.6694335938" posY="2394.9226074219" posZ="18.52725982666" rotX="0" rotY="0" rotZ="90" />
+    <spawnpoint id="spawnpoint (Sandking) (18)" vehicle="495" interior="0" posX="-2957.8303222656" posY="2398.5119628906" posZ="18.52725982666" rotX="0" rotY="0" rotZ="90" />
+    <spawnpoint id="spawnpoint (Sandking) (19)" vehicle="495" interior="0" posX="-2957.830078125" posY="2428.6611328125" posZ="18.52725982666" rotX="0" rotY="0" rotZ="90" />
+    <spawnpoint id="spawnpoint (Sandking) (20)" vehicle="495" interior="0" posX="-2957.830078125" posY="2432.2607421875" posZ="18.52725982666" rotX="0" rotY="0" rotZ="90" />
+    <racepickup id="racepickup (NRG-500) (1)" type="nitro" vehicle="522" respawn="0" interior="0" posX="-3023.564453125" posY="2413.7043457031" posZ="27.405473709106" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (NRG-500) (2)" type="repair" vehicle="522" respawn="0" interior="0" posX="-2980.6994628906" posY="2413.1801757813" posZ="30.792079925537" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (Infernus) (1)" type="vehiclechange" vehicle="411" respawn="0" interior="0" posX="-2980.6752929688" posY="2413.1550292969" posZ="30.792695999146" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (NRG-500) (3)" type="nitro" vehicle="522" respawn="0" interior="0" posX="-3030.005859375" posY="2413.7194824219" posZ="27.678983688354" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (NRG-500) (4)" type="nitro" vehicle="522" respawn="0" interior="0" posX="-3149.9689941406" posY="2413.802734375" posZ="51.479305267334" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (NRG-500) (5)" type="nitro" vehicle="522" respawn="0" interior="0" posX="-3381.4477539063" posY="2443.0900878906" posZ="86.863800048828" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (NRG-500) (6)" type="repair" vehicle="522" respawn="0" interior="0" posX="-3381.4794921875" posY="2446.7744140625" posZ="86.863800048828" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (NRG-500) (7)" type="nitro" vehicle="522" respawn="0" interior="0" posX="-3381.4851074219" posY="2450.6166992188" posZ="86.863800048828" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (NRG-500) (8)" type="repair" vehicle="522" respawn="0" interior="0" posX="-3381.4235839844" posY="2454.4340820313" posZ="86.863800048828" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (Sandking) (1)" type="vehiclechange" vehicle="495" respawn="0" interior="0" posX="-2977.1711425781" posY="2602.2199707031" posZ="9.8772792816162" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (NRG-500) (9)" type="nitro" vehicle="522" respawn="0" interior="0" posX="-2977.1970214844" posY="2602.2243652344" posZ="9.8727016448975" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (NRG-500) (10)" type="repair" vehicle="522" respawn="0" interior="0" posX="-2977.1940917969" posY="2602.2038574219" posZ="9.8732109069824" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (Jetmax) (1)" type="vehiclechange" vehicle="493" respawn="0" interior="0" posX="-2983.1533203125" posY="2924.8154296875" posZ="30.849998474121" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (BMX) (1)" type="vehiclechange" vehicle="481" respawn="0" interior="0" posX="-2976.6303710938" posY="3080.6560058594" posZ="2.1798238754272" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (BMX) (2)" type="vehiclechange" vehicle="481" respawn="0" interior="0" posX="-2979.6164550781" posY="3080.4443359375" posZ="2.1798238754272" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (BMX) (3)" type="vehiclechange" vehicle="481" respawn="0" interior="0" posX="-2982.798828125" posY="3080.4946289063" posZ="2.1798238754272" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (BMX) (4)" type="vehiclechange" vehicle="481" respawn="0" interior="0" posX="-2986.0876464844" posY="3080.8598632813" posZ="2.1798238754272" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (BMX) (5)" type="vehiclechange" vehicle="481" respawn="0" interior="0" posX="-2990.8095703125" posY="3081.166015625" posZ="2.1798238754272" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (BMX) (6)" type="vehiclechange" vehicle="481" respawn="0" interior="0" posX="-2992.7495117188" posY="3081.1657714844" posZ="2.1798238754272" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (BMX) (7)" type="vehiclechange" vehicle="481" respawn="0" interior="0" posX="-2987.9497070313" posY="3081.1940917969" posZ="2.1798238754272" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (BMX) (8)" type="vehiclechange" vehicle="481" respawn="0" interior="0" posX="-2992.2739257813" posY="3078.0200195313" posZ="2.1798238754272" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (BMX) (9)" type="vehiclechange" vehicle="481" respawn="0" interior="0" posX="-2990.2575683594" posY="3078.0031738281" posZ="2.1798238754272" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (BMX) (10)" type="vehiclechange" vehicle="481" respawn="0" interior="0" posX="-2988.2924804688" posY="3078.2065429688" posZ="2.1798238754272" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (BMX) (11)" type="vehiclechange" vehicle="481" respawn="0" interior="0" posX="-2985.2724609375" posY="3078.3889160156" posZ="2.1798238754272" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (BMX) (12)" type="vehiclechange" vehicle="481" respawn="0" interior="0" posX="-2981.2114257813" posY="3078.4987792969" posZ="2.1798238754272" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (BMX) (13)" type="vehiclechange" vehicle="481" respawn="0" interior="0" posX="-2977.2575683594" posY="3078.240234375" posZ="2.1798238754272" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (BMX) (14)" type="vehiclechange" vehicle="481" respawn="0" interior="0" posX="-2976.4560546875" posY="3083.1372070313" posZ="2.1798238754272" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (BMX) (15)" type="vehiclechange" vehicle="481" respawn="0" interior="0" posX="-2980.9367675781" posY="3082.5705566406" posZ="2.1798238754272" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (BMX) (16)" type="vehiclechange" vehicle="481" respawn="0" interior="0" posX="-2984.5483398438" posY="3082.7524414063" posZ="2.1798238754272" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (BMX) (17)" type="vehiclechange" vehicle="481" respawn="0" interior="0" posX="-2989.498046875" posY="3082.7858886719" posZ="2.1798238754272" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (BMX) (18)" type="vehiclechange" vehicle="481" respawn="0" interior="0" posX="-2986.7124023438" posY="3077.7817382813" posZ="2.1798238754272" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (BMX) (19)" type="vehiclechange" vehicle="481" respawn="0" interior="0" posX="-2982.9660644531" posY="3077.6127929688" posZ="2.1798238754272" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (BMX) (20)" type="vehiclechange" vehicle="481" respawn="0" interior="0" posX="-2979.2197265625" posY="3077.4438476563" posZ="2.1798238754272" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (Infernus) (2)" type="vehiclechange" vehicle="411" respawn="0" interior="0" posX="-2976.1171875" posY="3067.8786621094" posZ="35.748371124268" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (NRG-500) (11)" type="nitro" vehicle="522" respawn="0" interior="0" posX="-2977.3435058594" posY="3068.2507324219" posZ="2.1798238754272" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (Hunter) (1)" type="vehiclechange" vehicle="425" respawn="0" interior="0" posX="-3300.8466796875" posY="3068.18359375" posZ="14.652194976807" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (NRG-500) (12)" type="repair" vehicle="522" respawn="0" interior="0" posX="-2991.74609375" posY="3079.9282226563" posZ="2.1798238754272" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (NRG-500) (13)" type="repair" vehicle="522" respawn="0" interior="0" posX="-2989.4624023438" posY="3080.1506347656" posZ="2.1798238754272" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (NRG-500) (14)" type="repair" vehicle="522" respawn="0" interior="0" posX="-2984.3666992188" posY="3080.18359375" posZ="2.1798238754272" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (NRG-500) (15)" type="repair" vehicle="522" respawn="0" interior="0" posX="-2981.3559570313" posY="3080.8234863281" posZ="2.1798238754272" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (NRG-500) (16)" type="repair" vehicle="522" respawn="0" interior="0" posX="-2978.1879882813" posY="3080.8518066406" posZ="2.1798238754272" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (NRG-500) (17)" type="repair" vehicle="522" respawn="0" interior="0" posX="-2977.2944335938" posY="3068.2819824219" posZ="2.1798238754272" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (Jetmax) (1)" type="vehiclechange" vehicle="493" respawn="0" interior="0" posX="-2983.0185546875" posY="2923.1027832031" posZ="30.604232788086" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (Jetmax) (1)" type="vehiclechange" vehicle="493" respawn="0" interior="0" posX="-2983.0178222656" posY="2920.5837402344" posZ="30.604232788086" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (Jetmax) (1)" type="vehiclechange" vehicle="493" respawn="0" interior="0" posX="-2982.9897460938" posY="2918.7224121094" posZ="30.680011749268" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (Jetmax) (1)" type="vehiclechange" vehicle="493" respawn="0" interior="0" posX="-2983.03125" posY="2916.8984375" posZ="30.754995346069" rotX="0" rotY="0" rotZ="0" />
+    <racepickup id="racepickup (NRG-500) (18)" type="nitro" vehicle="522" respawn="0" interior="0" posX="-2981.8000488281" posY="2869.2060546875" posZ="43.521339416504" rotX="0" rotY="0" rotZ="0" />
+    <object id="object (vgsSairportland06) (5)" model="8171" interior="0" dimension="0" posX="-2983.0007324219" posY="3091.7946777344" posZ="-33.374977111816" rotX="330" rotY="0" rotZ="0" />
+    <object id="object (vgEhshade01_lvs) (4)" model="8838" interior="0" dimension="0" posX="-2982.8264160156" posY="3054.6284179688" posZ="-1.0999995470047" rotX="90" rotY="0" rotZ="0" />
+</map>

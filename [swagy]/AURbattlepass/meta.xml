@@ -1,0 +1,11 @@
+<meta>
+
+	<script src="server.lua" type="server"/>
+	<script src="client.lua" type="client"/>
+
+	<file src="images/player.png"/>
+	<file src="images/items.png"/>
+	<file src="images/pass.png"/>
+
+	<file src="files/font.ttf"/>
+</meta>

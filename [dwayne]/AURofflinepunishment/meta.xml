@@ -1,0 +1,5 @@
+<meta>
+    <info type="script" version="1.0.0" author="" name="offline punish" />
+	<script src="client.luac" type="client" />
+	<script src="server.lua" type="server" />
+</meta>

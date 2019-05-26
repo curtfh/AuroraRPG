@@ -1,0 +1,4 @@
+<meta>
+<info author="Nicolas" type="script" name="Change car Plate" version="1.0.0" />
+	<script src="plate.lua" type="server" />
+</meta>

@@ -1,0 +1,6 @@
+<meta>
+    <info author="AUR Scripting Team" type="script" name="groups" description="Groups system" />
+	
+	<script src="client.lua" type="client" />
+	<script src="server.lua" type="server" />
+</meta>

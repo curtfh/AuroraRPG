@@ -1,0 +1,6 @@
+<meta>
+	<info author="Funstein" version="1.2.2" name="glauncher" description="Grenade launcher script by Funstein." type="script" />
+
+	<script src="server.lua" type="server" />
+	<script src="client.lua" type="client" />
+</meta>

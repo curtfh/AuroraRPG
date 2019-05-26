@@ -1,0 +1,6 @@
+<meta>
+	<script src="server.lua" type="server" />
+	<script src="sbserver.lua" type="server" />
+	<script src="client.lua" type="client" />
+	<script src="sbclient.lua" type="client" />
+</meta>

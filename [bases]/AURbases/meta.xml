@@ -1,0 +1,7 @@
+<meta>
+    <info author="Epozide" version="3.0" type="script" />
+
+	<script src="client.luac" type="client" />
+
+	<export function="getBasesTable" type="client" />
+</meta>

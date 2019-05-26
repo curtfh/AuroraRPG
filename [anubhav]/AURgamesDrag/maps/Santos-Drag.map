@@ -1,0 +1,5 @@
+<map>
+	<theMap name="Santos-Drag" author="Unknown"></theMap>
+    <spawnpoint id="spawnpoint (Sabre) (1)" vehicle="475" posX="2715.3" posY="-1611" posZ="12.5" rotX="0" rotY="0" rotZ="90"></spawnpoint>
+    <checkpoint id="checkpoint () (1)" type="checkpoint" color="#00F9" size="15" posX="2340.5" posY="-1609.5" posZ="6.6" rotX="0" rotY="0" rotZ="0"></checkpoint>
+</map>

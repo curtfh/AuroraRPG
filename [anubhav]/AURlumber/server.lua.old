@@ -1,0 +1,19 @@
+
+
+
+
+--[[function pedWasted(_,killer)
+	if killer and isElement(killer) and getElementData(killer,"Occupation") == "Lumberjack" then
+		exports.NGCdxmsg:createNewDxMessage(killer,"Cut down a tree : Paid $1,500 & 1 score",0,255,0)
+		exports.CSGranks:addStat(killer,1)
+		exports.CSGscore:givePlayerScore(killer,1)
+		exports.AURpayments:addMoney(killer,1500,"Custom","Lumberjack",0,"AURlumber")
+]]
+
+addEvent("payLumberJack",true)
+addEventHandler("payLumberJack",root,function()
+	exports.NGCdxmsg:createNewDxMessage(source,"Cut down a tree : Paid $500 & 0.5 score",0,255,0)
+	exports.CSGranks:addStat(source,1)
+	exports.CSGscore:givePlayerScore(source,0.5)
+	exports.AURpayments:addMoney(source,500,"Custom","Misc",0,"AURlumber")
+end)

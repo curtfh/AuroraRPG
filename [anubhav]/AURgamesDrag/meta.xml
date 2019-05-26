@@ -1,0 +1,21 @@
+<meta>
+	<script src="maps.lua" type="server" />
+	<script src="drag.lua" type="server" />
+	<script src="client.luac" type="client" protected="true"/>
+	<file src="images/go.png" type="client" />
+	<file src="images/1.png" type="client" />
+	<file src="images/2.png" type="client" />
+	<file src="images/3.png" type="client" />
+	<file src="img/1.png" />
+	<file src="img/2.png" />
+	<file src="img/rpm.png" />
+	<file src="img/needle.png" />
+	<file src="img/car.png" />
+	<file src="img/nitro.png" />
+	<file src="img/shiftYellow.png" />
+	<file src="img/shiftGreen.png" />
+	<file src="img/Prototype.ttf"/>
+	<file src="img/lcd.ttf"/>
+	<export function="isPlayerInDrag" type="server" />
+	<min_mta_version server="1.3.9-0.00000" client="1.3.9-0.00000"/>
+</meta>

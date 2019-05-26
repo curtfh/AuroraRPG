@@ -1,0 +1,4 @@
+<meta>
+	<script src="client.lua" type="client" />
+	<file src="ican.mp3" />
+</meta>

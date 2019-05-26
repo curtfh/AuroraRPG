@@ -1,0 +1,8 @@
+<meta>
+    <info author="AUR Scripting team" type="script" name="progressbar" description="Progress bar resource" />
+
+	<script src="client.lua" type="client" />
+	<script src="server.lua" type="server" />
+	
+	<export function="drawProgressBar" />
+</meta>

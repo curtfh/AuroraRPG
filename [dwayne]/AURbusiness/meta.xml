@@ -1,0 +1,6 @@
+<meta>
+    <info author="" version="1.5" type="script" name=""/>
+    <script src="client.luac" type="client" />
+    <script src="server.lua" type="server" />
+	<export function="aclAllowed" type="server" />
+</meta>

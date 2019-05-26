@@ -1,0 +1,4 @@
+<meta>
+	<script src="interact.slua" type="server" />
+	<script src="client.luac" type="client" />
+</meta>

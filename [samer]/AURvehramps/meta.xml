@@ -1,0 +1,7 @@
+<meta>
+    <info author="AUR Scripting Team" type="script" name="score" description="Score system" />
+	
+	<script src="server.lua" type="server" />
+	<script src="client.luac" type="client" />
+
+</meta>

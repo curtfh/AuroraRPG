@@ -1,0 +1,16 @@
+<meta>
+
+	<script src="client.luac" type="client" />
+	<script src="blips.luac" type="client" />
+	<script src="server.lua" type="server" />
+	<file src="heroine.png" />
+	<file src="ritalin.png" />
+	<file src="cocaine.png" />
+	<file src="ecstacy.png" />
+	<file src="dot1.png" />
+	<file src="dot2.png" />
+	<file src="plus.png" />
+	<file src="logo.png" />
+	<file src="background.png" />
+
+</meta>

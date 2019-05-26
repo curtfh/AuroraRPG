@@ -1,0 +1,8 @@
+<meta>
+    <info author="" name="Trucking" version="1" type="script"/>
+
+    <script src="server.lua"/>
+
+    <script src="client.luac" type="client"/>
+    <script src="license.luac" type="client"/>
+</meta>

@@ -1,0 +1,57 @@
+<mod>
+
+
+	<group name="Misc">
+		<mod model="8" name="Katana" clip="0" pricePerClip="10000" weaponCost="5000" imgPath = "/images/8.png" />
+		<mod model="200" name="Laser" clip="0" pricePerClip="5000" weaponCost="5000" imgPath = "/images/laser.png" />
+		<mod model="2" name="Golf club" clip="0" pricePerClip="400" weaponCost="400" imgPath = "/images/2.png" />
+		<mod model="4" name="Knife" clip="0" pricePerClip="4000" weaponCost="4000" imgPath = "/images/4.png" />
+		<mod model="5" name="Bat" clip="0" pricePerClip="3000" weaponCost="3000" imgPath = "/images/5.png" />
+		<mod model="7" name="Poolstick" clip="0" pricePerClip="500" weaponCost="500" imgPath = "/images/7.png" />
+		<mod model="10" name="Dildo" clip="0" pricePerClip="100" weaponCost="100" imgPath = "/images/10.png" />
+		<mod model="12" name="Vibrator" clip="0" pricePerClip="300" weaponCost="300" imgPath = "/images/12.png" />
+		<mod model="15" name="Cane" clip="0" pricePerClip="600" weaponCost="600" imgPath = "/images/15.png" />
+	</group>
+
+
+	<group name="Thrown">
+		<mod model="17" name="Teargas" clip="1" pricePerClip="2500" weaponCost="3000" imgPath = "/images/17.png" />
+		<mod model="16" name="Grenade" clip="1" pricePerClip="2500" weaponCost="3000" imgPath = "/images/16.png" />
+		<mod model="39" name="Satchel" clip="1" pricePerClip="3000" weaponCost="4000" imgPath = "/images/39.png" />
+	</group>
+
+
+	<group name="Rifles">
+		<mod model="33" name="Country rifle" clip="3" pricePerClip="750" weaponCost="50000" imgPath = "/images/33.png" />
+		<mod model="34" name="Sniper rifle" clip="5" pricePerClip="1000" weaponCost="80000" imgPath = "/images/34.png" />
+	</group>
+
+	<group name="Assault">
+		<mod model="30" name="AK-47" clip="30" pricePerClip="550" weaponCost="60000" imgPath = "/images/30.png" />
+		<mod model="31" name="M4" clip="50" pricePerClip="600" weaponCost="75000" imgPath = "/images/31.png" />
+	</group>
+
+	<group name="Micro and SMG">
+		<mod model="28" name="UZI" clip="50" pricePerClip="450" weaponCost="40000" imgPath = "/images/28.png" />
+		<mod model="32" name="Tec-9" clip="50" pricePerClip="450" weaponCost="40000" imgPath = "/images/32.png" />
+		<mod model="29" name="Mp5" clip="30" pricePerClip="500" weaponCost="50000" imgPath = "/images/29.png" />
+	</group>
+
+	<group name="Shotguns">
+		<mod model="25" name="Shotgun" clip="1" pricePerClip="300" weaponCost="25000" imgPath = "/images/25.png" />
+		<mod model="26" name="Sawn-off" clip="2" pricePerClip="620" weaponCost="30000" imgPath = "/images/26.png" />
+		<mod model="27" name="Combat shotgun/Spas-7" clip="7" pricePerClip="510" weaponCost="40000" imgPath = "/images/27.png" />
+	</group>
+
+	<group name="Pistols">
+		<mod model="22" name="Colt" clip="17" pricePerClip="165" weaponCost="15000" imgPath = "/images/22.png" />
+		<mod model="23" name="Silenced/Tazer" clip="17" pricePerClip="165" weaponCost="20000" imgPath = "/images/23.png"/>
+		<mod model="24" name="Deagle" clip="7" pricePerClip="395" weaponCost="35000" imgPath = "/images/24.png"/>
+	</group>
+
+	<group name="Heavy Weapons">
+		<mod model="36" name="Javelin" clip="1" pricePerClip="35000" weaponCost="2000000" imgPath = "/images/36.png" />
+		<mod model="35" name="RPG" clip="1" pricePerClip="10000" weaponCost="1000000" imgPath = "/images/35.png" />
+		<mod model="38" name="Minigun" clip="500" pricePerClip="50000" weaponCost="10000000" imgPath = "/images/38.png" />
+	</group>
+</mod>

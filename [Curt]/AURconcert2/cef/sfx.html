@@ -1,0 +1,417 @@
+<style>
+#videoConcert {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+</style>
+
+<video-js id="videoConcert" class='video-js' controls preload='auto' width="100%" height="100%">
+  <source src="http://mta/AURparty-assets/output.ogv"></source>
+</video-js>
+
+<script src="jquery-3.3.1.min.js"></script>
+<script src="video.js"></script>
+<script>
+var player
+$(document).ready(function() {
+	function getRandomArbitrary(min, max) {
+	  return Math.random() * (max - min) + min;
+	}
+    mta.triggerEvent("AURconcert2.lightaffects", "all_off");
+    player = videojs('videoConcert');
+	
+	videojs('videoConcert').ready(function () {
+		mta.triggerEvent("AURconcert2.readyMusic");
+		console.log("Ready Player");
+  	});
+});
+
+function startSquence () {
+	setInterval(function () {
+		console.log(player.currentTime());
+		var theTime = player.currentTime();
+
+		if (theTime >= 612 & theTime <= 612.5) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_fadein");
+			mta.triggerEvent("AURconcert2.lightaffects", "danceped", "eagle");
+		} else if (theTime >= 619 & theTime <= 619.5) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_fadeout");
+		} else if (theTime >= 622.5 & theTime <= 623) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_fadein");
+		} else if (theTime >= 625.5 & theTime <= 626) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_fadeout");
+			mta.triggerEvent("AURconcert2.lightaffects", "danceped", "shout_01");
+		} else if (theTime >= 627.5 & theTime <= 628) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_fadein");
+		} else if (theTime >= 629.3 & theTime <= 630) {
+			mta.triggerEvent("AURconcert2.lightaffects", "eachlights_random");
+		} else if (theTime >= 630.1 & theTime <= 630.5) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+		} else if (theTime >= 630.6 & theTime <= 631.74) {
+			mta.triggerEvent("AURconcert2.lightaffects", "eachlights_random");
+		} else if (theTime >= 634 & theTime <= 634.5) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_fadein");
+		} else if (theTime >= 639 & theTime <= 639.5) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+			mta.triggerEvent("AURconcert2.lightaffects", "danceped", "starpower");
+		} else if (theTime >= 666 & theTime <= 666.5) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_fadein");
+			mta.triggerEvent("AURconcert2.lightaffects", "danceped", "infinitedab");
+		} else if (theTime >= 668 & theTime <= 668.5) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_fadeout");
+		} else if (theTime >= 672 & theTime <= 672.5) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_fadein");
+		} else if (theTime >= 675 & theTime <= 675.5) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_fadeout");
+		} else if (theTime >= 678.75 & theTime <= 679.3) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+		} else if (theTime >= 691.5 & theTime <= 692) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_off");
+		} else if (theTime >= 692.2 & theTime <= 692.7) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_on");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+		} else if (theTime >= 705.2 & theTime <= 705.7) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+			mta.triggerEvent("AURconcert2.lightaffects", "explode");
+			mta.triggerEvent("AURconcert2.lightaffects", "danceped", "starpower");
+		} else if (theTime >= 731.8 & theTime <= 732.3) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+			mta.triggerEvent("AURconcert2.lightaffects", "danceped", "takethel");
+		} else if (theTime >= 744.3 & theTime <= 744.8) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+		} else if (theTime >= 745.2 & theTime <= 745.7) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+			mta.triggerEvent("AURconcert2.lightaffects", "danceped", "infinitedab");
+		} else if (theTime >= 756.9 & theTime <= 757.4) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_off");
+		} else if (theTime >= 758.4 & theTime <= 758.9) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+			mta.triggerEvent("AURconcert2.lightaffects", "explode");
+			mta.triggerEvent("AURconcert2.lightaffects", "danceped", "electroshuffle");
+		} else if (theTime >= 771.4 & theTime <= 771.9) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+		} else if (theTime >= 781.4 & theTime <= 781.9) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_off");
+		} else if (theTime >= 782 & theTime <= 782.5) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "turning_light_right");
+		} else if (theTime >= 785.4 & theTime <= 785.9) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+			mta.triggerEvent("AURconcert2.lightaffects", "danceped", "infinitedab");
+		} else if (theTime >= 796.4 & theTime <= 796.9) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_off");
+			mta.triggerEvent("AURconcert2.lightaffects", "danceped", "cometome");
+		} else if (theTime >= 800.4 & theTime <= 800.9) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+			mta.triggerEvent("AURconcert2.lightaffects", "explode");
+		} else if (theTime >= 813.8 & theTime <= 814.3) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+		} else if (theTime >= 823.6 & theTime <= 824.1) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_off");
+		} else if (theTime >= 829.5 & theTime <= 830) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_fadein");
+		} else if (theTime >= 838.8 & theTime <= 839.3) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+			mta.triggerEvent("AURconcert2.lightaffects", "danceped", "electroshuffle");
+		} else if (theTime >= 892.5 & theTime <= 893) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+		} else if (theTime >= 899.2 & theTime <= 899.7) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+		} else if (theTime >= 902.2 & theTime <= 902.7) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+		} else if (theTime >= 905.3 & theTime <= 905.8) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+			mta.triggerEvent("AURconcert2.lightaffects", "explode");
+		} else if (theTime >= 932.3 & theTime <= 932.8) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+		} else if (theTime >= 938.7 & theTime <= 939.2) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+			mta.triggerEvent("AURconcert2.lightaffects", "danceped", "infinitedab");
+		} else if (theTime >= 943.8 & theTime <= 944.4) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+			mta.triggerEvent("AURconcert2.lightaffects", "danceped", "starpower");
+		} else if (theTime >= 969.8 & theTime <= 970.3) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_off");
+		} else if (theTime >= 984.2 & theTime <= 984.7) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+			mta.triggerEvent("AURconcert2.lightaffects", "danceped", "eagle");
+		} else if (theTime >= 1074.1 & theTime <= 1074.6) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+			mta.triggerEvent("AURconcert2.lightaffects", "danceped", "infinitedab");
+		} else if (theTime >= 1084.1 & theTime <= 1084.6) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_off");
+		} else if (theTime >= 1086.7 & theTime <= 1087.2) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+			mta.triggerEvent("AURconcert2.lightaffects", "danceped", "electroshuffle");
+		} else if (theTime >= 1113.4 & theTime <= 1113.8) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+		} else if (theTime >= 1139 & theTime <= 1139.5) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+		} else if (theTime >= 1140.1 & theTime <= 1140.6) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+		} else if (theTime >= 1151.8 & theTime <= 1152.3) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+		} else if (theTime >= 1153.1 & theTime <= 1153.6) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+			mta.triggerEvent("AURconcert2.lightaffects", "explode");
+			mta.triggerEvent("AURconcert2.lightaffects", "firework");
+			mta.triggerEvent("AURconcert2.lightaffects", "fly");
+		} else if (theTime >= 1153.5 & theTime <= 1179.4) {
+			mta.triggerEvent("AURconcert2.lightaffects", "fly");
+		} else if (theTime >= 1179.5 & theTime <= 1180) {
+			mta.triggerEvent("AURconcert2.lightaffects", "stopFly");
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "danceped", "starpower");
+		} else if (theTime >= 1180 & theTime <= 1206) {
+			mta.triggerEvent("AURconcert2.lightaffects", "eachlights_random");
+		} else if (theTime >= 1206.2 & theTime <= 1206.7) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+		} else if (theTime >= 1212.8 & theTime <= 1213.3) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+		} else if (theTime >= 1217.7 & theTime <= 1218.2) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+		} else if (theTime >= 1219.3 & theTime <= 1219.8) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+			mta.triggerEvent("AURconcert2.lightaffects", "explode");
+			mta.triggerEvent("AURconcert2.lightaffects", "firework");
+			mta.triggerEvent("AURconcert2.lightaffects", "danceped", "electroshuffle");
+		} else if (theTime >= 1246.0 & theTime <= 1246.5) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+		} else if (theTime >= 1272.0 & theTime <= 1272.5) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+		} else if (theTime >= 1283.7 & theTime <= 1284.2) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_off");
+		} else if (theTime >= 1285.5 & theTime <= 1286.0) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_on");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+			mta.triggerEvent("AURconcert2.lightaffects", "explode");
+			mta.triggerEvent("AURconcert2.lightaffects", "danceped", "infinitedab");
+		} else if (theTime >= 1312.5 & theTime <= 1313.0) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_fadeout");
+		} else if (theTime >= 1327.0 & theTime <= 1327.5) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+		} else if (theTime >= 1352.0 & theTime <= 1352.5) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_off");
+		} else if (theTime >= 1353.3 & theTime <= 1379.8) {
+			mta.triggerEvent("AURconcert2.lightaffects", "eachlights_random");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+			mta.triggerEvent("AURconcert2.lightaffects", "explode");
+			mta.triggerEvent("AURconcert2.lightaffects", "firework");
+		} else if (theTime >= 1380.0 & theTime <= 1406.3) {
+			mta.triggerEvent("AURconcert2.lightaffects", "eachlights_random");
+		} else if (theTime >= 1406.3 & theTime <= 1406.8) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+		} else if (theTime >= 1412.7 & theTime <= 1417.9) {
+			mta.triggerEvent("AURconcert2.lightaffects", "eachlights_random");
+		} else if (theTime >= 1417.9 & theTime <= 1418.4) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_off");
+		} else if (theTime >= 1419.6 & theTime <= 1420.1) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+		} else if (theTime >= 1446.2 & theTime <= 1446.7) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+		} else if (theTime >= 1472.7 & theTime <= 1499.1) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+			mta.triggerEvent("AURconcert2.lightaffects", "explode");
+			mta.triggerEvent("AURconcert2.lightaffects", "firework");
+			mta.triggerEvent("AURconcert2.lightaffects", "danceped", "electroshuffle");
+		} else if (theTime >= 1499.1 & theTime <= 1499.6) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+		} else if (theTime >= 1512.4 & theTime <= 1525.5) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+			mta.triggerEvent("AURconcert2.lightaffects", "explode");
+			mta.triggerEvent("AURconcert2.lightaffects", "firework");
+		} else if (theTime >= 1525.5 & theTime <= 1526.0) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+		} else if (theTime >= 1537.1 & theTime <= 1537.6) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_fadeout");
+		} else if (theTime >= 1538.7 & theTime <= 1539.2) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+			mta.triggerEvent("AURconcert2.lightaffects", "explode");
+			mta.triggerEvent("AURconcert2.lightaffects", "firework");
+		} else if (theTime >= 1565.1 & theTime <= 1565.6) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+		} else if (theTime >= 1578.4 & theTime <= 1578.9) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_fadeout");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+			mta.triggerEvent("AURconcert2.lightaffects", "danceped", "infinitedab");
+		} else if (theTime >= 1591.7 & theTime <= 1592.2) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_fadein");
+		} else if (theTime >= 1598.4 & theTime <= 1598.9) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+		} else if (theTime >= 1603.3 & theTime <= 1503.8) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_off");
+		} else if (theTime >= 1605.0 & theTime <= 1605.5) {
+			mta.triggerEvent("AURconcert2.lightaffects", "startDrug");
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+			mta.triggerEvent("AURconcert2.lightaffects", "danceped", "takethel");
+		} else if (theTime >= 1645.0 & theTime <= 1645.5) {
+			mta.triggerEvent("AURconcert2.lightaffects", "stopDrug");
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_fadeout");
+		} else if (theTime >= 1657.9 & theTime <= 1658.4) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+			mta.triggerEvent("AURconcert2.lightaffects", "eachlights_random");
+		} else if (theTime >= 1669.5 & theTime <= 1670.0) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_off");
+		} else if (theTime >= 1671.1 & theTime <= 1671.6) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+			mta.triggerEvent("AURconcert2.lightaffects", "explode");
+			mta.triggerEvent("AURconcert2.lightaffects", "danceped", "electroshuffle");
+		} else if (theTime >= 1697.7 & theTime <= 1698.2) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_off");
+		} else if (theTime >= 1712.1 & theTime <= 1712.6) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+		} else if (theTime >= 1733.1 & theTime <= 1733.6) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_off");
+		} else if (theTime >= 1737.3 & theTime <= 1763.7) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+			mta.triggerEvent("AURconcert2.lightaffects", "explode");
+		} else if (theTime >= 1763.7 & theTime <= 1764.2) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_fadeout");
+		} else if (theTime >= 1770.5 & theTime <= 1771.0) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+		} else if (theTime >= 1773.5 & theTime <= 1774.0) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_off");
+		} else if (theTime >= 1778.2 & theTime <= 1778.7) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+			mta.triggerEvent("AURconcert2.lightaffects", "explode");
+		} else if (theTime >= 1803.5 & theTime <= 1804.0) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "red", 255);
+			mta.triggerEvent("AURconcert2.lightaffects", "green", 255);
+			mta.triggerEvent("AURconcert2.lightaffects", "blue", 0);
+			mta.triggerEvent("AURconcert2.lightaffects", "targetlight", 0);
+			mta.triggerEvent("AURconcert2.lightaffects", "smokeOn");
+		} else if (theTime >= 1835.5 & theTime <= 1852.2) {
+			mta.triggerEvent("AURconcert2.lightaffects", "smokeOff");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_fadeout");
+		} else if (theTime >= 1852.5 & theTime <= 1852.7) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+		} else if (theTime >= 1853.5 & theTime <= 1854.0) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "red", 255);
+			mta.triggerEvent("AURconcert2.lightaffects", "green", 255);
+			mta.triggerEvent("AURconcert2.lightaffects", "blue", 0);
+			mta.triggerEvent("AURconcert2.lightaffects", "targetlight", 0);	
+			mta.triggerEvent("AURconcert2.lightaffects", "smokeOn");
+		} else if (theTime >= 1854.6 & theTime <= 1855.1) {
+			mta.triggerEvent("AURconcert2.lightaffects", "smokeOff");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy", 0);
+			mta.triggerEvent("AURconcert2.lightaffects", "targetlight", 0);	
+			mta.triggerEvent("AURconcert2.lightaffects", "explode");
+		} else if (theTime >= 1874.2 & theTime <= 1874.7) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "red", 255);
+			mta.triggerEvent("AURconcert2.lightaffects", "green", 255);
+			mta.triggerEvent("AURconcert2.lightaffects", "blue", 0);
+			mta.triggerEvent("AURconcert2.lightaffects", "targetlight", 0);	
+			mta.triggerEvent("AURconcert2.lightaffects", "smokeOn");
+		} else if (theTime >= 1894.2 & theTime <= 1908.2) {
+			mta.triggerEvent("AURconcert2.lightaffects", "smokeOff");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_fadeout");
+		} else if (theTime >= 1908.2 & theTime <= 1908.7) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+		} else if (theTime >= 1912.1 & theTime <= 1912.6) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_fadeout");
+		} else if (theTime >= 1913.1 & theTime <= 1913.6) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+			mta.triggerEvent("AURconcert2.lightaffects", "explode");
+			mta.triggerEvent("AURconcert2.lightaffects", "firework");
+		} else if (theTime >= 1932.0 & theTime <= 1932.5) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "red", 255);
+			mta.triggerEvent("AURconcert2.lightaffects", "green", 255);
+			mta.triggerEvent("AURconcert2.lightaffects", "blue", 0);
+			mta.triggerEvent("AURconcert2.lightaffects", "targetlight", 0);	
+			mta.triggerEvent("AURconcert2.lightaffects", "smokeOn");
+		} else if (theTime >= 1942.4 & theTime <= 1942.9) {
+			mta.triggerEvent("AURconcert2.lightaffects", "smokeOff");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+		} else if (theTime >= 1949.9 & theTime <= 1950.4) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "red", 255);
+			mta.triggerEvent("AURconcert2.lightaffects", "green", 255);
+			mta.triggerEvent("AURconcert2.lightaffects", "blue", 0);
+			mta.triggerEvent("AURconcert2.lightaffects", "targetlight", 0);	
+			mta.triggerEvent("AURconcert2.lightaffects", "all_fadeout");
+			mta.triggerEvent("AURconcert2.lightaffects", "smokeOn");
+		} else if (theTime >= 1952.0 & theTime <= 1986.0) {
+			mta.triggerEvent("AURconcert2.lightaffects", "smokeOff");
+			mta.triggerEvent("AURconcert2.lightaffects", "all_fadeout");
+		} else if (theTime >= 1986.0 & theTime <= 1986.5) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_flash");
+		} else if (theTime >= 1991.2 & theTime <= 1991.7) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_crazy");
+			mta.triggerEvent("AURconcert2.lightaffects", "explode");
+			mta.triggerEvent("AURconcert2.lightaffects", "firework");
+		} else if (theTime >= 2010.7 & theTime <= 2019.2) {
+			mta.triggerEvent("AURconcert2.lightaffects", "reset");
+			mta.triggerEvent("AURconcert2.lightaffects", "red", 255);
+			mta.triggerEvent("AURconcert2.lightaffects", "green", 255);
+			mta.triggerEvent("AURconcert2.lightaffects", "blue", 0);
+			mta.triggerEvent("AURconcert2.lightaffects", "targetlight", 0);	
+			mta.triggerEvent("AURconcert2.lightaffects", "all_fadeout");
+		} else if (theTime >= 2010.7 & theTime <= 2011.2) {
+			mta.triggerEvent("AURconcert2.lightaffects", "all_fadeout");
+			mta.triggerEvent("AURconcert2.lightaffects", "smokeOff");
+			mta.triggerEvent("AURconcert2.lightaffects", "firework");
+			mta.triggerEvent("AURconcert2.lightaffects", "danceped", "");
+		} else if (theTime >= 2011.2) {
+			mta.triggerEvent("AURconcert2.lightaffects", "firework");
+		}
+
+
+	}, 500);
+}
+</script>

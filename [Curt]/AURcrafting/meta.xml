@@ -1,0 +1,12 @@
+<meta>
+	<script src="client.luac" type="client" />
+	<script src="server.lua" type="server" />
+	<export function="getInventoryData" type="server" />
+	<export function="addPlayerItem" type="server" />
+	<export function="removePlayerItem" type="server" />
+	<export function="removePlayerAllItem" type="server" />
+	<export function="isPlayerHasItem" type="server" />
+	<export function="getPlayerItemQuantity" type="server" />
+	<export function="getAllCraftableItems" type="server" />
+	<export function="playerCraftItem" type="server" />
+</meta>

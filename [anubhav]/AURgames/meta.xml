@@ -1,0 +1,20 @@
+<meta>
+
+	<script src="server.lua" type="server" />
+	<script src="gui.luac" type="client" protected="true"/>
+	<script src="note.luac" type="client" protected="true"/>
+
+	 <export function="isPlayerSigned" type="server" />
+	<file src="cnr.png" type="client" />
+	<file src="dd.png" type="client" />
+	<file src="str.png" type="client" />
+	<file src="csgo.png" type="client" />
+	<file src="dm.png" type="client" />
+	<file src="Trials.png" type="client" />
+	<file src="drag.png" type="client" />
+
+	<file src="models/nitro.dff"/>
+	<file src="models/nitro.txd"/>
+	<file src="models/repair.dff"/>
+	<file src="models/repair.txd"/>
+</meta>

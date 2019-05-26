@@ -1,0 +1,111 @@
+<meta>
+    <info author="Noki" name="NGCPhone" version="1.5" type="script"/>
+
+	<file src="apps\flappy/images/atlas.png" />
+
+	<file src="apps\flappy/sounds/sfx_die.ogg" />
+	<file src="apps\flappy/sounds/sfx_hit.ogg" />
+	<file src="apps\flappy/sounds/sfx_point.ogg" />
+	<file src="apps\flappy/sounds/sfx_swooshing.ogg" />
+	<file src="apps\flappy/sounds/sfx_wing.ogg" />
+
+	<script src="apps\flappy\cFlappy.luac" type="client" />
+	<script src="apps\flappy\cFlappyBirdGame.luac" type="client" />
+	<script src="apps\flappy\cSound.luac" type="client" />
+	<script src="apps\flappy\cTube.luac" type="client" />
+	<script src="apps\flappy\cFlappyUI.luac" type="client" />
+	<script src="apps\flappy\cStart.luac" type="client" />
+
+
+	<script src="clientside.luac" type="client"/>
+	<script src="server.lua" type="server"/>
+	<script src="apps\alarm.luac" type="client"/>
+    <script src="apps\calculator.luac" type="client"/>
+    <script src="apps\settings.luac" type="client"/>
+    <script src="apps\sms.luac" type="client"/>
+    <script src="apps\mark.luac" type="client"/>
+    <script src="apps\contacts.luac" type="client"/>
+    <script src="apps\clock.luac" type="client"/>
+    <script src="apps\iPod.luac" type="client"/>
+    <script src="apps\phone.luac" type="client"/>
+    <script src="apps\notes.luac" type="client"/>
+	<script src="apps\houses.luac" type="client"/>
+	<script src="apps\weapons.luac" type="client"/>
+	<script src="apps\money.luac" type="client"/>
+	<script src="apps\maps.luac" type="client"/>
+	<script src="apps\minesweep.luac" type="client"/>
+	<script src="apps\puzzle.luac" type="client"/>
+	<script src="apps\music.luac" type="client" />
+	<file src="Ringtones\1.mp3"/>
+
+	<file src="Ringtones\2.mp3"/>
+	
+              <file src="Ringtones\3.mp3"/>
+	
+              <file src="Ringtones\4.mp3"/>
+
+	<file src="Ringtones\alarm.mp3"/>
+	<script src="apps\server.lua" type="server" />
+
+
+	<file src="Games\al.png"/>
+	<file src="Games\ar.png"/>
+	<file src="Games\clock.png"/>
+	<file src="Games\flag.png"/>
+	<file src="Games\mine.png"/>
+	<file src="Games\no1.png"/>
+	<file src="Games\no2.png"/>
+	<file src="Games\no3.png"/>
+	<file src="Games\no4.png"/>
+	<file src="Games\no5.png"/>
+	<file src="Games\smiley1.png"/>
+	<file src="Games\smiley2.png"/>
+	<file src="Games\smiley3.png"/>
+	<file src="Games\smiley4.png"/>
+	<file src="Games\smiley5.png"/>
+	<file src="Games\puzzle_e1.jpg"/>
+	<file src="Games\puzzle_e2.jpg"/>
+
+	<file src="Icons/Clock.png" />
+
+	<file src="backgrounds\background1.png"/>
+	<file src="backgrounds\background2.png"/>
+	<file src="backgrounds\background3.png"/>
+	<file src="backgrounds\background4.png"/>
+	<file src="backgrounds\background5.png"/>
+	<file src="backgrounds\background6.png"/>
+	<file src="backgrounds\background7.png"/>
+	<file src="backgrounds\background8.png"/>
+	<file src="backgrounds\appbackground.png"/>
+
+	<file src="tutano_cc_v2.ttf"/>
+
+
+	<file src="Icons\flash.png"/>
+
+	<file src="Icons\browser.png"/>
+	<file src="Icons\ngcphone.png"/>
+	<file src="Icons\Mark.png"/>
+	<file src="Icons\Calculator.png"/>
+	<file src="Icons\alarm.png"/>
+	<file src="Icons\Houses.png"/>
+	<file src="Icons\Settings.png"/>
+	<file src="Icons\lock.png"/>
+	<file src="Icons\Calendar.png"/>
+	<file src="Icons\Contacts Alt.png"/>
+	<file src="Icons\iPod Alt.png"/>
+	<file src="Icons\Weather.png"/>
+	<file src="Icons\Maps.png"/>
+	<file src="Icons\Messages.png"/>
+	<file src="Icons\Notes.png"/>
+	<file src="Icons\Radio.png"/>
+	<file src="Icons\Phone Alt.png"/>
+	<file src="Icons\Minesweep.png"/>
+	<file src="Icons\Weapons.png"/>
+	<file src="Icons\PocketMoney.png"/>
+	<file src="Icons\Puzzle.png"/>
+	<file src="Icons\Music.png"/>
+	<file src="Icons\vehmusic.png"/>
+	<file src="Icons\unreadSMS.png"/>
+	<file src="Icons\Flappy.png"/>
+</meta>

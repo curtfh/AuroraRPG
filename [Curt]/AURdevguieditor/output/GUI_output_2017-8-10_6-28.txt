@@ -1,0 +1,33 @@
+--[[-------------------------------------------------
+Notes:
+
+> This code is using a relative image filepath. This will only work as long as the location it is from always exists, and the resource it is part of is running.
+    To ensure it does not break, it is highly encouraged to move images into your local resource and reference them there.
+--]]-------------------------------------------------
+
+
+GUIEditor = {
+    button = {},
+    window = {},
+    staticimage = {},
+    label = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+local screenW, screenH = guiGetScreenSize()
+        GUIEditor.window[1] = guiCreateWindow((screenW - 756) / 2, (screenH - 425) / 2, 756, 425, "AuroraRPG - Electronic Dance Music Invitation", false)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.staticimage[1] = guiCreateStaticImage(208, 24, 339, 127, ":server/Images/logo.png", false, GUIEditor.window[1])
+        GUIEditor.label[1] = guiCreateLabel(136, 151, 499, 178, "AuroraRPG - EDM Event\nWhen: August 11, 2017 - 10PM PHT - 10AM EDT - 4PM CEST - 4PM CAT - 3PM WAT\n\nWhere: Santa Maria Beach, Los Santos (AuroraRPG In Game)\n\nInfo: Free event, Giveaways/Gifts, Includes flashing lights\n\n=-Rules-=\n1. Deathmatching is isn't allowed.\n2. Vehicles are not allowed inside the venue.\n3. Follow our in game rules.\n\nTo experience this party, you must agree to allow this website.", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[1], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[1], "center", false)
+        GUIEditor.button[1] = guiCreateButton(114, 354, 199, 41, "I agree, I will attend.", false, GUIEditor.window[1])
+        guiSetProperty(GUIEditor.button[1], "NormalTextColour", "FF1EFE00")
+        GUIEditor.button[2] = guiCreateButton(446, 354, 199, 41, "I don't agree. I won't attend anyway.", false, GUIEditor.window[1])
+        guiSetProperty(GUIEditor.button[2], "NormalTextColour", "FFFE0000")
+        GUIEditor.label[2] = guiCreateLabel(237, 399, 299, 16, "AuroraRPG Invitation 2017", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[2], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[2], "center", false)    
+    end
+)

@@ -1,0 +1,12 @@
+<meta>
+	<file src="contact.png" />
+	<file src="minigames.png" />
+	<file src="pastlogins.png" />
+	<file src="report.png" />
+	<file src="rules.png" />
+	<file src="settings.png" />
+	<file src="updates.png" />
+	<file src="userp.png" />
+	<file src="vip.png" />
+	<script src="client.luac" type="client" />
+</meta>

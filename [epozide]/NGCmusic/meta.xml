@@ -1,0 +1,6 @@
+<meta>
+	<script src="server.lua" type="server" />
+	<script src="Satellite-Client.luac" type="client" />
+	<map src="SSA.lua" />
+	<export function="captureCommunication" type="server" />
+</meta>

@@ -1,0 +1,32 @@
+<meta>
+	<script src="phones.lua" type="server" />
+	<script src="phone.lua" type="client" />
+	<script src="animation.lua" type="client" />
+	
+	
+	<file src="images/iphone.png"/>
+	
+	<file src="images/call.png"/>
+	<file src="images/photos.png"/>
+	<file src="images/clock.png"/>
+	<file src="images/contacts.png"/>
+	<file src="images/map.png"/>
+	<file src="images/sms.png"/>
+	<file src="images/weather.png"/>
+	
+	<file src="images/calculator.png"/>
+	<file src="images/calendar.png"/>
+	<file src="images/transfer.png"/>
+	<file src="images/settings.png"/>
+	<file src="images/notes.png"/>
+	<file src="images/music.png"/>
+	
+	<file src="images/blank.png"/>
+	
+	<file src="images/wallpapers/wallpaper1.jpg"/>
+	<file src="images/wallpapers/wallpaper2.jpg"/>
+	<file src="images/wallpapers/wallpaper3.jpg"/>
+	<file src="images/wallpapers/wallpaper4.jpg"/>
+	<file src="images/wallpapers/wallpaper5.jpg"/>
+	<file src="images/wallpapers/wallpaper6.jpg"/>
+</meta>

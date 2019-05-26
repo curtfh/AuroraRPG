@@ -1,0 +1,21 @@
+function loadMapMods()
+
+	col = engineLoadCOL ( "files/ammu2/mp_ammu01.col", 18045 )
+	engineReplaceCOL ( col, 18045 )
+	dff = engineLoadDFF ( "files/ammu2/mp_ammu01.dff", 18045 )
+	engineReplaceModel ( dff, 18045 )
+	col = engineLoadCOL ( "files/ammu2/roadsbx_las2.col", 5106 )
+	engineReplaceCOL ( col, 5106 )
+	dff = engineLoadDFF ( "files/ammu2/Roadsbx_las2.dff", 5106 )
+	engineReplaceModel ( dff, 5106 )
+	col = engineLoadCOL ( "files/ammu/munation_main.col", 18033 )
+	engineReplaceCOL ( col, 18033 )
+	dff = engineLoadDFF ( "files/ammu/munation_main.dff", 18033 )
+	engineReplaceModel ( dff, 18033 )
+	col = engineLoadCOL ( "files/ammu/amubloksun1_LAn.col", 4552 )
+	engineReplaceCOL ( col, 4552 )
+	dff = engineLoadDFF ( "files/ammu/amubloksun1_lan.dff", 4552 )
+	engineReplaceModel ( dff, 4552 )
+
+end
+addEventHandler("onClientResourceStart", resourceRoot, loadMapMods)

@@ -1,0 +1,8 @@
+<meta>
+	<info author="" version="1.0" type="script" name="" />
+	<script src="client.lua" type="client" />
+	<script src="pass_s.lua" type="server" />
+
+	<file src="barracks.dff" type="client" />
+    <file src="barracks.txd" type="client" />
+</meta>

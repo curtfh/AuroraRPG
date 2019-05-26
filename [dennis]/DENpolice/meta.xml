@@ -1,0 +1,9 @@
+<meta>
+	<info author="Dennis" version="1.0" description="Police Job" type="script" />
+	<file src="arrested.png"></file>
+	<file src="wanted.png"></file>
+
+	<script src="client.luac" type="client" />
+	<script src="server.lua" type="server" />
+
+</meta>

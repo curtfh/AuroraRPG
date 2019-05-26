@@ -1,0 +1,73 @@
+<map>
+<interiorEntry	id="Ammunation"	posX="-2625.85"	posY="208.345"	posZ="3.98935"	rotation="0"	dimension="0"	interior="0"	/>
+<interiorReturn	refid="Ammunation"	posX="286.15"	posY="-41.54"	posZ="1000.57"	rotation="5400.06"	interior="1"	dimension="2"	/>
+<interiorEntry	id="Desert Ammunation"	posX="-1508.89"	posY="2610.8"	posZ="54.8902"	rotation="-0.100006"	dimension="0"	interior="0"	/>
+<interiorReturn	refid="Desert Ammunation"	posX="316.53"	posY="-169.61"	posZ="998.66"	rotation="180"	interior="6"	dimension="11"	/>
+
+<interiorEntry	id="Clothes Shop 2"	posX="-1883.2"	posY="865.473"	posZ="34.2601"	rotation="0"	dimension="0"	interior="0"	/>
+<interiorReturn	refid="Clothes Shop 2"	posX="161.39"	posY="-96.69"	posZ="1000.81"	rotation="129"	interior="18"	dimension="2"	/>
+<interiorEntry	id="Clothes Shop 3"	posX="-2375.32"	posY="910.293"	posZ="44.4578"	rotation="0"	dimension="0"	interior="0"	/>
+<interiorReturn	refid="Clothes Shop 3"	posX="207.74"	posY="-111.42"	posZ="1004.27"	rotation="5507.58"	interior="15"	dimension="6"	/>
+
+
+
+<interiorEntry	id="SHOTRANGE11"	posX="286.13"	posY="-30.83"	posZ="1000.51 "	rotation="0"	dimension="2"	interior="1"	/>
+<interiorReturn	refid="SHOTRANGE11"	posX="286.13"	posY="-28.23"	posZ="1000.51 "	rotation="0"	interior="1"	dimension="2"	/>
+
+
+<interiorEntry	id="GYM2"	posX="-2270.46"	posY="-155.957"	posZ="34.3573"	rotation="0"	dimension="0"	interior="0"	/>
+<interiorReturn	refid="GYM2"	posX="774.21"	posY="-50.02"	posZ="999.69"	rotation="270"	interior="6"	dimension="0"	/>
+
+
+
+<interiorEntry	id="TaxiInt"	posX="-1754.16"	posY="963"	posZ="24"	rotation="0"	dimension="0"	interior="0"	/>
+<interiorReturn	refid="TaxiInt"	posX="-1736"	posY="950"	posZ="-45"	rotation="85"	interior="0"	dimension="0"	/>
+
+<interiorEntry	id="truckInt"	posX="-1687.5"	posY="-18.51"	posZ="3.2"	rotation="226"	dimension="0"	interior="0"	/>
+<interiorReturn	refid="truckInt"	posX="-1682.01"	posY="-17.12"	posZ="3.2"	rotation="45"	interior="0"	dimension="0"	/>
+
+<interiorEntry	id="fishInt"	posX="-2071.07"	posY="1411.96"	posZ="6.5"	rotation="226"	dimension="0"	interior="0"	/>
+<interiorReturn	refid="fishInt"	posX="-2082.65"	posY="1436.39"	posZ="1.5"	rotation="178"	interior="0"	dimension="0"	/>
+
+<interiorEntry	id="rescuerInt"	posX="-2832.56"	posY="1312.67"	posZ="7.5"	rotation="217"	dimension="0"	interior="0"	/>
+<interiorReturn	refid="rescuerInt"	posX="-2816.79"	posY="1315.68"	posZ="1.5"	rotation="358"	interior="0"	dimension="0"	/>
+
+<interiorEntry	id="mechInt"	posX="-2034.9"	posY="148.58"	posZ="27.83"	rotation="271"	dimension="0"	interior="0"	/>
+<interiorReturn	refid="mechInt"	posX="-2043.12"	posY="165.78"	posZ="9.99"	rotation="267"	interior="0"	dimension="0"	/>
+
+<interiorEntry	id="trashInt"	posX="-1874.01"	posY="-218.3"	posZ="17.37"	rotation="268"	dimension="0"	interior="0"	/>
+<interiorReturn	refid="trashInt"	posX="-1874.85"	posY="-218.4"	posZ="7.41"	rotation="87"	interior="0"	dimension="0"	/>
+
+<interiorEntry	id="tallestBuilding"	posX="1570.79"	posY="-1333.57"	posZ="15.48"	rotation="330"	dimension="0"	interior="0"	/>
+<interiorReturn	refid="tallestBuilding"	posX="1548.35"	posY=" -1364.22"	posZ="325.21"	rotation="180"	interior="0"	dimension="0"	/>
+
+<interiorEntry id="CongressPrivate" posX="-2766.5517578125" posY="375.548828125" posZ="6.3346824645996" rotation="270" interior="0" dimension="0" />
+<interiorReturn refid="CongressPrivate" posX="-105.25898742676" posY="-1220.3062744141" posZ="529.16876220703" rotation="268" interior="3" dimension="10" />
+<interiorEntry id="CongressSpeaker" posX="-2800.1474609375" posY="375.5205078125" posZ="6.3359375" rotation="90" interior="0" dimension="0" />
+<interiorReturn refid="CongressSpeaker" posX="-82.341796875" posY="-1203.4888916016" posZ="529.1687622070" rotation="90" interior="3" dimension="10" />
+<interiorEntry id="CongressPublic1" posX="-2766.5498046875" posY="368.9384765625" posZ="6.3346824645996" rotation="270" interior="0" dimension="0" />
+<interiorReturn refid="CongressPublic1" posX="-76.813201904297" posY="-1206.9670410156" posZ="536.89874267578" rotation="90" interior="3" dimension="10" />
+<interiorEntry id="CongressPublic2" posX="-2766.5517578125" posY="382.267578125" posZ="6.3346824645996" rotation="270" interior="0" dimension="0" />
+<interiorReturn refid="CongressPublic2" posX="-76.710754394531" posY="-1235.0363769531" posZ="536.90277099609" rotation="90" interior="3" dimension="10" />
+
+<interiorEntry id="Committee" posX="-2729.97" posY="424.91" posZ="4.32" rotation="180" interior="0" dimension="0" />
+<interiorReturn refid="Committee" posX="-2745.53" posY="366.54" posZ="-31.33" rotation="0" interior="3" dimension="5" />
+
+<interiorEntry id="CourtSA" posX="-2648.8935546875" posY="376.0283203125" posZ="6.1592502593994" rotation="90" interior="0" dimension="0" />
+<interiorReturn refid="CourtSA" posX="1445.6064453125" posY="-1465.603515625" posZ="1616.3072509766" rotation="90" interior="3" dimension="5" />
+
+
+
+
+<interiorEntry id="Jail1" posX="918.55859375" posY="-2271.4748535156" posZ="738.86828613281" rotation="0" interior="0" dimension="2" />
+<interiorReturn refid="Jail1" posX="830.75952148438" posY="-2410.2463378906" posZ="871.63037109375" rotation="181" interior="0" dimension="2" />
+
+
+<interiorEntry id="Jail2" posX="829.1103515625" posY="-2381.8291015625" posZ="873.50982666016" rotation="79" interior="0" dimension="2" />
+<interiorReturn refid="Jail2" posX="752.083984375" posY="-2447.4125976563" posZ="909.109375" rotation="358.46563720703" interior="0" dimension="2" />
+
+
+<interiorEntry id="Jail3" posX="830.76275634766" posY="-2380.1606445313" posZ="873.50982666016" rotation="2" interior="0" dimension="2" />
+<interiorReturn refid="Jail3" posX="846.5283203125" posY="-2359.8374023438" posZ="879.08459472656" rotation="183.46563720703" interior="0" dimension="2" />
+
+</map>

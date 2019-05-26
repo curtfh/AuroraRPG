@@ -1,0 +1,38 @@
+[[
+	[ "*Raw Materials", "A category of items.", true, "[[['Not Craftable', 1]]]" ],
+	[ "Iron", "This item is not craftable", false, [] ],
+	[ "Explosive Powder", "This item is not craftable", false, [] ],
+	[ "", "Not Craftable", true, "[[['Not Craftable', 1]]]" ],
+	
+	[ "*Chemicals", "A category of items.", true, "[[['Not Craftable', 1]]]" ],
+	[ "Weed Seed", "This item is not craftable", false, [] ],
+	[ "Pot", "This item is not craftable", false, [] ],
+	[ "Phosphorus", "This item is not craftable", false, [] ],
+	[ "Iodine", "This item is not craftable", false, [] ],
+	[ "Crystal Ritalin", "Crystalized Chemical", true, "[[ ['Iodine', 30], ['Phosphorus', 20] ]]" ],
+	[ "Crystal LSD", "Crystalized Chemical", true, "[[ ['Iodine', 10], ['Phosphorus', 20] ]]" ],
+	[ "Crystal Cocaine", "Crystalized Chemical", true, "[[ ['Iodine', 40], ['Phosphorus', 20] ]]" ],
+	[ "Crystal Ecstasy", "Crystalized Chemical", true, "[[ ['Iodine', 20], ['Phosphorus', 40] ]]" ],
+	[ "Crystal Heroine", "Crystalized Chemical", true, "[[ ['Iodine', 40], ['Phosphorus', 40] ]]" ],
+	[ "", "Not Craftable", true, "[[['Not Craftable', 1]]]" ],
+	
+	[ "*Weapons and Ammunation", "A category of items.", true, "[[['Not Craftable', 1]]]" ],
+	[ "Grenade", "A weapon.", true, "[[ ['Explosive Powder', 8], ['Iron', 40], ['Stone', 60] ]]" ],
+	[ "Satchel", "A weapon.", true, "[[ ['Explosive Powder', 12], ['Iron', 70], ['Stone', 100] ]]" ],
+	[ "Armor", "A armor which adds protection.", true, "[[ ['Explosive Powder', 2], ['Iron', 20], ['Stone', 30] ]]" ],
+	[ "", "Not Craftable", true, "[[['Not Craftable', 1]]]" ],
+	
+	[ "*Drugs", "A category of items.", true, "[[['Not Craftable', 1]]]" ],
+	[ "Ritalin", "A drug which has faster movement and weapon fire.", true, "[[ ['Crystal Ritalin', 1] ]]" ],
+	[ "LSD", "A drug which has hallucinate effects everywhere.", true, "[[ ['Crystal LSD', 1] ]]" ],
+	[ "Cocaine", "A drug which has ability to have the eye of eagle.", true, "[[ ['Crystal Cocaine', 1] ]]" ],
+	[ "Ecstasy", "A drug which has ability to have 200 health.", true, "[[ ['Crystal Ecstasy', 1] ]]" ],
+	[ "Heroine", "A drug which take less damage.", true, "[[ ['Crystal Heroine', 1] ]]" ],
+	[ "Weed", "A drug which has less gravity, higher jump.", true, "[[ ['Water Bottle', 1], ['Pot', 1], ['Weed Seed', 4] ]]" ],
+	[ "", "Not Craftable", true, "[[['Not Craftable', 1]]]" ],
+	
+	[ "*Miscellaneous", "A category of items.", true, "[[['Not Craftable', 1]]]" ],
+	[ "Medic Kit", "Can heal yourself by typing /medkit.", true, "[[ ['Bandage', 10], ['Cotton Pads', 30], ['Box', 1] ]]" ],
+	[ "Bandage", "Bandage is used to stop bleeding when being shot.", true, "[[ ['Cotton Pads', 20], ['Alcool', 5] ]]" ],
+	[ "", "Not Craftable", true, "[[['Not Craftable', 1]]]" ]
+]]

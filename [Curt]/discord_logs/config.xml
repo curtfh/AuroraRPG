@@ -1,0 +1,6 @@
+<discord>
+    <channel>serverlogs</channel>
+    <passphrase>aurorarpg_discordpasswordsecret</passphrase>
+    <hostname>localhost</hostname>
+    <port>8434</port>
+</discord>

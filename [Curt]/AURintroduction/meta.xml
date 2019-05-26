@@ -1,0 +1,6 @@
+<meta>
+	<script src="table.luac" type="client" />
+	<script src="client.luac" type="client" />
+	<script src="server.lua" type="server" />
+	<script src="tutorial.luac" type="client" />
+</meta>

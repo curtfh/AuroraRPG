@@ -1,0 +1,18 @@
+
+
+local screenW, screenH = guiGetScreenSize()
+
+addEventHandler("onClientRender", root,
+    function()
+        dxDrawText("Los Santos Police Department", (screenW * 0.2630) - 1, (screenH * 0.1565) - 1, (screenW * 0.7672) - 1, (screenH * 0.2556) - 1, tocolor(0, 0, 0, 255), 2.00, "pricedown", "center", "center", false, true, false, false, false)
+        dxDrawText("Los Santos Police Department", (screenW * 0.2630) + 1, (screenH * 0.1565) - 1, (screenW * 0.7672) + 1, (screenH * 0.2556) - 1, tocolor(0, 0, 0, 255), 2.00, "pricedown", "center", "center", false, true, false, false, false)
+        dxDrawText("Los Santos Police Department", (screenW * 0.2630) - 1, (screenH * 0.1565) + 1, (screenW * 0.7672) - 1, (screenH * 0.2556) + 1, tocolor(0, 0, 0, 255), 2.00, "pricedown", "center", "center", false, true, false, false, false)
+        dxDrawText("Los Santos Police Department", (screenW * 0.2630) + 1, (screenH * 0.1565) + 1, (screenW * 0.7672) + 1, (screenH * 0.2556) + 1, tocolor(0, 0, 0, 255), 2.00, "pricedown", "center", "center", false, true, false, false, false)
+        dxDrawText("Los Santos Police Department", screenW * 0.2630, screenH * 0.1565, screenW * 0.7672, screenH * 0.2556, tocolor(2, 149, 252, 255), 2.00, "pricedown", "center", "center", false, true, false, false, false)
+        dxDrawText("This is the los santos department. Testing some description lol. if this will fit on this dx.", 505 - 1, 388 - 1, 1473 - 1, 715 - 1, tocolor(0, 0, 0, 255), 2.00, "pricedown", "center", "center", false, true, false, false, false)
+        dxDrawText("This is the los santos department. Testing some description lol. if this will fit on this dx.", 505 + 1, 388 - 1, 1473 + 1, 715 - 1, tocolor(0, 0, 0, 255), 2.00, "pricedown", "center", "center", false, true, false, false, false)
+        dxDrawText("This is the los santos department. Testing some description lol. if this will fit on this dx.", 505 - 1, 388 + 1, 1473 - 1, 715 + 1, tocolor(0, 0, 0, 255), 2.00, "pricedown", "center", "center", false, true, false, false, false)
+        dxDrawText("This is the los santos department. Testing some description lol. if this will fit on this dx.", 505 + 1, 388 + 1, 1473 + 1, 715 + 1, tocolor(0, 0, 0, 255), 2.00, "pricedown", "center", "center", false, true, false, false, false)
+        dxDrawText("This is the los santos department. Testing some description lol. if this will fit on this dx.", 505, 388, 1473, 715, tocolor(120, 120, 120, 255), 2.00, "pricedown", "center", "center", false, true, false, false, false)
+    end
+)

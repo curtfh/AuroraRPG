@@ -1,0 +1,82 @@
+<meta>
+	<info author="" version="1.0" type="script" />
+	<script src="core.lua" />
+	<script src="client.luac" type="client" />
+
+
+
+
+	<script src="npc/npc_functions_s.lua"	type="server"	/>
+	<script src="npc/npc_functions.lua"		type="server"	/>
+	<script src="npc/npc_functions.lua"		type="client"	/>
+	<script src="npc/npc_hlc_s.lua"			type="server"	/>
+	<script src="npc/npc_hlc_c.lua"			type="client" 	/>
+	<script src="npc/control_npc_s.lua"		type="server"	/>
+	<script src="npc/control_npc_c.lua"		type="client" 	/>
+	<script src="npc/valid_tasks_s.lua"		type="server"	/>
+	<script src="npc/tasks_s.lua"			type="server"	/>
+	<script src="npc/tasks_c.lua"			type="client" 	/>
+	<script src="npc/actions_s.lua"			type="server" 	/>
+	<script src="npc/actions_c.lua"			type="client" 	/>
+	<script src="npc/math.lua"				type="server"	/>
+	<script src="npc/math.lua"				type="client" 	/>
+	<script src="npc/const.lua"				type="server"	/>
+	<script src="npc/const.lua"				type="client" 	/>
+
+
+
+
+
+
+
+
+
+	<file src="images/wShoe.png" type="client" />
+	<file src="images/mShoe.png" type="client" />
+	<file src="images/Women-Underwear.png" type="client" />
+	<file src="images/Men-Underwear.png" type="client" />
+	<file src="images/Wizard.png" type="client" />
+	<file src="images/Witch.png" type="client" />
+	<file src="images/Winter-Boots.png" type="client" />
+	<file src="images/Wedding-Dress.png" type="client" />
+	<file src="images/Watch.png" type="client" />
+	<file src="images/Umbrella.png" type="client" />
+	<file src="images/T-Shirt.png" type="client" />
+	<file src="images/Trousers.png" type="client" />
+	<file src="images/Trainers.png" type="client" />
+	<file src="images/Tie.png" type="client" />
+	<file src="images/Sun-Glasses.png" type="client" />
+	<file src="images/Glasses.png" type="client" />
+	<file src="images/Socks.png" type="client" />
+	<file src="images/Skirt.png" type="client" />
+	<file src="images/Shorts.png" type="client" />
+	<file src="images/Shoe-Brush.png" type="client" />
+	<file src="images/Shirt.png" type="client" />
+	<file src="images/Scarf.png" type="client" />
+	<file src="images/Romper.png" type="client" />
+	<file src="images/Pilot-hat.png" type="client" />
+	<file src="images/Necklace.png" type="client" />
+	<file src="images/Motorbike-Helmet.png" type="client" />
+	<file src="images/Kimono.png" type="client" />
+	<file src="images/Jumper.png" type="client" />
+	<file src="images/Jacket.png" type="client" />
+	<file src="images/Helmet.png" type="client" />
+	<file src="images/Hanger.png" type="client" />
+	<file src="images/Fireman-Coat.png" type="client" />
+	<file src="images/Fireman-Boots.png" type="client" />
+	<file src="images/Fan.png" type="client" />
+	<file src="images/Coat.png" type="client" />
+	<file src="images/Christmas-Mitten.png" type="client" />
+	<file src="images/Chef-Hat.png" type="client" />
+	<file src="images/Bulletproof-Vest.png" type="client" />
+	<file src="images/Bracelet.png" type="client" />
+	<file src="images/Bra.png" type="client" />
+	<file src="images/Bow-Tie.png" type="client" />
+	<file src="images/Bowler-Hat.png" type="client" />
+	<file src="images/Boots.png" type="client" />
+	<file src="images/Beanie.png" type="client" />
+	<file src="images/Baseball-cap.png" type="client" />
+
+	<file src="radar_tshirt.png" type="client" />
+
+</meta>

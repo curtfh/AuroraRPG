@@ -1,0 +1,10 @@
+<meta>
+    <info author="" type="script" name="police_lights" />
+	<min_mta_version server="1.3.4-0.00000" client="1.3.4-0.00000"></min_mta_version>
+	<script src="server.lua" />
+    <script src="client.luac" type="client" />
+    <file src="PoliceLight1.col" />
+    <file src="PoliceLight1.dff" />
+    <file src="PoliceLight1.txd" />
+</meta>
+

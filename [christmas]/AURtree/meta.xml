@@ -1,0 +1,9 @@
+<meta>
+    <map src="christmas.map" dimension="0"></map>
+    <script src="mapEditorScriptingExtension_s.lua" type="server"></script>
+    <script src="mapEditorScriptingExtension_c.lua" type="client" validate="false"></script>
+    <script src="client.lua" type="client" />
+    <script src="server.lua" type="server" />
+	<script src="fireworksclient.lua" type="client" />
+	<script src="fireworksserver.lua" type="server" />
+</meta>

@@ -1,0 +1,6 @@
+<meta>
+    <info author="Prime" version="2.0" type="script" />
+
+	<script src="farmerC.luac" type="client" />
+	<script src="farmerS.lua" type="server" />
+</meta>

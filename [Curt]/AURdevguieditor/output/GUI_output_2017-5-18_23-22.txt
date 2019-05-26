@@ -1,0 +1,44 @@
+--[[-------------------------------------------------
+Notes:
+
+> This code is using a relative image filepath. This will only work as long as the location it is from always exists, and the resource it is part of is running.
+    To ensure it does not break, it is highly encouraged to move images into your local resource and reference them there.
+--]]-------------------------------------------------
+
+
+GUIEditor = {
+    tab = {},
+    staticimage = {},
+    edit = {},
+    window = {},
+    tabpanel = {},
+    button = {},
+    label = {},
+    gridlist = {},
+    memo = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+        GUIEditor.window[1] = guiCreateWindow(0.30, 0.27, 0.40, 0.47, "AuroraRPG - Report", true)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.tabpanel[1] = guiCreateTabPanel(0.02, 0.06, 0.96, 0.91, true, GUIEditor.window[1])
+
+        GUIEditor.tab[1] = guiCreateTab("Screenshot Report", GUIEditor.tabpanel[1])
+
+        GUIEditor.gridlist[1] = guiCreateGridList(0.03, 0.04, 0.28, 0.93, true, GUIEditor.tab[1])
+        guiGridListAddColumn(GUIEditor.gridlist[1], "Pictures", 0.9)
+        GUIEditor.staticimage[1] = guiCreateStaticImage(0.32, 0.13, 0.23, 0.29, ":server/Images/disc.png", true, GUIEditor.tab[1])
+        GUIEditor.label[1] = guiCreateLabel(0.32, 0.05, 0.45, 0.04, "Preview (Click the picture for full view):", true, GUIEditor.tab[1])
+        guiSetFont(GUIEditor.label[1], "default-bold-small")
+        GUIEditor.label[2] = guiCreateLabel(0.32, 0.44, 0.06, 0.05, "Title:", true, GUIEditor.tab[1])
+        guiSetFont(GUIEditor.label[2], "default-bold-small")
+        GUIEditor.memo[1] = guiCreateMemo(0.32, 0.56, 0.67, 0.32, "", true, GUIEditor.tab[1])
+        GUIEditor.edit[1] = guiCreateEdit(0.39, 0.42, 0.60, 0.08, "", true, GUIEditor.tab[1])
+        GUIEditor.label[3] = guiCreateLabel(0.32, 0.52, 0.14, 0.05, "Description:", true, GUIEditor.tab[1])
+        guiSetFont(GUIEditor.label[3], "default-bold-small")
+        GUIEditor.button[1] = guiCreateButton(0.32, 0.89, 0.26, 0.07, "Report", true, GUIEditor.tab[1])
+        GUIEditor.button[2] = guiCreateButton(0.56, 0.13, 0.12, 0.06, "View", true, GUIEditor.tab[1])
+        GUIEditor.button[3] = guiCreateButton(0.71, 0.89, 0.26, 0.07, "Close", true, GUIEditor.tab[1])    
+    end
+)

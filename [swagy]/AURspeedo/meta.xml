@@ -1,0 +1,12 @@
+<meta>
+
+	<script src="client.lua" type="client"/>
+	<file src="images/needle.png"/>
+	<file src="images/speedo.png"/>
+	<file src="images/hp.png"/>
+	<file src="images/fuel.png"/>
+	<file src="images/engine.png"/>
+	<file src="images/headlights.png"/>
+	<file src="images/lock.png"/>
+
+</meta>

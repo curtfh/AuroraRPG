@@ -1,0 +1,5 @@
+<meta>
+	<info author="Anubhav" />
+	<script src="damage.luac" type="client" />
+	<script src="vehDamage.luac" type="client" />
+</meta>

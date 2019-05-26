@@ -1,0 +1,5 @@
+<meta>
+	<script src="server.lua" />
+	<script src="client.luac" type="client" />
+	<export function="recieve_custom_title_data" type="server" />
+</meta>

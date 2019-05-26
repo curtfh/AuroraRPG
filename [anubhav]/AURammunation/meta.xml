@@ -1,0 +1,39 @@
+<meta>
+	<info author="Prime" version="1.0" type="script" name="AmmoNation" description="Ammo Nation" />
+	<script src="wep.luac" type="client"/>
+	<script src="server.lua" type="server"/>
+	<export function="isPlayerInShooter" type="client" />
+	<config src="list.xml" type="server" />
+
+	<file src="images/2.png" type="client"/>
+	<file src="images/4.png" type="client"/>
+	<file src="images/7.png" type="client"/>
+	<file src="images/10.png" type="client"/>
+	<file src="images/12.png" type="client"/>
+	<file src="images/5.png" type="client"/>
+	<file src="images/15.png" type="client"/>
+
+	<file src="images/36.png" type="client"/>
+	<file src="images/38.png" type="client"/>
+	<file src="images/35.png" type="client"/>
+	<file src="images/30.png" type="client"/>
+	<file src="images/22.png" type="client"/>
+	<file src="images/27.png" type="client"/>
+	<file src="images/24.png" type="client"/>
+	<file src="images/16.png" type="client"/>
+	<file src="images/31.png" type="client"/>
+	<file src="images/28.png" type="client"/>
+	<file src="images/29.png" type="client"/>
+	<file src="images/33.png" type="client"/>
+	<file src="images/26.png" type="client"/>
+	<file src="images/39.png" type="client"/>
+	<file src="images/25.png" type="client"/>
+	<file src="images/23.png" type="client"/>
+	<file src="images/34.png" type="client"/>
+	<file src="images/17.png" type="client"/>
+	<file src="images/32.png" type="client"/>
+	<file src="images/8.png" type="client"/>
+	<file src="images/100.png" type="client"/>
+	<file src="images/laser.png" type="client"/>
+
+</meta>

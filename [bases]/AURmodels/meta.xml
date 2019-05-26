@@ -1,0 +1,156 @@
+<meta>
+    <info type="script" version="1.0.0" name="" description="" />
+    <script src="client.luac" type="client" />
+	<export function="normalSkin" type="client"/>
+
+	<file src="models/thief.dff" type="client" download="false" />
+    <file src="models/thief.txd" type="client"  download="false" />
+
+	<file src="models/avatar.dff" type="client" download="false" />
+    <file src="models/avatar.txd" type="client"  download="false" />
+
+	<!-- VIP skins for AURpremium below -->
+    <file src="models/ghost.txd" type="client"  download="false" />
+    <file src="models/robber.txd" type="client"  download="false" />
+	<file src="models/ghost.dff" type="client"  download="false" />
+    <file src="models/robber.dff" type="client"  download="false" />
+	<!-- VIP skins for AURpremium end -->
+	<file src="models/troll.dff" type="client" download="false" />
+    <file src="models/troll.txd" type="client"  download="false" />
+
+	<file src="models/pdm.dff" type="client" download="false" />
+    <file src="models/pdm.txd" type="client"  download="false" />
+	
+	<file src="models/Diver.dff" type="client" download="false" />
+    <file src="models/Diver.txd" type="client"  download="false" />
+	
+	<file src="models/batman.dff" type="client" download="false" />
+    <file src="models/batman.txd" type="client"  download="false" />
+	
+	<file src="models/bat.dff" type="client" download="false" />
+    <file src="models/bat.txd" type="client"  download="false" />
+	
+	<file src="models/patriot.dff" type="client" download="false" />
+    <file src="models/patriot.txd" type="client"  download="false" />
+	
+	<file src="models/cia.dff" type="client" download="false" />
+    <file src="models/cia.txd" type="client"  download="false" />
+
+	<file src="models/taskforce.dff" type="client" download="false" />
+    <file src="models/taskforce.txd" type="client"  download="false" />
+	
+	<file src="models/detective.dff" type="client" download="false" />
+    <file src="models/detective.txd" type="client" download="false" />
+	
+	<file src="models/health.dff" type="client" download="false" />
+    <file src="models/health.txd" type="client" download="false" />
+	
+	<file src="models/hydra.dff" type="client" download="false" />
+    <file src="models/hydra.txd" type="client" download="false" />
+	
+	<file src="models/minigun.dff" type="client" download="false" />
+    <file src="models/minigun.txd" type="client" download="false" />
+	
+    <file src="models/taser.txd" type="client" download="false" />
+	<file src="models/taser.dff" type="client" download="false" />
+	
+    <file src="models/jetpack.txd" type="client" download="false" />
+	<file src="models/jetpack.dff" type="client" download="false" />
+	
+    <file src="models/helmet.dff" type="client" download="false" />
+    <file src="models/helmet.txd" type="client" download="false" />
+	
+	<file src="models/Chloe.dff" type="client" download="false" />
+	<file src="models/Chloe.txd" type="client" download="false" />
+	
+	<file src="models/bmost.dff" type="client" download="false" />
+	<file src="models/bmost.txd" type="client" download="false" />
+	
+	<file src="models/rcraider.dff" type="client" download="false" />
+	<file src="models/rcraider.txd" type="client" download="false" />
+
+	<file src="models/drone_.dff" type="client" download="false" />
+    <file src="models/drone_.txd" type="client" download="false" />
+	
+	<!-- REVAMPED VEHICLE MODS DO NOT TOUCH -->
+	
+	<file src="models/copbike.dff" type="client" download="false" />
+	<file src="models/copbike.txd" type="client" download="false" />	
+	
+	<file src="models/copcarru.dff" type="client" download="false" />
+	<file src="models/copcarru.txd" type="client" download="false" />
+	
+	<file src="models/copcarla.txd" type="client" download="false" />
+	<file src="models/copcarla.dff" type="client" download="false" />
+	
+	<file src="models/copcarsf.txd" type="client" download="false" />
+	<file src="models/copcarsf.dff" type="client" download="false" />
+	
+	<file src="models/copcarvg.txd" type="client" download="false" />
+	<file src="models/copcarvg.dff" type="client" download="false" />
+	
+	<file src="models/at400.txd" type="client" download="false" />
+	<file src="models/at400.dff" type="client" download="false" />
+
+	<file src="models/fcr900.txd" type="client" download="false" />
+	<file src="models/fcr900.dff" type="client" download="false" />
+
+	<file src="models/bf400.txd" type="client" download="false" />
+	<file src="models/bf400.dff" type="client" download="false" />
+
+	<file src="models/enforcer.txd" type="client" download="false" />
+	<file src="models/enforcer.dff" type="client" download="false" />
+	
+	<file src="models/fbiranch.txd" type="client" download="false" />
+	<file src="models/fbiranch.dff" type="client" download="false" />
+	
+	<file src="models/admiral.txd" type="client" download="false" />
+	<file src="models/admiral.dff" type="client" download="false" />
+
+	<file src="models/stretch.txd" type="client" download="false" />
+	<file src="models/stretch.dff" type="client" download="false" />
+
+	<file src="models/ambulance.txd" type="client" download="false" />
+	<file src="models/ambulance.dff" type="client" download="false" />
+
+	<file src="models/banshee.txd" type="client" download="false" />
+	<file src="models/banshee.dff" type="client" download="false" />
+	
+	<file src="models/barracks.txd" type="client" download="false" />
+	<file src="models/barracks.dff" type="client" download="false" />
+	
+	<file src="models/buffalo.txd" type="client" download="false" />
+	<file src="models/buffalo.dff" type="client" download="false" />
+	
+	<file src="models/comet.txd" type="client" download="false" />
+	<file src="models/comet.dff" type="client" download="false" />
+	
+	<file src="models/merit.txd" type="client" download="false" />
+	<file src="models/merit.dff" type="client" download="false" />
+	
+	<file src="models/sabre.txd" type="client" download="false" />
+	<file src="models/sabre.dff" type="client" download="false" />
+	
+	<file src="models/sentinel.txd" type="client" download="false" />
+	<file src="models/sentinel.dff" type="client" download="false" />
+	
+	<file src="models/sultan.txd" type="client" download="false" />
+	<file src="models/sultan.dff" type="client" download="false" />
+
+	<file src="models/solair.txd" type="client" download="false" />
+	<file src="models/solair.dff" type="client" download="false" />
+	
+	<file src="models/turismo.txd" type="client" download="false" />
+	<file src="models/turismo.dff" type="client" download="false" />
+	
+	<file src="models/zr-350.txd" type="client" download="false" />
+	<file src="models/zr-350.dff" type="client" download="false" />
+	
+	<file src="models/patriot.txd" type="client" download="false" />
+	<file src="models/patriot.dff" type="client" download="false" />
+	
+	<file src="models/prime.txd" type="client" download="false" />
+	<file src="models/prime.dff" type="client" download="false" />
+		
+	
+</meta>

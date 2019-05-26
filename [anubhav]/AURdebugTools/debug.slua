@@ -1,0 +1,45 @@
+local options =
+{
+    connectionAttempts = 3,
+    connectTimeout = 5000,
+    formFields = {
+    	content = "",
+	}
+}
+
+function sendDebugToDiscord(webhook, msg)
+	options.formFields.content = msg
+	fetchRemote(webhook, options, function() end)
+	return false
+end
+
+function debugMessage(message, level, file, line, r, g, b)
+	if (not file or not line) then
+		return false
+	end
+	if (file == "[anubhav]\\AURdebugTools\\debug.slua") then
+		return false
+	end
+	mess = file.."\:"..line.."\: "..message
+	if (level == 1) then
+		local levelMsg = "**ERROR: **"
+		sendDebugToDiscord("https://discordapp.com/api/webhooks/540935326798053396/vCFftD6jE0_VLhtDU4OZZDB0h6jebLyxeYj7sqOIv7w7prNhQNZBU0Kxa-cYWp_bNpbQ", levelMsg..mess)
+	else
+		local levelMsg = (level == 2 and "**WARNING: **" or "**INFO: **")
+		sendDebugToDiscord("https://discordapp.com/api/webhooks/540935208266891287/x-aj_tQwqrmS9IjhODI5zIpXrdTpZ3Y9eQsgEQx7aGQ_TVsfzGk9MgvIcXpttZqBbwh-", levelMsg..mess)
+	end
+end
+addEventHandler("onDebugMessage", root, debugMessage)
+
+function displayClientDebug(level, msg, r, g, b)
+	outputDebugString(msg, 0, r, g, b)
+	if (level == 1) then
+		local levelMsg = "**ERROR: **"
+		sendDebugToDiscord("https://discordapp.com/api/webhooks/540935326798053396/vCFftD6jE0_VLhtDU4OZZDB0h6jebLyxeYj7sqOIv7w7prNhQNZBU0Kxa-cYWp_bNpbQ", levelMsg..msg)
+	else
+		local levelMsg = (level == 2 and "**WARNING: **" or "**INFO: **")
+		sendDebugToDiscord("https://discordapp.com/api/webhooks/540935208266891287/x-aj_tQwqrmS9IjhODI5zIpXrdTpZ3Y9eQsgEQx7aGQ_TVsfzGk9MgvIcXpttZqBbwh-", levelMsg..msg)
+	end
+end
+addEvent("AURdebugTools.clientDebug", true)
+addEventHandler("AURdebugTools.clientDebug", resourceRoot, displayClientDebug)

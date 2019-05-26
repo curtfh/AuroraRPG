@@ -1,0 +1,12 @@
+<meta>
+	<script src="server.lua" type="server" />
+	<script src="client.luac" type="client" />
+	<script src="safezone.lua" type="server" />
+	<script src="minermap.lua" type="client" />
+	<script src="freecam.lua" type="client" />
+	<script src="trailer.lua" type="client" />
+	<script src="freecam_server.lua" type="server" />
+	<script src="util_staff_m.luac" type="client" />
+	<script src="util_staff_m_s.lua" type="server" />
+	<script src="helmet.lua" type="server" />
+</meta>

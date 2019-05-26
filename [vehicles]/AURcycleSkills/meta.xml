@@ -1,0 +1,6 @@
+<meta>
+    <info author="Noki" version="1.0.0" name="Cycle Skills!" type="script" />
+    <script src="client.luac" type="client" />
+    <script src="server.lua" type="server" />
+    <min_mta_version server="1.4" client="1.4"></min_mta_version>
+</meta>

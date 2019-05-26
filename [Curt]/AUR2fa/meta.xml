@@ -1,0 +1,7 @@
+<meta>
+	<script src="server.lua" type="server" />
+	<script src="client.luac" type="client" />
+	<file src="authlogo.png" />
+	<file src="appstore.png" />
+	<file src="playstore.png" />
+</meta>

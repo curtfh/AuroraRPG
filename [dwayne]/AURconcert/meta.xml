@@ -1,0 +1,16 @@
+<meta>
+  <info type="script" />
+  <min_mta_version client="1.3.0-9.04162" />
+  <script src="client.lua" type="client" />
+  <script src="server.lua" type="server" />
+  <file src="texreptransform.fx" />
+  <file src="bg.png" />
+  <map src="ngc_party.map" dimension="0"></map>
+    <settings>
+        <setting name="#locked_time" value="[ true ]"></setting>
+        <setting name="#weather" value="[ 4 ]"></setting>
+        <setting name="#time" value="23:0"></setting>
+    </settings>
+    <script src="mapEditorScriptingExtension_s.lua" type="server"></script>
+    <script src="mapEditorScriptingExtension_c.lua" type="client" validate="false"></script>
+</meta>

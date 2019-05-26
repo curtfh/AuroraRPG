@@ -1,0 +1,16 @@
+
+
+addEventHandler("onClientRender", root,
+    function()
+        dxDrawText("Welcome to Police Department", 196 - 1, 187 - 1, 1269 - 1, 271 - 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "left", "top", false, true, false, false, false)
+        dxDrawText("Welcome to Police Department", 196 + 1, 187 - 1, 1269 + 1, 271 - 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "left", "top", false, true, false, false, false)
+        dxDrawText("Welcome to Police Department", 196 - 1, 187 + 1, 1269 - 1, 271 + 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "left", "top", false, true, false, false, false)
+        dxDrawText("Welcome to Police Department", 196 + 1, 187 + 1, 1269 + 1, 271 + 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "left", "top", false, true, false, false, false)
+        dxDrawText("Welcome to Police Department", 196, 187, 1269, 271, tocolor(51, 140, 250, 255), 3.00, "pricedown", "left", "top", false, true, false, false, false)
+        dxDrawText("In this introduction, you will know all the functions of the Los Santos Police Department.", 296 - 1, 306 - 1, 1661 - 1, 585 - 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, false, false)
+        dxDrawText("In this introduction, you will know all the functions of the Los Santos Police Department.", 296 + 1, 306 - 1, 1661 + 1, 585 - 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, false, false)
+        dxDrawText("In this introduction, you will know all the functions of the Los Santos Police Department.", 296 - 1, 306 + 1, 1661 - 1, 585 + 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, false, false)
+        dxDrawText("In this introduction, you will know all the functions of the Los Santos Police Department.", 296 + 1, 306 + 1, 1661 + 1, 585 + 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, false, false)
+        dxDrawText("In this introduction, you will know all the functions of the Los Santos Police Department.", 296, 306, 1661, 585, tocolor(163, 139, 140, 255), 3.00, "pricedown", "center", "top", false, true, false, false, false)
+    end
+)

@@ -1,0 +1,6 @@
+<meta>
+    <info description="Shader - Tex names" version="0.0.2" type="script" />
+    <script src="client.luac" type="client" />
+    <file src="tex_names.fx" type="client" />
+    <min_mta_version server="1.3.4-0.00000" client="1.3.4-0.00000"></min_mta_version>
+</meta>

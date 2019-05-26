@@ -1,0 +1,12 @@
+<meta>
+	<info author='Prime' name='Updates' type='script' version='2' />
+
+	<export function="requestUpdates" type="server" http="true" />
+	<export function='AllowedToAddUpdate' type='server' />
+	<export function='removeUpdate' type='server' />
+	<export function='addUpdate' type='server' />
+
+    <script src='client.luac' type='client' />
+	<script src='server.lua' type='server' />
+    <file src="logo2.png" />
+</meta>

@@ -1,0 +1,60 @@
+webhooks = exports.AURgroupChatSyncHooks:getWebhookTable()
+local options = {
+	connectionAttempts = 3,
+	connectTimeout = 5000,
+	formFields = {
+		content = "",
+	}
+}
+
+function triggerWebhook(webhook, msg)
+	if (not webhooks[webhook]) then
+		return false
+	end
+	options.formFields.content = msg:gsub("#%x%x%x%x%x%x", "")
+	fetchRemote(webhooks[webhook], options, function() end)
+end
+
+function discordSendGroupMessage(group, msg, id, discordUsername)
+	triggerWebhook(group, "**("..group.." Discord)** "..msg)
+	local rgb = exports.AURsamgroups:getGroupColor(group)
+	if (not rgb) then
+		return false
+	end
+	local r, g, b = unpack(split(rgb, ","))
+	for i, v in ipairs(getElementsByType("player")) do
+		if (getElementData(v, "Group") == group) then
+			outputChatBox("("..group.." Discord) #ffffff"..msg, v, tonumber(r), tonumber(g), tonumber(b), true)
+		end
+	end
+end
+
+function discordRequestGroupOnlineMembers(group, gsc)
+	local onlineMemberStr = ""
+	local mem = exports.CITgang:getGangMembersSuperQuick(group)
+	for i, v in ipairs(getElementsByType("player")) do
+		if (getElementData(v, "Group") == group) then
+			if (i == 1) then
+				onlineMemberStr = getPlayerName(v)
+			else
+				onlineMemberStr = onlineMemberStr..", "..getPlayerName(v)
+			end
+		end
+	end
+	onlineMemberStr = "There are **"..#mem.."** member(s) online: "..onlineMemberStr
+	triggerWebhook((gsc and "gsc" or "").."msg♠"..group.."♠"..onlineMemberStr)
+end
+
+function discordGroupChatEventSendMessage(group, message)
+	if (not webhooks[group]) then
+		return false
+	end
+	triggerWebhook(group, message)
+end
+addEvent("AURchat.groupc", true)
+addEventHandler("AURchat.groupc", root, discordGroupChatEventSendMessage)
+
+function refreshWebhooks()
+	webhooks = exports.AURgroupChatSyncHooks:getWebhookTable()
+end
+addCommandHandler("refreshwebhook", refreshWebhooks)

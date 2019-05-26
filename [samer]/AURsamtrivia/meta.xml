@@ -1,0 +1,5 @@
+<meta>
+    <info author="Samer 'Baseplate' Belgacem" type="script" name="Trivia" description="Trivia system" />
+	
+	<script src="server.lua" type="server" />
+</meta>

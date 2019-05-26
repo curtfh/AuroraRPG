@@ -1,0 +1,5 @@
+<map>
+	<theMap name="Golden-Gate-Drag" author="Unknown"></theMap>
+    <spawnpoint id="spawnpoint (Cheetah) (1)" vehicle="415" posX="-2689.2" posY="2147.6001" posZ="55.1" rotX="0" rotY="0" rotZ="180"></spawnpoint>
+    <checkpoint id="checkpoint () (5)" type="checkpoint" color="#00F9" size="15" posX="-2690.3999" posY="1276.8" posZ="54.5" rotX="0" rotY="0" rotZ="0"></checkpoint>
+</map>

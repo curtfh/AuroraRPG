@@ -1,0 +1,6 @@
+<meta>
+<file src="presents.txd" />
+<file src="presents.dff" />
+<script src="skin.lua" type="client" />
+<script src="map.lua" type="server" />
+</meta>

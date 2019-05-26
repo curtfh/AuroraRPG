@@ -1,0 +1,26 @@
+<meta>
+	<min_mta_version server="1.3.4-0.00000" client="1.3.4-0.00000"/>
+	<script src="events.slua" type="server"/>
+	<script src="CITevents_warp.slua" type="server" />
+	<script src="CITevents_warp.lua" type="client" />
+	<script src="races.slua" type="server"/>
+	<script src="races.lua" type="client"/>
+	<script src="saving.slua" type="server"/>
+	<script src="saving.lua" type="client"/>
+	<script src="pickups.slua" type="server"/>
+	<script src="explorer.slua" type="server"/>
+	<script src="explorer.lua" type="client"/>
+	<script src="eventRBs/roadBlocksS.slua" type="server"/>
+	<script src="eventRBs/roadBlocksC.lua" type="client"/>
+	<export function="isPlayerInEvent" type="server" />
+	<export function="getEventParticipants" type="server" />
+	<export function="isQuitJobDisabledForEvents" type="server" />
+	<export function="isEndShiftDisabledForEvents" type="server" />
+	
+	<file src="pickups/nitro.dff" type="client"/>
+	<file src="pickups/nitro.txd" type="client"/>
+	<file src="pickups/repair.dff" type="client"/>
+	<file src="pickups/repair.txd" type="client"/>
+	<file src="pickups/vehiclechange.dff" type="client"/>
+	<file src="pickups/vehiclechange.txd" type="client"/>
+</meta>

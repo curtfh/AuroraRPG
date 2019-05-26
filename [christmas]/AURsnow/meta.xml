@@ -1,0 +1,12 @@
+<meta>
+    <info author="" name="" version="1.0.4" type="misc"/>
+
+	<file src="flakes/real_tile.png"/>
+
+	<script src="snow.lua" type = "client"/>
+	<script src="c_snow_ground.lua" type="client" />
+	<file src="mta-helper.fx" type="client" />
+	<file src="snow_ground.fx" type="client" />
+	<file src="snow_trees.fx" type="client" />
+	<file src="smallnoise3d.dds" type="client" />
+</meta>

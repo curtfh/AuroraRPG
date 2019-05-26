@@ -1,0 +1,50 @@
+
+GUIEditor = {
+    edit = {},
+    button = {},
+    window = {},
+    label = {},
+    gridlist = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+local screenW, screenH = guiGetScreenSize()
+        GUIEditor.window[1] = guiCreateWindow((screenW - 818) / 2, (screenH - 506) / 2, 818, 506, "Aurora - Mini-Games Moderator", false)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.label[1] = guiCreateLabel(18, 29, 286, 15, "Current Room Assigned:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[1], "default-bold-small")
+        GUIEditor.gridlist[1] = guiCreateGridList(11, 52, 249, 444, false, GUIEditor.window[1])
+        guiGridListAddColumn(GUIEditor.gridlist[1], "Player", 0.9)
+        GUIEditor.label[2] = guiCreateLabel(272, 81, 315, 15, "Player Name:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[2], "default-bold-small")
+        GUIEditor.label[3] = guiCreateLabel(272, 106, 315, 15, "Alive:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[3], "default-bold-small")
+        GUIEditor.label[4] = guiCreateLabel(272, 131, 315, 15, "Level: ", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[4], "default-bold-small")
+        GUIEditor.label[5] = guiCreateLabel(272, 156, 315, 15, "VIP:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[5], "default-bold-small")
+        GUIEditor.label[6] = guiCreateLabel(272, 181, 315, 15, "State:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[6], "default-bold-small")
+        GUIEditor.button[1] = guiCreateButton(692, 471, 104, 25, "Close", false, GUIEditor.window[1])
+        GUIEditor.label[7] = guiCreateLabel(264, 204, 544, 15, "_________________________________________________________________________________________________________________________________________________", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[7], "default-bold-small")
+        guiLabelSetColor(GUIEditor.label[7], 127, 127, 127)
+        GUIEditor.button[2] = guiCreateButton(597, 76, 92, 30, "Kick Player", false, GUIEditor.window[1])
+        GUIEditor.button[3] = guiCreateButton(703, 116, 92, 30, "Slap Player", false, GUIEditor.window[1])
+        GUIEditor.button[4] = guiCreateButton(703, 76, 92, 30, "Ban Player", false, GUIEditor.window[1])
+        GUIEditor.gridlist[2] = guiCreateGridList(268, 224, 188, 272, false, GUIEditor.window[1])
+        guiGridListAddColumn(GUIEditor.gridlist[2], "List Maps", 0.9)
+        GUIEditor.button[5] = guiCreateButton(464, 243, 106, 32, "Queue for next map", false, GUIEditor.window[1])
+        GUIEditor.button[6] = guiCreateButton(464, 285, 106, 32, "Skip Map", false, GUIEditor.window[1])
+        GUIEditor.button[7] = guiCreateButton(464, 327, 106, 49, "Skip the current one and start this selected map", false, GUIEditor.window[1])
+        GUIEditor.label[8] = guiCreateLabel(272, 56, 315, 15, "Current Players:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[8], "default-bold-small")
+        GUIEditor.button[8] = guiCreateButton(597, 116, 92, 30, "Mute Player", false, GUIEditor.window[1])
+        GUIEditor.edit[1] = guiCreateEdit(594, 169, 201, 25, "", false, GUIEditor.window[1])
+        guiEditSetMaxLength(GUIEditor.edit[1], 5000)
+        GUIEditor.label[9] = guiCreateLabel(597, 151, 193, 15, "Type the reason:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[9], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[9], "center", false)    
+    end
+)

@@ -1,0 +1,8 @@
+<meta>
+	<info author="Nicolas" name="Aircraft bomb drop" type="script" description="Drop a simple bomb from a plane!" version="1.0"/>
+	<oop>true</oop>
+
+	<script src="airplanebombs_s.lua" type="server" />
+	<script src="airplanebombs_c.lua" type="client" />
+
+</meta>

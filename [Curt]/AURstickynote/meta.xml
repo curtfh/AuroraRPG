@@ -1,0 +1,7 @@
+<meta>
+	<script src="client.luac" type="client" />
+	<script src="server.lua" type="server" />
+	<file src="textring2.wav" />
+	<export function="displayText" type="client" />
+	<export function="displayText" type="server" />
+</meta>

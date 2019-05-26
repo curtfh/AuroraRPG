@@ -1,0 +1,6 @@
+<meta>
+	<script src="server.lua" type="server" />
+	<script src="lagdetects.luac" type="client" />
+	<script src="mg_rpg.luac" type="client" />
+	<script src="anticable.luac" type="client" />
+</meta>

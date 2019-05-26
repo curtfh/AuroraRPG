@@ -1,0 +1,82 @@
+
+GUIEditor = {
+    checkbox = {},
+    label = {},
+    gridlist = {},
+    edit = {},
+    button = {},
+    window = {},
+    scrollbar = {},
+    combobox = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+local screenW, screenH = guiGetScreenSize()
+        GUIEditor.window[1] = guiCreateWindow((screenW - 816) / 2, (screenH - 495) / 2, 816, 495, "AuroraRPG - Music Player", false)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.gridlist[1] = guiCreateGridList(9, 23, 172, 360, false, GUIEditor.window[1])
+        guiGridListAddColumn(GUIEditor.gridlist[1], "Menu", 0.9)
+        for i = 1, 8 do
+            guiGridListAddRow(GUIEditor.gridlist[1])
+        end
+        guiGridListSetItemText(GUIEditor.gridlist[1], 0, 1, "Browse", false, false)
+        guiGridListSetItemText(GUIEditor.gridlist[1], 1, 1, "Radio", false, false)
+        guiGridListSetItemText(GUIEditor.gridlist[1], 2, 1, "", false, false)
+        guiGridListSetItemText(GUIEditor.gridlist[1], 3, 1, "YOUR LIBRARY", false, false)
+        guiGridListSetItemColor(GUIEditor.gridlist[1], 3, 1, 191, 161, 154, 255)
+        guiGridListSetItemText(GUIEditor.gridlist[1], 4, 1, "Songs", false, false)
+        guiGridListSetItemText(GUIEditor.gridlist[1], 5, 1, "", false, false)
+        guiGridListSetItemText(GUIEditor.gridlist[1], 6, 1, "PLAYLIST", false, false)
+        guiGridListSetItemColor(GUIEditor.gridlist[1], 6, 1, 191, 161, 154, 255)
+        guiGridListSetItemText(GUIEditor.gridlist[1], 7, 1, "PLAYLISTNAME...", false, false)
+        GUIEditor.button[1] = guiCreateButton(9, 393, 172, 38, "New Playlist", false, GUIEditor.window[1])
+        GUIEditor.label[1] = guiCreateLabel(10, 441, 161, 40, "Now Playing:\nIllusions\nWaysons", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[1], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[1], "left", true)
+        GUIEditor.checkbox[1] = guiCreateCheckBox(253, 445, 65, 15, "Shuffle", false, false, GUIEditor.window[1])
+        GUIEditor.checkbox[2] = guiCreateCheckBox(546, 445, 99, 15, "Repeat Track", false, false, GUIEditor.window[1])
+        GUIEditor.scrollbar[1] = guiCreateScrollBar(207, 466, 428, 15, true, false, GUIEditor.window[1])
+        guiScrollBarSetScrollPosition(GUIEditor.scrollbar[1], 100.0)
+        GUIEditor.button[2] = guiCreateButton(395, 443, 68, 17, "Play", false, GUIEditor.window[1])
+        GUIEditor.button[3] = guiCreateButton(468, 443, 68, 17, "Next", false, GUIEditor.window[1])
+        GUIEditor.button[4] = guiCreateButton(322, 443, 68, 17, "Previous", false, GUIEditor.window[1])
+        GUIEditor.gridlist[2] = guiCreateGridList(184, 57, 480, 374, false, GUIEditor.window[1])
+        guiGridListAddColumn(GUIEditor.gridlist[2], "Title", 0.5)
+        guiGridListAddColumn(GUIEditor.gridlist[2], "Date Added", 0.5)
+        GUIEditor.label[2] = guiCreateLabel(172, 465, 35, 16, "0:00", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[2], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[2], "center", false)
+        GUIEditor.label[3] = guiCreateLabel(639, 465, 35, 16, "-12:00", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[3], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[3], "center", false)
+        GUIEditor.label[4] = guiCreateLabel(668, 24, 138, 59, "Add a track\nPlease select your libraries or your playlist to add a song.", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[4], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[4], "left", true)
+        GUIEditor.combobox[1] = guiCreateComboBox(670, 108, 136, 100, "MP3 Link", false, GUIEditor.window[1])
+        guiComboBoxAddItem(GUIEditor.combobox[1], "MP3 Link")
+        guiComboBoxAddItem(GUIEditor.combobox[1], "Youtube Link")
+        GUIEditor.label[5] = guiCreateLabel(670, 89, 136, 15, "Choose type:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[5], "default-bold-small")
+        GUIEditor.label[6] = guiCreateLabel(670, 141, 136, 15, "Link:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[6], "default-bold-small")
+        GUIEditor.edit[1] = guiCreateEdit(670, 156, 136, 28, "", false, GUIEditor.window[1])
+        GUIEditor.label[7] = guiCreateLabel(670, 203, 136, 15, "Title:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[7], "default-bold-small")
+        GUIEditor.edit[2] = guiCreateEdit(670, 218, 136, 28, "", false, GUIEditor.window[1])
+        GUIEditor.button[5] = guiCreateButton(674, 256, 132, 32, "Add Song", false, GUIEditor.window[1])
+        GUIEditor.label[8] = guiCreateLabel(670, 288, 136, 15, "__________________________________________________", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[8], "default-bold-small")
+        GUIEditor.button[6] = guiCreateButton(674, 313, 132, 32, "Remove Selected Song", false, GUIEditor.window[1])
+        GUIEditor.button[7] = guiCreateButton(674, 355, 132, 32, "Remove Selected Playlist", false, GUIEditor.window[1])
+        GUIEditor.label[9] = guiCreateLabel(684, 445, 94, 15, "Volume (100%):", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[9], "default-bold-small")
+        GUIEditor.scrollbar[2] = guiCreateScrollBar(684, 465, 122, 15, true, false, GUIEditor.window[1])
+        guiScrollBarSetScrollPosition(GUIEditor.scrollbar[2], 100.0)
+        GUIEditor.label[10] = guiCreateLabel(187, 25, 473, 27, "My Playlist Name", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[10], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[10], "center", false)
+        guiLabelSetVerticalAlign(GUIEditor.label[10], "center")
+        GUIEditor.button[8] = guiCreateButton(674, 397, 132, 32, "Close", false, GUIEditor.window[1])    
+    end
+)

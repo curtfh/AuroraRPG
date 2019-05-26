@@ -1,0 +1,123 @@
+--[[-------------------------------------------------
+Notes:
+
+> This code is using a relative image filepath. This will only work as long as the location it is from always exists, and the resource it is part of is running.
+    To ensure it does not break, it is highly encouraged to move images into your local resource and reference them there.
+--]]-------------------------------------------------
+
+
+GUIEditor = {
+    tab = {},
+    staticimage = {},
+    edit = {},
+    window = {},
+    tabpanel = {},
+    button = {},
+    label = {},
+    gridlist = {},
+    memo = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+        GUIEditor.window[1] = guiCreateWindow(0.30, 0.27, 0.40, 0.47, "AuroraRPG - Report", true)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.tabpanel[1] = guiCreateTabPanel(0.02, 0.06, 0.96, 0.91, true, GUIEditor.window[1])
+
+        GUIEditor.tab[1] = guiCreateTab("Screenshot Report", GUIEditor.tabpanel[1])
+
+        GUIEditor.gridlist[1] = guiCreateGridList(0.03, 0.04, 0.28, 0.92, true, GUIEditor.tab[1])
+        guiGridListAddColumn(GUIEditor.gridlist[1], "Pictures", 0.9)
+        GUIEditor.staticimage[1] = guiCreateStaticImage(0.32, 0.13, 0.23, 0.29, ":server/Images/disc.png", true, GUIEditor.tab[1])
+        GUIEditor.label[1] = guiCreateLabel(0.32, 0.05, 0.45, 0.04, "Preview (Click the picture for full view):", true, GUIEditor.tab[1])
+        guiSetFont(GUIEditor.label[1], "default-bold-small")
+        GUIEditor.label[2] = guiCreateLabel(0.32, 0.43, 0.06, 0.05, "Title:", true, GUIEditor.tab[1])
+        guiSetFont(GUIEditor.label[2], "default-bold-small")
+        GUIEditor.memo[1] = guiCreateMemo(0.32, 0.56, 0.67, 0.32, "", true, GUIEditor.tab[1])
+        GUIEditor.edit[1] = guiCreateEdit(0.39, 0.42, 0.60, 0.08, "", true, GUIEditor.tab[1])
+        GUIEditor.label[3] = guiCreateLabel(0.32, 0.51, 0.14, 0.05, "Description:", true, GUIEditor.tab[1])
+        guiSetFont(GUIEditor.label[3], "default-bold-small")
+        GUIEditor.button[1] = guiCreateButton(0.32, 0.89, 0.26, 0.07, "Report", true, GUIEditor.tab[1])
+        GUIEditor.button[2] = guiCreateButton(0.56, 0.13, 0.12, 0.06, "View", true, GUIEditor.tab[1])
+        GUIEditor.button[3] = guiCreateButton(0.71, 0.89, 0.26, 0.07, "Close", true, GUIEditor.tab[1])
+
+        GUIEditor.tab[2] = guiCreateTab("Text Report", GUIEditor.tabpanel[1])
+
+        GUIEditor.label[4] = guiCreateLabel(0.02, 0.05, 0.07, 0.05, "Title:", true, GUIEditor.tab[2])
+        guiSetFont(GUIEditor.label[4], "default-bold-small")
+        GUIEditor.edit[2] = guiCreateEdit(0.09, 0.04, 0.89, 0.07, "", true, GUIEditor.tab[2])
+        GUIEditor.label[5] = guiCreateLabel(0.02, 0.15, 0.15, 0.05, "Description:", true, GUIEditor.tab[2])
+        guiSetFont(GUIEditor.label[5], "default-bold-small")
+        GUIEditor.memo[2] = guiCreateMemo(0.01, 0.20, 0.97, 0.64, "", true, GUIEditor.tab[2])
+        GUIEditor.button[4] = guiCreateButton(0.13, 0.87, 0.27, 0.10, "Report", true, GUIEditor.tab[2])
+        GUIEditor.button[5] = guiCreateButton(0.58, 0.87, 0.27, 0.10, "Close", true, GUIEditor.tab[2])
+
+
+        GUIEditor.window[2] = guiCreateWindow(0.12, 0.16, 0.75, 0.71, "AuroraRPG - Admin Report", true)
+        guiWindowSetSizable(GUIEditor.window[2], false)
+
+        GUIEditor.label[6] = guiCreateLabel(0.01, 0.04, 0.98, 0.03, "Opened Reports: 0 | Overall Reports: 0 | Unread Reports: 0", true, GUIEditor.window[2])
+        guiSetFont(GUIEditor.label[6], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[6], "center", false)
+        GUIEditor.gridlist[2] = guiCreateGridList(0.01, 0.07, 0.50, 0.91, true, GUIEditor.window[2])
+        guiGridListAddColumn(GUIEditor.gridlist[2], "Report ID", 0.3)
+        guiGridListAddColumn(GUIEditor.gridlist[2], "Title", 0.3)
+        guiGridListAddColumn(GUIEditor.gridlist[2], "Player", 0.3)
+        GUIEditor.label[7] = guiCreateLabel(0.51, 0.08, 0.09, 0.03, "Account Name: ", true, GUIEditor.window[2])
+        guiSetFont(GUIEditor.label[7], "default-bold-small")
+        GUIEditor.edit[3] = guiCreateEdit(0.61, 0.07, 0.38, 0.05, "Acc Name", true, GUIEditor.window[2])
+        guiEditSetReadOnly(GUIEditor.edit[3], true)
+        GUIEditor.label[8] = guiCreateLabel(0.51, 0.14, 0.08, 0.03, "Player Name: ", true, GUIEditor.window[2])
+        guiSetFont(GUIEditor.label[8], "default-bold-small")
+        GUIEditor.edit[4] = guiCreateEdit(0.60, 0.13, 0.39, 0.05, "Player Name", true, GUIEditor.window[2])
+        guiEditSetReadOnly(GUIEditor.edit[4], true)
+        GUIEditor.label[9] = guiCreateLabel(0.51, 0.19, 0.02, 0.03, "IP:", true, GUIEditor.window[2])
+        guiSetFont(GUIEditor.label[9], "default-bold-small")
+        GUIEditor.edit[5] = guiCreateEdit(0.54, 0.18, 0.45, 0.04, "IP ", true, GUIEditor.window[2])
+        guiEditSetReadOnly(GUIEditor.edit[5], true)
+        GUIEditor.label[10] = guiCreateLabel(0.51, 0.25, 0.07, 0.03, "MTA Serial: ", true, GUIEditor.window[2])
+        guiSetFont(GUIEditor.label[10], "default-bold-small")
+        GUIEditor.edit[6] = guiCreateEdit(0.59, 0.24, 0.40, 0.04, "MTA Serial", true, GUIEditor.window[2])
+        guiEditSetReadOnly(GUIEditor.edit[6], true)
+        GUIEditor.label[11] = guiCreateLabel(0.51, 0.29, 0.49, 0.03, "---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------", true, GUIEditor.window[2])
+        guiSetFont(GUIEditor.label[11], "default-bold-small")
+        guiLabelSetColor(GUIEditor.label[11], 255, 0, 0)
+        GUIEditor.label[12] = guiCreateLabel(0.51, 0.33, 0.06, 0.03, "Report ID:", true, GUIEditor.window[2])
+        guiSetFont(GUIEditor.label[12], "default-bold-small")
+        GUIEditor.edit[7] = guiCreateEdit(0.58, 0.32, 0.10, 0.04, "Report ID", true, GUIEditor.window[2])
+        guiEditSetReadOnly(GUIEditor.edit[7], true)
+        GUIEditor.label[13] = guiCreateLabel(0.51, 0.38, 0.03, 0.03, "Title: ", true, GUIEditor.window[2])
+        guiSetFont(GUIEditor.label[13], "default-bold-small")
+        GUIEditor.edit[8] = guiCreateEdit(0.55, 0.37, 0.44, 0.04, "Title", true, GUIEditor.window[2])
+        guiEditSetReadOnly(GUIEditor.edit[8], true)
+        GUIEditor.label[14] = guiCreateLabel(0.51, 0.43, 0.07, 0.03, "Description: ", true, GUIEditor.window[2])
+        guiSetFont(GUIEditor.label[14], "default-bold-small")
+        GUIEditor.memo[3] = guiCreateMemo(0.51, 0.46, 0.48, 0.14, "Descrption", true, GUIEditor.window[2])
+        guiMemoSetReadOnly(GUIEditor.memo[3], true)
+        GUIEditor.label[15] = guiCreateLabel(0.51, 0.60, 0.26, 0.03, "Attachments (Click the image for full view):", true, GUIEditor.window[2])
+        guiSetFont(GUIEditor.label[15], "default-bold-small")
+        GUIEditor.staticimage[2] = guiCreateStaticImage(0.52, 0.64, 0.13, 0.14, ":server/Images/disc.png", true, GUIEditor.window[2])
+        GUIEditor.button[6] = guiCreateButton(0.65, 0.64, 0.11, 0.05, "View", true, GUIEditor.window[2])
+        GUIEditor.label[16] = guiCreateLabel(0.51, 0.78, 0.49, 0.03, "---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------", true, GUIEditor.window[2])
+        guiSetFont(GUIEditor.label[16], "default-bold-small")
+        guiLabelSetColor(GUIEditor.label[16], 255, 0, 0)
+        GUIEditor.label[17] = guiCreateLabel(0.51, 0.81, 0.05, 0.03, "Actions:", true, GUIEditor.window[2])
+        guiSetFont(GUIEditor.label[17], "default-bold-small")
+        GUIEditor.button[7] = guiCreateButton(0.57, 0.81, 0.12, 0.04, "Valid Report", true, GUIEditor.window[2])
+        GUIEditor.button[8] = guiCreateButton(0.52, 0.86, 0.17, 0.04, "Invalid Report and Reason:", true, GUIEditor.window[2])
+        GUIEditor.label[18] = guiCreateLabel(0.51, 0.93, 0.29, 0.05, "This report has been seen by:", true, GUIEditor.window[2])
+        guiSetFont(GUIEditor.label[18], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[18], "left", true)
+        GUIEditor.edit[9] = guiCreateEdit(0.69, 0.86, 0.30, 0.04, "Not enough evidence", true, GUIEditor.window[2])
+        GUIEditor.button[9] = guiCreateButton(0.69, 0.81, 0.12, 0.04, "Invalid Report", true, GUIEditor.window[2])
+        GUIEditor.button[10] = guiCreateButton(0.89, 0.93, 0.10, 0.05, "Close", true, GUIEditor.window[2])
+
+
+        GUIEditor.window[3] = guiCreateWindow(0.01, 0.01, 0.99, 0.98, "AuroraRPG - Screenshot", true)
+        guiWindowSetSizable(GUIEditor.window[3], false)
+        guiSetAlpha(GUIEditor.window[3], 1.00)
+
+        GUIEditor.staticimage[3] = guiCreateStaticImage(0.02, 0.07, 0.96, 0.92, ":server/Images/main.png", true, GUIEditor.window[3])
+        GUIEditor.button[11] = guiCreateButton(1134, 28, 104, 18, "Close", false, GUIEditor.window[3])    
+    end
+)

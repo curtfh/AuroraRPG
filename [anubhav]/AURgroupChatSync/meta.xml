@@ -1,0 +1,7 @@
+<meta>
+	<script src="discord.slua" type="server" />
+	<export function="discordSendGroupMessage" http="true" type="server" />
+	<export function="discordRecieveGroupCodeList" http="true" type="server" />
+	<export function="discordRequestGroupOnlineMembers" http="true" type="server" />
+	<min_mta_version server="1.5.4-9.11413" client="1.5.2-9.07903"/>
+</meta>

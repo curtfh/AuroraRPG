@@ -1,0 +1,1 @@
+<meta>	<info author="" description="" version="1.0" type="script"/>	<script src="skins_client.luac" type="client" />	<script src="skins_server.lua" type="server" />	<config src="skins.xml" type="server" /></meta>

@@ -1,0 +1,18 @@
+
+GUIEditor = {
+    button = {},
+    window = {},
+    label = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+        GUIEditor.window[1] = guiCreateWindow(0.37, 0.40, 0.28, 0.15, "AuroraRPG - Prison Break", true)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.label[1] = guiCreateLabel(0.03, 0.26, 0.94, 0.26, "Are you sure you want to escape?\nEscaping from the prison will be dangerious.", true, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[1], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[1], "center", true)
+        GUIEditor.button[1] = guiCreateButton(0.10, 0.61, 0.32, 0.25, "Yes", true, GUIEditor.window[1])
+        GUIEditor.button[2] = guiCreateButton(0.57, 0.61, 0.32, 0.25, "No", true, GUIEditor.window[1])    
+    end
+)

@@ -1,0 +1,7 @@
+echo 1 > /proc/sys/net/ipv4/ip_forward
+iptables -F
+iptables -t nat -F
+iptables -X
+iptables -t nat -A PREROUTING -p udp --dport 22003 -j DNAT --to-destination 78.108.216.208:22003
+iptables -t nat -A PREROUTING -p tcp --dport 22005 -j DNAT --to-destination 78.108.216.208:22005
+iptables -t nat -A POSTROUTING -j MASQUERADE

@@ -1,0 +1,23 @@
+<meta>
+	<script src="server.lua" type="server" />
+	<script src="map.luac" type="server" />
+	<script src="restricted.lua" type="server" />
+	<script src="lights.luac" type="client" />
+	<script src="camera.luac" type="client" />
+	<script src="dj.luac" type="client" />
+	<file src="texreptransform.fx" />
+	<file src="shootlight.dff"></file>
+	<file src="smoke_flare.dff"></file>
+	<file src="fwSound.mp3"></file>
+	<file src="smoke30m.dff"></file>
+	<file src="logo.png"></file>
+	<file src="cef/sfx.html"></file>
+	<file src="cef/jquery-3.3.1.min.js"></file>
+	<file src="cef/video.js"></file>
+	<script src="firework.lua" type="server" />
+	<script src="fireworkc.luac" type="client" />
+	<download_priority_group>-1</download_priority_group>
+	<file src="sfx/Bottle_Rocket.mp3"/>
+	<script src="superman/server.lua" type="server" />
+  	<script src="superman/client.luac" type="client" />
+</meta>

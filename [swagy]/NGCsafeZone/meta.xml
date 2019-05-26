@@ -1,0 +1,7 @@
+<meta>
+	<script src="client.lua" type="client"/>
+	<script src="server.lua" type="server"/>
+
+	<export function="isElementWithinSafeZone" type="client"/>
+	<export function="addVehicleMsg" type="client"/>
+</meta>

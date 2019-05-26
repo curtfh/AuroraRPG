@@ -1,0 +1,7 @@
+<meta>
+    <info author="Prime" version="1.0" description="CSG Gym Script" type="script" />
+    
+    <script src="gym_server.lua" type="server" />
+    <script src="gym_client.luac" type="client" />
+    <min_mta_version server="1.3.4-0.00000" client="1.3.4-0.00000"></min_mta_version>
+</meta>

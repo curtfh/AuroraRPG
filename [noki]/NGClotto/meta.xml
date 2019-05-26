@@ -1,0 +1,9 @@
+<meta>
+    <info author="Priyen and NOki" type="script" version="1.0.0" name="Lotto" />
+    <script src="lotto.lua" type="server" />
+    <script src="c_lottery.luac" type="client" />
+    <export function="addPlayer" type="server" />
+    <export function="isNumberTaken" type="server" />
+    <export function="doesPlayerAlreadyHaveANumber" type="server" />
+    <min_mta_version server="1.3.4-0.00000" client="1.3.4-0.00000"></min_mta_version>
+</meta>

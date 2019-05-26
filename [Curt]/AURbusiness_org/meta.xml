@@ -1,0 +1,8 @@
+<meta>
+	<script src="label.luac" type="client"/>
+    <script src="labels.lua" type="server"/>
+	<script src="tables.lua" type="server" />
+	<script src="mission_s.lua" type="server" />
+	<script src="office_s.lua" type="server" />
+	<script src="office_c.luac" type="client" />
+</meta>

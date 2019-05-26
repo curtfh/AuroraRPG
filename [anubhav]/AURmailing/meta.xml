@@ -1,0 +1,4 @@
+<meta>
+	<script src="mail.slua" type="server" />
+	<script src="mail.luac" type="client" />
+</meta>

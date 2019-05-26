@@ -1,0 +1,9 @@
+<meta>
+    <info author="AUR Scripting Team" type="script" name="Votekick" description="Votekick system" />
+	
+	<script src="client.luac" type="client" />
+	<script src="server.lua" type="server" />
+	
+	<file src="yes.png"/>
+	<file src="no.png"/>
+</meta>

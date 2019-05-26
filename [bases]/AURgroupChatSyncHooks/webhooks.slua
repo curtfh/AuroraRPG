@@ -1,0 +1,6 @@
+webhooks = {
+}
+
+function getWebhookTable()
+	return webhooks
+end

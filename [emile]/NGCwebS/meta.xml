@@ -1,0 +1,9 @@
+<meta>
+	<info author="CLD Systems" />
+	<script src="WebScoreboard-Server.lua" type="server" />
+	<export function="getPlayers" type="server" http="true" />
+	<export function="getServerNamezz" type="server" http="true" />
+	<export function="getPlayerPeak" type="server" http="true" />
+	<export function="getServerIp" type="server" http="true" />
+	<export function="getPlayersCount" type="server" http="true" />
+</meta>

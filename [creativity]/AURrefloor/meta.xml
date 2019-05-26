@@ -1,0 +1,6 @@
+<meta>
+    <script src="floor.luac" type="client" />
+    <file src="floor.col" />
+    <file src="floor.dff" />
+    <file src="floor.txd" />
+</meta>

@@ -1,0 +1,4 @@
+<meta>
+	<info author="chris/Frost" name="door" description="open or close car doors" />
+	<script src="carDoor.lua" type="server" />
+</meta>

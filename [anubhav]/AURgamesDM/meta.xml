@@ -1,0 +1,32 @@
+<meta>
+	<script src="maps.lua" type="server" />
+	<script src="dm.lua" type="server" />
+
+	<script src="client.luac" type="client" protected="true"/>
+	<file src="images/go.png" type="client" />
+	<file src="images/1.png" type="client" />
+	<file src="images/2.png" type="client" />
+	<file src="images/3.png" type="client" />
+	<file src="texreplace.fx" />
+	<file src="nbbtext.png" />
+	<file src="mods/gta_tree_palm.dff" type="client" download="false" />
+	<file src="mods/gta_tree_palm.txd" type="client" download="false" />
+
+	<file src="mods/grey.dff" type="client" download="false" />
+	<file src="mods/grey.txd" type="client" download="false" />
+
+	<file src="mods/brown.dff" type="client" download="false" />
+	<file src="mods/brown.txd" type="client" download="false" />
+
+	<file src="stopbord/left/lframe0.png" type="client" />
+    <file src="stopbord/left/lframe1.png" type="client" />
+    <file src="stopbord/left/lframe2.png" type="client" />
+    <file src="stopbord/left/lframe3.png" type="client" />
+    <file src="stopbord/right/rframe0.png" type="client" />
+    <file src="stopbord/right/rframe1.png" type="client" />
+    <file src="stopbord/right/rframe2.png" type="client" />
+    <file src="stopbord/right/rframe3.png" type="client" />
+
+	<export function="isPlayerInDM" type="server" />
+	<min_mta_version server="1.3.9-0.00000" client="1.3.9-0.00000"/>
+</meta>

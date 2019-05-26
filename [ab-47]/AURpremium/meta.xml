@@ -1,0 +1,41 @@
+<meta>
+	<script src="client.luac" type="client"/>
+	<script src="server.lua" type="server"/>
+	
+	<export function="givePlayerPremium" type="server"/>
+	<export function="removePlayerPremium" type="server"/>
+	<export function="decreasePlayerPremium" type="server"/>
+	
+	<!--<script src="colorpicker/picker_client.lua" type="client" />
+	<file src="colorpicker/cursor.png" />
+	<file src="colorpicker/h.png" />
+	<file src="colorpicker/sv.png" />
+	<file src="colorpicker/blank.png" />
+	
+	<file src="skins/harley.dff" />
+	<file src="skins/harley.txd" />
+	
+	<file src="skins/james.dff" />
+	<file src="skins/james.txd" />
+	
+	<file src="skins/joker.dff" />
+	<file src="skins/joker.txd" />
+	
+	<file src="skins/robber.dff" />
+	<file src="skins/robber.txd" />
+	
+	<file src="skins/james.dff" />
+	<file src="skins/james.txd" />
+	
+	<file src="skins/spiderman.dff" />
+	<file src="skins/spiderman.txd" />
+	
+	<file src="skins/ghost.dff" />
+	<file src="skins/ghost.txd" />
+	
+	<file src="skins/yakuza.dff" />
+	<file src="skins/yakuza.txd" />
+	
+	<file src="skins/greenarrow.dff" />
+	<file src="skins/greenarrow.txd" /> -->
+</meta>

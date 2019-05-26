@@ -1,0 +1,40 @@
+--addEventHandler( "OnClientWeaponFire", root, function (target)
+--	 if (target == getLocalPlayer()) then
+--		outputChatBox("Phew")
+--		if (getElementDimension(target) == 2000) then 
+--				local pedSlot = getPedWeaponSlot ( target )
+--				if (pedSlot == 8 or pedSlot == 12 or pedSlot == 7) then
+--					outputChatBox("You cannot use that weapon.", 255, 0, 0)
+--					cancelEvent()
+--				end 
+--			end
+--	end
+--end)
+
+--addEventHandler( "onClientProjectileCreation", root,
+--
+--function ( creator )
+--
+--	if getElementDimension ( localPlayer, 2000 ) then
+--
+--		if ( getProjectileType( source ) == 16 ) or ( getProjectileType( source ) == 17 ) or ( getProjectileType( source ) == 18 ) or ( getProjectileType( source ) == 39 ) or ( getProjectileType( source ) == 38 )then
+--
+--
+--
+--			if ( creator == localPlayer ) then
+--
+--				-------
+--
+--			end
+--
+--
+--
+--			destroyElement( source )
+--
+--		end
+--
+--	end
+--
+--end
+--
+--)

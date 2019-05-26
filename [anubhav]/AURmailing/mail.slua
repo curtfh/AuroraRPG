@@ -1,0 +1,203 @@
+local mailCache = {}
+local deletedMailsCache = {}
+local mailConnection = dbConnect("sqlite", "mail.db")
+dbExec(mailConnection, "CREATE TABLE IF NOT EXISTS mailSystem(mailID INT, title TEXT, description TEXT, sender TEXT, receivers TEXT, readBy TEXT, date TEXT)")
+dbExec(mailConnection, "CREATE TABLE IF NOT EXISTS deletedMails(mailID INT, deletedFor TEXT)")
+
+function getFormattedDate()
+	local time = getRealTime()
+	return time.monthday.."/"..time.month.."/"..(time.year + 1900).." "..time.hour..":"..time.minute..":"..time.second
+end
+
+function sendPlayerEmail(sender, title, description, receivers)
+	local cacheID = #mailCache + 1
+	dbExec(mailConnection, "INSERT INTO mailSystem(mailID, title, description, sender, receivers, readBy, date) VALUES(?, ?, ?, ?, ?, ?, ?)", cacheID, title, description, sender, receivers, "", getFormattedDate())
+	mailCache[cacheID] = {["mailID"] = cacheID, ["title"] = title, ["description"] = description, ["sender"] = sender, ["receivers"] = receivers, ["readBy"] = "", ["date"] = getFormattedDate()}
+end
+
+function isEmailRead(acc, emailObj)
+	local read = emailObj.readBy
+	if (read == "" or (not read:find(",") and read ~= acc)) then
+		return false
+	end
+	local read = split(read, ",")
+	for i, v in ipairs(read) do
+		if (v == acc) then
+			return true
+		end
+	end
+	return false
+end
+
+function getPlayerEmails(plr, read)
+	if (not exports.server:isPlayerLoggedIn(plr)) then
+		return false
+	end
+	local selectEmails = {}
+	local accName = exports.server:getPlayerAccountName(plr)
+	for i, v in ipairs(mailCache) do
+		if (not deletedMailsCache[v.mailID]) then
+			deletedMailsCache[v.mailID] = {}
+		end
+		if (not deletedMailsCache[v.mailID][accName]) then
+			if (not read or (read and not isEmailRead(accName, v))) then
+				if (v.receivers == "") then
+					selectEmails[#selectEmails + 1] = v
+				else
+					local multipleReceivers = v.receivers:find(",")
+					if (multipleReceivers) then
+						local spl = split(v.receivers, ",")
+						for i, v in ipairs(spl) do
+							if (v == accName) then
+								selectEmails[#selectEmails + 1] = v
+								break
+							end
+						end
+					elseif (v.receivers == accName) then
+						selectEmails[#selectEmails + 1] = v
+					end
+				end
+			end
+		end
+	end
+	return selectEmails
+end
+
+function getEmailsSentByPlayer(plr)
+	if (not exports.server:isPlayerLoggedIn(plr)) then
+		return false
+	end
+	local selectEmails = {}
+	local accName = exports.server:getPlayerAccountName(plr)
+	for i, v in ipairs(mailCache) do
+		if (v.sender == accName) then
+			selectEmails[#selectEmails + 1] = v
+		end
+	end
+	return selectEmails
+end
+
+function updateCacheFromDatabase()
+	local mailPoll = dbPoll(dbQuery(mailConnection, "SELECT * FROM mailSystem"), -1)
+	mailCache = {}
+	if (mailPoll and #mailPoll > 0) then
+		mailCache = mailPoll
+	end
+	deletedMailsCache = {}
+	local delMailPoll = dbPoll(dbQuery(mailConnection, "SELECT * FROM deletedMails"), -1)
+	if (delMailPoll and #delMailPoll > 0) then
+		for i, v in ipairs(delMailPoll) do
+			if (not deletedMailsCache[v.mailID]) then
+				deletedMailsCache[v.mailID] = {}
+			end
+			if (not deletedMailsCache[v.deletedFor]) then
+				deletedMailsCache[v.deletedFor] = {}
+			end
+			deletedMailsCache[v.mailID][v.deletedFor] = true
+			deletedMailsCache[v.deletedFor][v.mailID] = true
+		end
+	end
+end
+addEventHandler("onResourceStart", resourceRoot, updateCacheFromDatabase)
+
+function sendEmailMessage()
+	outputChatBox("You have "..(#getPlayerEmails(source, true)).." unseen mails. Type /mails to open your inbox.", source, 255, 255, 0)
+end
+addEventHandler("onPlayerLogin", root, sendEmailMessage)
+
+function openMailWindow(plr)
+	local mails = getPlayerEmails(plr)
+	if (not mails or exports.CSGadmin:getPlayerMute(plr)) then
+		return false
+	end
+	triggerClientEvent(plr, "AURmailingSystem.windowToggle", plr, mails or {}, getEmailsSentByPlayer(plr) or {}, exports.server:getPlayerAccountName(plr), false)
+end
+addCommandHandler("mails", openMailWindow)
+
+function composeEmail(sendTo, subject, desc)
+	local isStaff = exports.CSGstaff:isPlayerStaff(client)
+	if (not isStaff and sendTo == "") then
+		outputChatBox("You have to fill in the 'Compose To' field.", client, 255, 0, 0)
+		return false
+	end
+	local accName = exports.server:getPlayerAccountName(client)
+	local playersSentTo = ""
+	local accountsSentTo = ""
+	if (sendTo == "") then
+		outputChatBox("You have received an e-mail from "..getPlayerName(client), root, 255, 255, 0)
+		sendPlayerEmail(accName, subject, desc, sendTo)
+		outputChatBox("Mail sent to all accounts", client, 255, 255, 0)
+	elseif (sendTo:find(",")) then
+		local sendTo = split(sendTo, ",")
+		for i, v in ipairs(sendTo) do
+			if (getPlayerFromName(v)) then
+				local plr = getPlayerFromName(v)
+				outputChatBox("You have received an e-mail from "..getPlayerName(client), plr, 255, 255, 0)
+				playersSentTo = (playersSentTo == "" and playersSentTo or playersSentTo..", ")..v
+				sendTo[i] = exports.server:getPlayerAccountName(plr)
+			elseif (v ~= "") then
+				accountsSentTo = (accountsSentTo == "" and accountsSentTo or accountsSentTo..", ")..v
+				for i, v in ipairs(getElementsByType("player")) do
+					if (exports.server:getPlayerAccountName(v) == v) then
+						outputChatBox("You have received an e-mail from "..getPlayerName(client), v, 255, 255, 0)
+						break
+					end
+				end
+			end
+		end
+		sendPlayerEmail(accName, subject, desc, table.concat(sendTo, ","))
+		outputChatBox("Mails sent to Players: "..playersSentTo.." | Accounts: "..accountsSentTo, client, 255, 255, 0)
+	elseif (getPlayerFromName(sendTo)) then
+		local plr = getPlayerFromName(sendTo)
+		if (not exports.server:isPlayerLoggedIn(plr)) then
+			outputChatBox("This player has not logged in yet!", client, 255, 255, 0)
+			return false 
+		end
+		sendPlayerEmail(accName, subject, desc, exports.server:getPlayerAccountName(plr))
+		outputChatBox("You have received an e-mail from "..getPlayerName(client), plr, 255, 255, 0)
+		outputChatBox("Mail sent to "..getPlayerName(plr), client, 255, 255, 0)
+	else
+		for i, v in ipairs(getElementsByType("player")) do
+			if (exports.server:getPlayerAccountName(v) == sendTo) then
+				outputChatBox("You have received an e-mail from "..getPlayerName(client), v, 255, 255, 0)
+				break
+			end
+		end
+		outputChatBox("Mail sent to account "..sendTo, client, 255, 0, 0)
+		sendPlayerEmail(accName, subject, desc, sendTo)
+	end
+	local mails = getPlayerEmails(client)
+	triggerClientEvent(client, "AURmailingSystem.windowToggle", client, mails or {}, getEmailsSentByPlayer(client) or {}, exports.server:getPlayerAccountName(client), false)
+end
+addEvent("AURmailingSystem.composeEmail", true)
+addEventHandler("AURmailingSystem.composeEmail", resourceRoot, composeEmail)
+
+function readMail(mID)
+	for i, v in ipairs(mailCache) do
+		if (v.mailID == mID) then
+			mailCache[i].readBy = mailCache[i].readBy..exports.server:getPlayerAccountName(client)..","
+			dbExec(mailConnection, "UPDATE mailSystem SET readBy = ? WHERE mailID = ?", mailCache[i].readBy, mID)
+			break
+		end
+	end
+	local mails = getPlayerEmails(client)
+	triggerClientEvent(client, "AURmailingSystem.windowToggle", client, mails or {}, getEmailsSentByPlayer(client) or {}, exports.server:getPlayerAccountName(client), true)
+end
+addEvent("AURmailingSystem.readMail", true)
+addEventHandler("AURmailingSystem.readMail", resourceRoot, readMail)
+
+function deleteMail(mID)
+	if (not deletedMailsCache[mID]) then
+		deletedMailsCache[mID] = {}
+	end
+	if (not deletedMailsCache[exports.server:getPlayerAccountName(client)]) then
+		deletedMailsCache[exports.server:getPlayerAccountName(client)] = {}
+	end
+	deletedMailsCache[mID][exports.server:getPlayerAccountName(client)] = true
+	deletedMailsCache[exports.server:getPlayerAccountName(client)][mID] = true
+	dbExec(mailConnection, "INSERT INTO deletedMails(mailID, deletedFor) VALUES(?, ?)", mID, exports.server:getPlayerAccountName(client))
+	outputChatBox("E-mail successfully deleted!", client, 255, 255, 0)
+	triggerClientEvent(client, "AURmailingSystem.windowToggle", client, getPlayerEmails(client) or {}, getEmailsSentByPlayer(client) or {}, exports.server:getPlayerAccountName(client), true)
+end
+addEvent("AURmailingSystem.deleteMail", true)
+addEventHandler("AURmailingSystem.deleteMail", resourceRoot, deleteMail)

@@ -1,0 +1,16 @@
+<meta>
+	<info author="Nicolas" name="Police Cruiser Speed Camera" description="TICKET BABE LIGHT WEIGHT RONNIE COLEMAN BODY BUILDING" version="1.5.0" type="misc" />
+	
+	<settings>
+		<setting name="*ticketTax" value="[3000]" description="Set the tax of the speeding fine. Default: 2000$"/>
+		<setting name="*allowExit" value="[false]" description="If you want to let players leave the car while speeding camera
+									is on then change to true (not recommended) else let it false. Default: false 
+									(due to abuse)"/>
+		<setting name="*rangeOfRadar" value="[25]" description="Set the range of the speed camera. Default and recommended: 25"/>
+
+	</settings>
+	
+	<script src="cruiserspeedcam.lua"/>
+
+
+</meta>

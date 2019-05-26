@@ -1,0 +1,6 @@
+<meta>
+    <info type="script" version="1.0.0" name="law skills - priyen" description="teams" />
+	<script src="client.luac" type="client" />
+	<script src="server.lua" type="server"/>
+
+</meta>

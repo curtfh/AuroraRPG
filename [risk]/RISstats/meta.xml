@@ -1,0 +1,10 @@
+<meta>
+	<info author="Risk" name="DX Stats Panel" description="View player stats" type="script" version="1"/>
+	
+	<script src="s.luac" type="server"/>
+	<script src="c.luac" type="client"/>
+	
+	<export function="getPlayerStats" type="server"/>
+	
+	<oop>true</oop>
+</meta>

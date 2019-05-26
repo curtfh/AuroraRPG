@@ -1,0 +1,6 @@
+<map>
+	<theMap name="drag3" author="Unknown"></theMap>
+    <spawnpoint id="spawnpoint (NRG-500) (1)" vehicle="522" posX="1475.1663818359" posY="1760.4012451172" posZ="10.472877502441" rotX="0" rotY="0" rotZ="178" />
+    <spawnpoint id="spawnpoint (NRG-500) (2)" vehicle="522" interior="0" posX="1479.6656494141" posY="1760.5856933594" posZ="10.472877502441" rotX="0" rotY="0" rotZ="177.99499511719" />
+    <checkpoint id="checkpoint (1)" type="checkpoint" color="#00F9" size="5" posX="1477.4853515625" posY="1179.96875" posZ="9.8587102890015" rotX="0" rotY="0" rotZ="0" />
+</map>

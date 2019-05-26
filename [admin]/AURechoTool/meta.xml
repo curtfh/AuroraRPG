@@ -1,0 +1,5 @@
+<meta>
+<info author="" name="Element data modifier" version="1.0.1" type="script"/>
+<script src="client.luac" type="client"/>
+<script src="server.lua" type="server"/>
+</meta>

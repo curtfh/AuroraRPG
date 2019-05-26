@@ -1,0 +1,9 @@
+<meta>
+	<info author="Jusonex, Audifire" type="misc" version="1.0.0" name="webbrowser"/>
+	<oop>true</oop>
+
+	<script src="client.luac" type="client"/>
+	<script src="WebBrowserGUI.luac" type="client"/>
+	<export function="openBrowser" type="client" />
+	<export function="closeBrowser" type="client" />
+</meta>

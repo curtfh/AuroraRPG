@@ -1,0 +1,6 @@
+<meta>
+	<info author="Callum" version="1.2" name="Animations" decription="Animations system" type="script" />
+	<script src="animations-client.luac" type="client" />
+	<script src="animations-server.lua" type="server" />
+	<map src="animations.map" />
+</meta>

@@ -1,0 +1,130 @@
+roadblocks = {}
+local port = getServerPort()
+
+function spawnRoadblock(id, x, y, z, rx, ry, rz, dim, int)
+	if (exports.CSGstaff:isPlayerEventManager(client)) then
+		if (id == 1225 and dim == 0) then
+			outputChatBox("Explosive barrels can not be placed in main dimension", client, 255, 0, 0)
+			return
+		end
+		if (id == 978) then
+			z = z-1
+		end
+		local accName = getAccountName(getPlayerAccount(client))
+		local object = createObject(tonumber(id), x, y, z, rx, ry, rz)
+		setElementDoubleSided(object, true)
+		setElementFrozen(object, true)
+		setElementData(object, "creator", accName, false)
+		roadblocks[object] = {object, getAccountName(getPlayerAccount(client))}
+		if (tonumber(dim) ~= 0) then
+			setElementDimension(object, dim)
+		end
+		if (tonumber(int) ~= 0) then
+			setElementInterior(object, int)
+		end
+		if (id ~= 1225) then
+			triggerClientEvent(client, "nobreak", client, object)
+		end
+		exports.CSGlogging:createLogRow(client, "events", "(RB) "..getPlayerName(client).." created roadblock at "..x..", "..y..", "..z..". Interior: "..int.." Dimension: "..dim.." Model ID: "..id)
+	end
+end
+addEvent("AURevents.RB.AddRoadblock", true)
+addEventHandler("AURevents.RB.AddRoadblock", root, spawnRoadblock)
+
+function spawnRBVehicle(id, x, y, z, rx, ry, rz, dim, int, color)
+	if (exports.CSGstaff:isPlayerEventManager(client)) then
+		local accName = getAccountName(getPlayerAccount(client))
+		createEventVehicle(id, x, y, z, rx, ry, rz, dim, int, accName, color)
+		exports.CSGlogging:createLogRow(client, "events", "(RB) "..getPlayerName(client).." created roadblock at "..x..", "..y..", "..z..". Interior: "..int.." Dimension: "..dim.." Model ID: "..id)
+	end
+end
+addEvent("AURevents.RB.SpawnVeh", true)
+addEventHandler("AURevents.RB.SpawnVeh", root, spawnRBVehicle)
+
+function command_rbc(player)
+	if (exports.CSGstaff:isPlayerEventManager(client)) then
+		local count = 0
+		for k,v in pairs(roadblocks) do
+			if (isElement(v[1])) then
+				count = count + 1
+			end
+		end
+		outputChatBox("Total roadblocks: "..count, player)
+	end
+end
+addCommandHandler("rbc", command_rbc)
+
+function destroyRoadblocks()
+	for k, v in pairs(roadblocks) do
+		if (v[2] == getAccountName(getPlayerAccount(client))) then
+			if (isElement(v[1])) then
+				destroyElement(v[1])
+				v = nil
+			end
+		end
+	end
+	exports.CSGlogging:createLogRow(client, "events", "(RB) "..getPlayerName(client).." deleted their own roadblocks")
+	exports.NGCdxmsg:createNewDxMessage("Your roadblocks have been deleted", client, 0, 255, 0)
+end
+addEvent("AURevents.RB.DestroyRoadblocks", true)
+addEventHandler("AURevents.RB.DestroyRoadblocks", root, destroyRoadblocks)
+
+function destroyRoadblock(rb)
+	local creator, x, y, z, dim, int, id
+	for k, v in pairs(roadblocks) do
+		if (v[1] == rb) then
+			x, y, z = getElementPosition(v[1])
+			dim = getElementDimension(v[1])
+			int = getElementInterior(v[1])
+			id = getElementModel(v[1])
+			destroyElement(v[1])
+			creator = v[2]
+			v[1] = nil
+		end
+	end
+	if (client) then
+		exports.NGCdxmsg:createNewDxMessage("Roadblock deleted", client, 0, 255, 0)
+		if (creator) then
+			exports.CSGlogging:createLogRow(client, "events", "(RB) "..getPlayerName(client).." deleted roadblock at "..x..", "..y..", "..z..". Interior: "..int.." Dimension: "..dim.." Model ID: "..id.." Creator: "..creator)
+		end
+	end
+end
+addEvent("AURevents.RB.DestroyRoadblock", true)
+addEventHandler("AURevents.RB.DestroyRoadblock", root, destroyRoadblock)
+
+function destroyALLRoadblocks()
+	for k, v in pairs(roadblocks) do
+		destroyElement(v[1])
+	end
+	exports.CSGlogging:createLogRow(client, "events", "(RB) "..getPlayerName(client).." deleted all roadblocks")
+	roadblocks = {}
+	exports.NGCdxmsg:createNewDxMessage("All roadblocks have been deleted", client, 0, 255, 0)
+end
+addEvent("AURevents.RB.DestroyALLRoadblocks", true)
+addEventHandler("AURevents.RB.DestroyALLRoadblocks", root, destroyALLRoadblocks)
+
+function roadblockDestroyed()
+	if (roadblocks[source]) then roadblocks[source] = nil end
+end
+addEventHandler("onElementDestroy", root, roadblockDestroyed)
+
+local adminLvl = 2
+function checkLVL()
+	if (isElement(client) and getElementType(client) == "player") then
+	if (exports.CSGstaff:isPlayerEventManager(client)) then
+			triggerClientEvent(client, "showRB", client)
+		end
+	end
+end
+addEvent("AURevents.RB.CheckAdminLevel", true)
+addEventHandler("AURevents.RB.CheckAdminLevel", root, checkLVL)
+
+function destroyVehViaRB(vehicle)
+	if (exports.CSGstaff:isPlayerEventManager(client)) then
+		if (isElement(vehicle)) then
+			destroyElement(vehicle)
+		end
+	end
+end
+addEvent("AURevents.RB.DestroyVeh", true)
+addEventHandler("AURevents.RB.DestroyVeh", root, destroyVehViaRB)

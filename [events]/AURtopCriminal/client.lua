@@ -1,0 +1,821 @@
+
+local screenWidth, screenHeight = guiGetScreenSize()
+local screenWidth, screenHeight = guiGetScreenSize()
+rectangleAlpha = 170
+rectangleAlpha2 = 170
+textAlpha = 255
+textAlpha2 = 255
+local screenW, screenH = guiGetScreenSize()
+local kill = false
+local resX, resY = guiGetScreenSize()
+function drawTitle()
+	for k, v in pairs( getElementsByType( "player", root, true ) ) do
+		if (isElementOnScreen( v ) ) then
+			local x, y, z = getElementPosition( v )
+			local a, b, c = getElementPosition( localPlayer )
+			local dist = getDistanceBetweenPoints3D( x, y , z, a, b, c )
+			x, y, z = getPedBonePosition( v, 5 )
+			local tX, tY = getScreenFromWorldPosition( x, y, z+0.25, 0, false )
+			if ( tX and tY and isLineOfSightClear( a, b, c, x, y, z, true, false, false, true, true, false, false, v ) ) then
+				if ( dist < 30 ) then
+					theText = getElementData(v,"TC")
+					local width = dxGetTextWidth( tostring(theText), 0.8, "default-bold" )
+					if ( theText ~= false ) then
+						dxDrawText( tostring(theText), tX-( width/2), tY-1, resX, resY, tocolor( 0,0,0, 255 ), 1, "default-bold")
+						dxDrawText( tostring(theText), tX-( width/2), tY+1.1, resX, resY, tocolor( 0,0,0, 255 ), 1, "default-bold")
+						dxDrawText( tostring(theText), tX-( width/2), tY, resX, resY, tocolor( 255,0,0, 255 ), 1, "default-bold")
+                    end
+				end
+			end
+		end
+	end
+end
+addEventHandler("onClientRender", root, drawTitle)
+
+
+local sW, sH = guiGetScreenSize()
+function drawCunt()
+	if kill == false then
+		if getElementData(localPlayer,"isPlayerInDM") == true then
+			local countdown = getElementData ( root, "signedup" )
+			if countdown then
+				if tonumber(countdown) and tonumber(countdown) > 0 and tonumber(countdown) < 8 then
+					dxDrawBorderedText("Top Criminal: Please wait", 1.75, 0, 30, sW, 340, tocolor(255,255,255, 255), 1, "pricedown", "center", "center", false, false, true, false, false)
+					dxDrawBorderedText("Top Criminal: "..countdown.."/8 Players", 1.75, 0, 120, sW, 340, tocolor(255,255,255, 255), 1, "pricedown", "center", "center", false, false, true, false, false)
+				end
+			end
+		end
+	end
+end
+addEventHandler("onClientRender",root,drawCunt)
+
+addEvent("killTC",true)
+addEventHandler("killTC",root,function()
+	kill = true
+end)
+
+addEvent("SetTC",true)
+addEventHandler("SetTC",root,function(msg)
+	rectangleAlpha = 170
+	rectangleAlpha2 = 170
+	textAlpha = 255
+	textAlpha2 = 255
+	message = msg
+	fadeTimer = setTimer(fadeTheText, 500, 0)
+	removeEventHandler("onClientRender", root, drawTCText)
+	addEventHandler("onClientRender", root, drawTCText)
+end)
+
+
+function fadeTheText()
+	textAlpha = textAlpha - 8.5
+	rectangleAlpha = rectangleAlpha - 8.5
+	if (rectangleAlpha <= 0) then
+		if isTimer(fadeTimer) then killTimer(fadeTimer) end
+		removeEventHandler("onClientRender", root, drawTCText)
+	end
+end
+
+function drawTCText()
+	dxDrawBorderedText(message, 1.75, (screenW - 504) / 2, (screenH - 350) / 1.05, ((screenW - 504) / 2) + 504, ( (screenH - 44) / 1.05) + 44, tocolor(0,255,0, 255), 1, "pricedown", "center", "center", false, false, true, false, false)
+end
+
+
+function dxDrawBorderedText ( text, wh, x, y, w, h, clr, scale, font, alignX, alignY, clip, wordBreak, postGUI )
+	if not wh then wh = 1.5 end
+	dxDrawText ( text, x - wh, y - wh, w - wh, h - wh, tocolor ( 0, 0, 0, a ), scale, font, alignX, alignY, clip, wordBreak, false, true) -- black
+	dxDrawText ( text, x + wh, y - wh, w + wh, h - wh, tocolor ( 0, 0, 0, a ), scale, font, alignX, alignY, clip, wordBreak, false, true)
+	dxDrawText ( text, x - wh, y + wh, w - wh, h + wh, tocolor ( 0, 0, 0, a ), scale, font, alignX, alignY, clip, wordBreak, false, true)
+	dxDrawText ( text, x + wh, y + wh, w + wh, h + wh, tocolor ( 0, 0, 0, a ), scale, font, alignX, alignY, clip, wordBreak, false, true)
+	dxDrawText ( text, x - wh, y, w - wh, h, tocolor ( 0, 0, 0, a ), scale, font, alignX, alignY, clip, wordBreak, false, true)
+	dxDrawText ( text, x + wh, y, w + wh, h, tocolor ( 0, 0, 0, a ), scale, font, alignX, alignY, clip, wordBreak, false, true)
+	dxDrawText ( text, x, y - wh, w, h - wh, tocolor ( 0, 0, 0, a ), scale, font, alignX, alignY, clip, wordBreak, false, true)
+	dxDrawText ( text, x, y + wh, w, h + wh, tocolor ( 0, 0, 0, a ), scale, font, alignX, alignY, clip, wordBreak, false, true)
+	dxDrawText ( text, x, y, w, h, clr, scale, font, alignX, alignY, clip, wordBreak, postGUI, true)
+end
+
+
+
+function drawCount()
+	if not imagecount then
+		windowWidth, windowHeight = 250,190
+		windowX, windowY = (screenWidth / 2) - (windowWidth / 2), (screenHeight / 2) - (windowHeight / 2)
+		imagecount = guiCreateStaticImage (windowX, windowY, windowWidth, windowHeight,"images/3.png",false)
+	else
+		guiSetVisible(imagecount,true)
+		guiStaticImageLoadImage ( imagecount, "images/3.png" )
+	end
+	setTimer ( function()
+	guiStaticImageLoadImage ( imagecount, "images/2.png" )
+	setTimer ( function()
+	guiStaticImageLoadImage ( imagecount, "images/1.png" )
+	setTimer ( function()
+	guiStaticImageLoadImage ( imagecount, "images/go.png" )
+	setTimer(function()
+	guiSetVisible(imagecount,false)
+	if isElement(imagecount) then destroyElement(imagecount) end
+	triggerServerEvent("setPlayerCanDM",localPlayer)
+	end, 1000, 1 )
+	end, 1000, 1 )
+	end, 1000, 1 )
+	end, 1000, 1 )
+	setWeaponSlotDisabled(7,true)
+	setWeaponSlotDisabled(8,true)
+end
+addEvent("drawCount",true)
+addEventHandler("drawCount",root,drawCount)
+
+
+cobras = {--[[
+createObject(3997,2948.6347656,-1472.5263672,746.4971313,0.0000000,0.0000000,0.0000000), --object(cityhallblok_lan), (1),
+createObject(11088,2905.9682620,-1453.5399170,753.2540280,0.0000000,0.0000000,0.0000000), --object(cf_ext_dem_sfs), (1),
+createObject(11428,2974.1440430,-1460.9063720,752.0001830,0.0000000,0.0000000,0.0000000), --object(des_indruin02), (1),
+createObject(11440,2964.9782710,-1483.4725340,746.0189820,0.0000000,0.0000000,0.0000000), --object(des_pueblo1), (1),
+createObject(11427,2995.9953610,-1500.7438960,753.6870120,0.0000000,0.0000000,89.9999813), --object(des_adobech), (1),
+createObject(11426,2973.9624020,-1492.2426760,746.3906250,0.0000000,0.0000000,-89.9999813), --object(des_adobe03), (1),
+createObject(11440,2983.6232910,-1491.2845460,745.9939580,0.0000000,0.0000000,0.0000000), --object(des_pueblo1), (2),
+createObject(11441,3010.4533690,-1424.5637210,746.6720580,0.0000000,0.0000000,0.0000000), --object(des_pueblo5), (1),
+createObject(11442,3009.5600590,-1432.2164310,746.6708980,0.0000000,0.0000000,0.0000000), --object(des_pueblo3), (1),
+createObject(11443,3000.2722170,-1427.7399900,746.6688840,0.0000000,0.0000000,-180.0000198), --object(des_pueblo4), (1),
+createObject(11444,2959.1140140,-1462.3211670,746.4901120,0.0000000,0.0000000,0.0000000), --object(des_pueblo2), (1),
+createObject(11442,2956.5717770,-1450.5699460,746.6708980,0.0000000,0.0000000,-89.9999813), --object(des_pueblo3), (2),
+createObject(11441,2962.5671390,-1441.7663570,746.6720580,0.0000000,0.0000000,0.0000000), --object(des_pueblo5), (2),
+createObject(11442,2953.0805660,-1441.1468510,746.6708980,0.0000000,0.0000000,-89.9999813), --object(des_pueblo3), (3),
+createObject(11443,2953.2880860,-1431.4017330,746.5938110,0.0000000,0.0000000,-180.0000198), --object(des_pueblo4), (2),
+createObject(11445,2944.2260740,-1425.8930660,746.6688840,0.0000000,0.0000000,89.9999813), --object(des_pueblo06), (1),
+createObject(11446,2962.1953130,-1436.8525390,746.6720580,0.0000000,0.0000000,0.0000000), --object(des_pueblo07), (1),
+createObject(11447,2954.9594730,-1423.6601560,746.4912720,0.0000000,0.0000000,0.0000000), --object(des_pueblo08), (1),
+createObject(11447,2987.6401370,-1469.4382320,746.4662480,0.0000000,0.0000000,-89.9999813), --object(des_pueblo08), (2),
+createObject(11457,2971.2788090,-1422.6876220,746.0983280,0.0000000,0.0000000,0.0000000), --object(des_pueblo09), (1),
+createObject(11458,2979.7634280,-1453.9821780,746.6690670,0.0000000,0.0000000,0.0000000), --object(des_pueblo10), (1),
+createObject(11459,2955.1062010,-1423.7991940,749.3488160,0.0000000,0.0000000,-89.9999813), --object(des_pueblo11), (1),
+createObject(11458,3005.7028810,-1491.2677000,746.6690670,0.0000000,0.0000000,0.0000000), --object(des_pueblo10), (2),
+createObject(11459,3014.5117190,-1510.5541990,746.4953000,0.0000000,0.0000000,-89.9999813), --object(des_pueblo11), (2),
+createObject(11458,3009.7868650,-1517.1901860,746.6690670,0.0000000,0.0000000,-89.9999813), --object(des_pueblo10), (3),
+createObject(11457,2986.6970210,-1430.9230960,746.0983280,0.0000000,0.0000000,0.0000000), --object(des_pueblo09), (2),
+createObject(11446,2995.0825200,-1489.1337890,746.6720580,0.0000000,0.0000000,0.0000000), --object(des_pueblo07), (2),
+createObject(11444,2998.7150880,-1483.3085940,746.4901120,0.0000000,0.0000000,0.0000000), --object(des_pueblo2), (2),
+createObject(11443,3013.2951660,-1485.3375240,746.6688840,0.0000000,0.0000000,89.9999813), --object(des_pueblo4), (3),
+createObject(11441,3015.7224120,-1495.9600830,746.6720580,0.0000000,0.0000000,-89.9999813), --object(des_pueblo5), (3),
+createObject(11442,3020.4021000,-1476.4290770,746.5457760,0.0000000,0.0000000,89.9999813), --object(des_pueblo3), (4),
+createObject(11441,3012.4587400,-1475.3979490,746.6720580,0.0000000,0.0000000,0.0000000), --object(des_pueblo5), (4),
+createObject(11440,3001.9113770,-1453.9025880,746.0940550,0.0000000,0.0000000,0.0000000), --object(des_pueblo1), (3),
+createObject(11440,3015.6630860,-1465.2810060,746.0940550,0.0000000,0.0000000,89.9999813), --object(des_pueblo1), (4),
+createObject(11428,2931.9946290,-1429.0766600,751.8927000,0.0000000,0.0000000,-191.2499889), --object(des_indruin02), (2),
+createObject(11427,2941.2028810,-1486.7493900,753.6369630,0.0000000,0.0000000,89.9999813), --object(des_adobech), (2),
+createObject(11426,2958.8444820,-1489.7519530,746.4907230,0.0000000,0.0000000,0.0000000), --object(des_adobe03), (2),
+createObject(11441,2957.4719240,-1481.0489500,746.6720580,0.0000000,0.0000000,0.0000000), --object(des_pueblo5), (5),
+createObject(11442,2972.2500000,-1444.1497800,746.6708980,0.0000000,0.0000000,0.0000000), --object(des_pueblo3), (5),
+createObject(11446,2993.9165040,-1474.4849850,746.6470340,0.0000000,0.0000000,0.0000000), --object(des_pueblo07), (3),
+createObject(11445,2988.7314450,-1452.9910890,746.6688840,0.0000000,0.0000000,-89.9999813), --object(des_pueblo06), (2),
+createObject(11444,3021.4167480,-1454.4848630,746.4901120,0.0000000,0.0000000,0.0000000), --object(des_pueblo2), (3),
+createObject(11446,2980.8786620,-1460.6164550,746.6720580,0.0000000,0.0000000,0.0000000), --object(des_pueblo07), (4),
+createObject(11445,2996.0688480,-1463.0004880,746.6688840,0.0000000,0.0000000,0.0000000), --object(des_pueblo06), (3),
+createObject(11445,3017.9243160,-1520.5803220,746.6688840,0.0000000,0.0000000,-89.9999813), --object(des_pueblo06), (4),
+createObject(11445,3002.3474120,-1522.7402340,746.6688840,0.0000000,0.0000000,-270.0000011), --object(des_pueblo06), (5),
+createObject(11446,2998.3103030,-1515.0635990,746.6720580,0.0000000,0.0000000,0.0000000), --object(des_pueblo07), (5),
+createObject(11446,3025.0268550,-1509.0931400,746.6720580,0.0000000,0.0000000,-180.0000198), --object(des_pueblo07), (6),
+createObject(11445,2940.2543950,-1448.2468260,746.6438600,0.0000000,0.0000000,-359.9999824), --object(des_pueblo06), (6),
+createObject(976,2868.7617190,-1412.7198490,746.6590580,0.0000000,0.0000000,0.0000000), --object(phils_compnd_gate), (1),
+createObject(976,2877.6330570,-1412.6873780,746.6590580,0.0000000,0.0000000,0.0000000), --object(phils_compnd_gate), (2),
+createObject(976,2886.3542480,-1412.7237550,746.7051390,0.0000000,0.0000000,0.0000000), --object(phils_compnd_gate), (3),
+createObject(976,2895.1862790,-1412.5831300,746.6590580,0.0000000,0.0000000,0.0000000), --object(phils_compnd_gate), (4),
+createObject(976,2903.9646000,-1412.5861820,746.6590580,0.0000000,0.0000000,0.0000000), --object(phils_compnd_gate), (5),
+createObject(976,2912.7985840,-1412.6024170,746.6590580,0.0000000,0.0000000,0.0000000), --object(phils_compnd_gate), (6),
+createObject(976,2921.5566410,-1412.6588130,746.6590580,0.0000000,0.0000000,0.0000000), --object(phils_compnd_gate), (7),
+createObject(976,2930.3652340,-1412.6448970,746.6590580,0.0000000,0.0000000,0.0000000), --object(phils_compnd_gate), (8),
+createObject(976,2939.1494140,-1412.6489260,746.6590580,0.0000000,0.0000000,0.0000000), --object(phils_compnd_gate), (9),
+createObject(976,2947.9672850,-1412.6569820,746.6590580,0.0000000,0.0000000,0.0000000), --object(phils_compnd_gate), (10),
+createObject(976,2956.8554690,-1412.6170650,746.6590580,0.0000000,0.0000000,0.0000000), --object(phils_compnd_gate), (11),
+createObject(976,2965.6887210,-1412.6311040,746.6590580,0.0000000,0.0000000,0.0000000), --object(phils_compnd_gate), (12),
+createObject(976,2974.5063480,-1412.6188960,746.6590580,0.0000000,0.0000000,0.0000000), --object(phils_compnd_gate), (13),
+createObject(976,2983.4160160,-1412.6141360,746.6590580,0.0000000,0.0000000,0.0000000), --object(phils_compnd_gate), (14),
+createObject(976,2992.2602540,-1412.6379390,746.6590580,0.0000000,0.0000000,0.0000000), --object(phils_compnd_gate), (15),
+createObject(976,3001.0947270,-1412.6190190,746.6590580,0.0000000,0.0000000,0.0000000), --object(phils_compnd_gate), (16),
+createObject(976,3009.9333500,-1412.6068120,746.6590580,0.0000000,0.0000000,0.0000000), --object(phils_compnd_gate), (17),
+createObject(976,3018.7055660,-1412.6213380,746.6590580,0.0000000,0.0000000,0.0000000), --object(phils_compnd_gate), (18),
+createObject(976,3020.1113280,-1412.7335210,746.6590580,0.0000000,0.0000000,0.0000000), --object(phils_compnd_gate), (19),
+createObject(976,3028.7873540,-1412.8354490,746.6590580,0.0000000,0.0000000,-89.9999813), --object(phils_compnd_gate), (20),
+createObject(976,3028.7783200,-1421.5889890,746.6590580,0.0000000,0.0000000,-89.9999813), --object(phils_compnd_gate), (21),
+createObject(976,3028.7692870,-1430.3894040,746.6590580,0.0000000,0.0000000,-89.9999813), --object(phils_compnd_gate), (22),
+createObject(976,3028.8195800,-1439.0452880,746.6846310,0.0000000,0.0000000,-89.9999813), --object(phils_compnd_gate), (23),
+createObject(976,3028.8171390,-1447.8115230,746.6590580,0.0000000,0.0000000,-89.9999813), --object(phils_compnd_gate), (24),
+createObject(976,3028.8674320,-1456.5183110,746.6925660,0.0000000,0.0000000,-89.9999813), --object(phils_compnd_gate), (25),
+createObject(976,3028.8156740,-1465.2618410,746.6590580,0.0000000,0.0000000,-89.9999813), --object(phils_compnd_gate), (26),
+createObject(976,3028.8012700,-1474.1038820,746.6590580,0.0000000,0.0000000,-89.9999813), --object(phils_compnd_gate), (27),
+createObject(976,3028.7739260,-1482.8757320,746.6590580,0.0000000,0.0000000,-89.9999813), --object(phils_compnd_gate), (28),
+createObject(976,3028.7846680,-1491.6771240,746.6590580,0.0000000,0.0000000,-89.9999813), --object(phils_compnd_gate), (29),
+createObject(976,3028.7866210,-1500.4981690,746.6590580,0.0000000,0.0000000,-89.9999813), --object(phils_compnd_gate), (30),
+createObject(976,3028.7985840,-1509.2308350,746.6644900,0.0000000,0.0000000,-89.9999813), --object(phils_compnd_gate), (31),
+createObject(976,3028.8488770,-1517.8034670,746.6693730,0.0000000,0.0000000,-89.9999813), --object(phils_compnd_gate), (32),
+createObject(976,3028.9489750,-1523.8438720,746.5988160,0.0000000,0.0000000,-89.9999813), --object(phils_compnd_gate), (33),
+createObject(976,3028.6706540,-1532.5234380,746.6590580,0.0000000,0.0000000,-180.0000198), --object(phils_compnd_gate), (34),
+createObject(976,3019.8693850,-1532.5201420,746.6590580,0.0000000,0.0000000,-180.0000198), --object(phils_compnd_gate), (35),
+createObject(976,3011.0734860,-1532.5123290,746.6590580,0.0000000,0.0000000,-180.0000198), --object(phils_compnd_gate), (36),
+createObject(976,3002.2626950,-1532.5286870,746.6590580,0.0000000,0.0000000,-180.0000198), --object(phils_compnd_gate), (37),
+createObject(976,2993.3916020,-1532.5477290,746.6590580,0.0000000,0.0000000,-180.0000198), --object(phils_compnd_gate), (38),
+createObject(976,2984.4375000,-1532.5596920,746.6590580,0.0000000,0.0000000,-180.0000198), --object(phils_compnd_gate), (39),
+createObject(976,2975.6496580,-1532.5644530,746.6590580,0.0000000,0.0000000,-180.0000198), --object(phils_compnd_gate), (40),
+createObject(976,2966.9169920,-1532.5654300,746.6600950,0.0000000,0.0000000,-180.0000198), --object(phils_compnd_gate), (41),
+createObject(976,2958.0434570,-1532.5589600,746.6590580,0.0000000,0.0000000,-180.0000198), --object(phils_compnd_gate), (42),
+createObject(976,2949.2104490,-1532.5144040,746.6590580,0.0000000,0.0000000,-180.0000198), --object(phils_compnd_gate), (43),
+createObject(976,2940.3820800,-1532.4787600,746.6590580,0.0000000,0.0000000,-180.0000198), --object(phils_compnd_gate), (44),
+createObject(976,2931.7421880,-1532.4300540,746.6590580,0.0000000,0.0000000,-180.0000198), --object(phils_compnd_gate), (45),
+createObject(976,2922.9731450,-1532.4439700,746.6590580,0.0000000,0.0000000,-180.0000198), --object(phils_compnd_gate), (46),
+createObject(976,2914.1596680,-1532.3806150,746.6840820,0.0000000,0.0000000,-180.0000198), --object(phils_compnd_gate), (47),
+createObject(976,2905.2358400,-1532.4591060,746.6590580,0.0000000,0.0000000,-180.0000198), --object(phils_compnd_gate), (48),
+createObject(976,2896.3977050,-1532.4720460,746.6590580,0.0000000,0.0000000,-180.0000198), --object(phils_compnd_gate), (49),
+createObject(976,2887.6281740,-1532.4398190,746.6590580,0.0000000,0.0000000,-180.0000198), --object(phils_compnd_gate), (50),
+createObject(976,2878.7443850,-1532.4000240,746.6590580,0.0000000,0.0000000,-180.0000198), --object(phils_compnd_gate), (51),
+createObject(976,2877.1555180,-1532.3636470,746.6838990,0.0000000,0.0000000,-180.0000198), --object(phils_compnd_gate), (52),
+createObject(976,2868.5104980,-1532.3039550,746.6590580,0.0000000,0.0000000,-270.0000011), --object(phils_compnd_gate), (53),
+createObject(976,2868.4860840,-1523.4281010,746.6590580,0.0000000,0.0000000,-270.0000011), --object(phils_compnd_gate), (54),
+createObject(976,2868.5124510,-1514.4959720,746.6590580,0.0000000,0.0000000,-270.0000011), --object(phils_compnd_gate), (55),
+createObject(976,2868.5312500,-1505.5748290,746.6590580,0.0000000,0.0000000,-270.0000011), --object(phils_compnd_gate), (56),
+createObject(976,2868.5185550,-1496.7009280,746.6590580,0.0000000,0.0000000,-270.0000011), --object(phils_compnd_gate), (57),
+createObject(976,2868.5549320,-1487.9790040,746.7102050,0.0000000,0.0000000,-270.0000011), --object(phils_compnd_gate), (58),
+createObject(976,2868.5913090,-1479.3684080,746.7178340,0.0000000,0.0000000,-270.0000011), --object(phils_compnd_gate), (59),
+createObject(976,2868.6276860,-1470.6386720,746.7377930,0.0000000,0.0000000,-270.0000011), --object(phils_compnd_gate), (60),
+createObject(976,2868.4816890,-1461.8936770,746.6590580,0.0000000,0.0000000,-270.0000011), --object(phils_compnd_gate), (61),
+createObject(976,2868.4829100,-1453.0415040,746.6590580,0.0000000,0.0000000,-270.0000011), --object(phils_compnd_gate), (62),
+createObject(976,2868.5014650,-1444.1856690,746.6590580,0.0000000,0.0000000,-270.0000011), --object(phils_compnd_gate), (63),
+createObject(976,2868.5036620,-1435.3457030,746.6590580,0.0000000,0.0000000,-270.0000011), --object(phils_compnd_gate), (64),
+createObject(976,2868.4912110,-1426.5281980,746.6590580,0.0000000,0.0000000,-270.0000011), --object(phils_compnd_gate), (65),
+createObject(976,2868.6381840,-1421.3052980,746.6590580,0.0000000,0.0000000,-270.0000011), --object(phils_compnd_gate), (66),
+createObject(967,2894.6298830,-1516.2456050,746.4971310,0.0000000,0.0000000,-0.0000573), --object(bar_gatebox01), (1),
+createObject(3866,2928.8691406,-1500.9833984,754.3352051,0.0000000,0.0000000,179.9945068), --object(demolish1_sfxrf), (1),
+createObject(11492,2883.6669920,-1523.2490230,746.4927980,0.0000000,0.0000000,-180.0000198), --object(des_rshed1_), (1),
+createObject(12929,3022.4519040,-1428.5576170,746.9951170,0.0000000,0.0000000,-89.9999813), --object(sw_shed06), (1),
+createObject(12942,2905.8598630,-1427.4481200,746.7092900,0.0000000,0.0000000,0.0000000), --object(sw_shedinterior01), (1),
+createObject(5153,2934.7988280,-1491.3813480,753.5238040,0.0000000,0.0000000,0.0000000), --object(stuntramp7_las2), (1),
+createObject(5153,2930.7897950,-1491.3865970,751.7723390,0.0000000,0.0000000,0.0000000), --object(stuntramp7_las2), (2),
+createObject(5153,2926.7646480,-1491.3750000,750.0083010,0.0000000,0.0000000,0.0000000), --object(stuntramp7_las2), (3),
+createObject(5153,2922.7480470,-1491.3524170,748.2339480,0.0000000,0.0000000,0.0000000), --object(stuntramp7_las2), (4),
+createObject(5153,2919.4450680,-1491.3580320,746.7872310,0.0000000,0.0000000,0.0000000), --object(stuntramp7_las2), (5),
+createObject(5153,2899.2441410,-1427.1718750,752.4390260,0.0000000,0.0000000,-180.0000198), --object(stuntramp7_las2), (6),
+createObject(12929,2905.8093260,-1427.5389400,746.7150880,0.0000000,0.0000000,-180.0000198), --object(sw_shed06), (2),
+createObject(12928,3022.4504390,-1428.5687260,746.9951170,0.0000000,0.0000000,-89.9999813), --object(sw_shedinterior04), (1),
+createObject(1696,2936.8623050,-1465.3752440,747.1293330,0.0000000,0.0000000,89.9999813), --object(roofstuff15), (1),
+createObject(14395,2874.2875980,-1437.0125730,747.0100100,0.0000000,0.0000000,0.0000000), --object(dr_gsnew11), (1),
+createObject(14407,2881.4477540,-1435.6485600,750.4400630,0.0000000,0.0000000,89.9999813), --object(carter-stairs01), (1),
+createObject(14467,2889.2058110,-1463.2957760,750.6440430,0.0000000,0.0000000,67.4999860), --object(carter_statue), (1),
+createObject(9191,2891.1801760,-1486.4281010,751.2327270,0.0000000,0.0000000,0.0000000), --object(vgeastbillbrd03), (1),
+createObject(9191,2891.1777340,-1486.4461670,751.2307740,0.0000000,0.0000000,-180.0000198), --object(vgeastbillbrd03), (2),
+createObject(980,2919.1760250,-1412.6387940,752.6286620,0.0000000,0.0000000,0.0000000), --object(airportgate), (1),
+createObject(980,2907.5991210,-1412.6225590,752.6283570,0.0000000,0.0000000,0.0000000), --object(airportgate), (2),
+createObject(980,2896.1416016,-1412.6015625,752.6233521,0.0000000,0.0000000,0.0000000), --object(airportgate), (3),
+createObject(980,2884.7578130,-1412.6987300,752.5914920,0.0000000,0.0000000,0.0000000), --object(airportgate), (4),
+createObject(980,2874.3295900,-1412.6873780,752.6233520,0.0000000,0.0000000,0.0000000), --object(airportgate), (5),
+createObject(980,2930.6833500,-1412.6389160,752.6233520,0.0000000,0.0000000,0.0000000), --object(airportgate), (6),
+createObject(980,2942.1879880,-1412.6492920,752.6233520,0.0000000,0.0000000,0.0000000), --object(airportgate), (7),
+createObject(980,2953.8103030,-1412.6676030,752.6233520,0.0000000,0.0000000,0.0000000), --object(airportgate), (8),
+createObject(980,2965.3774410,-1412.6496580,752.6233520,0.0000000,0.0000000,0.0000000), --object(airportgate), (9),
+createObject(980,2976.9216310,-1412.5986330,752.6233520,0.0000000,0.0000000,0.0000000), --object(airportgate), (10),
+createObject(980,2988.4240720,-1412.6279300,752.6233520,0.0000000,0.0000000,0.0000000), --object(airportgate), (11),
+createObject(980,2999.9184570,-1412.6743160,752.6116940,0.0000000,0.0000000,0.0000000), --object(airportgate), (12),
+createObject(980,3011.4497070,-1412.6431880,752.6052250,0.0000000,0.0000000,0.0000000), --object(airportgate), (13),
+createObject(980,3022.9812010,-1412.6882320,752.6233520,0.0000000,0.0000000,0.0000000), --object(airportgate), (14),
+createObject(980,2868.5275880,-1418.2685550,752.5854490,0.0000000,0.0000000,-89.9999813), --object(airportgate), (15),
+createObject(980,2868.4614260,-1429.6694340,752.5482790,0.0000000,0.0000000,-89.9999813), --object(airportgate), (16),
+createObject(980,2868.4567870,-1441.1517330,752.5482790,0.0000000,0.0000000,-89.9999813), --object(airportgate), (17),
+createObject(980,2868.4445800,-1452.5533450,752.6347050,0.0000000,0.0000000,-89.9999813), --object(airportgate), (18),
+createObject(980,2868.5847170,-1464.1542970,752.7020870,0.0000000,0.0000000,-89.9999813), --object(airportgate), (19),
+createObject(980,2868.5314940,-1475.6481930,752.6821290,0.0000000,0.0000000,-89.9999813), --object(airportgate), (20),
+createObject(980,2868.5637210,-1487.2021480,752.6745000,0.0000000,0.0000000,-89.9999813), --object(airportgate), (21),
+createObject(980,2868.5466310,-1498.6064450,752.6233520,0.0000000,0.0000000,-89.9999813), --object(airportgate), (22),
+createObject(980,2868.4697270,-1510.0212400,752.6233520,0.0000000,0.0000000,-89.9999813), --object(airportgate), (23),
+createObject(980,2868.4477540,-1521.5170900,752.6071170,0.0000000,0.0000000,-89.9999813), --object(airportgate), (24),
+createObject(980,2868.4433590,-1526.6416020,752.6741330,0.0000000,0.0000000,-89.9999813), --object(airportgate), (25),
+createObject(980,2874.1721190,-1532.3878170,752.6233520,0.0000000,0.0000000,-180.0000198), --object(airportgate), (26),
+createObject(980,2885.5986330,-1532.4648440,752.6233520,0.0000000,0.0000000,-180.0000198), --object(airportgate), (27),
+createObject(980,2897.2775880,-1532.4227290,752.5980220,0.0000000,0.0000000,-180.0000198), --object(airportgate), (28),
+createObject(980,2908.7653810,-1532.4443360,752.6151730,0.0000000,0.0000000,-180.0000198), --object(airportgate), (29),
+createObject(980,2920.3146970,-1532.4821780,752.6233520,0.0000000,0.0000000,-180.0000198), --object(airportgate), (30),
+createObject(980,2931.8002930,-1532.4382320,752.6233520,0.0000000,0.0000000,-180.0000198), --object(airportgate), (31),
+createObject(980,2943.2531740,-1532.4780270,752.6027220,0.0000000,0.0000000,-180.0000198), --object(airportgate), (32),
+createObject(980,2954.7172850,-1532.5225830,752.5925900,0.0000000,0.0000000,-180.0000198), --object(airportgate), (33),
+createObject(980,2966.2319340,-1532.5290530,752.6003420,0.0000000,0.0000000,-180.0000198), --object(airportgate), (34),
+createObject(980,2977.6955570,-1532.5233150,752.5969240,0.0000000,0.0000000,-180.0000198), --object(airportgate), (35),
+createObject(980,2989.1564940,-1532.5113530,752.6215820,0.0000000,0.0000000,-180.0000198), --object(airportgate), (36),
+createObject(980,3000.6250000,-1532.5173340,752.6207280,0.0000000,0.0000000,-180.0000198), --object(airportgate), (37),
+createObject(980,3012.1296390,-1532.5092770,752.6233520,0.0000000,0.0000000,-180.0000198), --object(airportgate), (38),
+createObject(980,3023.1599120,-1532.4620360,752.6477050,0.0000000,0.0000000,-180.0000198), --object(airportgate), (39),
+createObject(980,3028.9731450,-1526.7282710,752.5631100,0.0000000,0.0000000,-270.0000011), --object(airportgate), (40),
+createObject(980,3028.7658690,-1515.1276860,752.6287840,0.0000000,0.0000000,-270.0000011), --object(airportgate), (41),
+createObject(980,3028.7502440,-1503.6523440,752.6337890,0.0000000,0.0000000,-270.0000011), --object(airportgate), (42),
+createObject(980,3028.7482910,-1492.0921630,752.6226200,0.0000000,0.0000000,-270.0000011), --object(airportgate), (43),
+createObject(980,3028.8022460,-1480.6314700,752.6233520,0.0000000,0.0000000,-270.0000011), --object(airportgate), (44),
+createObject(980,3028.7792970,-1469.1632080,752.6111450,0.0000000,0.0000000,-270.0000011), --object(airportgate), (45),
+createObject(980,3028.8310550,-1457.7237550,752.6054080,0.0000000,0.0000000,-270.0000011), --object(airportgate), (46),
+createObject(980,3028.8293460,-1446.2139890,752.6489260,0.0000000,0.0000000,-270.0000011), --object(airportgate), (47),
+createObject(980,3028.8203130,-1434.6854250,752.6483760,0.0000000,0.0000000,-270.0000011), --object(airportgate), (48),
+createObject(980,3028.8220210,-1418.4971920,752.6233520,0.0000000,0.0000000,-270.0000011), --object(airportgate), (49),
+createObject(980,3028.8266600,-1425.7503660,752.6233520,0.0000000,0.0000000,-270.0000011), --object(airportgate), (50),
+createObject(11444,3013.1433110,-1449.9155270,746.4901120,0.0000000,0.0000000,0.0000000), --object(des_pueblo2), (4),
+createObject(11444,3011.1960450,-1440.3251950,746.4901120,0.0000000,0.0000000,-89.9999813), --object(des_pueblo2), (5),
+createObject(3644,2978.7771000,-1517.3251950,749.1599730,0.0000000,0.0000000,179.9999626), --object(idlebuild01_lax) (1)
+
+
+createObject(8661,2833.7866211,-1616.9844971,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (1),
+			createObject(8661,2833.7871094,-1597.0343018,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (2),
+			createObject(8661,2833.7419434,-1577.0736084,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (3),
+			createObject(8661,2873.6706543,-1577.0754395,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (4),
+			createObject(8661,2873.7158203,-1597.0343018,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (5),
+			createObject(8661,2873.7580566,-1616.9880371,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (6),
+			createObject(8661,2833.6284180,-1557.0947266,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (7),
+			createObject(8661,2873.5869141,-1557.1009521,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (8),
+			createObject(13106,2819.2302246,-1625.9114990,263.5090942,310.3751221,337.4494629,333.4449463), --object(ce_groundpalo08), (1),
+			createObject(8661,2793.8376465,-1616.9808350,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (9),
+			createObject(8661,2793.7927246,-1597.0708008,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (10),
+			createObject(8661,2793.7646484,-1577.0943604,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (11),
+			createObject(8661,2793.7026367,-1557.1134033,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (12),
+			createObject(8661,2873.6308594,-1537.2745361,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (13),
+			createObject(8661,2833.6337891,-1537.1325684,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (14),
+			createObject(8661,2793.6354980,-1537.1311035,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (15),
+			createObject(8661,2753.8789062,-1616.9982910,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (16),
+			createObject(8661,2753.7937012,-1597.0325928,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (17),
+			createObject(8661,2753.7714844,-1577.0534668,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (18),
+			createObject(8661,2753.7443848,-1557.1253662,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (19),
+			createObject(8661,2753.7263184,-1537.1744385,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (20),
+			createObject(8661,2873.5961914,-1517.2976074,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (21),
+			createObject(8661,2833.6027832,-1517.3298340,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (22),
+			createObject(8661,2793.6079102,-1517.2873535,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (23),
+			createObject(8661,2753.6682129,-1517.2165527,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (24),
+			createObject(8661,2753.5683594,-1497.2918701,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (25),
+			createObject(8661,2793.5405273,-1497.3522949,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (26),
+			createObject(8661,2833.5400391,-1497.3946533,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (27),
+			createObject(8661,2873.5161133,-1497.4001465,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (28),
+			createObject(13106,2894.2929688,-1518.2390137,259.6350403,310.3751221,337.4494629,60.0493164), --object(ce_groundpalo08), (2),
+			createObject(8661,2873.4104004,-1477.4357910,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (29),
+			createObject(8661,2833.4711914,-1477.4533691,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (30),
+			createObject(8661,2793.5061035,-1477.3848877,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (31),
+			createObject(8661,2753.6081543,-1477.3813477,289.1856689,0.0000000,0.0000000,0.0000000), --object(gnhtelgrnd_lvs), (32),
+			createObject(13106,2869.5759277,-1468.3631592,259.3850403,310.3751221,337.4494629,149.3593750), --object(ce_groundpalo08), (3),
+			createObject(13106,2733.0532227,-1574.6188965,262.0331726,310.3751221,337.4494629,243.5455322), --object(ce_groundpalo08), (4),
+			createObject(7016,2800.5039062,-1623.6624756,290.2310181,0.0000000,0.0000000,0.0000000), --object(circusconstruct06), (1),
+			createObject(7017,2856.3647461,-1619.5476074,290.1854248,0.0000000,0.0000000,270.6749268), --object(circusconstruct07), (1),
+			createObject(8879,2798.6369629,-1586.0147705,295.2783813,0.0000000,0.0000000,213.1099854), --object(vgsecnstrct08), (1),
+			createObject(8878,2802.3110352,-1591.6424561,296.0912781,0.0000000,0.0000000,77.4150085), --object(vgsecnstrct11), (1),
+			createObject(2960,2797.2124023,-1589.7650146,289.5851746,0.0000000,0.0000000,0.0000000), --object(kmb_beam), (1),
+			createObject(3939,2799.4824219,-1616.9276123,290.9503479,0.0000000,0.0000000,0.0000000), --object(hanger01), (1),
+			createObject(3030,2745.9294434,-1573.6214600,293.3606873,0.0000000,0.0000000,0.0000000), --object(wongs_erection), (1),
+			createObject(16325,2788.8535156,-1587.4304199,289.1856689,0.0000000,0.0000000,0.0000000), --object(des_quarryhut02), (1),
+			createObject(10357,2784.0927734,-1492.2353516,378.2415161,0.0000000,0.0000000,0.0000000), --object(transmitter_sfs), (1),
+			createObject(1684,2797.1330566,-1595.5167236,290.7755432,0.0000000,0.0000000,89.9999695), --object(portakabin), (1),
+			createObject(5711,2807.2426758,-1490.2723389,292.6628418,0.0000000,0.0000000,0.0000000), --object(cem02_law), (1),
+			createObject(6962,2785.3769531,-1487.8947754,295.9418335,0.0000000,0.0000000,0.0000000), --object(vgsnwedchap1), (1),
+			createObject(10378,2804.9443359,-1542.8867188,289.1412354,0.0000000,0.0000000,0.0000000), --object(ctiyhallsquare_sfs), (1),
+			createObject(12925,2781.8359375,-1590.7695312,289.1856689,0.0000000,0.0000000,89.5599670), --object(sw_shed01), (1),
+			createObject(5838,2804.9257812,-1540.7841797,306.1702576,0.0000000,0.0000000,0.0000000), --object(ci_watertank01), (1),
+			createObject(5628,2872.3710938,-1489.3626709,293.3041992,0.0000000,0.0000000,0.0000000), --object(laenwblkb1), (1),
+			createObject(5737,2870.9895020,-1520.0882568,295.2253723,0.0000000,0.0000000,180.0000000), --object(archshop07_law02), (1),
+			createObject(5781,2859.9504395,-1553.1387939,294.8302002,0.0000000,0.0000000,0.0000000), --object(melblok11_lawn), (1),
+			createObject(6946,2759.3027344,-1504.1171875,289.1856689,0.0000000,0.0000000,268.6871338), --object(vgnwalgren1), (1),
+			createObject(12843,2748.0539551,-1577.0843506,289.1856689,0.0000000,0.0000000,91.3099670), --object(cos_liquorshop), (1),
+			createObject(12844,2748.1140137,-1580.0598145,291.1601868,0.0000000,0.0000000,91.3099670), --object(cos_liqinside), (1),
+			createObject(12845,2747.8117676,-1579.9606934,291.2984619,0.0000000,0.0000000,90.0400391), --object(cos_liqinsidebits), (1),
+			createObject(12951,2749.6582031,-1594.9482422,289.1856689,0.0000000,0.0000000,0.0000000), --object(sw_shopflat01), (1),
+			createObject(7017,2770.5593262,-1529.2037354,290.1854248,0.0000000,0.0000000,0.4692383), --object(circusconstruct07), (2),
+			createObject(2960,2797.2011719,-1589.5196533,290.0350647,0.0000000,0.0000000,0.0000000), --object(kmb_beam), (2),
+			createObject(2960,2797.2021484,-1589.2606201,289.5851746,0.0000000,0.0000000,0.0000000), --object(kmb_beam), (3),
+			createObject(1426,2800.0383301,-1612.4370117,289.1856689,0.0000000,0.0000000,0.0000000), --object(dyn_scaffold), (1),
+			createObject(1436,2797.6530762,-1610.1121826,290.7408752,0.0000000,0.0000000,89.3249817), --object(dyn_scaffold_2), (1),
+			createObject(8613,2860.6125488,-1483.4227295,293.9320068,0.0000000,0.0000000,88.0550232), --object(vgssstairs03_lvs), (2),
+			createObject(8615,2749.0219727,-1587.8944092,292.2352905,0.0000000,0.0000000,0.0000000), --object(vgssstairs04_lvs), (1),
+			createObject(8615,2798.6267090,-1486.2542725,295.4102478,0.2500000,27.8199463,0.0000000), --object(vgssstairs04_lvs), (2),
+			createObject(12839,2857.3415527,-1504.4493408,298.5549927,0.0000000,0.0000000,0.0000000), --object(cos_sbanksteps02), (2),
+			createObject(12950,2857.3127441,-1497.9508057,294.2662354,345.7500000,0.0000000,180.0000000), --object(cos_sbanksteps03), (1),
+			createObject(1656,2744.8603516,-1587.9670410,289.3042603,0.0000000,0.0000000,89.9999390), --object(esc_step), (1),
+			createObject(12839,2769.3818359,-1486.1683350,296.8043823,27.7500000,0.0000000,270.0000000), --object(cos_sbanksteps02), (1),
+			createObject(12950,2777.4787598,-1486.1345215,295.4411316,326.0000000,0.0000000,89.6599731), --object(cos_sbanksteps03), (2),
+			createObject(8615,2816.5400391,-1486.2119141,296.7099304,0.2500000,26.0699158,0.0000000), --object(vgssstairs04_lvs), (3),
+			createObject(8615,2860.8759766,-1537.6096191,301.1300354,0.2500000,33.7599182,269.9599609), --object(vgssstairs04_lvs), (4),
+			createObject(1656,2860.9201660,-1540.8796387,301.2093811,330.3398438,0.0000000,180.6049805), --object(esc_step), (2),
+			createObject(3399,2815.6591797,-1541.5611572,317.3496094,0.0000000,351.2500000,180.0000000), --object(cxrf_a51_stairs), (1),
+			createObject(3399,2826.1447754,-1541.6033936,310.4985962,0.0000000,346.8399048,180.0000000), --object(cxrf_a51_stairs), (2),
+			createObject(3399,2836.3222656,-1541.5638428,304.1251526,0.0000000,350.3850098,180.0000000), --object(cxrf_a51_stairs), (3),
+			createObject(1656,2840.3732910,-1541.6206055,301.2343750,25.8045959,0.0000000,90.7445068), --object(esc_step), (3),
+			createObject(1391,2847.4094238,-1613.3498535,321.7159729,0.0000000,0.0000000,0.0000000), --object(twrcrane_s_03), (1),
+			createObject(1389,2847.4101562,-1613.3658447,334.3147583,0.0000000,0.0000000,0.0000000), --object(twrcrane_s_01), (1),
+			createObject(1388,2847.4311523,-1613.3812256,334.6430969,0.0000000,0.0000000,0.0000000), --object(twrcrane_s_04), (1),
+			createObject(11406,2847.4865723,-1577.1127930,336.8164978,0.0000000,0.0000000,0.0000000), --object(acwinch1b_sfs01), (1),
+			createObject(14448,2838.9318848,-1593.8201904,290.0598450,0.0000000,0.0000000,0.0000000), --object(carter_girders02), (1),
+			createObject(14435,2834.9750977,-1584.8654785,291.9840698,0.0000000,0.0000000,0.0000000), --object(carter_girders), (1),
+			createObject(11558,2830.7702637,-1593.2119141,292.5088501,0.0000000,0.0000000,0.0000000), --object(cn_sta_grid_03), (1),
+			createObject(11558,2838.8449707,-1593.1584473,292.5088501,0.0000000,0.0000000,0.0000000), --object(cn_sta_grid_03), (2),
+			createObject(11558,2847.5690918,-1593.8275146,292.5088501,0.0000000,0.0000000,0.0000000), --object(cn_sta_grid_03), (3),
+			createObject(16132,2833.7204590,-1593.4566650,289.1856689,0.0000000,0.0000000,0.0000000), --object(dam_trellis01), (1),
+			createObject(16088,2847.8774414,-1584.7818604,289.1856689,0.0000000,0.0000000,91.3099670), --object(des_pipestrut01), (1),
+			createObject(16092,2847.2346191,-1604.9259033,289.1856689,0.0000000,0.0000000,268.4099731), --object(des_pipestrut05), (1),
+			createObject(9131,2852.7661133,-1585.6735840,290.3145752,0.0000000,0.0000000,0.0000000), --object(shbbyhswall13_lvs), (1),
+			createObject(2960,2835.9880371,-1584.7482910,289.5852966,0.0000000,0.0000000,326.2550049), --object(kmb_beam), (4),
+			createObject(2960,2835.9724121,-1584.7717285,290.0851746,0.0000000,0.0000000,326.2550049), --object(kmb_beam), (5),
+			createObject(9824,2852.6513672,-1593.9678955,292.1781311,0.0000000,0.0000000,180.0000000), --object(diner_sfw), (1),
+			createObject(11469,2832.6425781,-1595.0179443,289.1356812,0.0000000,0.0000000,0.0000000), --object(des_bullgrill_), (1),
+			createObject(9131,2836.0966797,-1586.8197021,290.3145752,0.0000000,0.0000000,0.0000000), --object(shbbyhswall13_lvs), (2),
+			createObject(9131,2835.1645508,-1586.2762451,290.3145752,0.0000000,0.0000000,0.0000000), --object(shbbyhswall13_lvs), (3),
+			createObject(16067,2825.0322266,-1615.2449951,289.2106628,0.0000000,0.0000000,180.0000000), --object(des_stwnmotel02), (1),
+			createObject(3283,2767.9584961,-1614.1362305,289.1856689,0.0000000,0.0000000,271.9449463), --object(conhoos3), (1),
+			createObject(3284,2750.7375488,-1614.9658203,291.1153564,0.0000000,0.0000000,0.0000000), --object(conhoos5), (1),
+			createObject(3285,2769.6057129,-1595.0451660,291.1148987,0.0000000,0.0000000,0.0000000), --object(conhoos4), (1),
+			createObject(3454,2752.5903320,-1551.3636475,293.4632263,0.0000000,0.0000000,270.0000000), --object(vgnhseing15), (1),
+			createObject(3558,2865.4311523,-1611.1166992,292.1402283,0.0000000,0.0000000,0.0000000), --object(compmedhos5_lae), (1),
+			createObject(3580,2874.8715820,-1570.6517334,293.8247070,0.0000000,0.0000000,89.9999695), --object(compbigho2_lae), (1),
+			createObject(3583,2879.7971191,-1587.7954102,292.3322754,0.0000000,1.9849854,314.3450012), --object(compbigho3_lae), (1),
+			createObject(3587,2877.2966309,-1603.2028809,291.7871399,0.0000000,0.0000000,222.3601074), --object(nwsnpedhus1_las), (1),
+			createObject(3601,2769.9309082,-1540.0614014,297.0349121,0.0000000,0.0000000,0.0000000), --object(hillhouse04_la), (1),
+			createObject(3617,2877.1108398,-1483.5863037,291.9242249,0.0000000,0.0000000,0.0000000), --object(midranhus_las), (1),
+			createObject(3626,2884.8085938,-1495.2568359,290.7529602,0.0000000,0.0000000,270.6701660), --object(dckwrkhut), (1),
+			createObject(3642,2805.4963379,-1516.6246338,292.1367798,0.0000000,0.0000000,0.0000000), --object(glenphouse03_lax), (1),
+			createObject(3651,2872.9843750,-1499.7012939,293.5423889,0.0000000,0.0000000,0.0000000), --object(ganghous04_lax), (1),
+			createObject(3698,2817.1860352,-1596.1776123,291.9350586,0.0000000,0.0000000,0.0000000), --object(barrio3b_lae), (1),
+			createObject(3783,2841.1896973,-1505.9971924,291.4741821,0.0000000,0.0000000,0.0000000), --object(las2xref01_lax), (1),
+			createObject(5341,2851.8723145,-1527.0230713,292.1889038,0.0000000,0.0000000,270.6749878), --object(crlsafhus_las2), (1),
+			createObject(9258,2765.7995605,-1576.0767822,292.9979248,0.0000000,0.0000000,0.0000000), --object(preshoosml02_sfn), (1),
+			createObject(9323,2860.2844238,-1592.7011719,291.0509033,0.0000000,0.0000000,0.0000000), --object(moresfnshit29), (1),
+			createObject(3279,2785.3830566,-1565.3627930,289.4693604,0.0000000,0.0000000,180.0000000), --object(a51_spottower), (1),
+			createObject(3279,2828.5644531,-1565.6611328,289.4693604,0.0000000,0.0000000,0.0000000), --object(a51_spottower), (2),
+			createObject(3279,2828.8786621,-1520.6624756,289.4693604,0.0000000,0.0000000,0.0000000), --object(a51_spottower), (3),
+			createObject(3279,2783.8242188,-1520.7998047,289.4693604,0.0000000,0.0000000,179.9945068), --object(a51_spottower), (4),
+			createObject(3399,2794.3278809,-1540.7740479,317.3617859,0.0000000,351.2500000,0.0000000), --object(cxrf_a51_stairs), (4),
+			createObject(3399,2783.5690918,-1540.7736816,310.9367676,0.0000000,351.2500000,0.0000000), --object(cxrf_a51_stairs), (5),
+			createObject(3399,2775.1616211,-1540.7264404,305.1867065,0.0000000,351.2500000,0.0000000), --object(cxrf_a51_stairs), (6),
+			createObject(3399,2823.2053223,-1520.8189697,307.8244934,0.2500000,2.5000000,180.0000000), --object(cxrf_a51_stairs), (7),
+			createObject(3399,2790.0268555,-1520.6962891,307.9744568,0.2500000,1.5000000,0.0000000), --object(cxrf_a51_stairs), (8),
+			createObject(16645,2804.5620117,-1520.5948486,309.8680420,0.0000000,0.7500000,0.0000000), --object(a51_ventsouth01), (1),
+			createObject(3399,2822.4240723,-1565.8841553,307.8244934,0.2500000,2.5000000,180.0000000), --object(cxrf_a51_stairs), (9),
+			createObject(3399,2791.4548340,-1565.5700684,307.8494873,0.2500000,2.5000000,0.0000000), --object(cxrf_a51_stairs), (10),
+			createObject(16645,2810.1337891,-1565.7812500,309.7430725,0.0000000,0.0000000,179.9945068), --object(a51_ventsouth01), (2),
+			createObject(16645,2797.1884766,-1553.0468750,309.7051697,0.4998779,359.7473145,271.9995117), --object(a51_ventsouth01), (3),
+			createObject(16645,2796.1555176,-1529.3045654,309.8551331,0.0000000,1.2349854,270.5000000), --object(a51_ventsouth01), (4),
+			createObject(16644,2796.3239746,-1539.2397461,309.6870422,0.0000000,0.0000000,270.6749268), --object(a51_ventsouth), (1),
+			createObject(16644,2816.9472656,-1531.6171875,309.7066040,0.0000000,0.0000000,89.3243408), --object(a51_ventsouth), (2),
+			createObject(16644,2816.6870117,-1548.9381104,309.7066040,0.0000000,0.0000000,89.3249512), --object(a51_ventsouth), (3),
+			createObject(16644,2816.4218750,-1566.2597656,309.7066040,0.0000000,0.0000000,89.3243408), --object(a51_ventsouth), (4),
+			createObject(16644,2817.7285156,-1508.4931641,307.5130005,0.0000000,347.3382568,262.7302246), --object(a51_ventsouth), (6),
+			createObject(16644,2819.7814941,-1493.3989258,301.1638794,4.0450134,330.5899048,258.0750732), --object(a51_ventsouth), (7),
+			createObject(3399,2758.2431641,-1545.1762695,302.4615173,0.7349854,358.9249268,0.0000000), --object(cxrf_a51_stairs), (11),
+			createObject(3399,2752.6650391,-1545.1564941,299.9364014,0.7349854,358.9249268,0.0000000), --object(cxrf_a51_stairs), (12),
+			createObject(3399,2749.7622070,-1570.5841064,295.3365479,359.7349854,358.9249268,89.3250122), --object(cxrf_a51_stairs), (13),
+			createObject(3399,2747.3330078,-1584.1835938,294.8116760,359.7349854,358.9249268,268.7850342), --object(cxrf_a51_stairs), (14),
+			createObject(16644,2752.2526855,-1527.5876465,297.6932678,0.0000000,0.0000000,269.6899414), --object(a51_ventsouth), (8),
+			createObject(16644,2752.3552246,-1517.4361572,297.6932678,0.0000000,0.0000000,269.6899414), --object(a51_ventsouth), (9),
+			createObject(16644,2818.1523438,-1603.9953613,294.5924988,0.0000000,0.0000000,88.5899963), --object(a51_ventsouth), (10),
+			createObject(16644,2816.0378418,-1583.1634521,306.6673584,0.0000000,342.1350098,88.5899963), --object(a51_ventsouth), (11),
+			createObject(16644,2815.5793457,-1599.6915283,301.3423767,0.0000000,342.1350098,88.5899963), --object(a51_ventsouth), (12),
+			createObject(16644,2815.2746582,-1608.8966064,298.3672485,0.0000000,342.1350098,88.5899963), --object(a51_ventsouth), (13),
+			createObject(3399,2808.8452148,-1609.7105713,292.0863647,0.7349854,352.9699707,0.0000000), --object(cxrf_a51_stairs), (15),
+			createObject(12950,2863.7773438,-1481.9996338,293.7410583,330.7049561,358.0000000,267.3399658), --object(cos_sbanksteps03), (3),
+			createObject(16644,2873.9472656,-1490.9822998,295.7309875,0.0000000,351.3099976,270.6749878), --object(a51_ventsouth), (14),
+			createObject(12950,2871.2773438,-1503.6127930,297.9412537,358.7500000,0.0000000,180.0000000), --object(cos_sbanksteps03), (4),
+			createObject(16644,2850.7126465,-1531.7924805,296.7783203,0.0000000,332.2099915,268.6899414), --object(a51_ventsouth), (17),
+			createObject(16644,2757.1528320,-1533.8381348,298.4184570,2.2349854,349.5899963,359.0142822), --object(a51_ventsouth), (18),
+			createObject(16644,2771.0769043,-1567.7734375,295.5937805,0.0000000,351.5299683,0.0000000), --object(a51_ventsouth), (19),
+			createObject(16644,2756.7714844,-1580.4313965,294.6940002,0.0000000,351.5299683,0.0000000), --object(a51_ventsouth), (20),
+			createObject(16645,2802.3217773,-1593.7805176,294.2550964,0.0000000,2.9849854,179.6750488), --object(a51_ventsouth01), (5),
+			createObject(16645,2847.6252441,-1610.1280518,294.4354858,0.0000000,0.0000000,0.0000000), --object(a51_ventsouth01), (6),
+			createObject(16644,2878.8276367,-1580.2027588,294.7994080,0.0000000,340.1499939,90.1050110), --object(a51_ventsouth), (23),
+			createObject(16644,2878.3046875,-1569.5627441,297.6325684,0.0000000,338.1650085,89.3250122), --object(a51_ventsouth), (24),
+			createObject(1656,2878.8024902,-1560.0361328,300.9094543,359.9549561,0.0000000,0.6749268), --object(esc_step), (4),
+			createObject(1656,2849.9631348,-1540.9909668,301.0844116,358.0149536,0.0000000,179.3249512), --object(esc_step), (5),
+			createObject(1656,2851.2299805,-1496.9185791,293.0844116,358.1296387,0.0000000,180.6049805), --object(esc_step), (6),
+			createObject(16645,2851.4887695,-1504.7242432,293.5649109,0.0000000,0.0000000,269.9399719), --object(a51_ventsouth01), (7),
+			createObject(1656,2840.6223145,-1541.6262207,300.9094543,25.8013916,0.0000000,89.4891357), --object(esc_step), (3),
+			createObject(16645,2809.6721191,-1552.1317139,309.7301636,0.4998779,359.7473145,178.9696045), --object(a51_ventsouth01), (3),
+			createObject(16645,2808.6279297,-1532.0292969,309.7301636,0.4998779,359.7473145,179.4506836), --object(a51_ventsouth01), (3),
+			createObject(16645,2805.9809570,-1552.7222900,316.9663086,0.0000000,23.8349915,273.5694580), --object(a51_ventsouth01), (2),
+			createObject(16645,2808.0581055,-1587.7489014,301.4739075,0.0000000,23.8348389,273.5650635), --object(a51_ventsouth01), (2),
+			createObject(16645,2807.0139160,-1570.2298584,309.2265015,0.0000000,23.8348389,273.5650635), --object(a51_ventsouth01), (2),
+			createObject(16645,2809.0480957,-1604.5111084,292.3736877,0.0000000,35.7448425,273.5650635), --object(a51_ventsouth01), (2),
+			createObject(16645,2805.5642090,-1530.8278809,317.8911438,0.2471924,27.2857056,86.7535400), --object(a51_ventsouth01), (2),
+			createObject(16645,2806.5625000,-1513.6827393,309.3165283,0.2471924,25.2960205,86.7480469), --object(a51_ventsouth01), (2),
+			createObject(16645,2807.5710449,-1496.3673096,301.1166992,0.2471924,25.2960205,86.7480469), --object(a51_ventsouth01), (2),
+			createObject(9247,2786.6999512,-1609.5261230,295.6641235,0.0000000,0.0000000,88.0550232),
+]]
+createObject(8357,-2004.4775391,940.7675781,64.2412338,0.0000000,90.0000000,0.0000000), --object(vgssairportland14), (1),
+createObject(8357,-2074.5029297,1042.3935547,64.2412338,0.0000000,90.0000000,90.0000000), --object(vgssairportland14), (2),
+createObject(8357,-2074.5029297,1042.3935547,103.9912338,0.0000000,90.0000000,90.0000000), --object(vgssairportland14), (3),
+createObject(8357,-2004.4775391,940.7675781,103.9912338,0.0000000,90.0000000,0.0000000), --object(vgssairportland14), (4),
+createObject(8357,-2143.2812500,939.1435547,64.2412338,0.0000000,90.0000000,179.9945068), --object(vgssairportland14), (5),
+createObject(8357,-2143.2812500,939.1435547,103.9912338,0.0000000,90.0000000,179.9945068), --object(vgssairportland14), (6),
+createObject(8357,-2143.2812500,726.3935547,64.2412338,0.0000000,90.0000000,179.9945068), --object(vgssairportland14), (7),
+createObject(8357,-2143.2812500,726.3935547,103.9912338,0.0000000,90.0000000,179.9945068), --object(vgssairportland14), (8),
+createObject(8357,-2004.4775391,728.0175781,64.2412338,0.0000000,90.0000000,0.0000000), --object(vgssairportland14), (9),
+createObject(8357,-2004.4775391,728.0175781,103.9912338,0.0000000,90.0000000,0.0000000), --object(vgssairportland14), (10),
+createObject(8357,-2075.7275391,808.3681641,64.2412338,0.0000000,90.0000000,270.0000000), --object(vgssairportland14), (11),
+createObject(8357,-2075.7275391,808.3681641,103.9912338,0.0000000,90.0000000,270.0000000), --object(vgssairportland14), (12),
+createObject(12958,-2023.1741940,824.2455440,64.3977200,0.0000000,0.0000000,90.0000000), --object(cos_sbanksteps01), (1),
+createObject(3399,-2034.1276860,845.7254030,69.1073530,0.0000000,0.0000000,180.0000000), --object(cxrf_a51_stairs), (1),
+createObject(3399,-2040.1527100,851.6500850,73.8073500,0.0000000,0.0000000,90.0000000), --object(cxrf_a51_stairs), (2),
+createObject(3361,-2033.6652830,821.0817260,73.2372060,0.0000000,0.0000000,0.0000000), --object(cxref_woodstair), (1),
+createObject(3361,-2029.1903080,824.8817750,69.2372060,0.0000000,0.0000000,90.0000000), --object(cxref_woodstair), (2),
+createObject(3399,-2045.8035890,830.8507690,65.4916610,0.0000000,0.0000000,0.0000000), --object(cxrf_a51_stairs), (3),
+createObject(8613,-2053.2160640,825.1121220,79.6517720,0.0000000,0.0000000,90.0000000), --object(vgssstairs03_lvs), (1),
+createObject(16322,-2080.6782230,827.3913570,86.8712770,0.0000000,0.0000000,0.0000000), --object(a51_plat), (1),
+createObject(3867,-2093.0102540,857.1372680,83.5497360,0.0000000,0.0000000,0.0000000), --object(ws_scaffolding_sfx), (1),
+createObject(3867,-2110.4355470,857.1372680,83.5497360,0.0000000,0.0000000,0.0000000), --object(ws_scaffolding_sfx), (2),
+createObject(3867,-2082.8608400,864.6625370,83.5497360,0.0000000,0.0000000,90.0000000), --object(ws_scaffolding_sfx), (3),
+createObject(16644,-2125.5979000,849.2136840,91.7924270,0.0000000,329.9197000,90.0000000), --object(a51_ventsouth), (1),
+createObject(16644,-2125.6477050,834.0635380,83.0674290,0.0000000,329.9197000,90.0000000), --object(a51_ventsouth), (2),
+createObject(1365,-2120.5627440,855.9062500,87.2757110,0.0000000,0.0000000,90.0000000), --object(cj_big_skip1), (1),
+createObject(12950,-2082.9099120,872.2775270,75.0442050,0.0000000,0.0000000,0.0000000), --object(cos_sbanksteps03), (1),
+createObject(8572,-2083.3886720,875.6522220,90.6287920,0.0000000,0.0000000,90.0000000), --object(vgssstairs02_lvs), (1),
+createObject(11472,-2090.8793950,877.1448360,89.0674900,0.0000000,0.0000000,90.0000000), --object(des_swtstairs1), (1),
+createObject(11472,-2090.8793950,877.7697140,89.0662610,0.0000000,0.0000000,90.0000000), --object(des_swtstairs1), (2),
+createObject(1365,-2120.5627440,851.4562990,85.9507060,0.0000000,327.3414000,90.0000000), --object(cj_big_skip1), (2),
+createObject(16644,-2118.4479980,857.6896970,81.0100560,0.0000000,0.0000000,0.0000000), --object(a51_ventsouth), (3),
+createObject(16644,-2124.1955570,848.1796880,82.7815780,0.0000000,0.0000000,270.0000000), --object(a51_ventsouth), (4),
+createObject(1437,-2087.1699219,889.3505859,88.2113419,335.9344482,0.0000000,90.0000000), --object(dyn_ladder_2), (1),
+createObject(1437,-2083.9199219,889.3505859,83.4113388,335.9344482,0.0000000,90.0000000), --object(dyn_ladder_2), (2),
+createObject(1437,-2080.6699219,889.3505859,78.6113358,335.9344482,0.0000000,90.0000000), --object(dyn_ladder_2), (3),
+createObject(1635,-2026.8051760,883.3067630,63.2884830,0.0000000,0.0000000,90.0000000), --object(nt_aircon1dbl), (1),
+createObject(3502,-2061.4838870,892.5021970,78.6802060,351.4056000,114.4089000,67.5000000), --object(vgsn_con_tube), (1),
+createObject(1689,-2072.4309080,882.2807010,77.9374390,0.0000000,0.0000000,270.0000000), --object(gen_roofbit3), (1),
+createObject(3798,-2037.6975100,886.6251830,66.2074810,0.0000000,0.0000000,11.2500000), --object(acbox3_sfs), (1),
+createObject(3798,-2037.5798340,889.6692500,66.2074810,0.0000000,0.0000000,348.7500000), --object(acbox3_sfs), (2),
+createObject(3798,-2037.7205810,889.6003420,68.2074810,0.0000000,0.0000000,0.0000000), --object(acbox3_sfs), (3),
+createObject(3798,-2035.3763430,890.6734620,66.2074810,0.0000000,0.0000000,22.5000000), --object(acbox3_sfs), (4),
+createObject(3800,-2035.3221440,884.6958620,66.2074810,0.0000000,0.0000000,0.0000000), --object(acbox4_sfs), (1),
+createObject(3260,-2014.5468750,894.9267578,61.2629776,289.6270752,0.0000000,269.9945068), --object(oldwoodpanel), (1),
+createObject(3260,-2017.3710938,894.9267578,60.2629776,289.6270752,0.0000000,269.9945068), --object(oldwoodpanel), (2),
+createObject(3260,-2020.1718750,894.9267578,59.2629776,289.6270752,0.0000000,269.9945068), --object(oldwoodpanel), (3),
+createObject(1617,-2015.3032230,892.1717530,63.6657260,0.0000000,0.0000000,180.0000000), --object(nt_aircon1_01), (1),
+createObject(1617,-2014.6533200,892.1712650,63.6657260,0.0000000,0.0000000,180.0000000), --object(nt_aircon1_01), (2),
+createObject(3576,-2106.5566410,878.1970210,93.8598630,0.0000000,0.0000000,22.5000000), --object(dockcrates2_la), (1),
+createObject(3577,-2108.2937010,881.3267210,93.1496960,0.0000000,0.0000000,101.2500000), --object(dockcrates1_la), (1),
+createObject(16766,-1988.1955570,885.5989990,25.0979540,0.0000000,35.2369000,0.0000000), --object(des_oilpipe_02), (1),
+createObject(16766,-1988.1955570,884.5989990,25.0979540,0.0000000,35.2369000,0.0000000), --object(des_oilpipe_02), (2),
+createObject(8572,-2058.6723630,886.8013920,68.4361040,0.0000000,0.0000000,270.0000000), --object(vgssstairs02_lvs), (2),
+createObject(8572,-2060.2558590,893.6878050,63.0782390,0.0000000,0.0000000,90.0000000), --object(vgssstairs02_lvs), (3),
+createObject(11544,-2019.3013920,867.1848140,74.9971080,0.0000000,0.0000000,180.0000000), --object(des_ntfrescape2), (1),
+createObject(11544,-2019.3013920,874.4848630,72.2721100,0.0000000,0.0000000,180.0000000), --object(des_ntfrescape2), (2),
+createObject(11544,-2019.3013920,881.7598880,69.5471120,0.0000000,0.0000000,180.0000000), --object(des_ntfrescape2), (3),
+createObject(11544,-2019.3013920,889.0346680,66.8221130,0.0000000,0.0000000,180.0000000), --object(des_ntfrescape2), (4),
+createObject(3458,-2115.8811040,918.3948360,94.2418210,0.0000000,359.6992000,270.0000000), --object(vgncarshade1), (1),
+createObject(9766,-2045.3320310,924.5140380,80.9075780,1.7189000,0.0000000,0.0000000), --object(scaff3_sfw), (1),
+createObject(3361,-2040.5599370,962.7552490,82.1226120,0.0000000,0.0000000,270.0000000), --object(cxref_woodstair), (3),
+createObject(3361,-2036.6711430,958.4451900,78.0754320,0.0000000,0.0000000,0.0000000), --object(cxref_woodstair), (4),
+createObject(3361,-2032.3217770,962.2948000,74.0504760,0.0000000,0.0000000,90.0000000), --object(cxref_woodstair), (5),
+createObject(3406,-2040.5574950,963.8240360,74.0597000,0.0000000,0.0000000,90.0000000), --object(cxref_woodjetty), (1),
+createObject(3399,-2024.6181640,975.3120730,70.7625660,0.0000000,0.0000000,0.0000000), --object(cxrf_a51_stairs), (4),
+createObject(3399,-2034.2187500,975.3120730,66.0875700,0.0000000,0.0000000,0.0000000), --object(cxrf_a51_stairs), (5),
+createObject(1685,-2038.0683590,989.7731930,65.0726620,0.0000000,0.0000000,11.2500000), --object(blockpallet), (1),
+createObject(1685,-2035.9099120,989.7781370,65.0705570,0.0000000,0.0000000,292.5000000), --object(blockpallet), (2),
+createObject(1685,-2037.4310300,987.6982420,65.0715560,0.0000000,0.0000000,315.0000000), --object(blockpallet), (3),
+createObject(1685,-2033.6291500,989.9110110,65.0683290,0.0000000,0.0000000,348.7500000), --object(blockpallet), (4),
+createObject(1685,-2034.8221440,990.0823360,66.5705570,0.0000000,0.0000000,0.0000000), --object(blockpallet), (5),
+createObject(3576,-2055.1967770,968.1505740,85.7043610,0.0000000,0.0000000,337.5000000), --object(dockcrates2_la), (2),
+createObject(3800,-2074.7329100,827.2661740,83.0121690,0.0000000,0.0000000,0.0000000), --object(acbox4_sfs), (2),
+createObject(3800,-2074.7111820,827.3502200,84.0924300,0.0000000,0.0000000,348.7500000), --object(acbox4_sfs), (3),
+createObject(3800,-2074.4343260,825.9672850,83.0121690,0.0000000,0.0000000,11.2500000), --object(acbox4_sfs), (4),
+createObject(3800,-2073.4250490,827.7520750,83.0098110,0.0000000,0.0000000,348.7500000), --object(acbox4_sfs), (5),
+createObject(3800,-2074.5834960,828.5795290,83.0121690,0.0000000,0.0000000,0.0000000), --object(acbox4_sfs), (6),
+createObject(3800,-2074.0961910,828.2593380,84.0924300,0.0000000,0.0000000,337.5000000), --object(acbox4_sfs), (7),
+createObject(3800,-2073.2683110,826.5010990,83.0121690,0.0000000,0.0000000,337.5000000), --object(acbox4_sfs), (8),
+createObject(3761,-2027.9643550,1007.4232180,67.8152850,0.0000000,0.0000000,270.0000000), --object(industshelves), (1),
+createObject(12930,-2118.6835940,981.3808590,96.2505340,0.0000000,0.0000000,348.7500000), --object(sw_pipepile02), (1),
+createObject(18260,-2115.7817380,974.1570430,97.5185090,0.0000000,0.0000000,90.0000000), --object(crates01), (1),
+createObject(18260,-2026.2546390,957.1105350,74.1669460,0.0000000,0.0000000,0.0000000), --object(crates01), (2),
+createObject(2567,-2055.2695310,957.5140380,84.2392810,0.0000000,0.0000000,326.2500000), --object(ab_warehouseshelf), (1),
+createObject(5262,-2110.6608890,941.2117310,97.8826370,0.0000000,0.0000000,337.5000000), --object(las2dkwar04), (1),
+createObject(5262,-2053.0825200,898.0971680,80.2748340,0.0000000,0.0000000,135.0000000), --object(las2dkwar04), (2),
+createObject(5269,-2037.2966310,901.7243650,68.5199890,0.0000000,0.0000000,90.0000000), --object(las2dkwar05), (1),
+createObject(12930,-2020.5809330,901.5932620,67.0411760,0.0000000,0.0000000,101.2500000), --object(sw_pipepile02), (2),
+createObject(18260,-2033.2254640,864.1985470,77.6051790,0.0000000,0.0000000,202.5000000), --object(crates01), (3),
+createObject(925,-2024.2104490,847.2423100,77.0938950,0.0000000,0.0000000,180.0000000), --object(rack2), (1),
+createObject(930,-2037.8190920,843.3459470,68.1891940,0.0000000,0.0000000,67.5000000), --object(o2_bottles), (1),
+createObject(964,-2040.1246340,828.6623540,75.3053510,0.0000000,0.0000000,0.0000000), --object(cj_metal_crate), (1),
+createObject(964,-2069.0815430,828.8169560,83.0156250,0.0000000,0.0000000,270.0000000), --object(cj_metal_crate), (2),
+createObject(1362,-2071.0764160,822.2797240,83.6141050,0.0000000,0.0000000,0.0000000), --object(cj_firebin), (1),
+createObject(1431,-2038.0507812,834.8339844,68.2609329,0.0000000,0.0000000,90.0000000), --object(dyn_box_pile), (1),
+createObject(1431,-2085.5371090,875.6641240,97.3679280,0.0000000,0.0000000,0.0000000), --object(dyn_box_pile), (2),
+createObject(1685,-2088.1281740,875.1360470,97.5703130,0.0000000,0.0000000,11.2500000), --object(blockpallet), (6),
+createObject(2567,-2115.3771970,867.0697630,98.7479170,0.0000000,0.0000000,337.5000000), --object(ab_warehouseshelf), (2),
+createObject(2669,-2125.9792480,900.0916140,98.1605830,0.0000000,0.0000000,22.5000000), --object(cj_chris_crate), (1),
+createObject(3576,-2086.7824710,860.3251950,98.3129880,0.0000000,0.0000000,348.7500000), --object(dockcrates2_la), (3),
+createObject(3577,-2111.6557620,902.4375610,97.6028210,0.0000000,0.0000000,348.7500000), --object(dockcrates1_la), (2),
+createObject(3630,-2123.8066410,929.2462160,97.1462330,0.0000000,0.0000000,0.0000000), --object(crdboxes2_las), (1),
+createObject(3722,-2112.6015630,838.0637820,89.5550080,0.0000000,0.0000000,326.2500000), --object(laxrf_scrapbox), (1),
+createObject(3761,-2086.2175290,833.9593510,87.4645770,0.0000000,0.0000000,0.0000000), --object(industshelves), (2),
+createObject(3761,-2093.5412600,897.0726320,94.1411510,0.0000000,0.0000000,270.0000000), --object(industshelves), (3),
+createObject(3796,-2084.8796390,898.3679200,80.6314240,0.0000000,0.0000000,112.5000000), --object(acbox1_sfs), (1),
+createObject(3799,-2085.2282710,879.3915410,80.4900210,0.0000000,0.0000000,348.7500000), --object(acbox2_sfs), (1),
+createObject(3799,-2088.0993650,881.3215940,80.5198290,0.0000000,0.0000000,0.0000000), --object(acbox2_sfs), (2),
+createObject(3799,-2088.5979000,878.1690670,80.5161290,0.0000000,0.0000000,0.0000000), --object(acbox2_sfs), (3),
+createObject(3799,-2087.7326660,879.5207520,82.7514340,0.0000000,0.0000000,45.0000000), --object(acbox2_sfs), (4),
+createObject(925,-2075.2497560,902.4088750,81.6634670,0.0000000,0.0000000,0.0000000), --object(rack2), (2),
+createObject(3593,-2064.7592770,902.9346920,77.2867360,0.0000000,0.0000000,101.2500000), --object(la_fuckcar2), (1),
+createObject(3594,-2068.8999020,901.3842160,77.6827320,13.7510000,1.7189000,303.7500000), --object(la_fuckcar1), (1),
+createObject(12957,-2117.0966800,1005.3470460,96.8235320,0.0000000,0.0000000,11.2500000), --object(sw_pickupwreck01), (1),
+createObject(13591,-2115.3994140,1020.2990110,96.1075820,0.0000000,0.0000000,270.0000000), --object(kickcar28), (1),
+createObject(13749,-2050.6650390,998.9992680,74.6924820,0.0000000,0.0000000,112.5000000), --object(cunte_curvesteps1), (1),
+createObject(3458,-2095.2387700,995.6712040,87.8876110,0.0000000,20.3257000,0.0000000), --object(vgncarshade1), (2),
+createObject(16644,-2060.3391110,979.3977050,82.3412700,0.0000000,0.0000000,308.0472000), --object(a51_ventsouth), (5),
+createObject(3576,-2073.4448240,986.1788330,84.3585970,0.0000000,0.0000000,11.2500000), --object(dockcrates2_la), (4),
+createObject(3594,-2078.1293950,985.5541990,83.3532710,13.7510000,1.7189000,281.2500000), --object(la_fuckcar1), (2),
+createObject(3593,-2071.1389160,986.7488400,84.3619460,30.0803000,0.8594000,101.2500000), --object(la_fuckcar2), (2),
+createObject(925,-2083.5939940,984.5453490,82.1544950,0.0000000,0.0000000,0.0000000), --object(rack2), (3),
+createObject(925,-2082.5192870,984.5453490,82.1544950,0.0000000,0.0000000,0.0000000), --object(rack2), (4),
+createObject(944,-2050.8625490,957.4526980,84.8214570,0.0000000,0.0000000,0.0000000), --object(packing_carates04), (1),
+createObject(944,-2041.0268550,1010.0433960,71.3986210,0.0000000,0.0000000,270.0000000), --object(packing_carates04), (2),
+createObject(944,-2040.2912600,903.0840450,78.3769760,0.0000000,0.0000000,11.2500000), --object(packing_carates04), (3),
+createObject(944,-2078.4023440,901.2708130,81.4863510,0.0000000,0.0000000,22.5000000), --object(packing_carates04), (4),
+createObject(1271,-2077.5507810,901.6024780,82.3974460,0.0000000,0.0000000,0.0000000), --object(gunbox), (1),
+createObject(3576,-2125.4780270,872.3745730,98.3129880,0.0000000,0.0000000,135.0000000), --object(dockcrates2_la), (5),
+createObject(3796,-2113.2744140,886.1822510,96.8215330,0.0000000,0.0000000,56.2500000), --object(acbox1_sfs), (2),
+createObject(3502,-2098.6618650,873.8510740,97.7489550,0.0000000,0.0000000,78.7500000), --object(vgsn_con_tube), (2),
+createObject(1685,-2090.1281740,875.1360470,97.5703130,0.0000000,0.0000000,0.0000000), --object(blockpallet), (7),
+createObject(1685,-2089.1281740,875.1360470,99.0202940,0.0000000,0.0000000,0.0000000), --object(blockpallet), (8),
+createObject(1431,-2110.3896484,894.1162109,97.3679276,0.0000000,0.0000000,90.0000000), --object(dyn_box_pile), (3),
+createObject(3798,-2071.1132810,997.9743040,82.5997010,0.0000000,0.0000000,348.7500000), --object(acbox3_sfs), (5),
+createObject(3798,-2073.1352540,998.1624760,82.5563580,0.0000000,0.0000000,0.0000000), --object(acbox3_sfs), (6),
+createObject(3798,-2072.1066890,998.1813350,84.5997010,0.0000000,0.0000000,0.0000000), --object(acbox3_sfs), (7),
+createObject(3798,-2065.2917480,992.1864010,82.6266250,0.0000000,0.0000000,337.5000000), --object(acbox3_sfs), (8),
+createObject(3798,-2037.6165770,1021.3637080,70.4809190,0.0000000,0.0000000,11.2500000), --object(acbox3_sfs), (9),
+createObject(944,-2021.4050290,1013.9400020,71.1191480,0.0000000,0.0000000,0.0000000), --object(packing_carates04), (5),
+createObject(3798,-2020.0401610,1023.0986330,70.4809190,0.0000000,0.0000000,22.5000000), --object(acbox3_sfs), (10),
+createObject(3798,-2022.4206540,1022.9365230,70.4809190,0.0000000,0.0000000,0.0000000), --object(acbox3_sfs), (11),
+createObject(12930,-2017.9128420,998.9917600,67.9536590,0.0000000,0.0000000,112.5000000), --object(sw_pipepile02), (3),
+createObject(3576,-2038.3010250,971.0197750,74.0942380,0.0000000,0.0000000,348.7500000), --object(dockcrates2_la), (6),
+createObject(944,-2036.0645750,965.6759640,73.2550890,0.0000000,0.0000000,337.5000000), --object(packing_carates04), (6),
+createObject(3577,-2025.9935300,971.3007200,73.3813710,0.0000000,0.0000000,101.2500000), --object(dockcrates1_la), (3),
+createObject(3576,-2018.1046140,963.9880370,74.0626140,0.0000000,0.0000000,0.0000000), --object(dockcrates2_la), (7),
+createObject(3576,-2020.2457280,981.2571410,65.7979350,0.0000000,0.0000000,90.0001000), --object(dockcrates2_la), (8),
+createObject(2567,-2028.5949710,983.2409670,66.0398030,0.0000000,0.0000000,225.0000000), --object(ab_warehouseshelf), (3),
+createObject(3576,-2021.8789060,854.3308720,77.5246660,0.0000000,0.0000000,22.5000000), --object(dockcrates2_la), (9),
+createObject(3796,-2032.6607670,851.3948360,76.0375750,0.0000000,0.0000000,236.2501000), --object(acbox1_sfs), (3),
+createObject(3798,-2023.4582520,861.3258060,76.0285340,0.0000000,0.0000000,0.0000000), --object(acbox3_sfs), (12),
+createObject(3798,-2022.2336430,863.0994260,76.0285340,0.0000000,0.0000000,11.2500000), --object(acbox3_sfs), (13),
+createObject(3798,-2022.1014400,862.0264280,78.0285340,0.0000000,0.0000000,337.5000000), --object(acbox3_sfs), (14),
+createObject(3798,-2028.0371090,866.9626460,76.0285340,0.0000000,0.0000000,11.2500000), --object(acbox3_sfs), (15),
+createObject(3798,-2020.9726560,861.0734250,76.0285340,0.0000000,0.0000000,78.7500000), --object(acbox3_sfs), (16),
+createObject(925,-2022.8557130,831.6768190,68.7752230,0.0000000,0.0000000,157.5000000), --object(rack2), (5),
+createObject(18260,-2054.2397460,827.6750490,76.8785400,0.0000000,0.0000000,180.0000000), --object(crates01), (4),
+createObject(18260,-2049.6169430,827.1655270,76.8785400,0.0000000,0.0000000,0.0000000), --object(crates01), (5),
+createObject(2567,-2063.8330080,823.8186040,84.9432300,0.0000000,0.0000000,337.5000000), --object(ab_warehouseshelf), (4),
+createObject(3576,-2098.7626950,832.3020630,87.3833010,0.0000000,0.0000000,281.2500000), --object(dockcrates2_la), (10),
+createObject(3577,-2099.7126460,842.2139280,86.6731340,0.0000000,0.0000000,348.7500000), --object(dockcrates1_la), (4),
+createObject(18260,-2111.0063480,829.4550170,87.4599150,0.0000000,0.0000000,135.0000000), --object(crates01), (6),
+createObject(3576,-2116.4001460,840.3907470,87.3793950,0.0000000,0.0000000,146.2500000), --object(dockcrates2_la), (11),
+createObject(964,-2124.9233400,887.5407710,96.8203130,0.0000000,0.0000000,258.7500000), --object(cj_metal_crate), (3),
+createObject(964,-2119.5952150,900.1011350,96.8203130,0.0000000,0.0000000,258.7500000), --object(cj_metal_crate), (4),
+createObject(964,-2102.3515630,864.1671750,96.8203130,0.0000000,0.0000000,191.2500000), --object(cj_metal_crate), (5),
+createObject(964,-2112.6223140,930.6615600,95.7500000,0.0000000,0.0000000,191.2501000), --object(cj_metal_crate), (6),
+createObject(964,-2123.5576170,946.0164790,95.9063720,0.0000000,0.0000000,180.0000000), --object(cj_metal_crate), (7),
+createObject(3458,-2120.4833980,954.0330200,94.0516510,0.0000000,359.6992000,270.0000000), --object(vgncarshade1), (3),
+createObject(964,-2118.9304200,959.9880980,95.5488740,0.0000000,0.0000000,180.0000000), --object(cj_metal_crate), (8),
+createObject(964,-2124.8474120,971.4088130,95.9453130,0.0000000,0.0000000,191.2501000), --object(cj_metal_crate), (9),
+createObject(964,-2121.6015630,1009.8393550,95.9453130,0.0000000,0.0000000,180.0000000), --object(cj_metal_crate), (10),
+createObject(3576,-2124.3574220,992.6018070,97.4379880,0.0000000,0.0000000,135.0000000), --object(dockcrates2_la), (12),
+createObject(964,-2115.0068360,999.0845950,95.9453130,0.0000000,0.0000000,180.0000000), --object(cj_metal_crate), (11),
+createObject(3577,-2122.9650880,1001.0607300,96.7278210,0.0000000,0.0000000,11.2500000), --object(dockcrates1_la), (5),
+createObject(3576,-2124.0598140,1019.6877440,97.4379880,0.0000000,0.0000000,90.0000000), --object(dockcrates2_la), (13),
+createObject(964,-2117.3725590,917.6123660,95.7744220,0.0000000,0.0000000,180.0000000), --object(cj_metal_crate), (12),
+createObject(964,-2103.9355470,890.0236210,92.3671880,0.0000000,0.0000000,180.0000000), --object(cj_metal_crate), (13),
+createObject(964,-2078.2204590,893.0227050,80.6015630,0.0000000,0.0000000,101.2501000), --object(cj_metal_crate), (14),
+createObject(964,-2066.2023930,883.3419190,76.7265630,0.0000000,0.0000000,112.5001000), --object(cj_metal_crate), (15),
+createObject(964,-2027.0026860,889.8088990,66.2109380,0.0000000,0.0000000,112.5001000), --object(cj_metal_crate), (16),
+createObject(964,-2044.4376220,885.9365230,70.0234380,0.0000000,0.0000000,90.0001000), --object(cj_metal_crate), (17),
+createObject(964,-2039.3725590,888.5961910,77.4921880,0.0000000,0.0000000,67.5001000), --object(cj_metal_crate), (18),
+createObject(964,-2048.1538090,955.8497920,84.2116850,0.0000000,0.0000000,78.7500000), --object(cj_metal_crate), (19),
+createObject(964,-2049.8659670,971.3533940,84.2116850,0.0000000,0.0000000,101.2501000), --object(cj_metal_crate), (20),
+createObject(964,-2033.6228030,972.5374150,72.5957640,0.0000000,0.0000000,90.0001000), --object(cj_metal_crate), (21),
+createObject(964,-2030.6590580,992.5177000,67.3913730,0.0000000,0.0000000,180.0000000), --object(cj_metal_crate), (22),
+createObject(964,-2022.4837650,1009.0687870,70.4843750,0.0000000,0.0000000,191.2501000), --object(cj_metal_crate), (23),
+createObject(964,-2023.9837650,1009.0687870,70.4843750,0.0000000,0.0000000,180.0000000), --object(cj_metal_crate), (24),
+createObject(964,-2022.9837650,1009.0687870,71.4843750,0.0000000,0.0000000,0.0001000), --object(cj_metal_crate), (25),
+createObject(964,-2064.2526860,987.0647580,82.3907930,0.0000000,0.0000000,45.0001000), --object(cj_metal_crate), (26),
+createObject(964,-2085.9428710,993.9290770,86.0741420,17.1887000,0.0000000,90.0001000), --object(cj_metal_crate), (27),
+createObject(964,-2100.8916020,997.4085080,91.6114880,17.1887000,0.0000000,90.0001000), --object(cj_metal_crate), (28),
+createObject(3594,-2123.6711430,938.5108640,96.5425570,1.7189000,0.8594000,302.0312000), --object(la_fuckcar1), (3),
+createObject(3593,-2125.9323730,977.0281980,96.5054700,0.0000000,0.0000000,123.7499000), --object(la_fuckcar2), (3),
+createObject(3576,-2077.1208500,879.9982910,82.0942380,0.0000000,0.0000000,0.0000000), --object(dockcrates2_la), (14),
+createObject(3576,-2063.2058110,878.5596920,78.2192380,0.0000000,0.0000000,213.7500000), --object(dockcrates2_la), (15),
+createObject(3576,-2023.3627930,885.8065800,67.7036130,0.0000000,0.0000000,168.7500000), --object(dockcrates2_la), (16),
+createObject(13749,-2134.5852050,1020.5214840,86.2136920,0.0000000,0.0000000,236.2501000), --object(cunte_curvesteps1), (2),
+createObject(11544,-2129.8623050,1002.2404170,94.7694170,0.0000000,0.0000000,180.0000000), --object(des_ntfrescape2), (5),
+createObject(2669,-2128.3161620,1001.9129640,94.4300990,0.0000000,0.0000000,90.0000000), --object(cj_chris_crate), (2),
+createObject(2669,-2128.3161620,1004.9129640,94.4300990,0.0000000,0.0000000,90.0000000), --object(cj_chris_crate), (3),
+createObject(2669,-2128.3161620,998.7630620,94.4300990,0.0000000,0.0000000,90.0000000), --object(cj_chris_crate), (4),
+createObject(3361,-2046.5229490,1024.4367680,68.6469650,0.0000000,0.0000000,180.0000000), --object(cxref_woodstair), (6),
+createObject(3361,-2054.7470700,1024.4367680,64.6219640,0.0000000,0.0000000,180.0000000), --object(cxref_woodstair), (7),
+createObject(3361,-2062.9472660,1024.4367680,60.5719600,0.0000000,0.0000000,180.0000000), --object(cxref_woodstair), (8),
+createObject(3361,-2013.0136720,831.9137570,59.7069590,0.0000000,0.0000000,0.0000000), --object(cxref_woodstair), (9),
+createObject(3361,-2008.6633300,835.7638550,55.6319540,0.0000000,0.0000000,90.0000000), --object(cxref_woodstair), (10),
+createObject(3361,-2008.6633300,841.8386840,51.5819510,0.0000000,0.0000000,90.0000000), --object(cxref_woodstair), (11),
+createObject(3361,-2008.6633300,850.0383910,47.5819510,0.0000000,0.0000000,90.0000000), --object(cxref_woodstair), (12),
+createObject(3361,-2008.6633300,856.0136110,43.5819510,0.0000000,0.0000000,90.0000000), --object(cxref_woodstair), (13),
+createObject(3576,-2018.9680180,844.4179080,63.2691460,0.0000000,0.0000000,270.0000000), --object(dockcrates2_la), (17),
+createObject(3796,-2020.8710940,837.8791500,61.7790220,0.0000000,0.0000000,33.7500000), --object(acbox1_sfs), (4),
+createObject(18260,-2036.1866460,825.5372310,69.2865140,0.0000000,0.0000000,202.5000000), --object(crates01), (7),
+createObject(964,-2037.9768070,840.0319820,67.7133180,0.0000000,0.0000000,90.0000000), --object(cj_metal_crate), (29),
+createObject(1431,-2038.0507810,836.8342290,68.2609330,0.0000000,0.0000000,90.0000000), --object(dyn_box_pile), (4),
+createObject(944,-2037.4458010,867.3646240,76.7917710,0.0000000,0.0000000,22.5000000), --object(packing_carates04), (7),
+createObject(944,-2049.6870120,888.1489260,78.1269610,0.0000000,0.0000000,0.0000000), --object(packing_carates04), (8),
+createObject(944,-2067.3564450,877.1604000,77.3863370,0.0000000,0.0000000,0.0000000), --object(packing_carates04), (9),
+createObject(3761,-2091.3383790,866.4814450,98.8192900,0.0000000,0.0000000,281.2500000), --object(industshelves), (4),
+createObject(3593,-2118.9387210,878.5255740,97.4054720,0.0000000,0.0000000,236.2500000), --object(la_fuckcar2), (4),
+createObject(3594,-2095.2502440,882.1550290,92.8438950,0.8594000,355.7028000,33.7500000), --object(la_fuckcar1), (4),
+createObject(3594,-2104.4965820,897.4176640,92.9983670,0.8594000,355.7028000,101.2500000), --object(la_fuckcar1), (5),
+createObject(12930,-2025.9687500,1013.3479000,71.0396270,0.0000000,0.0000000,67.5000000), --object(sw_pipepile02), (4),
+createObject(3576,-2031.7423100,839.1106570,69.2059940,0.0000000,0.0000000,315.0000000), --object(dockcrates2_la), (18),
+createObject(18260,-2067.2902830,957.6578370,60.2245600,0.0000000,6.8755000,348.7501000), --object(crates01), (8),
+createObject(18260,-2110.9111330,912.8804930,77.7827150,354.8434000,2.5783000,281.2501000), --object(crates01), (9),
+createObject(18260,-2018.9061280,921.3096920,45.9585650,354.8434000,0.0000000,270.0001000), --object(crates01), (10),
+createObject(3593,-2072.7509770,928.0162960,62.5737040,6.0161000,357.4217000,101.2500000), --object(la_fuckcar2), (5),
+createObject(5262,-2084.4096680,908.5418700,67.7212520,5.1566000,347.9679000,101.2500000), --object(las2dkwar04), (3),
+createObject(5262,-2098.7653810,959.9534300,72.0743410,352.2651000,354.8434000,292.5000000), --object(las2dkwar04), (4),
+createObject(2567,-2083.0439450,935.6265260,69.5253980,0.0000000,0.0000000,90.0000000), --object(ab_warehouseshelf), (5),
+createObject(3576,-2042.0402830,923.6992190,52.7597850,0.0000000,7.7349000,348.7500000), --object(dockcrates2_la), (19),
+createObject(3576,-2061.1845700,945.7440190,59.7239650,353.1245000,351.4056000,180.0000000), --object(dockcrates2_la), (20),
+createObject(3576,-2101.1960450,937.3267820,74.3136980,4.2972000,355.7028000,180.0000000), --object(dockcrates2_la), (21),
+createObject(12930,-2052.9350590,923.5173950,56.2435340,4.2972000,358.2811000,112.5000000), --object(sw_pipepile02), (5),
+createObject(5262,-2030.2122800,936.0751340,48.6620220,353.9839000,345.3896000,191.2500000), --object(las2dkwar04), (5),
+createObject(5262,-2100.5866700,923.1427610,77.0251770,356.5623000,16.3293000,0.0000000), --object(las2dkwar04), (6),
+createObject(944,-2077.7570800,939.8647460,62.8139610,0.0000000,8.5944000,0.0000000), --object(packing_carates04), (10),
+createObject(944,-2054.0527340,932.9673460,57.0645560,0.0000000,4.2972000,0.0000000), --object(packing_carates04), (11),
+createObject(944,-2040.6977540,915.9682010,52.5156940,0.0000000,6.8755000,337.5000000), --object(packing_carates04), (12),
+createObject(944,-2088.4106450,948.3261720,69.7854390,0.0000000,6.8755000,22.5000000), --object(packing_carates04), (13),
+createObject(12985,-2111.9313960,924.4412230,88.6493680,0.0000000,0.0000000,90.0000000), --object(cos_sbanksteps05), (1),
+createObject(3761,-2108.3083500,928.1296390,92.6313480,55.8633000,0.0000000,0.0001000), --object(industshelves), (5),
+createObject(9766,-2046.0820310,924.5140380,80.9075780,349.7903000,0.0000000,180.0000000), --object(scaff3_sfw), (2),
+createObject(3799,-2064.2714840,998.7568360,79.9221880,0.0000000,24.0642000,56.2500000), --object(acbox2_sfs), (5),
+createObject(3576,-2096.7038570,891.6152950,93.8553850,0.0000000,0.0000000,236.2501000), --object(dockcrates2_la), (22),
+createObject(18260,-2033.3713380,874.9393920,63.3496740,0.0000000,0.0000000,22.5001000), --object(crates01), (11),
+
+}
+
+for k,v in ipairs(cobras) do
+	setElementDimension(v,5000)
+	setElementDoubleSided ( v, true )
+	setObjectBreakable(v, false)
+end
+
+weapons = {
+	[1] = {2, 3, 4, 5, 6, 7, 8, 9},
+	[2] = {22, 23, 24},
+	[3] = {25, 26, 27},
+	[4] = {28, 29, 32},
+	[5] = {30, 31},
+	[6] = {33, 34},
+	[7] = {35, 36, 37,38},
+	[8] = {16, 17, 18, 39},
+	[9] = {41, 42, 43},
+	[10] = {10, 11, 12, 13, 14, 15},
+	[11] = {44, 45, 46},
+	[12] = {40},
+}
+
+restrictedWeapons = {}
+
+function onClientPreRender()
+	if getElementData(localPlayer,"isPlayerInDM") then
+		local weapon = getPedWeapon(localPlayer)
+		local slot = getPedWeaponSlot(localPlayer)
+		if (restrictedWeapons[weapon]) then
+			local weapons = {}
+			for i=1, 30 do
+				if (getControlState("next_weapon")) then
+					slot = slot + 1
+				else
+					slot = slot - 1
+				end
+				if (slot == 13) then
+					slot = 0
+				elseif (slot == -1) then
+					slot = 12
+				end
+
+				local w = getPedWeapon(localPlayer, slot)
+				if (((w ~= 0 and slot ~= 0) or (w == 0 and slot == 0)) and not restrictedWeapons[w]) then
+					setPedWeaponSlot(localPlayer, slot)
+					break
+				end
+			end
+		end
+	end
+end
+addEventHandler("onClientPreRender", root, onClientPreRender)
+
+function onClientPlayerWeaponFire(weapon)
+	if (restrictedWeapons[weapon]) then return end
+end
+addEventHandler("onClientPlayerWeaponFire", localPlayer, onClientPlayerWeaponFire)
+
+---- dont forget to make exports for these .........
+
+function setWeaponDisabled(id, bool)
+	if (id == 0) then return end
+	restrictedWeapons[id] = bool
+end
+
+function isWeaponDisabled(id)
+	return restrictedWeapons[id]
+end
+
+function setWeaponSlotDisabled(slot, bool)
+	if (not weapons[slot]) then return end
+	for k, v in ipairs(weapons[slot]) do
+		setWeaponDisabled(v, bool)
+	end
+end

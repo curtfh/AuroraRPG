@@ -1,0 +1,24 @@
+<meta>
+	<min_mta_version client="1.5.0" server="1.5.0" />
+	<file src="shaders/block_world.fx" type="client"/>
+	<file src="shaders/mta-helper.fx" type="client"/>
+
+	<script src="LSDshader.luac" type="client"/>
+    <script src="drugsClient.lua" type="client"/>
+    <script src="drugswall.luac" type="client"/>
+
+	<script src="drugsServer.lua" type="server"/>
+
+	<export function="giveDrug" type="server"/>
+	<export function="takeDrug" type="server"/>
+	<export function="setDrug" type="server"/>
+	<export function="outputTable" type="server"/>
+	<export function="getDrugsTable" type="client"/>
+	<export function="getDrugNumber" type="server"/>
+	<export function="getPlayerDrugsTable" type="server"/>
+
+	<file src="fx/ped_wall.fx" type="client" />
+	<file src="fx/ped_wall_mrt.fx" type="client" />
+	<file src="fx/post_edge.fx" type="client" />
+
+</meta>

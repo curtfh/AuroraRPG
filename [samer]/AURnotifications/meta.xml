@@ -1,0 +1,8 @@
+<meta>
+    <info author="AUR Scripting Team" type="script" name="notifications" description="Notifications resource" />
+	
+	<script src="client.luac" type="client" />
+	<script src="server.lua" type="server" />
+	<file src="icon.png"/>
+	<export function="addNotification" type="server" />
+</meta>

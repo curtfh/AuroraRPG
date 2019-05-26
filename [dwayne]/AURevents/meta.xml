@@ -1,0 +1,10 @@
+<meta>
+	<info author=""	name="Events System" version="1.0.1" type="misc"/>
+	<script src="client.luac" type="client" />
+	<script src="server.lua" type="server" />
+
+	<file src="images/1.png" />
+	<file src="images/2.png" />
+	<file src="images/3.png" />
+	<file src="images/go.png" />
+</meta>

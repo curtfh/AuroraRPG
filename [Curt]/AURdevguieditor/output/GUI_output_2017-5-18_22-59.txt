@@ -1,0 +1,64 @@
+--[[-------------------------------------------------
+Notes:
+
+> This code is using a relative image filepath. This will only work as long as the location it is from always exists, and the resource it is part of is running.
+    To ensure it does not break, it is highly encouraged to move images into your local resource and reference them there.
+--]]-------------------------------------------------
+
+
+GUIEditor = {
+    staticimage = {},
+    edit = {},
+    gridlist = {},
+    window = {},
+    label = {},
+    memo = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+        GUIEditor.window[1] = guiCreateWindow(0.12, 0.16, 0.75, 0.71, "AuroraRPG - Admin Report", true)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.label[1] = guiCreateLabel(0.01, 0.04, 0.98, 0.03, "Opened Reports: 0 | Overall Reports: 0 | Unread Reports: 0", true, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[1], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[1], "center", false)
+        GUIEditor.gridlist[1] = guiCreateGridList(0.01, 0.07, 0.50, 0.91, true, GUIEditor.window[1])
+        guiGridListAddColumn(GUIEditor.gridlist[1], "Report ID", 0.3)
+        guiGridListAddColumn(GUIEditor.gridlist[1], "Title", 0.3)
+        guiGridListAddColumn(GUIEditor.gridlist[1], "Player", 0.3)
+        GUIEditor.label[2] = guiCreateLabel(0.51, 0.08, 0.09, 0.03, "Account Name: ", true, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[2], "default-bold-small")
+        GUIEditor.edit[1] = guiCreateEdit(0.61, 0.07, 0.38, 0.05, "Acc Name", true, GUIEditor.window[1])
+        guiEditSetReadOnly(GUIEditor.edit[1], true)
+        GUIEditor.label[3] = guiCreateLabel(0.51, 0.14, 0.08, 0.03, "Player Name: ", true, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[3], "default-bold-small")
+        GUIEditor.edit[2] = guiCreateEdit(0.60, 0.13, 0.39, 0.05, "Player Name", true, GUIEditor.window[1])
+        guiEditSetReadOnly(GUIEditor.edit[2], true)
+        GUIEditor.label[4] = guiCreateLabel(0.51, 0.19, 0.02, 0.03, "IP:", true, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[4], "default-bold-small")
+        GUIEditor.edit[3] = guiCreateEdit(0.54, 0.18, 0.45, 0.04, "IP ", true, GUIEditor.window[1])
+        guiEditSetReadOnly(GUIEditor.edit[3], true)
+        GUIEditor.label[5] = guiCreateLabel(0.51, 0.25, 0.07, 0.03, "MTA Serial: ", true, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[5], "default-bold-small")
+        GUIEditor.edit[4] = guiCreateEdit(0.59, 0.24, 0.40, 0.04, "MTA Serial", true, GUIEditor.window[1])
+        guiEditSetReadOnly(GUIEditor.edit[4], true)
+        GUIEditor.label[6] = guiCreateLabel(0.51, 0.29, 0.49, 0.03, "---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------", true, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[6], "default-bold-small")
+        guiLabelSetColor(GUIEditor.label[6], 255, 0, 0)
+        GUIEditor.label[7] = guiCreateLabel(0.51, 0.33, 0.06, 0.03, "Report ID:", true, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[7], "default-bold-small")
+        GUIEditor.edit[5] = guiCreateEdit(0.58, 0.32, 0.10, 0.04, "Report ID", true, GUIEditor.window[1])
+        guiEditSetReadOnly(GUIEditor.edit[5], true)
+        GUIEditor.label[8] = guiCreateLabel(0.51, 0.38, 0.03, 0.03, "Title: ", true, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[8], "default-bold-small")
+        GUIEditor.edit[6] = guiCreateEdit(0.55, 0.37, 0.44, 0.04, "Title", true, GUIEditor.window[1])
+        guiEditSetReadOnly(GUIEditor.edit[6], true)
+        GUIEditor.label[9] = guiCreateLabel(0.51, 0.43, 0.07, 0.03, "Description: ", true, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[9], "default-bold-small")
+        GUIEditor.memo[1] = guiCreateMemo(0.51, 0.46, 0.48, 0.14, "Descrption", true, GUIEditor.window[1])
+        guiMemoSetReadOnly(GUIEditor.memo[1], true)
+        GUIEditor.label[10] = guiCreateLabel(0.51, 0.60, 0.26, 0.03, "Attachments (Click the image for full view):", true, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[10], "default-bold-small")
+        GUIEditor.staticimage[1] = guiCreateStaticImage(0.52, 0.64, 0.17, 0.07, ":server/Images/disc.png", true, GUIEditor.window[1])    
+    end
+)

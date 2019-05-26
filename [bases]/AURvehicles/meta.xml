@@ -1,0 +1,7 @@
+<meta>
+    <info author="Dennis" version="2.0" type="script" />
+
+	<script src="client.luac" type="client" />
+
+	<export function="reloadFreeVehicleMarkers" type="server" />
+</meta>

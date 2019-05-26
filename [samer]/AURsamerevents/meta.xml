@@ -1,0 +1,5 @@
+<meta>
+    <info author="Samer" type="script" name="emotes" description="Emotes resource" />
+	
+	<script src="client.lua" type="client" />
+</meta>

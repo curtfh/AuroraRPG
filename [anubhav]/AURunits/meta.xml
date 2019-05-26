@@ -1,0 +1,34 @@
+<meta>
+	<script src="server.lua" />
+	<script src="client.luac" type="client" />
+	<script src="client_management.luac" type="client" />
+
+	<export function="isUnit" type="server" />
+	<export function="createUnit" type="server" />
+	<export function="deleteUnit" type="server" />
+	<export function="getUnitMembers" type="server" />
+	<export function="getUnitMemberCount" type="server" />
+	<export function="getUnitFounder" type="server" />
+
+	<export function="addMember" type="server" />
+	<export function="addMember2" type="server" />
+	<export function="removeMember" type="server" />
+	<export function="removeMember2" type="server" />
+
+	<export function="getPlayerUnit" type="server" />
+	<export function="getPlayerUnit2" type="server" />
+
+	<export function="setUnitFounder" type="server" />
+
+	<export function="addInvite" type="server" />
+	<export function="addInvite2" type="server" />
+	<export function="getInvites" type="server" />
+	<export function="getInvites2" type="server" />
+
+	<export function="giveUnitMoney" type="server" />
+
+
+	<export function="getUnitOnlineMembers" type="client" />
+
+	<file src="map-hd.png" />
+</meta>

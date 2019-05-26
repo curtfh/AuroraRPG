@@ -1,0 +1,14 @@
+
+GUIEditor = {
+    label = {},
+    window = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+        GUIEditor.window[1] = guiCreateWindow(0.13, 0.15, 0.75, 0.71, "AuroraRPG - Admin Reports", true)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.label[1] = guiCreateLabel(0.01, 0.04, 0.98, 0.03, "", true, GUIEditor.window[1])
+        guiLabelSetHorizontalAlign(GUIEditor.label[1], "center", false)    
+    end
+)

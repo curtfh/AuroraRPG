@@ -1,0 +1,6 @@
+<meta>
+	<info author="Nixon" name="Parachute" description="To buy parachute" type="script" />
+	<script src="client.luac" type="client" />
+	<script src="server.luac" type="server" />
+	<file src="aurora.png"/>
+</meta>

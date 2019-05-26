@@ -1,0 +1,6 @@
+<meta>
+	<script src="server.lua" />
+	<script src="client.luac" type="client" />
+	<script src="client_add.luac" type="client" />
+	<script src="client_remove.luac" type="client" />
+</meta>

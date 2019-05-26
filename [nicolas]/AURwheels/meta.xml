@@ -1,0 +1,23 @@
+<meta>
+	<info type="misc" name=" " author="Lord Nicolas" description="" version="1.5.2" />
+	<file src="wheels/rod.txd" />
+	<file src="wheels/wheel_gn1.dff" />
+	<file src="wheels/wheel_gn2.dff" />
+	<file src="wheels/wheel_gn3.dff" />
+	<file src="wheels/wheel_gn4.dff" />
+	<file src="wheels/wheel_gn5.dff" />
+	<file src="wheels/wheel_lr1.dff" />
+	<file src="wheels/wheel_lr2.dff" />
+	<file src="wheels/wheel_lr3.dff" />
+	<file src="wheels/wheel_lr4.dff" />
+	<file src="wheels/wheel_lr5.dff" />
+	<file src="wheels/wheel_or1.dff" />
+	<file src="wheels/wheel_sr1.dff" />
+	<file src="wheels/wheel_sr2.dff" />
+        <file src="wheels/wheel_sr3.dff" />
+	<file src="wheels/wheel_sr4.dff" />
+        <file src="wheels/wheel_sr5.dff" />
+	<file src="wheels/wheel_sr6.dff" />
+   
+	<script type="client" src="wheelpack.lua" />
+</meta>

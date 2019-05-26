@@ -1,0 +1,15 @@
+<meta>
+
+	<file src="files/ammu2/mp_ammu01.col" />
+	<file src="files/ammu2/mp_ammu01.dff" />
+	<file src="files/ammu2/Roadsbx_las2.col" />
+	<file src="files/ammu2/Roadsbx_las2.dff" />
+	<file src="files/ammu/munation_main.col" />
+	<file src="files/ammu/munation_main.dff" />
+	<file src="files/ammu/amubloksun1_LAn.col" />
+	<file src="files/ammu/amubloksun1_lan.dff" />
+
+	<script src="client.lua" type="client" />
+
+    <min_mta_version server="1.3.4-0.00000" client="1.3.4-0.00000"></min_mta_version>
+</meta>

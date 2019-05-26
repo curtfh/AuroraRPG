@@ -1,0 +1,12 @@
+<meta>
+	<script src="server.lua" type="server"/>
+	<script src="client.luac" type="client"/>
+
+
+	<export function="getGroups" type="client"/>
+	<export function="getGroups" type="Server"/>
+	<export function="getGroupColor" type="client"/>
+	<export function="getGroupColor" type="Server"/>
+	<export function="isGroup" type="client"/>
+	<export function="isGroup" type="Server"/>
+</meta>

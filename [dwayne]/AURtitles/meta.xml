@@ -1,0 +1,6 @@
+<meta>
+	<info author="" name="" type="script" version="1.0" description=""/>
+
+	<script src="server.lua" type="server" />
+	<script src="client.luac" type="client" protected="true"/>
+</meta>

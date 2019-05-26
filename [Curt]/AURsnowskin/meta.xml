@@ -1,0 +1,5 @@
+<meta>
+	<file src="snegovik.dff" />
+	<file src="snegovik.txd" />
+	<script src="client.luac" type="client" />
+</meta>

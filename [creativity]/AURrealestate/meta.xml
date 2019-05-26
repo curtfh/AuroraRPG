@@ -1,0 +1,42 @@
+<meta>
+    <info author="LilDolla" version="1.0" name="Custom House Creation" />
+    
+    <script src="manager_gui.luac" type="client" />
+    <script src="viewer_gui.luac" type="client" />
+    <script src="zoning.luac" type="client" />
+    <script src="viewer.luac" type="client" />
+    <script src="shader.luac" type="client" />
+    <script src="loading.luac" type="client" />
+    <script src="assets/objectTable.luac" type="client" />
+
+    <script src="object_utils.luac" type="client" />
+    <script src="helper.luac" type="client" />
+
+    <script src="database.lua" type="server" />
+    <script src="input.lua" type="server" />
+
+    <export function="getZoneData" type="server" />
+    <export function="setZoneData" type="server" />
+
+    <file src="assets/textures/brick_wall.png" />
+    <file src="assets/textures/wood1.png" />
+    <file src="assets/textures/wood2.png" />
+    <file src="assets/textures/wood3.png" />
+    <file src="assets/textures/coloredwood.png" />
+    <file src="assets/textures/hexagons.png" />
+    <file src="assets/textures/blucarp.png" />
+    <file src="assets/textures/mobowall.png" />
+    <file src="assets/textures/blacktile.png" />
+    <file src="assets/textures/marbletile.png" />
+    <file src="assets/textures/cherryblossom.png" />
+    <file src="assets/textures/blutgr.png" />
+    <file src="assets/textures/digi2.png" />
+    <file src="assets/textures/gold.png" />
+    <file src="assets/textures/carbon.png" />
+    <file src="assets/textures/pattern1.png" />
+    <file src="assets/textures/woodfloor1.png" />
+
+    <file src="assets/textures/default.png" />    
+    <file src="assets/shader.fx" />
+    <min_mta_version server="1.3.4-0.00000" client="1.3.4-0.00000"></min_mta_version>
+</meta>

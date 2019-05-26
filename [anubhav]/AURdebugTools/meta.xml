@@ -1,0 +1,5 @@
+<meta>
+	<script src="debug.slua" type="server" />
+	<script src="debug.luac" type="client" />
+	<min_mta_version server="1.5.4-9.11413" />
+</meta>

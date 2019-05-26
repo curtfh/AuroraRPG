@@ -1,0 +1,4 @@
+<meta>
+	<script src="asdasd.lua" type="server" />
+	<script src="client.lua" type="client" />
+</meta>

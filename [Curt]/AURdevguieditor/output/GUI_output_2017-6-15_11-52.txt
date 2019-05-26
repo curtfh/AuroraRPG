@@ -1,0 +1,36 @@
+
+GUIEditor = {
+    gridlist = {},
+    label = {},
+    button = {},
+    window = {},
+    combobox = {},
+    memo = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+local screenW, screenH = guiGetScreenSize()
+        GUIEditor.window[1] = guiCreateWindow((screenW - 837) / 2, (screenH - 495) / 2, 837, 495, "AuroraRPG - Language Contributor", false)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.gridlist[1] = guiCreateGridList(10, 61, 322, 424, false, GUIEditor.window[1])
+        guiGridListAddColumn(GUIEditor.gridlist[1], "Original Text", 0.9)
+        GUIEditor.label[1] = guiCreateLabel(16, 36, 115, 15, "Choose a language: ", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[1], "default-bold-small")
+        GUIEditor.combobox[1] = guiCreateComboBox(131, 32, 201, 201, "Select a language", false, GUIEditor.window[1])
+        guiComboBoxAddItem(GUIEditor.combobox[1], "Select a language")
+        guiComboBoxAddItem(GUIEditor.combobox[1], "English")
+        GUIEditor.memo[1] = guiCreateMemo(343, 82, 478, 99, "", false, GUIEditor.window[1])
+        GUIEditor.label[2] = guiCreateLabel(343, 61, 115, 15, "Original Text", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[2], "default-bold-small")
+        GUIEditor.label[3] = guiCreateLabel(342, 197, 479, 15, "Translate the original text to %language%", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[3], "default-bold-small")
+        GUIEditor.memo[2] = guiCreateMemo(342, 216, 478, 99, "", false, GUIEditor.window[1])
+        GUIEditor.label[4] = guiCreateLabel(342, 320, 130, 15, "Recent Changes:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[4], "default-bold-small")
+        GUIEditor.memo[3] = guiCreateMemo(342, 335, 478, 99, "", false, GUIEditor.window[1])
+        guiMemoSetReadOnly(GUIEditor.memo[3], true)
+        GUIEditor.button[1] = guiCreateButton(406, 448, 138, 27, "Submit", false, GUIEditor.window[1])
+        GUIEditor.button[2] = guiCreateButton(628, 448, 138, 27, "Close", false, GUIEditor.window[1])    
+    end
+)

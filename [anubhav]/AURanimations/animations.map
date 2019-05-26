@@ -1,0 +1,182 @@
+<map>
+	<animationCategory id="Dance">
+		<animation id="Dance 1" block="DANCING" code="bd_clap" />
+		<animation id="Dance 2" block="DANCING" code="bd_clap1" />
+		<animation id="Dance 3" block="DANCING" code="dance_loop" />
+		<animation id="Dance 4" block="DANCING" code="DAN_Down_A" />
+		<animation id="Dance 5" block="DANCING" code="DAN_Left_A" />
+		<animation id="Dance 6" block="DANCING" code="DAN_Loop_A" />
+		<animation id="Dance 7" block="DANCING" code="DAN_Right_A" />
+		<animation id="Dance 8" block="DANCING" code="DAN_Up_A" />
+		<animation id="Dance 9" block="DANCING" code="dnce_M_a" />
+		<animation id="Dance 10" block="DANCING" code="dnce_M_b" />
+		<animation id="Dance 11" block="DANCING" code="dnce_M_c" />
+		<animation id="Dance 12" block="DANCING" code="dnce_M_d" />
+		<animation id="Dance 13" block="DANCING" code="dnce_M_e" />
+	</animationCategory>
+
+	<animationCategory id="Romantic">
+		<animation id="Girlfriend" block="BD_FIRE" code="BD_GF_Wave" />
+		<animation id="Girlfriend 2" block="KISSING" code="gfwave2" />
+		<animation id="Kiss" block="BD_FIRE" code="Grlfrd_Kiss_03" />
+		<animation id="Assslap " block="SWEET" code="sweet_ass_slap" />
+
+	</animationCategory>
+
+	<animationCategory id="Police">
+		<animation id="Cop at car" block="CAR_CHAT" code="car_talkm_loop" />
+		<animation id="Look around" block="COP_AMBIENT" code="Coplook_loop" />
+		<animation id="Think" block="COP_AMBIENT" code="Coplook_think" />
+		<animation id="CPR" block="MEDIC" code="CPR" />
+		<animation id="Arrested!" block="ped" code="ARRESTGUN" />
+		<animation id="Pull over!" block="POLICE" code="CopTraf_Away" />
+		<animation id="Stop!" block="POLICE" code="CopTraf_Stop" />
+		<animation id="Kick 2" block="POLICE" code="Door_Kick" />
+		<animation id="Hold Weapon" block="SWORD" code="sword_IDLE" />
+		<animation id="CPR" block="MEDIC" code="CPR" />
+		<animation id="Crouch" block="CAMERA" code="camcrch_idleloop" />
+		<animation id="Gangster aim" block="ped" code="gang_gunstand" />
+
+	</animationCategory>
+	<animationCategory id="Misc">
+		<animation id="Sit watch" block="INT_OFFICE" code="OFF_Sit_Watch" />
+		<animation id="Sit talk" block="MISC" code="Seat_talk_01" />
+		<animation id="Wank" block="PAULNMAC" code="wank_loop" />
+		<animation id="Smoke" block="BD_FIRE" code="M_smklean_loop" />
+		<animation id="Chill " block="BEACH" code="ParkSit_M_loop" />
+		<animation id="Plant bomb" block="BOMBER" code="BOM_Plant_Loop" />
+		<animation id="Come at me!" block="BSKTBALL" code="BBALL_def_loop" />
+		<animation id="Handstand" block="DAM_JUMP" code="DAM_Dive_Loop" />
+		<animation id="Dealer" block="DEALER" code="DEALER_IDLE" />
+		<animation id="Tired" block="FAT" code="IDLE_tired" />
+		<animation id="Vomit" block="FOOD" code="EAT_Vomit_P" />
+		<animation id="Agree" block="GANGS" code="Invite_Yes" />
+		<animation id="Disagree" block="GANGS" code="Invite_No" />
+		<animation id="Lean" block="GANGS" code="leanIDLE" />
+		<animation id="Talk" block="GANGS" code="prtial_gngtlkB" />
+		<animation id="Talk2" block="GANGS" code="prtial_gngtlkD" />
+		<animation id="Talk3" block="GANGS" code="prtial_gngtlkG" />
+		<animation id="Kick" block="GANGS" code="shake_carK" />
+		<animation id="Cry" block="GRAVEYARD" code="mrnF_loop" />
+		<animation id="Mourn" block="GRAVEYARD" code="mrnM_loop" />
+		<animation id="Mourn2" block="GRAVEYARD" code="prst_loopa" />
+		<animation id="Boxing" block="GYMNASIUM" code="GYMshadowbox" />
+		<animation id="Go right!" block="MISC" code="Hiker_Pose" />
+		<animation id="Go left!" block="MISC" code="Hiker_Pose_L" />
+		<animation id="Talk4" block="MISC" code="Idle_Chat_02" />
+		<animation id="Lean2" block="MISC" code="Plyrlean_loop" />
+		<animation id="Oh, my balls!" block="MISC" code="Scratchballs_01" />
+		<animation id="Look around2" block="ON_LOOKERS" code="lkaround_loop" />
+		<animation id="Look up" block="ON_LOOKERS" code="lkup_loop" />
+		<animation id="Oh my god!" block="ON_LOOKERS" code="panic_loop" />
+		<animation id="Point up" block="ON_LOOKERS" code="Pointup_loop" />
+		<animation id="Shout" block="ON_LOOKERS" code="shout_01" />
+		<animation id="Shout2" block="ON_LOOKERS" code="shout_02" />
+		<animation id="Shout3" block="ON_LOOKERS" code="shout_loop" />
+		<animation id="Wave" block="ON_LOOKERS" code="wave_loop" />
+		<animation id="Watch " block="OTB" code="wtchrace_loop" />
+		<animation id="Tai Chi" block="PARK" code="Tai_Chi_Loop" />
+		<animation id="Stare " block="ped" code="car_hookertalk" />
+		<animation id="Cower" block="ped" code="cower" />
+		<animation id="Stroke" block="ped" code="FLOOR_hit" />
+		<animation id="Stroke2" block="ped" code="FLOOR_hit_f" />
+		<animation id="Hey!" block="ped" code="fucku" />
+		<animation id="Look around3" block="ped" code="IDLE_HBHB" />
+		<animation id="Tired2" block="ped" code="IDLE_tired" />
+		<animation id="Look around4" block="ped" code="XPRESSscratch" />
+		<animation id="Come at me!2" block="RIOT" code="RIOT_ANGRY" />
+		<animation id="Taunt" block="RIOT" code="RIOT_PUNCHES" />
+		<animation id="Taunt2" block="RIOT" code="RIOT_CHANT" />
+		<animation id="F**k you" block="RIOT" code="RIOT_FUKU" />
+		<animation id="Come to me" block="RYDER" code="RYD_Beckon_02" />
+		<animation id="Aim gun" block="SHOP" code="SHP_Gun_Aim" />
+		<animation id="Handsup" block="SHOP" code="SHP_Rob_HandsUp" />
+		<animation id="Injured" block="SWEET" code="Sweet_injuredloop" />
+		<animation id="Follow me" block="WUZI" code="Wuzi_follow" />
+	</animationCategory>
+
+	<animationCategory id="General">
+		<animation id="Drink" block="bar" code="dnk_stndM_loop" />
+		<animation id="Lay Down" block="BEACH" code="Lay_Bac_Loop" />
+		<animation id="Wave" block="ON_LOOKERS" code="wave_loop" />
+		<animation id="Sit Down" block="Ped" code="SEAT_idle" cmd="sit" />
+		<animation id="Lean" block="smoking" code="M_smklean_loop" cmd="lean" />
+		<animation id="Tired" block="FAT" code="IDLE_tired" />
+		<animation id="Cower" block="ped" code="Cower" />
+		<animation id="Piss" block="PAULNMAC" code="Piss_loop" />
+	</animationCategory>
+
+
+
+	<animationCategory id="Bar">
+		<animation id="Bar 1" block="BAR" code="Barcustom_get" />
+		<animation id="Bar 2" block="BAR" code="Barcustom_loop" />
+		<animation id="Bar 3" block="BAR" code="Barcustom_order" />
+		<animation id="Bar 4" block="BAR" code="BARman_idle" />
+		<animation id="Bar 5" block="BAR" code="Barserve_bottle" />
+		<animation id="Bar 6" block="BAR" code="Barserve_give" />
+		<animation id="Bar 7" block="BAR" code="Barserve_glass" />
+		<animation id="Bar 8" block="BAR" code="Barserve_in" />
+		<animation id="Bar 9" block="BAR" code="Barserve_loop" />
+		<animation id="Bar 10" block="BAR" code="Barserve_order" />
+		<animation id="Bar 11" block="BAR" code="dnk_stndF_loop" />
+		<animation id="Bar 12" block="BAR" code="dnk_stndM_loop" />
+	</animationCategory>
+
+	<animationCategory id="Baseball">
+		<animation id="Bat 1" block="BASEBALL" code="Bat_1" />
+		<animation id="Bat 2" block="BASEBALL" code="Bat_2" />
+		<animation id="Bat 3" block="BASEBALL" code="Bat_3" />
+		<animation id="Bat 4" block="BASEBALL" code="Bat_4" />
+		<animation id="Bat 5" block="BASEBALL" code="Bat_block" />
+		<animation id="Bat 6" block="BASEBALL" code="Bat_hit_1" />
+		<animation id="Bat 7" block="BASEBALL" code="Bat_hit_2" />
+		<animation id="Bat 8" block="BASEBALL" code="Bat_hit_3" />
+		<animation id="Bat 9" block="BASEBALL" code="Bat_IDLE" />
+		<animation id="Bat 10" block="BASEBALL" code="Bat_M" />
+		<animation id="Bat 11" block="BASEBALL" code="Bat_PART" />
+	</animationCategory>
+
+	<animationCategory id="Beach">
+		<animation id="Beach 1" block="BEACH" code="bather" />
+		<animation id="Beach 2" block="BEACH" code="Lay_Bac_Loop" />
+		<animation id="Beach 3" block="BEACH" code="ParkSit_M_loop" />
+		<animation id="Beach 4" block="BEACH" code="ParkSit_W_loop" />
+		<animation id="Beach 5" block="BEACH" code="SitnWait_loop_W" />
+	</animationCategory>
+
+	<animationCategory id="Smoke">
+		<animation id="Smoke 1" block="SMOKING" code="F_smklean_loop" />
+		<animation id="Smoke 2" block="SMOKING" code="M_smklean_loop" />
+		<animation id="Smoke 3" block="SMOKING" code="M_smkstnd_loop" />
+		<animation id="Smoke 4" block="SMOKING" code="M_smk_drag" />
+		<animation id="Smoke 5" block="SMOKING" code="M_smk_in" />
+		<animation id="Smoke 6" block="SMOKING" code="M_smk_loop" />
+		<animation id="Smoke 7" block="SMOKING" code="M_smk_out" />
+		<animation id="Smoke 8" block="SMOKING" code="M_smk_tap" />
+	</animationCategory>
+
+	<animationCategory id="Strip">
+		<animation id="STRIP 1" block="STRIP" code="PLY_CASH" />
+		<animation id="STRIP 2" block="STRIP" code="PUN_CASH" />
+		<animation id="STRIP 3" block="STRIP" code="PUN_HOLLER" />
+		<animation id="STRIP 4" block="STRIP" code="PUN_LOOP" />
+		<animation id="STRIP 5" block="STRIP" code="strip_A" />
+		<animation id="STRIP 6" block="STRIP" code="strip_B" />
+		<animation id="STRIP 7" block="STRIP" code="strip_C" />
+		<animation id="STRIP 8" block="STRIP" code="strip_D" />
+		<animation id="STRIP 9" block="STRIP" code="strip_E" />
+		<animation id="STRIP 10" block="STRIP" code="strip_F" />
+		<animation id="STRIP 11" block="STRIP" code="strip_G" />
+		<animation id="STRIP 12" block="STRIP" code="STR_A2B" />
+		<animation id="STRIP 13" block="STRIP" code="STR_B2A" />
+		<animation id="STRIP 14" block="STRIP" code="STR_B2C" />
+		<animation id="STRIP 15" block="STRIP" code="STR_C1" />
+		<animation id="STRIP 16" block="STRIP" code="STR_C2" />
+		<animation id="STRIP 17" block="STRIP" code="STR_C2B" />
+		<animation id="STRIP 18" block="STRIP" code="STR_Loop_A" />
+		<animation id="STRIP 19" block="STRIP" code="STR_Loop_B" />
+		<animation id="STRIP 20" block="STRIP" code="STR_Loop_C" />
+	</animationCategory>
+
+</map>

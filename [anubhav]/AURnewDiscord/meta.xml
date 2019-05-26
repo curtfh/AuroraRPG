@@ -1,0 +1,7 @@
+<meta>
+	<script src="server.lua" />
+
+	<export function="sendMessageToDiscord" type="server" />
+
+	<min_mta_version server="1.5.4-9.11413" />
+</meta>

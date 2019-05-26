@@ -1,0 +1,34 @@
+<meta>
+	<info author="Epozide" description="AUR Server" version="2.0" type="script" />
+
+	<script src="GUI/client.luac" type="client" cache="false" />
+	<script src="Server/server.lua" type="server" />
+	<script src="Client/client.luac" type="client" />
+
+	<!--Images-->
+	<file src="Images/panel.png"/>
+	<file src="Images/panel2.png"/>
+	<file src="Images/disc.png"/>
+	<file src="Images/main.png"/>
+	<file src="Images/background.png"/>
+	<file src="Images/button_mouse.png"/>
+	<file src="Images/button_standart.png"/>
+
+	<file src="CEF/index.html"/>
+	<file src="CEF/assets/css/login.css"/>
+	<file src="CEF/assets/css/sweetalert2.min.css"/>
+	<file src="CEF/assets/images/logo.png"/>
+	<file src="CEF/assets/js/login.js"/>
+	<file src="CEF/assets/js/sweetalert2.min.js"/>
+	<file src="CEF/assets/plugins/animate/animate.css"/>
+	<file src="CEF/assets/plugins/animated-intro-section/css/reset.css"/>
+	<file src="CEF/assets/plugins/animated-intro-section/css/style.css"/>
+	<file src="CEF/assets/plugins/animated-intro-section/js/jquery-2.1.4.js"/>
+	<file src="CEF/assets/plugins/animated-intro-section/js/main.js"/>
+	<file src="CEF/assets/plugins/animated-intro-section/js/modernizr.js"/>
+	
+
+	<export function="isAllowedToSave" type="server"/> <!-- Security related -->
+
+	<oop>true</oop>
+</meta>

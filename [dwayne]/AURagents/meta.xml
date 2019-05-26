@@ -1,0 +1,8 @@
+<meta>
+    <info author="" version="1.0.0" type="script" ></info>
+
+	<script src="server.lua" type="server" />
+	<script src="client.luac" type="client" />
+	<export function="addAccount" server="server" />
+	<export function="delAccount" server="server" />
+</meta>

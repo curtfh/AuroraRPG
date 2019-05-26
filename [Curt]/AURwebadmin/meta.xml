@@ -1,0 +1,5 @@
+<meta>
+	<script src="server.lua" type="server" />
+	<export function="getPlayerData" type="server" http="true" />
+	<export function="punishPlayer" type="server" http="true" />
+</meta>

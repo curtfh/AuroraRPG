@@ -1,0 +1,8 @@
+<meta>
+	<info author="" name="Server Start List" autostart="true"></info>
+    <aclrequest>
+        <right name="function.startResource" access="true" />
+    </aclrequest>
+    <script src="startList.lua" />
+
+</meta>

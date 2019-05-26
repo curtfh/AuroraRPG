@@ -1,0 +1,21 @@
+<meta>
+    <script src="clientc.lua" type="client" />
+    <script src="servers.lua" type="server" />
+	
+    <file src="race_mods/model_.txd" />
+    <file src="race_mods/model_.dff" />
+    <file src="race_mods/model_.col" />
+    <file src="race_mods/model_1.dff" />
+    <file src="race_mods/model_1.col" />
+    <file src="race_mods/model_2.dff" />
+    <file src="race_mods/model_2.col" />
+	
+    <file src="race_imgs/ngc_log.png" />
+    <file src="race_imgs/icon.png" />
+    <file src="race_imgs/ngcrally_race_1.png" />
+    <file src="race_imgs/ngcrally_race_2.png" />
+    <file src="race_imgs/ngcrally_race_3.png" />
+    <file src="race_imgs/ngcrally_race_go.png" />
+	
+    <map src="race_map.map" dimension="0"></map>
+</meta>

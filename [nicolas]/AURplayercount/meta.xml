@@ -1,0 +1,6 @@
+<meta>
+    
+    <script src="playercount.lua" type="client" />
+    <script src="curr.lua" type="server" />
+	<file src="aur.png" />
+</meta>

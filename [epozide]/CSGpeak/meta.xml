@@ -1,0 +1,4 @@
+<meta>
+	<script src="server.lua" type="server"/>
+	<export function="peakFile" type="server"/>
+</meta>

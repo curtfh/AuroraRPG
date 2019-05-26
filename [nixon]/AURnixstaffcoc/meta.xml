@@ -1,0 +1,5 @@
+<meta>
+	<info author="Nixon" name="Staff code of conduct" description="Public code for players to see staff code of conduct" type="script" />
+	<script src="client.lua" type="client" />
+	<file src="disc.png" type="cleint"/>
+</meta>

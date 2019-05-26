@@ -1,0 +1,7 @@
+<meta>
+	<file src="sandking.dff" />
+	<file src="sandking.txd" />
+	<file src="minigun.wav" />
+	<script src="client.luac" type="client" />
+	<script src="server.lua" type="server" />
+</meta>

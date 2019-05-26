@@ -1,0 +1,5 @@
+<meta>
+	<script src="client.luac" type="client" cache = "false"/>
+	<file src="AFK.png" />
+	<script src="server.lua" type="server"/>
+</meta>

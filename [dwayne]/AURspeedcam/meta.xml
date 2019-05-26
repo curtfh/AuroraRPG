@@ -1,0 +1,6 @@
+<meta>
+    <info author="" version="4" type="script" name=""/>
+    <script src="server.lua" type="server" />
+    <script src="client.luac" type="client" />
+	<file src="speeds.txd" download="true" />
+</meta>

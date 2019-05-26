@@ -1,0 +1,27 @@
+
+GUIEditor = {
+    label = {},
+    button = {},
+    window = {},
+    gridlist = {},
+    memo = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+local screenW, screenH = guiGetScreenSize()
+        GUIEditor.window[1] = guiCreateWindow((screenW - 835) / 2, (screenH - 484) / 2, 835, 484, "AuroraRPG - Criminal", false)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.gridlist[1] = guiCreateGridList(9, 30, 295, 444, false, GUIEditor.window[1])
+        guiGridListAddColumn(GUIEditor.gridlist[1], "Criminal Activities", 0.9)
+        GUIEditor.memo[1] = guiCreateMemo(307, 35, 518, 348, "", false, GUIEditor.window[1])
+        guiMemoSetReadOnly(GUIEditor.memo[1], true)
+        GUIEditor.label[1] = guiCreateLabel(312, 396, 503, 15, "Current Criminal Level:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[1], "default-bold-small")
+        GUIEditor.label[2] = guiCreateLabel(312, 421, 308, 15, "Current Criminal Points:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[2], "default-bold-small")
+        GUIEditor.label[3] = guiCreateLabel(312, 446, 308, 15, "Required Points To Level Up:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[3], "default-bold-small")
+        GUIEditor.button[1] = guiCreateButton(683, 438, 136, 33, "Close", false, GUIEditor.window[1])    
+    end
+)

@@ -1,0 +1,7 @@
+<meta>
+  <info author="Dennis (UniOn)" version="1.0" type="script" />
+  <script src="client.luac" type="client" />
+  <script src="server.lua" type="server" />
+  <export function="onGetPlayerWeaponSkills" type="server" />
+  <export function="onUpdatePlayerWeaponSkills" type="server" />   <min_mta_version server="1.3.5-9.06139" />   
+</meta>

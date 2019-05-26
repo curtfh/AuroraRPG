@@ -1,0 +1,6 @@
+<meta>
+<script src="client.lua" type="client"/>
+<script src="c_advanced.lua" type="client"/>
+<script src="c_cirkular.lua" type="client"/>
+<script src="c_linear.lua" type="client"/>
+</meta>

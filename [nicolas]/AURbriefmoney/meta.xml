@@ -1,0 +1,7 @@
+<meta>
+<info author="Nicolas"  name="The secret bag Money" version="1.3.0" type="script" />
+	<script src="Client.lua" type="client"/>
+	<script src="Server.lua" type="server"/>
+	<file src="sound.mp3"/>
+	<include resource="bone_attach"/>
+</meta>

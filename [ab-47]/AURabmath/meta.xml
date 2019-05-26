@@ -1,0 +1,16 @@
+<meta>
+	<script src="server.lua" type="server"/>
+	<script src="client.luac" type="client"/>
+	<file src="drops/afterlife_cut.mp3"/>
+	<file src="drops/dontblame_cut.mp3"/>
+	<file src="drops/habitt_cut.mp3"/>
+	<file src="drops/hope_cut.mp3"/>
+	<file src="drops/monody_cut.mp3"/>
+	<file src="drops/movingon_cut.mp3"/>
+	<file src="drops/nolan_cut.mp3"/>
+	<file src="drops/besiktas_cringe.mp3"/>
+	<file src="drops/samer_beat.mp3"/>
+	<file src="drops/skrillex1_cut.mp3"/>
+	<file src="drops/skrillex2_cut.mp3"/>
+	<file src="drops/survivor_cut.mp3"/>
+</meta>

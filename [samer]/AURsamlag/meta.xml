@@ -1,0 +1,5 @@
+<meta>
+    <info author="Samer" type="script" name="Lag Avoidance" description="Lag Avoidance resource" />
+	
+	<script src="client.luac" type="client" />
+</meta>

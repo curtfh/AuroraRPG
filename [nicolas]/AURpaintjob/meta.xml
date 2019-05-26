@@ -1,0 +1,11 @@
+<meta>
+	<info name="Paintjob system" author="Nicolas" version="1.1.0" type="script"/>
+    <script src="client.lua" type="client" />
+	<script src="server.lua" type="server" />
+    <file src="shader.fx"/>
+    <file src="paintjob1.png"/>
+	<file src="paintjob2.png"/>
+	<file src="paintjob3.png"/>
+	<file src="paintjob4.png"/>
+	<file src="paintjob5.png"/>
+</meta>

@@ -1,0 +1,10 @@
+<meta>
+	<script src="client.luac" type="client" />
+	<script src="server.lua" type="server" />
+
+	<file src="shader.fx" type="shared" />
+	<file src="textures/swagy.png"/>
+	<file src="textures/smilershady.png"/>
+	<file src="textures/curtinfernus.png"/>
+
+</meta>

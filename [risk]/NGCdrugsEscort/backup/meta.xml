@@ -1,0 +1,7 @@
+<meta>
+	<info author="" version="1.0" name="" type="script" />
+	<script src="server.lua" type="server" />
+	<script src="client.lua" type="client" />
+	<file src="0.png" type="client" />
+	<file src="1.png" type="client" />
+</meta>

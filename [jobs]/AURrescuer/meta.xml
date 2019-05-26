@@ -1,0 +1,1 @@
+<meta>    <info type="script" version="1.4.0" author="" name="Rescuer_Job" description="" />	<script src="server.lua" type="server" />	<script src="client.luac" type="client" cache="false" /></meta>

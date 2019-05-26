@@ -1,0 +1,23 @@
+<meta>
+    <info author='Nicolas' name='Neon Panel' type='script' version='0.0.3'/>
+
+    <script src='server.lua' type='server' />
+    <script src='client.lua' type='client' />
+
+    <file src='models/BlueNeonTube1.dff' />
+    <file src='models/GreenNeonTube1.dff' />
+    <file src='models/RedNeonTube1.dff' />
+    <file src='models/PinkNeonTube1.dff' />
+    <file src='models/YellowNeonTube1.dff' />
+    <file src='models/WhiteNeonTube1.dff' />
+    <file src='models/BlueNeonTube1.col' />
+    <file src='models/GreenNeonTube1.col' />
+    <file src='models/RedNeonTube1.col' />
+    <file src='models/PinkNeonTube1.col' />
+    <file src='models/YellowNeonTube1.col' />
+    <file src='models/WhiteNeonTube1.col' />
+    <file src='models/MatTextures.txd' />
+	 <file src='proxys.png' />
+
+
+</meta>

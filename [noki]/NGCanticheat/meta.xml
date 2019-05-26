@@ -1,0 +1,13 @@
+<meta>
+    <info name="NGC Anti-Cheat" version="0.0.3" />
+    
+    <script src="c_speed.luac" type="client" cache="false" />
+    <script src="heli_kill.luac" type="client" />
+    <script src="anti_jump.luac" type="client" />
+    <script src="c_cbug.luac" type="client" />
+    
+    <script src="s_speed.lua" type="server" />
+    <script src="s_weapons.lua" type="server" />
+    <script src="s_mods.lua" type="server" />
+    <min_mta_version server="1.3.4-0.00000" client="1.3.4-0.00000"></min_mta_version>
+</meta>

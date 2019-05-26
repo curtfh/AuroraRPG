@@ -1,0 +1,13 @@
+<meta>
+	<info author="Dennis" version="2.0" description="CSG Blips" type="script" />
+	<file src="blip1.png"> </file>
+	<file src="blip2.png"> </file>
+	<file src="drugs.png"> </file>
+
+	<script src="client.luac" type="client" />
+	<script src="server.lua" type="server" />
+
+	<export function="destroyPlayerGroupBlips" type="server" />
+	<export function="removePlayerBlip" type="client" />
+	<export function="readdPlayerBlip" type="client" />
+</meta>

@@ -1,0 +1,16 @@
+
+
+addEventHandler("onClientRender", root,
+    function()
+        dxDrawText("The Law Enforcement", 164 - 1, 240 - 1, 895 - 1, 324 - 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "left", "top", false, true, false, false, false)
+        dxDrawText("The Law Enforcement", 164 + 1, 240 - 1, 895 + 1, 324 - 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "left", "top", false, true, false, false, false)
+        dxDrawText("The Law Enforcement", 164 - 1, 240 + 1, 895 - 1, 324 + 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "left", "top", false, true, false, false, false)
+        dxDrawText("The Law Enforcement", 164 + 1, 240 + 1, 895 + 1, 324 + 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "left", "top", false, true, false, false, false)
+        dxDrawText("The Law Enforcement", 164, 240, 895, 324, tocolor(255, 255, 255, 255), 3.00, "pricedown", "left", "top", false, true, false, false, false)
+        dxDrawText("As you can see, you can take police job on this location and take a look on your current job skills.", 314 - 1, 400 - 1, 1723 - 1, 650 - 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, false, false)
+        dxDrawText("As you can see, you can take police job on this location and take a look on your current job skills.", 314 + 1, 400 - 1, 1723 + 1, 650 - 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, false, false)
+        dxDrawText("As you can see, you can take police job on this location and take a look on your current job skills.", 314 - 1, 400 + 1, 1723 - 1, 650 + 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, false, false)
+        dxDrawText("As you can see, you can take police job on this location and take a look on your current job skills.", 314 + 1, 400 + 1, 1723 + 1, 650 + 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, false, false)
+        dxDrawText("As you can see, you can take police job on this location and take a look on your current job skills.", 314, 400, 1723, 650, tocolor(163, 139, 140, 255), 3.00, "pricedown", "center", "top", false, true, false, false, false)
+    end
+)

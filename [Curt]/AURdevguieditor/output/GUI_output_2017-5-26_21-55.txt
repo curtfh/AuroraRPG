@@ -1,0 +1,30 @@
+
+GUIEditor = {
+    edit = {},
+    window = {},
+    scrollbar = {},
+    label = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+        GUIEditor.window[1] = guiCreateWindow(360, 240, 593, 317, "AuroraRPG - Light System", false)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.label[1] = guiCreateLabel(11, 40, 38, 15, "Red: ", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[1], "default-bold-small")
+        guiLabelSetColor(GUIEditor.label[1], 255, 0, 0)
+        GUIEditor.label[2] = guiCreateLabel(10, 65, 38, 15, "Green:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[2], "default-bold-small")
+        guiLabelSetColor(GUIEditor.label[2], 0, 255, 0)
+        GUIEditor.label[3] = guiCreateLabel(10, 90, 38, 15, "Blue:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[3], "default-bold-small")
+        guiLabelSetColor(GUIEditor.label[3], 0, 0, 255)
+        GUIEditor.label[4] = guiCreateLabel(10, 115, 38, 15, "Alpha:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[4], "default-bold-small")
+        GUIEditor.scrollbar[1] = guiCreateScrollBar(48, 40, 265, 15, true, false, GUIEditor.window[1])
+        GUIEditor.scrollbar[2] = guiCreateScrollBar(48, 65, 265, 15, true, false, GUIEditor.window[1])
+        GUIEditor.scrollbar[3] = guiCreateScrollBar(48, 90, 265, 15, true, false, GUIEditor.window[1])
+        GUIEditor.scrollbar[4] = guiCreateScrollBar(53, 115, 265, 15, true, false, GUIEditor.window[1])
+        GUIEditor.edit[1] = guiCreateEdit(318, 40, 46, 21, "", false, GUIEditor.window[1])    
+    end
+)

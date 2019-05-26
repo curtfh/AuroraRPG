@@ -1,0 +1,17 @@
+
+GUIEditor = {
+    button = {},
+    window = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+        GUIEditor.window[1] = guiCreateWindow(0.40, 0.39, 0.20, 0.22, "AuroraRPG - Office Assistant", true)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.button[1] = guiCreateButton(0.04, 0.18, 0.44, 0.26, "Request an helicopter", true, GUIEditor.window[1])
+        GUIEditor.button[2] = guiCreateButton(0.52, 0.18, 0.44, 0.26, "Request an car", true, GUIEditor.window[1])
+        GUIEditor.button[3] = guiCreateButton(0.04, 0.50, 0.44, 0.26, "Request for medical treatment", true, GUIEditor.window[1])
+        GUIEditor.button[4] = guiCreateButton(0.52, 0.50, 0.44, 0.26, "Request for armor", true, GUIEditor.window[1])
+        GUIEditor.button[5] = guiCreateButton(0.25, 0.82, 0.46, 0.12, "Close", true, GUIEditor.window[1])    
+    end
+)

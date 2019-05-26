@@ -1,0 +1,68 @@
+<meta>
+    <info type="script" version="1.0.0" name="" description="" />
+	<script src="dust2.luac" type="server" />
+	<script src="dust.luac" type="server" />
+	<script src="server.lua" type="server" />
+	<script src="c.luac" type="client" />
+	<file src="models/tt.dff" type="client" download="false" />
+    <file src="models/tt.txd" type="client"  download="false" />
+	<file src="models/ct.dff" type="client" download="false" />
+    <file src="models/ct.txd" type="client"  download="false" />
+	<file src="misc/cterrorists_win.mp3"/>
+	<file src="misc/terrorists_win.mp3"/>
+	<file src="misc/letsgo.mp3"/>
+	<file src="FONT.ttf" />
+
+	<file src="csgo2.png" />
+	<file src="team1.png" />
+	<file src="team2.png" />
+	<file src="Time.png" />
+	<file src="armor.png" />
+	<file src="Heart.png" />
+	<file src="icons/0.png" />
+	<file src="icons/1.png" />
+	<file src="icons/2.png" />
+	<file src="icons/3.png" />
+	<file src="icons/4.png" />
+	<file src="icons/5.png" />
+	<file src="icons/6.png" />
+	<file src="icons/7.png" />
+	<file src="icons/8.png" />
+	<file src="icons/9.png" />
+	<file src="icons/10.png" />
+	<file src="icons/11.png" />
+	<file src="icons/12.png" />
+	<file src="icons/14.png" />
+	<file src="icons/15.png" />
+	<file src="icons/16.png" />
+	<file src="icons/17.png" />
+	<file src="icons/18.png" />
+	<file src="icons/22.png" />
+	<file src="icons/23.png" />
+	<file src="icons/24.png" />
+	<file src="icons/25.png" />
+	<file src="icons/26.png" />
+	<file src="icons/27.png" />
+	<file src="icons/28.png" />
+	<file src="icons/29.png" />
+	<file src="icons/30.png" />
+	<file src="icons/31.png" />
+	<file src="icons/32.png" />
+	<file src="icons/33.png" />
+	<file src="icons/34.png" />
+	<file src="icons/35.png" />
+	<file src="icons/36.png" />
+	<file src="icons/37.png" />
+	<file src="icons/38.png" />
+	<file src="icons/39.png" />
+	<file src="icons/40.png" />
+	<file src="icons/41.png" />
+	<file src="icons/42.png" />
+	<file src="icons/43.png" />
+	<file src="icons/44.png" />
+	<file src="icons/45.png" />
+	<file src="icons/46.png" />
+
+	<export function="isPlayerInCSGO" type="server"/>
+	<export function="playsound" type="server"/>
+</meta>

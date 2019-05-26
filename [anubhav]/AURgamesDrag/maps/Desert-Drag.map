@@ -1,0 +1,5 @@
+<map>
+	<theMap name="Desert-Drag" author="Unknown"></theMap>
+    <spawnpoint id="spawnpoint (Sultan) (1)" vehicle="560" posX="907.29999" posY="2426" posZ="10.3" rotX="0" rotY="0" rotZ="182"></spawnpoint>
+    <checkpoint id="checkpoint () (3)" type="checkpoint" color="#00F9" size="15" posX="908.79999" posY="1856.5" posZ="9.7" rotX="0" rotY="0" rotZ="0"></checkpoint>
+</map>

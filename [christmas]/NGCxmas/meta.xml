@@ -1,0 +1,7 @@
+<meta>
+	<info name="Shader snow ground" author="ccw" version="0.0.3" type="script" />
+	<min_mta_version client="1.1.0" server="1.1.0" />
+
+	<script src="snow.lua" type="server" />
+
+</meta>

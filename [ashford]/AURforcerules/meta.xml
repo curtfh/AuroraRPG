@@ -1,0 +1,9 @@
+<meta> 
+ <info name="AURforceRules" type="script" author="Ashford" version="1.0" description=""></info>
+    <oop>true</oop>
+	<script type="server" src="server.lua"></script>
+	<script type="client" src="client.luac"></script>
+	<file src="logo.png" />
+	<file src="rules/en.txt" />
+
+</meta>

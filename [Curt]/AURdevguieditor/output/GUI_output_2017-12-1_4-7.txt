@@ -1,0 +1,10 @@
+
+
+local screenW, screenH = guiGetScreenSize()
+
+addEventHandler("onClientRender", root,
+    function()
+        dxDrawRectangle(screenW * 0.7256, screenH * 0.1756, 359, 28, tocolor(12, 12, 12, 165), false)
+        dxDrawText("A Bounty of $5000 has been set on [AUR]Curt.", screenW * 0.7281, screenH * 0.1811, screenW * 0.9437, screenH * 0.2011, tocolor(255, 255, 255, 255), 1.10, "default", "right", "top", false, true, false, false, false)
+    end
+)

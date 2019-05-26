@@ -1,0 +1,28 @@
+<meta>
+	<info name=" Vehmods Client Side Performence" author="YOU" autostart="true" />
+	<script src="vTable.luac" type="client" />
+	<script src="vClient.luac" type="client"/>
+
+	<file src="mods/overwatch/overwatch_micro_uzi.txd" type="client" download="false" />  
+	<file src="mods/overwatch/overwatch_micro_uzi.dff" type="client" download="false" />  
+	<file src="mods/overwatch/overwatch_rocketla.dff" type="client" download="false" />  
+	<file src="mods/overwatch/overwatch_rocketla.txd" type="client" download="false" />  
+	<file src="mods/overwatch/overwatch_ak47.txd" type="client" download="false" />  
+	<file src="mods/overwatch/overwatch_ak47.dff" type="client" download="false" />  
+	
+	
+	<file src="mods/blueline/blueline_m4.dff" type="client" download="false" />  
+	<file src="mods/blueline/blueline_m4.txd" type="client" download="false" />  
+	<file src="mods/blueline/blueline_chromegun.txd" type="client" download="false" />  
+	<file src="mods/blueline/blueline_chromegun.dff" type="client" download="false" />  
+	<file src="mods/blueline/blueline_desert_eagle.dff" type="client" download="false" />  
+	<file src="mods/blueline/blueline_desert_eagle.txd" type="client" download="false" />  
+	<file src="mods/blueline/blueline_knifecur.txd" type="client" download="false" />  
+	<file src="mods/blueline/blueline_knifecur.dff" type="client" download="false" />  
+	<file src="mods/blueline/blueline_mp5lng.dff" type="client" download="false" />  
+	<file src="mods/blueline/blueline_mp5lng.txd" type="client" download="false" />  
+	<file src="mods/blueline/blueline_shotgspa.txd" type="client" download="false" />  
+	<file src="mods/blueline/blueline_shotgspa.dff" type="client" download="false" />  
+	<file src="mods/blueline/blueline_sniper.dff" type="client" download="false" />  
+	<file src="mods/blueline/blueline_sniper.txd" type="client" download="false" />  
+</meta>

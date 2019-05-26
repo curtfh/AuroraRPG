@@ -1,0 +1,23 @@
+--[[-------------------------------------------------
+Notes:
+
+> This code is using a relative image filepath. This will only work as long as the location it is from always exists, and the resource it is part of is running.
+    To ensure it does not break, it is highly encouraged to move images into your local resource and reference them there.
+--]]-------------------------------------------------
+
+
+GUIEditor = {
+    button = {},
+    window = {},
+    staticimage = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+local screenW, screenH = guiGetScreenSize()
+        GUIEditor.window[1] = guiCreateWindow((screenW - 1247) / 2, (screenH - 772) / 2, 1247, 772, "AuroraRPG - Full view screenshot", false)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.staticimage[1] = guiCreateStaticImage(0.01, 0.03, 0.98, 0.93, ":server/Images/disc.png", true, GUIEditor.window[1])
+        GUIEditor.button[1] = guiCreateButton(0.39, 0.97, 0.25, 0.02, "Close", true, GUIEditor.window[1])    
+    end
+)

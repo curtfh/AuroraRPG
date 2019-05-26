@@ -1,0 +1,56 @@
+<meta>
+	<info name="San Andreas - Customs" author="" version="1.0.1" type="script" />
+	<export function="getPlayerNos" type="client"/>
+	<export function="isPlayerModding" type="client"/>
+	<export function="addNeon" type="client"/>
+	<!-- Scripts -->
+	<script src="sourceS.lua" type="server" />
+	<script src="color.luac" type="client" />
+	<script src="sourceC.luac" type="client" />
+
+	<file src="shader.fx" />
+
+	<!-- Neons -->
+	<file src="files/neons/neonCollision.col" />
+	<file src="files/neons/blue.dff" />
+	<file src="files/neons/green.dff" />
+	<file src="files/neons/pink.dff" />
+	<file src="files/neons/red.dff" />
+	<file src="files/neons/white.dff" />
+	<file src="files/neons/yellow.dff" />
+	<file src="files/neons/orange.dff" />
+	<file src="files/neons/lightblue.dff" />
+	<file src="files/neons/rasta.dff" />
+	<file src="files/neons/ice.dff" />
+
+	<!-- Images -->
+	<file src="Normal/2.png" />
+	<file src="Normal/3.png" />
+	<file src="Normal/4.png" />
+	<file src="Normal/5.png" />
+	<file src="Normal/6.png" />
+	<file src="Normal/7.png" />
+	<file src="Normal/8.png" />
+	<file src="Normal/9.png" />
+
+
+
+	<file src="files/images/logo.png" />
+	<file src="files/images/hoveredrow.png" />
+	<file src="files/images/menunav.png" />
+	<file src="files/images/navbar/mouse.png" />
+	<file src="files/images/palette.png" />
+	<file src="files/images/light.png" />
+
+	<!-- Fonts -->
+	<file src="files/fonts/chalet.ttf" />
+	<file src="files/fonts/icons.ttf" />
+
+	<!-- Sounds -->
+	<file src="files/sounds/menuback.wav" />
+	<file src="files/sounds/menuenter.mp3" />
+	<file src="files/sounds/menunavigate.mp3" />
+	<file src="files/sounds/moneychange.wav" />
+	<file src="files/sounds/notification.mp3" />
+	<file src="files/sounds/airride.mp3" />
+</meta>

@@ -1,0 +1,6 @@
+<meta>
+	<script src="client.luac" type="client" />
+	<file src="emojis.json" />
+	<file src="emojis/smile.png" />
+	<file src="emojis/sad.png" />
+</meta>

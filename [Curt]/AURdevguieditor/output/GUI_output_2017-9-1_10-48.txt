@@ -1,0 +1,69 @@
+--[[-------------------------------------------------
+Notes:
+
+> This code is using a relative image filepath. This will only work as long as the location it is from always exists, and the resource it is part of is running.
+    To ensure it does not break, it is highly encouraged to move images into your local resource and reference them there.
+--]]-------------------------------------------------
+
+
+GUIEditor = {
+    tab = {},
+    staticimage = {},
+    tabpanel = {},
+    label = {},
+    button = {},
+    window = {},
+    combobox = {},
+    memo = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+local screenW, screenH = guiGetScreenSize()
+        GUIEditor.window[1] = guiCreateWindow((screenW - 1206) / 2, (screenH - 613) / 2, 1206, 613, "AuroraRPG - Battle Grounds", false)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.staticimage[1] = guiCreateStaticImage(422, 21, 364, 141, ":server/Images/logo.png", false, GUIEditor.window[1])
+        GUIEditor.tabpanel[1] = guiCreateTabPanel(10, 167, 1187, 437, false, GUIEditor.window[1])
+
+        GUIEditor.tab[1] = guiCreateTab("Main Menu", GUIEditor.tabpanel[1])
+
+        GUIEditor.label[1] = guiCreateLabel(28, 28, 372, 15, "Player Name: ", false, GUIEditor.tab[1])
+        guiSetFont(GUIEditor.label[1], "default-bold-small")
+        GUIEditor.label[2] = guiCreateLabel(28, 53, 372, 15, "Battle Points: ", false, GUIEditor.tab[1])
+        guiSetFont(GUIEditor.label[2], "default-bold-small")
+        GUIEditor.label[3] = guiCreateLabel(28, 78, 372, 15, "Level: ", false, GUIEditor.tab[1])
+        guiSetFont(GUIEditor.label[3], "default-bold-small")
+        GUIEditor.label[4] = guiCreateLabel(28, 103, 372, 15, "Total Won:", false, GUIEditor.tab[1])
+        guiSetFont(GUIEditor.label[4], "default-bold-small")
+        GUIEditor.label[5] = guiCreateLabel(28, 128, 372, 15, "Total Lost:", false, GUIEditor.tab[1])
+        guiSetFont(GUIEditor.label[5], "default-bold-small")
+        GUIEditor.label[6] = guiCreateLabel(28, 153, 372, 15, "Total Kills:", false, GUIEditor.tab[1])
+        guiSetFont(GUIEditor.label[6], "default-bold-small")
+        GUIEditor.label[7] = guiCreateLabel(28, 178, 372, 15, "Total Deaths:", false, GUIEditor.tab[1])
+        guiSetFont(GUIEditor.label[7], "default-bold-small")
+        GUIEditor.label[8] = guiCreateLabel(439, 18, 724, 15, "Gamemode Updates", false, GUIEditor.tab[1])
+        guiSetFont(GUIEditor.label[8], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[8], "center", false)
+        GUIEditor.memo[1] = guiCreateMemo(439, 36, 730, 161, "", false, GUIEditor.tab[1])
+        guiMemoSetReadOnly(GUIEditor.memo[1], true)
+        GUIEditor.button[1] = guiCreateButton(73, 335, 206, 50, "Play (0/20 On Queue)", false, GUIEditor.tab[1])
+        GUIEditor.button[2] = guiCreateButton(496, 334, 206, 50, "Spectate", false, GUIEditor.tab[1])
+        GUIEditor.button[3] = guiCreateButton(932, 334, 206, 50, "Quit Mini Game", false, GUIEditor.tab[1])
+        GUIEditor.label[9] = guiCreateLabel(28, 234, 87, 15, "Select a lobby:", false, GUIEditor.tab[1])
+        guiSetFont(GUIEditor.label[9], "default-bold-small")
+        GUIEditor.combobox[1] = guiCreateComboBox(118, 232, 161, 199, "Solo #1 (0/20)", false, GUIEditor.tab[1])
+        guiComboBoxAddItem(GUIEditor.combobox[1], "Solo #1 (0/20)")
+
+        GUIEditor.tab[2] = guiCreateTab("Inventory", GUIEditor.tabpanel[1])
+
+        GUIEditor.label[10] = guiCreateLabel(438, 177, 311, 15, "Coming Soon!", false, GUIEditor.tab[2])
+        guiSetFont(GUIEditor.label[10], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[10], "center", false)
+
+        GUIEditor.tab[3] = guiCreateTab("Store", GUIEditor.tabpanel[1])
+
+        GUIEditor.label[11] = guiCreateLabel(460, 173, 272, 15, "Coming Soon!", false, GUIEditor.tab[3])
+        guiSetFont(GUIEditor.label[11], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[11], "center", false)    
+    end
+)

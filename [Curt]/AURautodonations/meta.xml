@@ -1,0 +1,11 @@
+<meta>
+	<script src="server.lua" type="server" />
+	<export function="isPlayerOnline" type="server" http="true" />
+	<export function="givePlayerVIP" type="server" http="true" />
+	<export function="givePlayerWife" type="server" http="true" />
+	<export function="givePlayerCash" type="server" http="true" />
+	<export function="outputTransaction" type="server" http="true" />
+	<export function="givePlayerSoldierSkin" type="server" http="true" />
+	<export function="givePlayerDrugs" type="server" http="true" />
+	<export function="outputToPlayer" type="server" http="true" />
+</meta>

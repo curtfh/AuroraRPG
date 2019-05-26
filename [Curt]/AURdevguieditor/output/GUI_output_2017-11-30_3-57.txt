@@ -1,0 +1,26 @@
+
+GUIEditor = {
+    label = {},
+    button = {},
+    window = {},
+    gridlist = {},
+    memo = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+local screenW, screenH = guiGetScreenSize()
+        GUIEditor.window[1] = guiCreateWindow((screenW - 892) / 2, (screenH - 478) / 2, 892, 478, "AuroraRPG - Christmas", false)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.label[1] = guiCreateLabel(17, 35, 856, 19, "Each login day, you'll receive an daily gift from us! This last until Janauary 5, 2018.", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[1], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[1], "center", true)
+        GUIEditor.gridlist[1] = guiCreateGridList(13, 57, 266, 411, false, GUIEditor.window[1])
+        guiGridListAddColumn(GUIEditor.gridlist[1], "Days", 0.9)
+        GUIEditor.label[2] = guiCreateLabel(289, 67, 77, 15, "Information:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[2], "default-bold-small")
+        GUIEditor.memo[1] = guiCreateMemo(303, 85, 579, 295, "", false, GUIEditor.window[1])
+        GUIEditor.button[1] = guiCreateButton(734, 402, 138, 36, "Close", false, GUIEditor.window[1])
+        GUIEditor.button[2] = guiCreateButton(586, 402, 138, 36, "Special Button", false, GUIEditor.window[1])    
+    end
+)

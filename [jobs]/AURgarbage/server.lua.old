@@ -1,0 +1,9 @@
+function payGarbageDriver()
+	exports.CSGranks:addStat(source,1)
+	exports.AURpayments:addMoney(source,50,"Custom","Trash Collector",0,"AURgarbage")
+	exports.CSGscore:givePlayerScore(source,0.5)
+	exports.NGCdxmsg:createNewDxMessage(source,"You have earned $50 from collecting trash",0,255,0)
+	exports.NGCdxmsg:createNewDxMessage(source,"You have earned 0.5 score",0,255,0)
+	end
+addEvent("collectedTrashMoney", true)
+addEventHandler("collectedTrashMoney", getRootElement(), payGarbageDriver)

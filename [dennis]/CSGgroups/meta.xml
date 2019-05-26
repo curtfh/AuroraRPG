@@ -1,0 +1,5 @@
+<meta>
+	<script src="export-redirect.lua" type="server" />
+
+	<export function="addXP" type="server" />
+</meta>

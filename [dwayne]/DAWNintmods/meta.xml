@@ -1,0 +1,17 @@
+<meta>
+    <info author="" type="script" name="" version="1.0" />
+	<min_mta_version server="1.3.4-0.00000" client="1.3.4-0.00000"></min_mta_version>
+	<script src="client.luac" type="client" />
+	<file src="floor.png" />
+	<file src="floor2.png" />
+	<file src="cherryblossom.png" />
+	<file src="ccarbon.png" />
+	<file src="carbonside.png" />
+	<file src="carbon.png" />
+	<file src="doors.png" />
+	<file src="mobowall.png" />
+	<file src="wall2.png" />
+	<file src="wall.png" />
+	<file src="ground.png" />
+	<file src="shader.fx" />
+</meta>

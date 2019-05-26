@@ -1,0 +1,7 @@
+<meta>
+
+	<info author="Swagy"/>
+	<script src="client.luac" type="client"/>
+	<script src="server.luac" type="server"/>
+
+</meta>

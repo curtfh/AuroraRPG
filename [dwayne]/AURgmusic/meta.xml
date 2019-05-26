@@ -1,0 +1,9 @@
+<meta>
+	<min_mta_version client="1.3.0-9.04162" />
+	<script src="server.lua" type="server"/>
+	<script src="client.luac" type="client"/>
+	<export function="prompt_password" type="client" />
+	<export function="givePlayerTempMusic" type="server" />
+	<export function="trigger_return_playy" type="server" />
+	<export function="trigger_return_stopp" type="server" />
+</meta>

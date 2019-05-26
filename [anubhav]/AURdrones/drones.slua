@@ -1,0 +1,30 @@
+function callDrones(plr)
+	if (plr) then
+		outputChatBox("This feature is not available at the moment!", plr, 255, 0, 0)
+		return
+	end
+	triggerClientEvent("AURdrones.callDrone", plr)
+end
+addCommandHandler("calldrone", callDrones)
+
+function callOffDrone(plr)
+	if (plr) then
+		outputChatBox("This feature is not available at the moment!", plr, 255, 0, 0)
+		return
+	end
+	triggerClientEvent("AURdrones.callOffDrone", plr)
+end
+addCommandHandler("calloffdrone", callOffDrone)
+
+function requestFireMissiles(x, y, z)
+	createExplosion(x, y, z, 10, client)
+	createExplosion(x + 3, y + 3, z, 10, client)
+	createExplosion(x - 3, y - 3, z, 10, client)
+	createExplosion(x + 3, y, z, 10, client)
+	createExplosion(x - 3, y, z, 10, client)
+	createExplosion(x, y + 3, z, 10, client)
+	createExplosion(x, y - 3, z, 10, client)
+	triggerClientEvent("AURdrones.missilesLaunched", client)
+end
+addEvent("AURdrones.requestFireMissiles", true)
+addEventHandler("AURdrones.requestFireMissiles", resourceRoot, requestFireMissiles)

@@ -1,0 +1,62 @@
+local SSA = createColSphere(-328.310546875,1549.384765625,75.5625,50)
+local bytesCaptured = 0
+local ssaStaff = {
+	["sensei"] = "FBI Director",
+	["Callum"] = "SSA Director",
+	["ralph367"] = "SSA Operative",
+	["fabiognr"] = "SSA Operative"
+}
+
+function beginTracking(source,cmd,player)
+	if isElementWithinColShape(source,SSA) then
+		local staffLevel = exports.CSGstaff:getPlayerAdminLevel(source)
+		if ssaStaff[exports.server:getPlayerAccountName(source)] or (staffLevel and staffLevel >= 1) then
+			local thePlayer = getPlayerFromName(player)
+			if isElement(thePlayer) then
+				triggerClientEvent(source,"satelliteTrack",thePlayer)
+			end
+		end
+	end
+end
+addCommandHandler("satellite",beginTracking,false,false)
+
+addCommandHandler("ssa",function ( thePlayer )
+	local rank = ssaStaff[exports.server:getPlayerAccountName(thePlayer)]
+	if rank then
+		setPlayerTeam ( thePlayer, getTeamFromName( "Server Security Agency" ) )
+		setElementData( thePlayer, "Occupation", rank, true)
+		setElementModel( thePlayer, 295 )
+		exports.server:updatePlayerJobSkin( thePlayer, 295 )
+
+		exports.DENvehicles:reloadFreeVehicleMarkers( thePlayer, true )
+
+		triggerEvent("onPlayerJobChange", thePlayer, rank, false, getPlayerTeam( thePlayer ) )
+		exports.CSGlogging:createAdminLogRow ( thePlayer, getPlayerName( thePlayer ).." entered SSA job with " .. getPlayerWantedLevel( thePlayer ) .. " stars" )
+
+		setElementData( thePlayer, "wantedPoints", 0, true )
+		setPlayerWantedLevel( thePlayer, 0 )
+		exports.DENdxmsg:createNewDxMessage( thePlayer, "You entered the SSA job!", 0, 225, 0 )
+	end
+end,false,false)
+
+function captureCommunication(msg,r,g,b)
+	bytesCaptured = bytesCaptured+msg:len()
+	for k, v in ipairs(getElementsByType("player")) do
+		if isElementWithinColShape(v,SSA) then
+			local staffLevel = exports.CSGstaff:getPlayerAdminLevel(v)
+			if ssaStaff[exports.server:getPlayerAccountName(v)] or (staffLevel and staffLevel >= 4) then
+				outputChatBox(msg,v,r,g,b,true)
+			end
+		end
+	end
+end
+
+function ssaBytes(source)
+	if ssaStaff[exports.server:getPlayerAccountName(source)] then
+		outputChatBox(tostring(bytesCaptured),source,255,255,0)
+	end
+end
+addCommandHandler("ssabytes",ssaBytes,false,false)
+
+removeWorldModel(16139,20,-369.005859375,1497.6103515625,77.119323730469)
+removeWorldModel(16722,20,-369.005859375,1497.6103515625,77.119323730469)

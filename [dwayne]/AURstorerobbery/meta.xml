@@ -1,0 +1,10 @@
+<meta>
+	<min_mta_version server="1.3.4-0.00000" client="1.3.4-0.00000"></min_mta_version>
+
+	<script src="client.luac" type="client" />
+    <script src="serverside.lua" type="server" />
+
+    <file src="robbed.png" />
+    <file src="norobbed.png" />
+
+</meta>

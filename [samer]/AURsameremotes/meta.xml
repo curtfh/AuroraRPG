@@ -1,0 +1,27 @@
+<meta>
+    <info author="Samer" type="script" name="events" description="Events resource" />
+	
+	<script src="client.lua" type="client" />
+	<script src="server.lua" type="server" />
+	
+	<file src="arrow2.png" />
+	
+	<file src="images/bestmates.png" />
+	<file src="images/default.png" />
+	<file src="images/eagle.png" />
+	<file src="images/electroshuffle.png" />
+	<file src="images/floss.png" />
+	<file src="images/fresh.png" />
+	<file src="images/groovejam.png" />
+	<file src="images/hype.png" />
+	<file src="images/infinitedab.png" />
+	<file src="images/orangejustice.png" />
+	<file src="images/starpower.png" />
+	<file src="images/taketheelf.png" />
+	<file src="images/bringiton.png" />
+	
+	<export function="getPlayerEmotes" type="server" http="true" />
+	<export function="doesEmoteExist" type="server" http="true" />
+	<export function="addPlayerEmote" type="server" http="true" />
+	<export function="deletePlayerEmote" type="server" http="true" />
+</meta>

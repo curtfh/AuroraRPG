@@ -1,0 +1,6 @@
+<meta>
+  <info author="Nicolas*" version="1.0" type="script" />
+  <script src="panel.lua" type="client" />
+  <script src="s_panel.lua" type="server" />
+   <file src="aur.png" />
+</meta>

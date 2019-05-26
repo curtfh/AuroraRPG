@@ -1,0 +1,8 @@
+<meta>
+    <info author="" version="1.0.0" name="" type="script" />
+	<export function="addNote" type="server" />
+	<export function="addNote" type="client" />
+    <script src="client.luac" type="client" />
+    <script src="server.lua" type="server" />
+    <min_mta_version server="1.4" client="1.4"></min_mta_version>
+</meta>

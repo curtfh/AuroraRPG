@@ -1,0 +1,10 @@
+<meta>
+<info author="Nicolas" type="script" version="1.0" name="Weather" />
+<script src="client.lua" type="client" />	
+	 <file src='aur.png' />
+	 	 <file src='cloudy.png' />
+		 	 <file src='sunny.png' />
+			  <file src='rainy.png' />
+			  <file src='night.png' />
+			  <file src='foggy.png' />
+</meta>

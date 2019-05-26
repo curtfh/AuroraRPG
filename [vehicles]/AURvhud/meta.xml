@@ -1,0 +1,6 @@
+<meta>
+	<script src="client.luac" type="client" />
+	<file src="lock.png" />
+	<file src="headlights.png" />
+	<file src="engine.png" />
+</meta>

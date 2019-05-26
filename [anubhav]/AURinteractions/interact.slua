@@ -1,0 +1,24 @@
+function executeCommandServer(cmd, ...)
+	executeCommandHandler(cmd, client, ...)
+end
+addEvent("AURinteractions.serverCmd", true)
+addEventHandler("AURinteractions.serverCmd", resourceRoot, executeCommandServer)
+
+function doServerAction(action, ...)
+	local args = {...}
+	if (action == "v_despawn") then
+		local veh = args[1]
+		if (not isElement(veh) or getElementType(veh) ~= "vehicle") then
+			return false
+		end
+		if (not getElementData(veh, "vehicleOwner")) then
+			outputChatBox("Cannot find vehicle owner", client, 255, 0, 0)
+			return false
+		end
+		local owner = getElementData(veh, "vehicleOwner")
+		outputChatBox(getPlayerName(client).." has asked you to hide your vehicle! ("..getVehicleName(veh)..")", owner, 255, 255, 0)
+		outputChatBox(getPlayerName(owner).." has been asked to hide his vehicle!", client, 255, 255, 0)
+	end
+end
+addEvent("AURinteractions.action", true)
+addEventHandler("AURinteractions.action", resourceRoot, doServerAction)

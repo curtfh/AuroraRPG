@@ -1,0 +1,33 @@
+<meta>
+	<info name=" Vehmods Client Side Performence" author="YOU" autostart="true" />
+	<script src="vTable.luac" type="client" />
+	<script src="vClient.luac" type="client"/>
+
+	<file src="mods/pegass.txd" type="client" download="false" />  
+	<file src="mods/pegass.dff" type="client" download="false" />  
+	<file src="mods/MaseratiGhibliS.txd" type="client" download="false" /> 
+	<file src="mods/MaseratiGhibliS.dff" type="client" download="false" /> 
+	<file src="mods/blueray.txd" type="client" download="false" /> 
+	<file src="mods/blueray.dff" type="client" download="false" /> 
+	<file src="mods/cheetah.txd" type="client" download="false" /> 
+	<file src="mods/cheetah.dff" type="client" download="false" />	
+	<file src="mods/hotknife.txd" type="client" download="false" />
+	<file src="mods/hotknife.dff" type="client" download="false" />
+	<file src="mods/CheCorv.txd" type="client" download="false" /> 
+	<file src="mods/CheCorv.dff" type="client" download="false" /> 	
+	<file src="mods/DodgeChaSRT8.txd" type="client" download="false" />  
+	<file src="mods/DodgeChaSRT8.dff" type="client" download="false" />	
+	<file src="mods/Chopper.txd" type="client" download="false" />     
+	<file src="mods/Chopper.dff" type="client" download="false" />		  
+	<file src="mods/JeepSRT8.txd" type="client" download="false" />  
+	<file src="mods/JeepSRT8.dff" type="client" download="false" />	 
+	<file src="mods/SilveradoRed.txd" type="client" download="false" />
+	<file src="mods/SilveradoRed.dff" type="client" download="false" /> 
+	<file src="mods/FerrariF430.txd" type="client" download="false" /> 
+	<file src="mods/FerrariF430.dff" type="client" download="false" /> 
+	<file src="mods/FordMustangRTR.txd" type="client" download="false" /> 
+	<file src="mods/FordMustangRTR.dff" type="client" download="false" /> 
+	<file src="mods/EvoVIII.txd" type="client" download="false" /> 
+	<file src="mods/EvoVIII.dff" type="client" download="false" /> 	
+	<min_mta_version server="1.3.4-0.00000" client="1.3.4-0.00000"></min_mta_version>
+</meta>

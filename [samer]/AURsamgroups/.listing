@@ -1,0 +1,8 @@
+drwxrwxrwx   2 selfbackup aurora_devs     4096 Jul 26 11:12 .
+drwxrwxrwx  20 1000     2001         4096 Jul 26 11:43 ..
+-rwxrwxrwx   1 selfbackup aurora_devs    68139 Jul 26 11:15 client.lua
+-rwxrwxrwx   1 selfbackup aurora_devs    96806 Jul 26 11:15 client.luac
+-rwxrwxrwx   1 selfbackup aurora_devs    55696 Jul 26 11:12 font.ttf
+-rwxrwxrwx   1 selfbackup aurora_devs      461 Jul 26 11:12 meta.xml
+-rwxrwxrwx   1 selfbackup aurora_devs     2508 Jul 26 11:12 msg.png
+-rwxrwxrwx   1 selfbackup aurora_devs    37212 Jul 26 11:08 server.lua

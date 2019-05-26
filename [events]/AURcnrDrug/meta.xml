@@ -1,0 +1,7 @@
+<meta>
+	<script src="client.luac" type="client" />
+	<script src="server.lua" type="server"/>
+	<file src="dot1.png" />
+	<file src="dot2.png" />
+	<file src="drugs.png" />
+</meta>

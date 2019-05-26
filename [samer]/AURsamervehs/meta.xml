@@ -1,0 +1,7 @@
+<meta>
+    <info author="AUR Scripting Team" type="script" name="spawners" description="Spawners system" />
+	
+	<script src="shared.luac" type="shared" />
+	<script src="client.luac" type="client" />
+	<script src="server.lua" type="server" />
+</meta>

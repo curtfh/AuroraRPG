@@ -1,0 +1,10 @@
+<meta>
+	<info author="" type="script" name="" version="1.0"/>
+	<script src="maps.lua" type="client"/>
+	<script src="client.luac" type="client"/>
+	<script src="server.lua" type="server"/>
+	<file src="logo.png"/>
+	<export function="startDueling" type="server" />
+	<export function="isPlayerDueling" type="server" />
+	<export function="isPlayerDueling" type="client" />
+</meta>

@@ -1,0 +1,6 @@
+<meta>
+	<info name="" author="" description="Medic kit" version="3.0.1" type="script" />
+
+	<script src="client.luac" type="client" />
+	<script src="server.lua" type="server" />
+</meta>

@@ -1,0 +1,12 @@
+<meta>
+	<info author="" version="1.0" type="script" name="housing" description="Housing System" />
+	<sync_map_element_data>true</sync_map_element_data>
+	<script src="client.luac" type="client"/>
+	<script src="invent.luac" type="client"/>
+	<script src="decor.luac" type="client"/>
+	<script src="creating.luac" type="client"/>
+	<script src="editor.luac" type="client"/>
+	<script src="server.lua" type="server"/>
+	<min_mta_version client="1.3.0-9.04555" />
+
+</meta>

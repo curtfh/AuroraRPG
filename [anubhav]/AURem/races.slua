@@ -1,0 +1,215 @@
+positions = {}
+winners = {}
+raceParticipants = {}
+raceCreators = {}
+markerType = "checkpoint"
+markerSize = 10
+raceType = 1
+raceStarted = false
+
+function addMarker(player)
+	if (exports.CSGstaff:isPlayerEventManager ( player )) then
+		if (getElementDimension(player) == 336) then
+			if (not raceStarted) then
+				local x, y, z = getElementPosition(player)
+				table.insert(positions, {math.floor(x), math.floor(y), math.floor(z)})
+				outputChatBox("Coordinates taken, total markers: "..#positions, player)
+				for plyr in pairs(raceCreators) do
+					triggerClientEvent(plyr, "AURevents.AddCheck", plyr, {#positions, x, y, z}, markerType, markerSize)
+				end
+			else
+				exports.NGCdxmsg:createNewDxMessage("You can't use this when a race is going on", player, 255, 0, 0)
+			end
+		end
+	end
+end
+addCommandHandler("addcheck", addMarker)
+
+function startRace(player, mode)
+	if (getElementDimension(player) == 336) then
+		if (warp_event) then
+			if (not raceStarted) then
+				raceStarted = true
+				raceType = mode
+				for k,v in ipairs(getEventParticipants()) do
+					raceParticipants[v] = true
+					triggerClientEvent(v, "AURevents.CreateRaceStuff", v, positions, markerType, markerSize, raceType)
+				end
+				outputChatBox("Markers should now be created for all players. Using racemode: "..raceType, player, 0, 255, 0)
+			else
+				outputChatBox("There's a race going on", player, 255, 0, 0)
+			end
+		else
+			outputChatBox("There must be an active event to start the race", player, 255, 0, 0)
+		end
+	end
+end
+
+function onPlayerQuit()
+	if (raceParticipants[source]) then
+		raceParticipants[source] = nil
+	end
+	if (raceCreators[source]) then
+		raceCreators[source] = nil
+	end
+end
+addEventHandler("onPlayerQuit", root, onPlayerQuit)
+
+function resetRaceStuff()
+	for player in pairs(raceParticipants) do
+		if (player) then
+			triggerClientEvent(player, "AURevents.DestroyRaceStuff", player)
+		end
+	end
+	raceParticipants = {}
+	positions = {}
+	winners = {}
+	raceStarted = false
+end
+
+function setWinner()
+	if (not winners[1]) then 
+		for k,v in ipairs(getElementsByType("player")) do
+			if (getElementDimension(v) == 336) then
+				if (raceType == 1) then
+					if (v == client) then
+						exports.NGCdxmsg:createNewDxMessage("You have won the race!", v, 0, 255, 0)
+					else
+						exports.NGCdxmsg:createNewDxMessage(getPlayerName(client).." has won the race!", v, 0, 255, 255)
+					end
+				else
+					if (v == client) then
+						exports.NGCdxmsg:createNewDxMessage("You have won!", v, 0, 255, 0)
+					else
+						exports.NGCdxmsg:createNewDxMessage(getPlayerName(client).." has won!", v, 0, 255, 255)
+					end
+				end
+			end
+		end
+	end
+	table.insert(winners, exports.server:getPlayerAccountName(client))
+end
+addEvent("AURevents.SetRaceWinner", true)
+addEventHandler("AURevents.SetRaceWinner", root, setWinner)
+
+function acc_check_2(acc)
+	for i, v in ipairs(getElementsByType("player")) do
+		if (exports.server:isPlayerLoggedIn(v) and exports.server:getPlayerAccountName(v) == acc) then
+			return v
+		end
+	end
+end
+
+function raceWinners(src, amount)
+	if (exports.CSGstaff:isPlayerEventManager ( src )) then
+		if (winners[1]) then
+			if (not tonumber(amount)) then
+				outputChatBox("Syntax: /event racewinners [1-"..#winners.."]", src)
+				return
+			end
+			outputChatBox("Place: Ingame Name (Account Name)", src)
+			for i=1, tonumber(amount) do
+				if (winners[i]) then
+					local player = acc_check_2(winners[i])
+					local playerName = "Player Offline"
+					if (player) then
+						playerName = getPlayerName(player)
+					end
+					outputChatBox(i..": "..playerName.." ("..winners[i]..")", src)
+				end
+			end
+		else
+			outputChatBox("No winners or race hasn't started", src)
+		end
+	end
+end
+
+function delCheck(player)
+	if (exports.CSGstaff:isPlayerEventManager ( player )) then
+		if (getElementDimension(player) == 336) then
+			if (#positions > 0) then
+				positions[#positions] = nil
+				outputChatBox("Check "..(#positions + 1).." has been deleted", player)
+				for plyr in pairs(raceCreators) do
+					triggerClientEvent(plyr, "AURevents.DelPrevCheck", plyr)	
+				end
+			end
+		end
+	end
+end
+addCommandHandler("delcheck", delCheck)
+
+function showChecks(player)
+	if (exports.CSGstaff:isPlayerEventManager ( player )) then
+		if (getElementDimension(player) == 336) then
+			if (raceCreators[player]) then
+				raceCreators[player] = nil
+				outputChatBox("showchecks: false", player)
+				triggerClientEvent(player, "AURevents.UpdateMarkers", player, {})
+			else
+				raceCreators[player] = true
+				outputChatBox("showchecks: true", player)
+				triggerClientEvent(player, "AURevents.UpdateMarkers", player, positions, markerType, markerSize)
+			end
+		end
+	end
+end
+addCommandHandler("showchecks", showChecks)
+
+function deleteAllChecks(player)
+	if (exports.CSGstaff:isPlayerEventManager ( player )) then
+		if (getElementDimension(player) == 336) then
+			outputChatBox("All checkpoints were deleted", player)
+			positions = {}
+			for plyr in pairs(raceCreators) do
+				triggerClientEvent(player, "AURevents.DestroyRaceStuff", player)
+			end
+		end
+	end
+end
+addCommandHandler("delallchecks", deleteAllChecks)
+
+function updateChecks(player)
+	if (exports.CSGstaff:isPlayerEventManager ( player )) then
+		if (getElementDimension(player) == 336) then
+			for plyr in pairs(raceCreators) do
+				triggerClientEvent(plyr, "AURevents.UpdateMarkers", plyr, positions, markerType, markerSize)	
+			end
+		end
+	end
+end
+addCommandHandler("updatechecks", deleteAllChecks)
+
+function rmsize(player, _, size)
+	if (exports.CSGstaff:isPlayerEventManager ( player )) then
+		if (getElementDimension(player) == 336) then
+			if (size and tonumber(size) and tonumber(size) <= 50) then
+				markerSize = size
+				for plyr in pairs(raceCreators) do
+					triggerClientEvent(plyr, "AURevents.UpdateMarkers", plyr, positions, markerType, markerSize)	
+				end
+				exports.NGCdxmsg:createNewDxMessage("Marker size set to "..size, player, 0, 255, 0)
+			else
+				exports.NGCdxmsg:createNewDxMessage("Syntax is: /rmtype [1-50] Current marker size: "..markerSize, player, 255, 0, 0)
+			end
+		end
+	end
+end
+addCommandHandler("rmsize", rmsize)
+
+function rmtype(player, _, mtype)
+	if (exports.CSGstaff:isPlayerEventManager ( player )) then
+		if (getElementDimension(player) == 336) then
+			if (mtype and (mtype == "checkpoint" or mtype == "ring")) then
+				markerType = mtype
+				for plyr in pairs(raceCreators) do
+					triggerClientEvent(plyr, "AURevents.UpdateMarkers", plyr, positions, markerType, markerSize)	
+				end
+				exports.NGCdxmsg:createNewDxMessage("Marker type set to "..mtype, player, 0, 255, 0)
+			else
+				exports.NGCdxmsg:createNewDxMessage("Syntax is: /rmtype [checkpoint - ring] Current marker type: "..markerType, player, 255, 0, 0)
+			end
+		end
+	end
+end
+addCommandHandler("rmtype", rmtype)

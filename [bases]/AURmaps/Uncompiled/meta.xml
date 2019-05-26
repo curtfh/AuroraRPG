@@ -1,0 +1,58 @@
+<meta>
+    <script src="mapEditorScriptingExtension_s.lua" type="server"></script>
+    <script src="mapEditorScriptingExtension_c.lua" type="client"></script>
+	<script src="doublesided.luac" type="client" />
+
+	<!--  AUR BASES / LAW-->
+	<script src="newmfbase.luac" type="client"> </script>
+	<script src="mfinteror.luac" type="client"> </script>
+	<script src="RBC-staff-hq.luac" type="client"></script>
+	<script src="FrenkyLSPD.luac" type="client"></script>
+	<script src="dodbase.luac" type="client"></script>
+	<script src="mf-tunnel3.luac" type="client"></script>
+	<script src="josephoffice.luac" type="client"></script>
+	<script src="ssg2.luac" type="client"></script>
+	
+	<!--  AUR BASES / CRIMINAL-->
+	<script src="scarface2.luac" type="client"></script>
+	<script src="heaven.luac" type="client"></script>
+	
+
+    <!--  AUR BASES / SA-->
+	<script src="hideandseek.lua" type="server"></script>
+	<script src="nrgparkour.luac" type="server"></script>
+	<script src="beach.luac" type="client"></script>
+	<script src="mapbug.luac" type="client"></script>
+	<!--script src="lshosp.luac" type="client"></script>
+	<script src="franklinlsfix.luac" type="client"></script>
+	<script src="paschinewhosp.luac" type="client"></script>
+	<script src="mazefrenky.luac" type="client"></script>
+	<script src="ryderrace.luac" type="client"></script>
+	<script src="rydersurv.luac" type="client"></script>
+	<script src="mapfixes.luac" type="client"></script>
+	<script src="city.luac" type="client"></script>	
+	<script src="island.luac" type="client"></script>	
+	<script src="smilerparkour.luac" type="client"></script>
+	<script src="cybraxlvh.luac" type="client"></script>
+	<script src="crimjob.luac" type="client"></script>	
+	<script src="swatnew.luac" type="client"></script>		
+	<script src="smilerdd.luac" type="client"></script>
+	<script src="reacthq.luac" type="client"></script>
+	<script src="AURmapbugfix.luac" type="server"></script>
+	<script src="parkour2.luac" type="client"></script>
+	<script src="destruction.luac" type="client"></script>
+	<script src="seafallout.luac" type="client"></script>
+	<script src="parkour4.luac" type="client"></script>
+	<script src="miner.luac" type="client"></script>
+	<script src="Uncompiled/lawfarm.lua" type="client"></script>
+	<script src="zones.luac" type="client"></script>
+	<script src="ffa.luac" type="client"></script>
+	<script src="smilertopparkour.luac" type="client"></script>
+	<script src="nixtoll.luac" type="client"></script>
+	<script src="nixproject.luac" type="client"></script>
+	<script src="parkour5.luac" type="client"></script>
+	<script src="lvlshospital.luac" type="client"></script>
+	
+   <!--  MAP file for RemoveWorldObjects-->
+	<map src="RWO.map"></map>
+</meta>

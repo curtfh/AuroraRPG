@@ -1,0 +1,13 @@
+<meta>
+	<info author="" type="script" name="" version="" />
+	<script src="server.lua" type="server"></script>
+	<script src="client.luac" type="client"></script>
+	<file src="uv_scripted.fx" />
+	<file src="include/tex_matrix.fx" />
+    <file src="kick.mp3"></file>
+    <file src="files/ball.dff"></file>
+    <file src="files/balltxd.txd"></file>
+    <file src="files/road.col"></file>
+    <file src="files/road.dff"></file>
+    <file src="files/road.txd"></file>
+</meta>

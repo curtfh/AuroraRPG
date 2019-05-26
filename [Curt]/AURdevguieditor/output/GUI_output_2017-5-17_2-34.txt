@@ -1,0 +1,39 @@
+
+GUIEditor = {
+    label = {},
+    button = {},
+    window = {},
+    gridlist = {},
+    combobox = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+        GUIEditor.window[1] = guiCreateWindow(384, 312, 521, 181, "AuroraRPG - Warehouse", false)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.label[1] = guiCreateLabel(5, 20, 83, 11, "Current warehouse:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[1], "default-bold-small")
+        GUIEditor.combobox[1] = guiCreateComboBox(131, 24, 244, 135, "Choose an warehouse", false, GUIEditor.window[1])
+        guiComboBoxAddItem(GUIEditor.combobox[1], "Choose an warehouse")
+        GUIEditor.button[1] = guiCreateButton(632, 196, 0, 0, "Close", false, GUIEditor.window[1])
+        GUIEditor.gridlist[1] = guiCreateGridList(9, 50, 481, 109, false, GUIEditor.window[1])
+        guiGridListAddColumn(GUIEditor.gridlist[1], "", 0.3)
+        guiGridListAddColumn(GUIEditor.gridlist[1], "", 0.3)
+        guiGridListAddColumn(GUIEditor.gridlist[1], "", 0.3)
+        GUIEditor.button[2] = guiCreateButton(632, 50, 0, 25, "Sell Stock", false, GUIEditor.window[1])
+
+
+        GUIEditor.window[2] = guiCreateWindow(0.28, 0.28, 0.45, 0.44, "AuroraRPG - Inventory", true)
+        guiWindowSetSizable(GUIEditor.window[2], false)
+
+        GUIEditor.label[2] = guiCreateLabel(0.02, 0.09, 0.37, 0.04, "Overall Items:", true, GUIEditor.window[2])
+        guiSetFont(GUIEditor.label[2], "default-bold-small")
+        GUIEditor.gridlist[2] = guiCreateGridList(0.02, 0.16, 0.79, 0.81, true, GUIEditor.window[2])
+        guiGridListAddColumn(GUIEditor.gridlist[2], "Item", 0.3)
+        guiGridListAddColumn(GUIEditor.gridlist[2], "Description", 0.3)
+        guiGridListAddColumn(GUIEditor.gridlist[2], "Est. Price", 0.3)
+        GUIEditor.button[3] = guiCreateButton(0.81, 0.20, 0.17, 0.07, "Sell", true, GUIEditor.window[2])
+        GUIEditor.button[4] = guiCreateButton(0.81, 0.31, 0.17, 0.07, "Throw Item", true, GUIEditor.window[2])
+        GUIEditor.button[5] = guiCreateButton(0.82, 0.90, 0.16, 0.07, "Close", true, GUIEditor.window[2])    
+    end
+)

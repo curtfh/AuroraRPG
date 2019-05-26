@@ -1,0 +1,42 @@
+<meta>
+    <info author="Epozide" version="1.1" type="script" name="VIP" description="VIP" />
+
+    <script src="client.luac" type="client" />
+    <script src="server.lua" type="server" />
+	<file src="logo.png" />
+	<export function="givePlayerVIP" type="server"/>
+	<export function="removePlayerVIP" type="server"/>
+
+	<file src="models/mask1Demon.dff" type="client" download="false" />
+	<file src="models/mask1Demon.txd" type="client" download="false" />
+	<file src="models/mask2Ape.dff" type="client" download="false" />
+    <file src="models/mask2Ape.txd" type="client"  download="false" />
+	<file src="models/mask3Ape2.dff" type="client" download="false" />
+	<file src="models/mask3Ape2.txd" type="client" download="false" />
+	<file src="models/mask4Hockey.dff" type="client" download="false" />
+	<file src="models/mask4Hockey.txd" type="client" download="false" />
+	<file src="models/mask5Demon2.dff" type="client" download="false" />
+	<file src="models/mask5Demon2.txd" type="client" download="false" />
+	<file src="models/mask6Pig.dff" type="client" download="false" />
+	<file src="models/mask6Pig.txd" type="client" download="false" />
+	<file src="models/mask7Mickey.dff" type="client" download="false" />
+	<file src="models/mask7Mickey.txd" type="client" download="false" />
+	<file src="models/mask8Vendetta.dff" type="client" download="false" />
+	<file src="models/mask8Vendetta.txd" type="client" download="false" />
+	<file src="models/mask9bunnyears.dff" type="client" download="false" />
+	<file src="models/mask9bunnyears.txd" type="client" download="false" />
+	<file src="models/mask10cat.dff" type="client" download="false" />
+	<file src="models/mask10cat.txd" type="client" download="false" />
+	<file src="models/mask11bo.dff" type="client" download="false" />
+	<file src="models/mask11bo.txd" type="client" download="false" />
+	<file src="models/mask12fox.dff" type="client" download="false" />
+	<file src="models/mask12fox.txd" type="client" download="false" />
+	<file src="models/mask13id.dff" type="client" download="false" />
+	<file src="models/mask13id.txd" type="client" download="false" />
+	<file src="models/mask14biker.dff" type="client" download="false" />
+	<file src="models/mask14biker.txd" type="client" download="false" />
+	<file src="models/mask15Iron.dff" type="client" download="false" />
+	<file src="models/mask15Iron.txd" type="client" download="false" />
+
+	<min_mta_version server="1.3.0-9.04351"></min_mta_version>
+</meta>

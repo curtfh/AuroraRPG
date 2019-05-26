@@ -1,0 +1,12 @@
+<meta>
+
+	<script src="dd.lua" type="server" />
+	<script src="maps.lua" type="server" />
+	<script src="client.luac" type="client" protected="true"/>
+	<file src="images/go.png" type="client" />
+	<file src="images/1.png" type="client" />
+	<file src="images/2.png" type="client" />
+	<file src="images/3.png" type="client" />
+	<export function="isPlayerInDD" type="server" />
+	<min_mta_version server="1.3.9-0.00000" client="1.3.9-0.00000"/>
+</meta>

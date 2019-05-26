@@ -1,0 +1,17 @@
+
+GUIEditor = {
+    button = {},
+    window = {},
+    edit = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+local screenW, screenH = guiGetScreenSize()
+        GUIEditor.window[1] = guiCreateWindow((screenW - 453) / 2, (screenH - 171) / 2, 453, 171, "Enter a title", false)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.edit[1] = guiCreateEdit(59, 54, 337, 36, "", false, GUIEditor.window[1])
+        GUIEditor.button[1] = guiCreateButton(59, 104, 156, 34, "Create", false, GUIEditor.window[1])
+        GUIEditor.button[2] = guiCreateButton(240, 104, 156, 34, "Cancel", false, GUIEditor.window[1])    
+    end
+)

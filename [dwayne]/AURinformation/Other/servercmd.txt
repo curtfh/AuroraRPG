@@ -1,0 +1,56 @@
+Server commands:
+
+/payjailfine - To pay jail fine
+/payfine - When you have 15 or less wanted points you can pay a fine, this will remove your wanted star
+/bribe [COPNAME] [AMOUNT MONEY] - When you have less that 4 wanted stars you can bribe a cop, if the cop accepts the bribe your stars get removed
+/updates - See the latest updates on the server
+/punishments - See all your serial and account punishments
+/showhud [0 OR 1] - Disable or enable the MTA hud
+/screenshot or F12 - Take a screenshot (will be saved on your PC)
+/shownametags [0 OR 1] - Disabled or enable the nametags
+/showchat [0 OR 1] - Disabled or enable the chatbox
+/craft - Opens crafting interface.
+/atm - Instantly opens the ATM Interface (Only VIPs).
+/vipjetpack - Gives you jetpack (Only VIPs).
+/cmplay - Plays a video in cinema (Only Staffs).
+/cmstop - Stops a video in cinema (Only Stopp).
+/vip - Opens the VIP Interface (Only VIPs).
+/stats - Opens stats panel.
+/kill - Kills yourself.
+/jihad - Suicide Bomber.
+/glue - Glue to the vehicle.
+/unglue - Unglue to the vehicle.
+/vehmods - Opens vehicle mods.
+/dynamicweather - Enables the dynamic weather system.
+/sunny - Make the weather sunny.
+/rainy - Make the weather rainy.
+/foggy - Make the weather foggy.
+/sandstorm - Make the weather sandstorm.
+/leavedm - Leave deathmatch area.
+/iracetime - Shows the time left in illegal race.
+/topcriminal - Enters to top crriminal event
+/dmtime - Shows the time left in top criminal.
+/sms <player> <message> - Send a sms to someone.
+/r <message> - Reply to the sms.
+/reply <message> - Reply to the sms.
+/pos - Shows your position and rotation.
+/engine - Enable/disable the car engine.
+/eject - Eject players on your vehicle.
+/lights - Enable/disable the vehicle lights.
+/lock - Locks your vehicle.
+/gc <message> - Message to group chat.
+/glc <message> - Message to group leader chat.
+/groupnote <message> - Sets the group note for the group.
+/pchief - Opens police chief pannel (Only Police Chiefs).
+/law <message> - Law chat.
+/lotto <number> - Lotto.
+/takehit <name> <ammount> - Takes drug.
+/crimes - See your crimes.
+/duel - Opens the duel interface.
+/acceptduel - Accepts the duel.
+/peak - Views the server's peak.
+
+
+
+NOTE: You can bind all these command by using /bind [KEYBOARD KEY] [COMMANDNAME]
+NOTE: Use /help to see all MTA commands (output is in the console (F8))

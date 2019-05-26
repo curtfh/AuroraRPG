@@ -1,0 +1,33 @@
+
+
+local screenW, screenH = guiGetScreenSize()
+
+addEventHandler("onClientRender", root,
+    function()
+        dxDrawText("Please wait...", (screenW * 0.2818) - 1, (screenH * 0.1769) - 1, (screenW * 0.7328) - 1, (screenH * 0.2481) - 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, false, false, true, false)
+        dxDrawText("Please wait...", (screenW * 0.2818) + 1, (screenH * 0.1769) - 1, (screenW * 0.7328) + 1, (screenH * 0.2481) - 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, false, false, true, false)
+        dxDrawText("Please wait...", (screenW * 0.2818) - 1, (screenH * 0.1769) + 1, (screenW * 0.7328) - 1, (screenH * 0.2481) + 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, false, false, true, false)
+        dxDrawText("Please wait...", (screenW * 0.2818) + 1, (screenH * 0.1769) + 1, (screenW * 0.7328) + 1, (screenH * 0.2481) + 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, false, false, true, false)
+        dxDrawText("Please wait...", screenW * 0.2818, screenH * 0.1769, screenW * 0.7328, screenH * 0.2481, tocolor(0, 143, 254, 255), 3.00, "pricedown", "center", "top", false, false, false, true, false)
+        dxDrawText("Loading introduction", (screenW * 0.2818) - 1, (screenH * 0.2815) - 1, (screenW * 0.7328) - 1, (screenH * 0.3528) - 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, true, false)
+        dxDrawText("Loading introduction", (screenW * 0.2818) + 1, (screenH * 0.2815) - 1, (screenW * 0.7328) + 1, (screenH * 0.3528) - 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, true, false)
+        dxDrawText("Loading introduction", (screenW * 0.2818) - 1, (screenH * 0.2815) + 1, (screenW * 0.7328) - 1, (screenH * 0.3528) + 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, true, false)
+        dxDrawText("Loading introduction", (screenW * 0.2818) + 1, (screenH * 0.2815) + 1, (screenW * 0.7328) + 1, (screenH * 0.3528) + 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, true, false)
+        dxDrawText("Loading introduction", screenW * 0.2818, screenH * 0.2815, screenW * 0.7328, screenH * 0.3528, tocolor(58, 196, 107, 255), 3.00, "pricedown", "center", "top", false, true, false, true, false)
+        dxDrawText("LS_POLICE_DEPARTMENT", (screenW * 0.2818) - 1, (screenH * 0.3833) - 1, (screenW * 0.7328) - 1, (screenH * 0.4546) - 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, true, false)
+        dxDrawText("LS_POLICE_DEPARTMENT", (screenW * 0.2818) + 1, (screenH * 0.3833) - 1, (screenW * 0.7328) + 1, (screenH * 0.4546) - 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, true, false)
+        dxDrawText("LS_POLICE_DEPARTMENT", (screenW * 0.2818) - 1, (screenH * 0.3833) + 1, (screenW * 0.7328) - 1, (screenH * 0.4546) + 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, true, false)
+        dxDrawText("LS_POLICE_DEPARTMENT", (screenW * 0.2818) + 1, (screenH * 0.3833) + 1, (screenW * 0.7328) + 1, (screenH * 0.4546) + 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, true, false)
+        dxDrawText("LS_POLICE_DEPARTMENT", screenW * 0.2818, screenH * 0.3833, screenW * 0.7328, screenH * 0.4546, tocolor(11, 253, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, true, false)
+        dxDrawText("AUTHOR: CURT", (screenW * 0.2818) - 1, (screenH * 0.4917) - 1, (screenW * 0.7328) - 1, (screenH * 0.5630) - 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, true, false)
+        dxDrawText("AUTHOR: CURT", (screenW * 0.2818) + 1, (screenH * 0.4917) - 1, (screenW * 0.7328) + 1, (screenH * 0.5630) - 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, true, false)
+        dxDrawText("AUTHOR: CURT", (screenW * 0.2818) - 1, (screenH * 0.4917) + 1, (screenW * 0.7328) - 1, (screenH * 0.5630) + 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, true, false)
+        dxDrawText("AUTHOR: CURT", (screenW * 0.2818) + 1, (screenH * 0.4917) + 1, (screenW * 0.7328) + 1, (screenH * 0.5630) + 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, true, false)
+        dxDrawText("AUTHOR: CURT", screenW * 0.2818, screenH * 0.4917, screenW * 0.7328, screenH * 0.5630, tocolor(252, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, true, false)
+        dxDrawText("AuroraRPG", (screenW * 0.2818) - 1, (screenH * 0.5954) - 1, (screenW * 0.7328) - 1, (screenH * 0.6667) - 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, true, false)
+        dxDrawText("AuroraRPG", (screenW * 0.2818) + 1, (screenH * 0.5954) - 1, (screenW * 0.7328) + 1, (screenH * 0.6667) - 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, true, false)
+        dxDrawText("AuroraRPG", (screenW * 0.2818) - 1, (screenH * 0.5954) + 1, (screenW * 0.7328) - 1, (screenH * 0.6667) + 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, true, false)
+        dxDrawText("AuroraRPG", (screenW * 0.2818) + 1, (screenH * 0.5954) + 1, (screenW * 0.7328) + 1, (screenH * 0.6667) + 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, true, false)
+        dxDrawText("AuroraRPG", screenW * 0.2818, screenH * 0.5954, screenW * 0.7328, screenH * 0.6667, tocolor(197, 54, 54, 255), 3.00, "pricedown", "center", "top", false, true, false, true, false)
+    end
+)

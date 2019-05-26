@@ -1,0 +1,7 @@
+<meta>
+	<info author="Prime" name="TaxiBOTjob" version="0.1.1" type="script" />
+	<script src="client.luac" type="client"/>
+	<script src="service.lua" type="server"/>
+	<file src="taxi2.png" />
+	<file src="taxi.png" />
+</meta>

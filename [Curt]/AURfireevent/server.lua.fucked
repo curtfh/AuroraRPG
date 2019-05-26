@@ -1,0 +1,85 @@
+local eventMarkers = {
+	
+	{1094.5478515625, -1468.509765625, 22.74333190918},
+	{1094.212890625, -1516.59375, 22.745655059814},
+	{1113.6513671875, -1532.701171875, 22.756786346436},
+	{1153.5703125, -1525.845703125, 22.752216339111},
+	{1166.28515625, -1509.6826171875, 22.750331878662},
+	{1168.2724609375, -1477.7607421875, 22.757894515991},
+}
+
+local crimMarkers = {}
+local fireMarkers = {}
+local fireObjects = {}
+local restMarkers = 0
+local counter = #eventMarkers
+
+function createEventMarkers ()
+
+	exports.NGCdxmsg:createNewDxMessage("Criminals! you now have the opportunity to break fire in buildings!", 255,0,0)
+	for k,v in ipairs (eventMarkers) do
+		marker = createMarker (v[1], v[2], v[3]-1, "cylinder", 2, 255,0,0,255)
+		crimMarkers[marker] = k
+		restMarkers = #eventMarkers
+	end
+end
+addEventHandler("onResourceStart", getRootElement(), createEventMarkers)
+
+
+function onCrimMarkerHit (hElem, dim)
+
+	if not (dim) then return false end
+	if not (crimMarkers[source]) then return false end
+	if (getTeamName(getPlayerTeam(hElem)) ~= "Criminals") then return false end
+	local mx, my, mz = getElementPosition(source)
+	destroyElement(source)
+	crimMarkers[source] = nil
+	setElementFrozen(hElem, true)
+	exports.server:givePlayerWantedPoints(hElem,11)
+	givePlayerMoney(hElem, 5000)
+	exports.NGCdxmsg:createNewDxMessage("You have broken fire into this building and robbed $5,000!",255,255,0)
+	fire = createObject (3461, mx, my, mz-1.6)
+	fireMarker = createMarker (mx, my, mz, "cylinder", 4, 255,255,255,0)
+	fireMarkers[fireMarker] = restMarkers
+	fireObjects[fireMarker] = fire
+	setPedAnimation (hElem, "flame", "flame_fire")
+	setTimer(setElementFrozen, 2000,1,hElem, false)
+	setTimer(setPedAnimation, 2000, 1, hElem, false)
+	restMarkers = restMarkers-1
+	print(restMarkers)
+		if (restMarkers < 0) then
+			counter = #eventMarkers
+		end
+end
+addEventHandler("onMarkerHit", root, onCrimMarkerHit)
+
+
+function onFireMarkerHit (hElem, dim)
+
+	if not (dim) then return false end
+	if not (fireMarkers[source]) then return false end
+	if (getPedWeapon(hElem) ~= 42) then return exports.NGCdxmsg:createNewDxMessage("You need a fire extinguisher to extinguish the fire!",255,0,0) end
+	if (exports.server:getPlayerOccupation(hElem) == "Firefighter") then
+	destroyElement(source)
+	destroyElement(fireObjects[source])
+	fireMarkers[source] = nil
+	setElementFrozen(hElem, true)
+	setPedAnimation (hElem, "flame", "flame_fire")
+	setTimer(setElementFrozen, 2000,1,hElem, false)
+	setTimer(setPedAnimation, 2000, 1, hElem, false)
+	givePlayerMoney(hElem, 5000)
+	exports.NGCdxmsg:createNewDxMessage("You have been rewarded $5,000 by the government for removing the fire!", 255,255,0)
+	counter = counter-1
+	print(counter)
+		if (counter < 0) then
+			local crims = getPlayersInTeam(getTeamName("Criminals"))
+			for k,v in ipairs (crims) do
+				if (#crims < 0) then return false end
+				exports.NGCdxmsg:createNewDxMessage("You have successfully fired the buildings, escape now !",255,0,0)
+			end
+			eventTimer = setTimer(createEventMarkers, 1000*60*20, 1)
+		end
+    end
+end
+addEventHandler("onMarkerHit", root, onFireMarkerHit)
+

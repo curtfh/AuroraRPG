@@ -1,0 +1,10 @@
+<meta>
+    <info type="script" version="1.0.0" author="Epozide&apos;" name="Staff misc" />
+    <script src="smisc.luac" type="client" />
+    <script src="StaffSpeed.luac" type="client" />
+    <script src="vehjump.luac" type="client" />
+    <script src="fly.luac" type="client" />
+    <script src="stop.luac" type="client" />
+    <script src="flip.luac" type="client" />
+    <min_mta_version server="1.3.4-0.00000" client="1.3.4-0.00000"></min_mta_version>
+</meta>

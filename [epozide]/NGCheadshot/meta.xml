@@ -1,0 +1,6 @@
+<meta>
+	<info author="epozide" type="script" version="1.0.0" />
+	<script src="headshot.lua" type="server" />
+	<script src="cheadshot.luac" type="client" />
+ 	<file src="headshot.mp3" />
+</meta>

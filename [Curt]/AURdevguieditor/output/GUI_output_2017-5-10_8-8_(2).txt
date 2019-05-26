@@ -1,0 +1,18 @@
+
+
+local screenW, screenH = guiGetScreenSize()
+
+addEventHandler("onClientRender", root,
+    function()
+        dxDrawText("The Law Enforcement", (screenW * 0.0854) - 1, (screenH * 0.2222) - 1, (screenW * 0.4661) - 1, (screenH * 0.3000) - 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "left", "top", false, true, false, false, false)
+        dxDrawText("The Law Enforcement", (screenW * 0.0854) + 1, (screenH * 0.2222) - 1, (screenW * 0.4661) + 1, (screenH * 0.3000) - 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "left", "top", false, true, false, false, false)
+        dxDrawText("The Law Enforcement", (screenW * 0.0854) - 1, (screenH * 0.2222) + 1, (screenW * 0.4661) - 1, (screenH * 0.3000) + 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "left", "top", false, true, false, false, false)
+        dxDrawText("The Law Enforcement", (screenW * 0.0854) + 1, (screenH * 0.2222) + 1, (screenW * 0.4661) + 1, (screenH * 0.3000) + 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "left", "top", false, true, false, false, false)
+        dxDrawText("The Law Enforcement", screenW * 0.0854, screenH * 0.2222, screenW * 0.4661, screenH * 0.3000, tocolor(255, 255, 255, 255), 3.00, "pricedown", "left", "top", false, true, false, false, false)
+        dxDrawText("As you can see, you can take police job on this location and take a look on your current job skills.", (screenW * 0.1635) - 1, (screenH * 0.3704) - 1, (screenW * 0.8974) - 1, (screenH * 0.6019) - 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, false, false)
+        dxDrawText("As you can see, you can take police job on this location and take a look on your current job skills.", (screenW * 0.1635) + 1, (screenH * 0.3704) - 1, (screenW * 0.8974) + 1, (screenH * 0.6019) - 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, false, false)
+        dxDrawText("As you can see, you can take police job on this location and take a look on your current job skills.", (screenW * 0.1635) - 1, (screenH * 0.3704) + 1, (screenW * 0.8974) - 1, (screenH * 0.6019) + 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, false, false)
+        dxDrawText("As you can see, you can take police job on this location and take a look on your current job skills.", (screenW * 0.1635) + 1, (screenH * 0.3704) + 1, (screenW * 0.8974) + 1, (screenH * 0.6019) + 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, false, false)
+        dxDrawText("As you can see, you can take police job on this location and take a look on your current job skills.", screenW * 0.1635, screenH * 0.3704, screenW * 0.8974, screenH * 0.6019, tocolor(163, 139, 140, 255), 3.00, "pricedown", "center", "top", false, true, false, false, false)
+    end
+)

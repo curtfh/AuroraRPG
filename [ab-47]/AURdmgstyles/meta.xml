@@ -1,0 +1,5 @@
+<meta>
+	<script src="dxdamage.luac" type="client"/>
+	<file src="font.otf" type="client"/>
+	<file src="sound.mp3" type="client"/>
+</meta>

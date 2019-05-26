@@ -1,0 +1,30 @@
+
+GUIEditor = {
+    progressbar = {},
+    label = {},
+    button = {},
+    window = {},
+    gridlist = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+local screenW, screenH = guiGetScreenSize()
+        GUIEditor.window[1] = guiCreateWindow((screenW - 913) / 2, (screenH - 414) / 2, 913, 414, "AuroraRPG - Tutorials", false)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.label[1] = guiCreateLabel(11, 31, 160, 15, "Total Tutorials: 0/0", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[1], "default-bold-small")
+        GUIEditor.button[1] = guiCreateButton(234, 381, 176, 23, "View", false, GUIEditor.window[1])
+        GUIEditor.button[2] = guiCreateButton(493, 382, 176, 22, "Close", false, GUIEditor.window[1])
+        GUIEditor.progressbar[1] = guiCreateProgressBar(10, 62, 893, 26, false, GUIEditor.window[1])
+        GUIEditor.label[2] = guiCreateLabel(11, 46, 892, 16, "Your progress (0% of 100%): ", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[2], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[2], "center", false)
+        GUIEditor.gridlist[1] = guiCreateGridList(9, 96, 894, 281, false, GUIEditor.window[1])
+        guiGridListAddColumn(GUIEditor.gridlist[1], "Name", 0.2)
+        guiGridListAddColumn(GUIEditor.gridlist[1], "Location", 0.2)
+        guiGridListAddColumn(GUIEditor.gridlist[1], "Seen?", 0.2)
+        guiGridListAddColumn(GUIEditor.gridlist[1], "Date Added", 0.2)
+        guiGridListAddColumn(GUIEditor.gridlist[1], "Author", 0.2)    
+    end
+)

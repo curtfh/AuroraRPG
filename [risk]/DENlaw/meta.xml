@@ -1,0 +1,19 @@
+<meta>
+	<info author="Dennis" version="1.1.0" type="script" name="DENlaw" description="LAW System" />
+
+	<script src="serverside.lua" type="server"/>
+	<script src="servertimer.lua" type="server"/>
+	<script src="clientside.lua" type="client"/>
+	<script src="clienttimer.lua" type="client"/>
+	<script src="tazerclient.luac" type="client"/>
+	<script src="tazerserver.lua" type="server"/>
+	<export function="isPlayerLawEnforcer" type="client" />
+	<export function="isPlayerLawEnforcer" type="server" />
+	<export function="isLaw" type="client" />
+	<export function="isLaw" type="server" />
+	<export function="getCopArrestedPlayers" type="server" />
+	<file src="cuffs.txd" />
+    <file src="cuffs.dff" />
+	
+	<oop>true</oop>
+</meta>

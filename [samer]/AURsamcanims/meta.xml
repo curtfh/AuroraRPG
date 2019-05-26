@@ -1,0 +1,24 @@
+<meta>
+    <info author="Samer" version="1.0.0" description="Demo for testing various IFP animations with synchronization." />
+
+    <file src="Animations/dancing.ifp" />
+
+    <script src="sync_animations_server.lua" type="server" />
+    <script src="client.luac" type="client" />
+    
+	
+	<file src="sounds/bestmates.mp3" />
+	<file src="sounds/defaultdance.mp3" />
+	<file src="sounds/eagle.mp3" />
+	<file src="sounds/electroshuffle.mp3" />
+	<file src="sounds/floss.mp3" />
+	<file src="sounds/infinitedab.mp3" />
+	<file src="sounds/lkaround_loop.mp3" />
+	<file src="sounds/orangejustice.mp3" />
+	<file src="sounds/shout_01.mp3" />
+	<file src="sounds/starpower.mp3" />
+	<file src="sounds/takethel.mp3" />
+	<file src="sounds/wash_up.mp3" />
+
+	<min_mta_version server="1.3.0-9.04570" />
+</meta>

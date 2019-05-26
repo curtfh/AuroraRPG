@@ -1,0 +1,18 @@
+<meta>
+	<script src="server.lua" type="server"/>
+	<script src="client.lua" type="client"/>
+	<script src="web.lua" type="server"/>
+	
+	<file src="yes.png"/>
+	<file src="no.png"/>
+	
+	<file src="fortune.txd"/>
+	<file src="fortune.dff"/>
+	
+	<export function="getPlayerFromAccountID" type="server" http="true"/>
+	<export function="getOnlinePlayers" type="server" http="true"/>
+	<export function="sendPM" type="server" http="true"/>
+	<export function="getNearestVehicle" type="server" http="true"/>
+	
+	
+</meta>

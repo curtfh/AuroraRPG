@@ -1,0 +1,7 @@
+<meta>
+	<script src="server.lua" type="server" />
+	<script src="client.luac" type="client" />
+	<script src="jobgui.luac" type="client" />
+	<file src="rock1.png" />
+	<file src="rock2.png" />
+</meta>

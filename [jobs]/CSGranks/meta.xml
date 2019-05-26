@@ -1,0 +1,13 @@
+<meta>
+	<script src="client.luac" type="client" />
+	<script src="server.lua" type="server" />
+	<file src="logo.png" />
+	<export function="addStat" type="server" />
+	<export function="getRank" type="server" />
+	<export function="closePanel" type="client" />
+	<export function="openPanel" type="client" />
+	<export function="getPlayerRankInfo" type="client" />
+	<export function="getPlayerRankTable" type="client"/>
+	<export function="getRankAccountFromID" type="server"/>
+	<export function="getOccupationToRankTable" type="server"/>
+</meta>

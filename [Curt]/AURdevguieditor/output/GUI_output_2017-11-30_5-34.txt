@@ -1,0 +1,13 @@
+
+
+local screenW, screenH = guiGetScreenSize()
+
+addEventHandler("onClientRender", root,
+    function()
+        dxDrawText("Loading Scene...", (screenW * 0.0737) - 1, (screenH * 0.0711) - 1, (screenW * 0.9300) - 1, (screenH * 0.9211) - 1, tocolor(0, 0, 0, 255), 2.50, "default-bold", "center", "center", false, false, true, true, false)
+        dxDrawText("Loading Scene...", (screenW * 0.0737) + 1, (screenH * 0.0711) - 1, (screenW * 0.9300) + 1, (screenH * 0.9211) - 1, tocolor(0, 0, 0, 255), 2.50, "default-bold", "center", "center", false, false, true, true, false)
+        dxDrawText("Loading Scene...", (screenW * 0.0737) - 1, (screenH * 0.0711) + 1, (screenW * 0.9300) - 1, (screenH * 0.9211) + 1, tocolor(0, 0, 0, 255), 2.50, "default-bold", "center", "center", false, false, true, true, false)
+        dxDrawText("Loading Scene...", (screenW * 0.0737) + 1, (screenH * 0.0711) + 1, (screenW * 0.9300) + 1, (screenH * 0.9211) + 1, tocolor(0, 0, 0, 255), 2.50, "default-bold", "center", "center", false, false, true, true, false)
+        dxDrawText("Loading Scene...", screenW * 0.0737, screenH * 0.0711, screenW * 0.9300, screenH * 0.9211, tocolor(255, 255, 255, 255), 2.50, "default-bold", "center", "center", false, false, true, true, false)
+    end
+)

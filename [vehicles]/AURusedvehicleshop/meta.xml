@@ -1,0 +1,11 @@
+<meta>
+	<min_mta_version server="1.3.4-0.00000" client="1.3.4-0.00000"/>
+	<script src="server.lua" />
+    <script src="client.luac" type="client" />
+	<file src="Automobile.png" type="client" />
+	<file src="Plane.png" type="client" />
+	<file src="Helicopter.png" type="client" />
+	<file src="Bike.png" type="client" />
+	<file src="Boat.png" type="client" />
+	<file src="Monster Truck.png" type="client" />
+</meta>

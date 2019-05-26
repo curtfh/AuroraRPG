@@ -1,0 +1,14 @@
+
+
+local screenW, screenH = guiGetScreenSize()
+
+addEventHandler("onClientRender", root,
+    function()
+        dxDrawText("#ff0000Curt #ffffffhas donated #ff0000$30!", screenW * 0.3974, screenH * 0.2435, screenW * 0.5667, screenH * 0.2815, tocolor(255, 255, 255, 255), 2.00, "sans", "center", "center", false, true, false, true, false)
+        dxDrawText("This is a test donation for dollar. @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@", (screenW * 0.3974) - 1, (screenH * 0.2815) - 1, (screenW * 0.5667) - 1, (screenH * 0.3296) - 1, tocolor(0, 0, 0, 255), 1.00, "default-bold", "center", "top", true, true, false, false, false)
+        dxDrawText("This is a test donation for dollar. @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@", (screenW * 0.3974) + 1, (screenH * 0.2815) - 1, (screenW * 0.5667) + 1, (screenH * 0.3296) - 1, tocolor(0, 0, 0, 255), 1.00, "default-bold", "center", "top", true, true, false, false, false)
+        dxDrawText("This is a test donation for dollar. @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@", (screenW * 0.3974) - 1, (screenH * 0.2815) + 1, (screenW * 0.5667) - 1, (screenH * 0.3296) + 1, tocolor(0, 0, 0, 255), 1.00, "default-bold", "center", "top", true, true, false, false, false)
+        dxDrawText("This is a test donation for dollar. @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@", (screenW * 0.3974) + 1, (screenH * 0.2815) + 1, (screenW * 0.5667) + 1, (screenH * 0.3296) + 1, tocolor(0, 0, 0, 255), 1.00, "default-bold", "center", "top", true, true, false, false, false)
+        dxDrawText("This is a test donation for dollar. @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@", screenW * 0.3974, screenH * 0.2815, screenW * 0.5667, screenH * 0.3296, tocolor(255, 255, 255, 255), 1.00, "default-bold", "center", "top", true, true, false, false, false)
+    end
+)

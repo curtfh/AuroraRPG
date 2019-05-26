@@ -1,0 +1,41 @@
+--[[-------------------------------------------------
+Notes:
+
+> This code is using a relative image filepath. This will only work as long as the location it is from always exists, and the resource it is part of is running.
+    To ensure it does not break, it is highly encouraged to move images into your local resource and reference them there.
+--]]-------------------------------------------------
+
+
+GUIEditor = {
+    staticimage = {},
+    edit = {},
+    button = {},
+    window = {},
+    label = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+local screenW, screenH = guiGetScreenSize()
+        GUIEditor.window[1] = guiCreateWindow(604, 541, 586, 374, "AuroraRPG Security - 2 Factor Authentication", false)
+        guiWindowSetMovable(GUIEditor.window[1], false)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.staticimage[1] = guiCreateStaticImage(144, 84, 298, 247, ":AURdevguieditor/images/examples/mtalogo.png", false, GUIEditor.window[1])
+        GUIEditor.button[1] = guiCreateButton(436, 335, 140, 29, "Close", false, GUIEditor.window[1])
+        GUIEditor.button[2] = guiCreateButton(10, 335, 140, 29, "Test 2FA", false, GUIEditor.window[1])
+        GUIEditor.label[1] = guiCreateLabel(20, 26, 546, 48, "Turn on 2-Step Verification. When you enable 2-Step Verification (also known as two-factor authentication), you add an extra layer of security to your account. You sign in with something you know (your password) and something you have (a code sent to your phone).", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[1], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[1], "center", true)
+
+
+        GUIEditor.window[2] = guiCreateWindow((screenW - 510) / 2, (screenH - 170) / 2, 510, 170, "AuroraRPG Security - Two Factor Authentication", false)
+        guiWindowSetMovable(GUIEditor.window[2], false)
+        guiWindowSetSizable(GUIEditor.window[2], false)
+
+        GUIEditor.label[2] = guiCreateLabel(9, 23, 491, 31, "To continue playing please open your phone and open the app called \"Google Authenticator\" or \"Authenticator\" and get the code.", false, GUIEditor.window[2])
+        guiSetFont(GUIEditor.label[2], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[2], "center", true)
+        GUIEditor.edit[1] = guiCreateEdit(214, 64, 79, 40, "", false, GUIEditor.window[2])
+        GUIEditor.button[3] = guiCreateButton(185, 114, 137, 31, "Continue", false, GUIEditor.window[2])    
+    end
+)

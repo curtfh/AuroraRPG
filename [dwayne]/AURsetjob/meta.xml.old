@@ -1,0 +1,5 @@
+<meta>
+     <info src="Dwayne" name="NGC" description="Setjob" version="1"/>
+	 <script src="setjob_c.luac" type="client"/>
+	 <script src="setjob_s.lua" type="server"/>
+</meta>

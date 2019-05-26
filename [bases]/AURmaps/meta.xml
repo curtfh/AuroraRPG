@@ -1,0 +1,67 @@
+<meta>
+    <script src="mapEditorScriptingExtension_s.lua" type="server"></script>
+    <script src="mapEditorScriptingExtension_c.lua" type="client"></script>
+	<script src="doublesided.luac" type="client" />
+
+	<!--  AUR BASES / LAW-->
+	<script src="RBC-staff-hq.luac" type="client"></script>
+	<script src="Uncompiled/carshowLS.lua" type="server"></script>
+	<script src="DioPasLSPD.luac" type="client"></script>
+	<script src="LVPDJebne.luac" type="client"></script>
+	<script src="newmfbase.luac" type="client"> </script>
+
+	<!--  AUR BASES / CRIMINAL-->
+	<script src="terr.luac" type="client"> </script>
+	<script src="Uncompiled/cobras.luac" type="client"> </script>
+	<script src="Uncompiled/FBIbase.lua" type="client"> </script>
+
+	<!--  AUR BASES / BUSINESSES-->
+
+
+	<!--  AUR BASES / SA-->
+
+	<script src="Uncompiled/nrgparkour.lua" type="server"></script>
+	<script src="beach.luac" type="client"></script>
+	<script src="mapbug.luac" type="client"></script>
+	<script src="LSbugfixes.luac" type="client"></script>
+	<script src="mazefrenky.luac" type="client"></script>
+	<script src="rydersurv.luac" type="client"></script>
+	<script src="mapfixes.luac" type="client"></script>
+	<script src="island.luac" type="client"></script>
+	<script src="smilerparkour.luac" type="client"></script>
+	<script src="crimjob.luac" type="client"></script>
+	<script src="smilerdd.luac" type="client"></script>
+	<script src="StaffHQ.luac" type="client"></script>
+	<script src="AURmapbugfix.luac" type="server"></script>
+	<script src="destruction.luac" type="client"></script>
+	<script src="seafallout.luac" type="client"></script>
+	<script src="parkour4.luac" type="client"></script>
+	<script src="cafe.luac" type="client"></script>
+	<script src="miner.luac" type="client"></script>
+	<script src="Uncompiled/lawfarm.lua" type="client"></script>
+	<script src="smilertopparkour.luac" type="client"></script>
+	<script src="parkour5.luac" type="client"></script>
+	<script src="minorfix.luac" type="client"></script>
+	<script src="lvlshospital.luac" type="client"></script>
+	<script src="LSallSaintsH.luac" type="client"></script>
+	<script src="LSjeffersonH.luac" type="client"></script>
+	<script src="LSgrovestreet.luac" type="client"></script>
+	<script src="LVhospitalJebne.luac" type="client"></script>
+	<script src="DrugFarmJebne.luac" type="client"></script>
+
+
+	<script src="Uncompiled/LVwarzone.lua" type="client"></script>
+
+	<script src="cinema_map.lua" type="server"></script>
+	
+	<script src="TCpaschi.luac" type="server"></script>
+	
+	<!--  Fixed MAP bugs -->
+	<script src="chichabug#1.luac" type="server"></script>
+	
+	
+
+   <!--  MAP file for RemoveWorldObjects-->
+	<map src="RWO.map"></map>
+	<map src="frenkyrace.map"></map>
+</meta>

@@ -1,0 +1,71 @@
+
+GUIEditor = {
+    gridlist = {},
+    label = {},
+    button = {},
+    window = {},
+    combobox = {},
+    memo = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+local screenW, screenH = guiGetScreenSize()
+        GUIEditor.window[1] = guiCreateWindow((screenW - 837) / 2, (screenH - 495) / 2, 837, 495, "AuroraRPG - Language Contributor", false)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.gridlist[1] = guiCreateGridList(10, 61, 322, 424, false, GUIEditor.window[1])
+        guiGridListAddColumn(GUIEditor.gridlist[1], "Original Text", 0.9)
+        GUIEditor.label[1] = guiCreateLabel(16, 36, 115, 15, "Choose a language: ", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[1], "default-bold-small")
+        GUIEditor.combobox[1] = guiCreateComboBox(131, 32, 201, 201, "", false, GUIEditor.window[1])
+        guiComboBoxAddItem(GUIEditor.combobox[1], "Select a language")
+        guiComboBoxAddItem(GUIEditor.combobox[1], "English")
+        GUIEditor.memo[1] = guiCreateMemo(343, 82, 478, 99, "", false, GUIEditor.window[1])
+        guiMemoSetReadOnly(GUIEditor.memo[1], true)
+        GUIEditor.label[2] = guiCreateLabel(343, 61, 115, 15, "Original Text", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[2], "default-bold-small")
+        GUIEditor.label[3] = guiCreateLabel(342, 197, 479, 15, "Translate the original text to %language%", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[3], "default-bold-small")
+        GUIEditor.memo[2] = guiCreateMemo(342, 216, 478, 99, "", false, GUIEditor.window[1])
+        GUIEditor.label[4] = guiCreateLabel(342, 320, 130, 15, "Recent Changes:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[4], "default-bold-small")
+        GUIEditor.memo[3] = guiCreateMemo(342, 335, 478, 99, "", false, GUIEditor.window[1])
+        guiMemoSetReadOnly(GUIEditor.memo[3], true)
+        GUIEditor.button[1] = guiCreateButton(406, 448, 138, 27, "Submit", false, GUIEditor.window[1])
+        GUIEditor.button[2] = guiCreateButton(628, 448, 138, 27, "Close", false, GUIEditor.window[1])
+        GUIEditor.label[5] = guiCreateLabel(342, 37, 461, 14, "Reward: Accepted Translation = $3,000 & 10 Score", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[5], "default-bold-small")
+
+
+        GUIEditor.window[2] = guiCreateWindow((screenW - 938) / 2, (screenH - 480) / 2, 938, 480, "AuroraRPG - Admin Language Contributor", false)
+        guiWindowSetSizable(GUIEditor.window[2], false)
+
+        GUIEditor.label[6] = guiCreateLabel(9, 36, 111, 15, "Choose a language:", false, GUIEditor.window[2])
+        guiSetFont(GUIEditor.label[6], "default-bold-small")
+        GUIEditor.combobox[2] = guiCreateComboBox(125, 32, 205, 148, "", false, GUIEditor.window[2])
+        guiComboBoxAddItem(GUIEditor.combobox[2], "Choose a language")
+        guiComboBoxAddItem(GUIEditor.combobox[2], "English")
+        GUIEditor.gridlist[2] = guiCreateGridList(9, 60, 321, 408, false, GUIEditor.window[2])
+        guiGridListAddColumn(GUIEditor.gridlist[2], "Submited by", 0.5)
+        guiGridListAddColumn(GUIEditor.gridlist[2], "Submited Text", 0.5)
+        GUIEditor.label[7] = guiCreateLabel(340, 35, 111, 15, "Original Text:", false, GUIEditor.window[2])
+        guiSetFont(GUIEditor.label[7], "default-bold-small")
+        GUIEditor.memo[4] = guiCreateMemo(336, 55, 595, 81, "", false, GUIEditor.window[2])
+        guiMemoSetReadOnly(GUIEditor.memo[4], true)
+        GUIEditor.label[8] = guiCreateLabel(340, 146, 111, 15, "Submited Text:", false, GUIEditor.window[2])
+        guiSetFont(GUIEditor.label[8], "default-bold-small")
+        GUIEditor.memo[5] = guiCreateMemo(338, 166, 593, 81, "", false, GUIEditor.window[2])
+        guiMemoSetReadOnly(GUIEditor.memo[5], true)
+        GUIEditor.label[9] = guiCreateLabel(336, 372, 585, 15, "Submited by: %PlayerName% (%AccountName%)", false, GUIEditor.window[2])
+        guiSetFont(GUIEditor.label[9], "default-bold-small")
+        GUIEditor.label[10] = guiCreateLabel(336, 407, 585, 15, "Date Submited: %TheDate%", false, GUIEditor.window[2])
+        guiSetFont(GUIEditor.label[10], "default-bold-small")
+        GUIEditor.button[3] = guiCreateButton(398, 437, 140, 31, "Approve Request", false, GUIEditor.window[2])
+        GUIEditor.button[4] = guiCreateButton(548, 437, 140, 31, "Deny Request", false, GUIEditor.window[2])
+        GUIEditor.button[5] = guiCreateButton(698, 437, 140, 31, "Close", false, GUIEditor.window[2])
+        GUIEditor.label[11] = guiCreateLabel(338, 257, 144, 15, "Already Translated Text:", false, GUIEditor.window[2])
+        guiSetFont(GUIEditor.label[11], "default-bold-small")
+        GUIEditor.memo[6] = guiCreateMemo(338, 276, 593, 81, "", false, GUIEditor.window[2])
+        guiMemoSetReadOnly(GUIEditor.memo[6], true)    
+    end
+)

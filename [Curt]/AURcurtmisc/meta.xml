@@ -1,0 +1,6 @@
+<meta>
+	<script src="server.lua" type="server" />
+	
+	<export function="setPlayerAccountData" type="server"/>
+	<export function="getPlayerAccountData" type="server"/>
+</meta>

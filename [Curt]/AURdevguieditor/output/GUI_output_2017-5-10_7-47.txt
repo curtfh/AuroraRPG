@@ -1,0 +1,18 @@
+
+
+local screenW, screenH = guiGetScreenSize()
+
+addEventHandler("onClientRender", root,
+    function()
+        dxDrawText("Welcome to Police Department", (screenW * 0.1021) - 1, (screenH * 0.1731) - 1, (screenW * 0.6609) - 1, (screenH * 0.2509) - 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "left", "top", false, true, false, false, false)
+        dxDrawText("Welcome to Police Department", (screenW * 0.1021) + 1, (screenH * 0.1731) - 1, (screenW * 0.6609) + 1, (screenH * 0.2509) - 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "left", "top", false, true, false, false, false)
+        dxDrawText("Welcome to Police Department", (screenW * 0.1021) - 1, (screenH * 0.1731) + 1, (screenW * 0.6609) - 1, (screenH * 0.2509) + 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "left", "top", false, true, false, false, false)
+        dxDrawText("Welcome to Police Department", (screenW * 0.1021) + 1, (screenH * 0.1731) + 1, (screenW * 0.6609) + 1, (screenH * 0.2509) + 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "left", "top", false, true, false, false, false)
+        dxDrawText("Welcome to Police Department", screenW * 0.1021, screenH * 0.1731, screenW * 0.6609, screenH * 0.2509, tocolor(51, 140, 250, 255), 3.00, "pricedown", "left", "top", false, true, false, false, false)
+        dxDrawText("In this introduction, you will know all the functions of the Los Santos Police Department.", (screenW * 0.1542) - 1, (screenH * 0.2833) - 1, (screenW * 0.8651) - 1, (screenH * 0.5417) - 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, false, false)
+        dxDrawText("In this introduction, you will know all the functions of the Los Santos Police Department.", (screenW * 0.1542) + 1, (screenH * 0.2833) - 1, (screenW * 0.8651) + 1, (screenH * 0.5417) - 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, false, false)
+        dxDrawText("In this introduction, you will know all the functions of the Los Santos Police Department.", (screenW * 0.1542) - 1, (screenH * 0.2833) + 1, (screenW * 0.8651) - 1, (screenH * 0.5417) + 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, false, false)
+        dxDrawText("In this introduction, you will know all the functions of the Los Santos Police Department.", (screenW * 0.1542) + 1, (screenH * 0.2833) + 1, (screenW * 0.8651) + 1, (screenH * 0.5417) + 1, tocolor(0, 0, 0, 255), 3.00, "pricedown", "center", "top", false, true, false, false, false)
+        dxDrawText("In this introduction, you will know all the functions of the Los Santos Police Department.", screenW * 0.1542, screenH * 0.2833, screenW * 0.8651, screenH * 0.5417, tocolor(163, 139, 140, 255), 3.00, "pricedown", "center", "top", false, true, false, false, false)
+    end
+)

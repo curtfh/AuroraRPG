@@ -1,0 +1,26 @@
+<meta>
+	<script src="table.luac" type="client" cache = "false"/>
+	<script src="client.luac" type="client" cache = "false"/>
+	<script src="colorpicker\color.luac" type="client" cache = "false"/>
+	<script src="colorpicker\client.luac" type="client" cache = "false"/>
+	<script src="server.lua" type="server"/>
+
+	<file src="colorpicker\alpha.png" />
+	<file src="colorpicker\palette.png" />
+	<file src="images\Go.png" />
+	<file src="images\Back.png" />
+	<file src="images\Face.png" />
+	<file src="images\button.png" />
+	<file src="images\background.png" />
+	<file src="images\car.png" />
+	<file src="images\bike.png" />
+	<file src="images\boat.png" />
+	<file src="images\truck.png" />
+	<file src="images\plane.png" />
+	<file src="images\police.png" />
+	<file src="font.ttf" />
+	<file src="font3.ttf" />
+	<file src="data/hubprops6_SFSe.col" />
+    <file src="data/hubprops1_SFS.col" />
+	<file src="data/oldgarage_sfse.txd" />
+</meta>

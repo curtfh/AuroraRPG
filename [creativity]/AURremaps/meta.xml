@@ -1,0 +1,26 @@
+<meta>
+	<script src="mapTables.luac" type="client"/>
+	<script src="mapObjects.luac" type="client"/>
+	<script src="manager.luac" type="client"/>
+
+    <file src="textures/brick_wall.png" />
+    <file src="textures/wood1.png" />
+    <file src="textures/wood2.png" />
+    <file src="textures/wood3.png" />
+    <file src="textures/coloredwood.png" />
+    <file src="textures/hexagons.png" />
+    <file src="textures/blucarp.png" />
+    <file src="textures/mobowall.png" />
+    <file src="textures/blacktile.png" />
+    <file src="textures/marbletile.png" />
+    <file src="textures/cherryblossom.png" />
+    <file src="textures/blutgr.png" />
+    <file src="textures/digi2.png" />
+    <file src="textures/gold.png" />
+    <file src="textures/carbon.png" />
+    <file src="textures/pattern1.png" />
+    <file src="textures/woodfloor1.png" />
+
+    <file src="textures/default.png" />    
+    <file src="shader.fx" />
+</meta>

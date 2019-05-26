@@ -1,0 +1,8 @@
+<meta>
+	<script src="server.lua" />
+	<script src="client.luac" type="client" />
+
+	<export function="is_rsa" type="server" />
+	<export function="get_rsas" type="server" />
+	<export function="get_rsa_l" type="server" />
+</meta>

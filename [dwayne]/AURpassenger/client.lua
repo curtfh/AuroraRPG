@@ -1,0 +1,70 @@
+
+function OnStart()
+    txd = engineLoadTXD("barracks.txd")
+    engineImportTXD(txd, 433)
+    dff = engineLoadDFF("barracks.dff", 433)
+    engineReplaceModel(dff, 433)
+end
+addEventHandler("onClientResourceStart", resourceRoot, OnStart)
+
+function glue()
+	if not getPedOccupiedVehicle( localPlayer ) then
+		--if ( getTeamName( getPlayerTeam( localPlayer ) ) == "Staff" ) then
+			local vehicle = getPedContactElement( localPlayer )
+			if isElement(vehicle) and getElementType(vehicle) == "vehicle" then
+				if getElementModel(vehicle) ~= 433 then
+					return
+				end
+				if ( getTeamName( getPlayerTeam( localPlayer ) ) ~= "Military Forces" ) then
+					return
+				end
+				local px, py, pz = getElementPosition( localPlayer )
+				local vx, vy, vz = getElementPosition(vehicle)
+				local sx = px - vx
+				local sy = py - vy
+				local sz = pz - vz
+
+				local rotpX = 0
+				local rotpY = 0
+				local rotpZ = getPedRotation( localPlayer )
+
+				local rotvX,rotvY,rotvZ = getElementRotation(vehicle)
+
+				local t = math.rad(rotvX)
+				local p = math.rad(rotvY)
+				local f = math.rad(rotvZ)
+
+				local ct = math.cos(t)
+				local st = math.sin(t)
+				local cp = math.cos(p)
+				local sp = math.sin(p)
+				local cf = math.cos(f)
+				local sf = math.sin(f)
+
+				local z = ct*cp*sz + (sf*st*cp + cf*sp)*sx + (-cf*st*cp + sf*sp)*sy
+				local x = -ct*sp*sz + (-sf*st*sp + cf*cp)*sx + (cf*st*sp + sf*cp)*sy
+				local y = st*sz - sf*ct*sx + cf*ct*sy
+
+				local rotX = rotpX - rotvX
+				local rotY = rotpY - rotvY
+				local rotZ = rotpZ - rotvZ
+
+				local slot = getPedWeaponSlot( localPlayer )
+
+				triggerServerEvent("glueMF", localPlayer, slot, vehicle, x, y, z, rotX, rotY, rotZ)
+
+				bindKey("jump","down",unglue)
+				bindKey("space","down",unglue)
+			end
+		--end
+	end
+end
+
+function unglue ()
+	triggerServerEvent("unglueMF", localPlayer )
+	unbindKey("jump","down",unglue)
+	unbindKey("space","down",unglue)
+end
+addCommandHandler("sit",glue)
+bindKey("jump","down",unglue)
+

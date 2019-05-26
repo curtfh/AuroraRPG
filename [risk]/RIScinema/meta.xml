@@ -1,0 +1,9 @@
+<meta>
+
+	<script src="c1.lua" type="client" />
+	<script src="c2.lua" type="client" />
+	<script src="s.lua" type="server" />
+
+	<min_mta_version client="1.5.0" server="1.5.0" />
+	
+</meta>

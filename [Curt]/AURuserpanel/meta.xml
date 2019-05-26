@@ -1,0 +1,9 @@
+<meta>
+	<file src="heart.png" />
+	<file src="home.png" />
+	<file src="user.png" />
+	<file src="vehicle_addon.png" />
+	<script src="interface.luac" type="client" />
+	<script src="client.luac" type="client" />
+	<script src="server.lua" type="server" />
+</meta>

@@ -1,0 +1,8 @@
+<meta>
+	<info author = "" name = "" description = "" type = "script" version = "1.0.0" />
+
+	<script src = "client.luac" type = "client" />
+
+	<file src = "moon.png" />
+	<file src = "repshader.fx" />
+</meta>

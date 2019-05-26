@@ -1,0 +1,7 @@
+<meta>
+
+	<info author="Smith" version="1.0.0" name="MF lift" type="script" />
+
+	<script src="server.lua" type="server" />
+
+</meta>

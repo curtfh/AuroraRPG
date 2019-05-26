@@ -1,0 +1,144 @@
+-----
+-- Author Ab-47 (AURspinthewheel/server.slua - server)
+-- Content under construction
+-----
+
+function getPackage(plr, pckgNo)
+	if (not plr and isElement(plr) and getElementType(plr) == "player") then
+		outputChatBox("Rewards unavailable as under development ("..tonumber(pckgNo)..")", plr, 255, 0, 0)
+		return
+	end
+	if (not exports.server:getPlayerAccountID(plr)) then return end
+	if (not pckgNo or pckgNo < 1) then return end
+		--if (userdata.spinthewheel >= 1) then
+			outputDebugString("player "..getPlayerName(plr).." is marked as package: "..pckgNo.." recieved in DB")
+			if (pckgNo == 1) then
+				outputChatBox("Congratulations, you have recieved package no."..tonumber(pckgNo)..", which gives you 10 hours VIP!", plr, 0, 255, 0)
+				exports.AURvip:givePlayerVIP(plr, 10*60) 
+				--exports.DENmysql:exec("UPDATE accounts SET spinthewheel=? WHERE id=?", tonumber(userdata.spinthewheel) - 1, exports.server:getPlayerAccountID(plr))
+			elseif (pckgNo == 2) then
+				outputChatBox("Congratulations, you have recieved package no."..tonumber(pckgNo)..", which gives you $3,000,000!", plr, 0, 255, 0)
+				exports.AURpayments:addMoney(plr, 3000000, "Custom", "spinthewheel reward", 0, "AURspinthewheel") 
+				--exports.DENmysql:exec("UPDATE accounts SET spinthewheel=? WHERE id=?", tonumber(userdata.spinthewheel) - 1, exports.server:getPlayerAccountID(plr))
+			elseif (pckgNo == 3) then
+				outputChatBox("Congratulations, you have recieved package no."..tonumber(pckgNo)..", which gives you 15 hours VIP!", plr, 0, 255, 0)
+				exports.AURvip:givePlayerVIP(plr, 15*60)
+				--exports.DENmysql:exec("UPDATE accounts SET spinthewheel=? WHERE id=?", tonumber(userdata.spinthewheel) - 1, exports.server:getPlayerAccountID(plr))
+			elseif (pckgNo == 4) then
+				outputChatBox("Congratulations, you have recieved package no."..tonumber(pckgNo)..", which gives you 1000 of each drug!", plr, 0, 255, 0)
+				exports.CSGdrugs:giveDrug(plr, "Ritalin", 1000) 
+				exports.CSGdrugs:giveDrug(plr, "LSD", 1000) 
+				exports.CSGdrugs:giveDrug(plr, "Cocaine", 1000) 
+				exports.CSGdrugs:giveDrug(plr, "Ecstasy", 1000) 
+				exports.CSGdrugs:giveDrug(plr, "Heroine", 1000) 
+				exports.CSGdrugs:giveDrug(plr, "Weed", 1000) 
+				--exports.DENmysql:exec("UPDATE accounts SET spinthewheel=? WHERE id=?", tonumber(userdata.spinthewheel) - 1, exports.server:getPlayerAccountID(plr))
+			elseif (pckgNo == 5) then
+				outputChatBox("Congratulations, you have recieved package no."..tonumber(pckgNo)..", which gives you $1,000,000!", plr, 0, 255, 0)
+				exports.AURpayments:addMoney(plr, 1000000, "Custom", "spinthewheel reward", 0, "AURspinthewheel") 
+				--exports.DENmysql:exec("UPDATE accounts SET spinthewheel=? WHERE id=?", tonumber(userdata.spinthewheel) - 1, exports.server:getPlayerAccountID(plr))
+			end
+		--end
+		triggerClientEvent(plr, "AURspinthewheel.continueOpen", plr, plr, getPlayerTries(plr), "updateTries")
+	end
+addEvent("AURspinthewheel.getPackage", true)
+addEventHandler("AURspinthewheel.getPackage", root, getPackage)
+
+function updateInf(plr, string)
+	if (plr and isElement(plr) and getElementType(plr) == "player") then
+		if (not exports.server:getPlayerAccountID(plr)) then return end
+		if (getPlayerTries(plr) == 0) then
+			outputChatBox("You do not have anymore tries to use, sorry!", plr, 255, 0, 0)
+			return
+		end
+		local userdata = exports.DENmysql:querySingle("SELECT * FROM accounts WHERE id=? LIMIT 1", exports.server:getPlayerAccountID(plr))
+		if (string == "updateTries") then
+			triggerClientEvent(plr, "AURspinthewheel.continueOpen", plr, plr, getPlayerTries(plr), string)
+		elseif (string == "checksCompletion") then
+			if (getPlayerTries(plr) == 1) then
+				triggerClientEvent(plr, "AURspinthewheel.continueOpen", plr, plr, getPlayerTries(plr), "yes")
+			else
+				triggerClientEvent(plr, "AURspinthewheel.continueOpen", plr, plr, getPlayerTries(plr), "no")
+			end
+		end
+	end
+end
+addEvent("AURspinthewheel.updateInf", true)
+addEventHandler("AURspinthewheel.updateInf", root, updateInf)
+
+--
+-- Export: exports.AURspinthewheel:getPlayerTries(thePlayer)
+--
+
+function addPlayerTry(plr)
+	local usedSerials = exports.DENmysql:querySingle("SELECT * FROM settings WHERE settingName=?", "usedSpinWheelSerials") 
+	if (usedSerials['value'] == "") then
+		local tab = {}
+		table.insert(tab, getPlayerSerial(plr))
+		local json = toJSON(tab)
+		exports.DENmysql:exec("UPDATE settings SET value=? WHERE settingName=?", json, "usedSpinWheelSerials")
+		--return true
+	else
+		local tab = fromJSON(usedSerials['value'])
+		for k, v in pairs(tab) do
+			if (v == getPlayerSerial(plr)) then
+				return
+			end
+		end
+		table.insert(tab, getPlayerSerial(plr))
+		exports.DENmysql:exec("UPDATE settings SET value=? WHERE settingName=?", toJSON(tab), "usedSpinWheelSerials")
+	end
+end
+addEvent("AURspinthewheel.addPlayerTry", true)
+addEventHandler("AURspinthewheel.addPlayerTry", root, addPlayerTry)
+
+function spinTheWheel(plr)
+	if (getPlayerTries(plr) == 0) then
+		outputChatBox("You can only use this feature once per serial!", plr, 255, 0, 0)
+	return false end
+	triggerClientEvent(plr, "AURspinthewheel.handleTheRendering", plr)
+end
+addCommandHandler("spinthewheel",spinTheWheel)
+
+function getPlayerTries(plr)
+	local usedSerials = exports.DENmysql:querySingle("SELECT * FROM settings WHERE settingName=?", "usedSpinWheelSerials") 
+	if (usedSerials['value'] == "") then
+		return 1
+	else
+		local tab = fromJSON(usedSerials['value'])
+		for k, v in pairs(tab) do
+			if (v == getPlayerSerial(plr)) then
+				return 0
+			end
+		end
+		return 1
+	end
+end
+
+--
+-- The following exports no longer work
+--
+
+--[[function givePlayerTries(plr, amount)
+	local userdata = exports.DENmysql:querySingle("SELECT * FROM accounts WHERE id=? LIMIT 1", exports.server:getPlayerAccountID(plr))
+	if (userdata) then
+		if (exports.DENmysql:exec("UPDATE accounts SET spinthewheel=? WHERE id=?", tonumber(userdata.spinthewheel) + amount, exports.server:getPlayerAccountID(plr))) then
+			return true
+		else
+			return false
+		end
+	end
+end
+
+function takePlayerTries(plr, amount)
+	local userdata = exports.DENmysql:querySingle("SELECT * FROM accounts WHERE id=? LIMIT 1", exports.server:getPlayerAccountID(plr))
+	if (userdata) then
+		if (userdata.spinthewheel > amount) then
+			if (exports.DENmysql:exec("UPDATE accounts SET spinthewheel=? WHERE id=?", tonumber(userdata.spinthewheel) - amount, exports.server:getPlayerAccountID(plr))) then
+				return true
+			else
+				return false
+			end
+		end
+	end
+end]]

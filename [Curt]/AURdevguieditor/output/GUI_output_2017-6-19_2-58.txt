@@ -1,0 +1,22 @@
+
+GUIEditor = {
+    button = {},
+    window = {},
+    label = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+local screenW, screenH = guiGetScreenSize()
+        GUIEditor.window[1] = guiCreateWindow((screenW - 463) / 2, (screenH - 152) / 2, 463, 152, "User Panel Error [0x000001]", false)
+        guiWindowSetMovable(GUIEditor.window[1], false)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+        guiSetAlpha(GUIEditor.window[1], 0.95)
+        guiSetProperty(GUIEditor.window[1], "CaptionColour", "FFFEFDFE")
+
+        GUIEditor.label[1] = guiCreateLabel(5, 23, 455, 75, "This is an error message.", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[1], "default-bold-small")
+        guiLabelSetColor(GUIEditor.label[1], 241, 0, 0)
+        guiLabelSetHorizontalAlign(GUIEditor.label[1], "center", false)
+        GUIEditor.button[1] = guiCreateButton(145, 108, 173, 34, "Ok", false, GUIEditor.window[1])    
+    end
+)

@@ -1,0 +1,10 @@
+<meta>
+
+	<!--MADE BY SWAGY IN SERVICE OF AURORA RPG SERVER 2019!-->
+	<script src="server.lua" type="server"/>
+	<script src="client.lua" type="client"/>
+
+	<!--EXPORTS!-->
+	<export function="isPlayerEventManager" type="server"/>
+	<export function="isStaffEventManager" type="server"/>
+</meta>

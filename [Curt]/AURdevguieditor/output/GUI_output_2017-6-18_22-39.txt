@@ -1,0 +1,43 @@
+--[[-------------------------------------------------
+Notes:
+
+> This code is using a relative image filepath. This will only work as long as the location it is from always exists, and the resource it is part of is running.
+    To ensure it does not break, it is highly encouraged to move images into your local resource and reference them there.
+--]]-------------------------------------------------
+
+
+GUIEditor = {
+    gridlist = {},
+    staticimage = {},
+    window = {},
+    label = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+local screenW, screenH = guiGetScreenSize()
+        GUIEditor.window[1] = guiCreateWindow((screenW - 834) / 2, (screenH - 506) / 2, 834, 506, "Aurora ~ User Panel", false)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.staticimage[1] = guiCreateStaticImage(300, 27, 211, 46, ":server/Images/disc.png", false, GUIEditor.window[1])
+        GUIEditor.staticimage[2] = guiCreateStaticImage(10, 73, 92, 80, ":AURuserpanel/home.png", false, GUIEditor.window[1])
+        GUIEditor.label[1] = guiCreateLabel(36, 228, 40, 15, "User", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[1], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[1], "center", false)
+        GUIEditor.staticimage[3] = guiCreateStaticImage(10, 167, 92, 80, ":AURuserpanel/user.png", false, GUIEditor.window[1])
+        GUIEditor.label[2] = guiCreateLabel(36, 132, 40, 15, "Home", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[2], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[2], "center", false)
+        GUIEditor.staticimage[4] = guiCreateStaticImage(10, 257, 91, 80, ":AURuserpanel/vehicle_addon.png", false, GUIEditor.window[1])
+        GUIEditor.label[3] = guiCreateLabel(12, 317, 90, 15, "Vehicle Addons", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[3], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[3], "center", false)
+        GUIEditor.staticimage[5] = guiCreateStaticImage(10, 352, 90, 74, ":AURuserpanel/heart.png", false, GUIEditor.window[1])
+        GUIEditor.label[4] = guiCreateLabel(37, 411, 40, 15, "Music", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[4], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[4], "center", false)
+        GUIEditor.gridlist[1] = guiCreateGridList(102, 24, 15, 472, false, GUIEditor.window[1])
+        GUIEditor.label[5] = guiCreateLabel(10, 45, 88, 18, "Menu Section", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[5], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[5], "center", false)    
+    end
+)

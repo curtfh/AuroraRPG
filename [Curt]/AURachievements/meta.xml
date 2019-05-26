@@ -1,0 +1,9 @@
+<meta>
+	<script src="client.luac" type="client" />
+	<script src="server.lua" type="server" />
+	
+	<file src="achievement.png" />
+	<file src="sound.mp3" />
+	
+	<export function="givePlayerAward" type="server" />
+</meta>

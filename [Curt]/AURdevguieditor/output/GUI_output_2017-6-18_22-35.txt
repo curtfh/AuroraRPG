@@ -1,0 +1,33 @@
+--[[-------------------------------------------------
+Notes:
+
+> This code is using a relative image filepath. This will only work as long as the location it is from always exists, and the resource it is part of is running.
+    To ensure it does not break, it is highly encouraged to move images into your local resource and reference them there.
+--]]-------------------------------------------------
+
+
+GUIEditor = {
+    window = {},
+    staticimage = {},
+    label = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+        GUIEditor.window[1] = guiCreateWindow(549, 321, 834, 506, "Aurora ~ User Panel", false)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.staticimage[1] = guiCreateStaticImage(300, 27, 211, 46, ":server/Images/disc.png", false, GUIEditor.window[1])
+        GUIEditor.staticimage[2] = guiCreateStaticImage(10, 73, 92, 80, ":AURuserpanel/home.png", false, GUIEditor.window[1])
+        GUIEditor.label[1] = guiCreateLabel(36, 237, 40, 15, "User", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[1], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[1], "center", false)
+        GUIEditor.staticimage[3] = guiCreateStaticImage(10, 177, 92, 80, ":AURuserpanel/user.png", false, GUIEditor.window[1])
+        GUIEditor.label[2] = guiCreateLabel(35, 128, 40, 15, "Home", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[2], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[2], "center", false)
+        GUIEditor.staticimage[4] = guiCreateStaticImage(10, 277, 91, 80, ":AURuserpanel/vehicle_addon.png", false, GUIEditor.window[1])
+        GUIEditor.label[3] = guiCreateLabel(11, 337, 90, 15, "Vehicle Addons", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[3], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[3], "center", false)    
+    end
+)

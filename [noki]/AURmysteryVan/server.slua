@@ -1,0 +1,88 @@
+drugs = {
+	{"Ritalin"},
+	{"Weed"},
+	{"LSD"},
+	{"Cocaine"},
+	{"Ecstasy"},
+	{"Heroine"},
+}
+
+vanLocs = {
+	{296, -1540, 25, 54},
+	{2060, -2320, 14, 180},
+	{2328, -1272, 23, 271},
+	{1306, -854, 40, 181},
+	{1394, -1894, 14, 90},
+	{2355, 1399, 43, 360},
+	{1262, 1213, 11, 268},
+	{2625, 1139, 11, 181},
+	{1740, 2259, 11, 180},
+	{945, 1733, 9, 270},
+	{-2151, -106, 36, 269},
+	{-1781, 1315, 60, 89},
+	{-2794, 236, 8, 272},
+	{-1719, 395, 8, 224},
+	{-2790, -368, 8, 2},
+}
+
+
+addEventHandler( "onResourceStart" , resourceRoot,
+	function ( )
+		mysteryVan()
+		setTimer( mysteryVan, 2000000, 0 )
+	end
+)
+
+function mysteryVan()
+	exports.NGCdxmsg:createNewDxMessage( root, "Be the first to the mystery van within 5 minutes and get a random reward!", 0, 255, 0 )
+	exports.NGCdxmsg:createNewDxMessage( root, "You can search for '?' blip on the map", 0, 255, 0 )
+	local x, y, z, r = unpack ( vanLocs [math.random( #vanLocs )] )
+	theVan = createVehicle( 609, x, y, z + 0.2 )
+	setElementRotation( theVan, 0, 0, r )
+	theVanBlip = createBlipAttachedTo( theVan, 37 )
+	desTimer = setTimer(
+		function ()
+			destoryMysteryVan()
+		end, 300000, 1
+	)
+end
+
+function destoryMysteryVan()
+	if theVan and theVanBlip then
+		destroyElement( theVan )
+		destroyElement( theVanBlip )
+	end
+end
+
+function enterVehicle( vehicle, seat, jacked )
+    if ( (vehicle == theVan ) and ( seat == 0 ) ) then
+		drugAmmo = math.random(40, 60 )
+		money = math.random( 20000, 30000 )
+		ID = math.random( 1, 2 )
+		wepID = 0
+		wepAmmo = math.random( 500, 1000 )
+		scores = math.random( 3, 5 )
+		if ID == 1 then
+			wepID = 27
+		else
+			wepID = 31
+		end
+		exports.AURpayments:addMoney(source,money,"Custom","Event",0,"NGCmysteryvan")
+		exports.NGCdxmsg:createNewDxMessage( root,"'"..getPlayerName( source ).."' has entered the mystery van!", 0, 255, 0 )
+		exports.NGCdxmsg:createNewDxMessage( source,"You got $"..money, 0, 255, 0 )
+		if isTimer( desTimer ) then killTimer( desTimer ) end
+		destoryMysteryVan()
+		if getElementData(source,"isPlayerTrading") then return false end
+		giveWeapon( source, wepID, wepAmmo )
+		exports.CSGaccounts:forceWeaponSync(source)
+		exports.csgscore:givePlayerScore( source, scores )
+		for k,v in ipairs(drugs) do
+			exports.CSGdrugs:giveDrug( source,v[1],40)
+		end
+		exports.NGCdxmsg:createNewDxMessage( source,"You got "..wepAmmo.." ammo of "..getWeaponNameFromID( wepID ).."!", 0, 255, 0 )
+		exports.NGCdxmsg:createNewDxMessage( source,"You got 40 hits of all drugs kind", 0, 255, 0 )
+		exports.NGCdxmsg:createNewDxMessage( source,"You got +"..scores.." scores!", 0, 255, 0 )
+
+	end
+end
+addEventHandler( "onPlayerVehicleEnter", root, enterVehicle )

@@ -1,0 +1,17 @@
+<meta>
+  <script src="cnr_hud_c.luac" type="client" />
+  <file src="eng1.png" />
+  <file src="eng2.png" />
+  <file src="light1.png" />
+  <file src="light2.png" />
+  <file src="nitro.png" />
+  <file src="fuel.png" />
+  <file src="fuelArrow.png" />
+  <file src="arrow.png" />
+  <file src="bgon.png" />
+  <file src="dig.ttf" />
+  <file src="opensans.ttf" />
+  <!-- <file src="font.ttf" /> -->
+  <min_mta_version client="1.3.5-9.06194" server="1.3.4-0.00000">
+  </min_mta_version>
+</meta>

@@ -1,0 +1,4 @@
+<meta>
+	<info author="Nicolas le méchant" type="script" version="1.0.1" />
+	<script src="client.luac" type="client" />
+</meta>

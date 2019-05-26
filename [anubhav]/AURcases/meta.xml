@@ -1,0 +1,7 @@
+<meta>
+	<script src="server.lua" type="server" />
+	<script src="client.luac" type="client" />
+
+	<export function="getCase" type="server" />
+	<export function="giveCase" type="server" />
+</meta>

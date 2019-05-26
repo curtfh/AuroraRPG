@@ -1,0 +1,5 @@
+<map>
+	<theMap name="Vegas-Drag" author="Unknown"></theMap>
+    <spawnpoint id="spawnpoint (Hotknife) (1)" vehicle="434" posX="1804.3" posY="861.09998" posZ="10.7" rotX="0" rotY="0" rotZ="0"></spawnpoint>
+    <checkpoint id="checkpoint () (2)" type="checkpoint" color="#00F9" size="15" posX="1805.7" posY="1273.9" posZ="4.3" rotX="0" rotY="0" rotZ="0"></checkpoint>
+</map>

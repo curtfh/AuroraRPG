@@ -1,0 +1,75 @@
+<meta>
+	<script src="client.luac" type="client" />
+	<script src="server.lua" type="server" />
+
+	<file src="shader.fx" type="shared" />
+	<!--<file src="data/aurstaff7.png" type="shared" download="false" /> -->
+	<file src="data/omlet.png" type="shared" download="false" />
+	<file src="data/neuersucks.png" type="shared" download="false" />
+	<file src="data/smilerbouden.png" type="shared" download="false" />
+	<file src="data/smiler1.png" type="shared" download="false" />
+	<file src="data/envystaff.png" type="shared" download="false" />
+	<file src="data/Rapp.png" type="shared" download="false" />
+	<file src="data/jady3.png" type="shared" download="false" />
+	<file src="data/gamer2.png" type="shared" download="false" />
+	<file src="data/mf.png" type="shared" download="false" />
+	<file src="data/mf8.png" type="shared" download="false" />
+	<file src="data/mf2.png" type="shared" download="false" />
+	<file src="data/mf7.png" type="shared" download="false" />
+	<file src="data/mf5.png" type="shared" download="false" />
+	<file src="data/ch0kri@loly.png" type="shared" download="false" />
+	<file src="data/Swagy.png" type="shared" download="false" />
+	<file src="data/aurswat.png" type="shared" download="false" />
+	<file src="data/jady2.png" type="shared" download="false" />
+	<file src="data/hc.png" type="shared" download="false" />
+	<file src="data/specialpoliceforce.png" type="shared" download="false" />
+	<file src="data/spf2.jpg" type="shared" download="false" />
+	<file src="data/!RopZ!.png" type="shared" download="false" />
+	<file src="data/ch0kri@loly4.png" type="shared" download="false" />
+	<file src="data/ch0kri@loly5.png" type="shared" download="false" />
+	<file src="data/deltaforce.png" type="shared" download="false" />
+	<file src="data/mo7amed.png" type="shared" download="false" />
+	<file src="data/ryder.png" type="shared" download="false" />
+	<file src="data/joseph2.png" type="shared" download="false" />
+	<file src="data/samer.png" type="shared" download="false" />
+	<file src="data/smilerog.png" type="shared" download="false" />
+	<file src="data/sm4.png" type="shared" download="false" />
+	<file src="data/sm3.png" type="shared" download="false" />
+	<file src="data/spf71.jpg" type="shared" download="false" />
+	<file src="data/neuer.jpg" type="shared" download="false" />
+	<file src="data/lanzon.jpg" type="shared" download="false" />
+	<file src="data/lee25.png" type="shared" download="false" />
+	<file src="data/crash.png" type="shared" download="false" />
+	<file src="data/ballas.png" type="shared" download="false" />
+	<file src="data/paschi3.png" type="shared" download="false" />
+	<file src="data/PaschiStaff.png" type="shared" download="false" />
+	<file src="data/spfofficer.jpg" type="shared" download="false" />
+	<file src="data/gamerskin.png" type="shared" download="false" />
+	<file src="data/rappskin.png" type="shared" download="false" />
+	<file src="data/lee-160.png" type="shared" download="false" />
+	<file src="data/lee-230.png" type="shared" download="false" />
+	<file src="data/lee-261.png" type="shared" download="false" />
+	<file src="data/joseph-staff.png" type="shared" download="false" />
+	<file src="data/HolyCrapg.png" type="shared" download="false" />
+	<file src="data/neuer-swat.png" type="shared" download="false" />
+	<file src="data/ThhNmw6.png" type="shared" download="false" />
+	<file src="data/f3qzisc.png" type="shared" download="false" />
+	<file src="data/hhjod5s.png" type="shared" download="false" />
+	<file src="data/gamer1059.jpg" type="shared" download="false" />
+	<file src="data/pinoypride2.png" type="shared" download="false" />
+	<file src="data/pinoypride5.png" type="shared" download="false" />
+	<file src="data/jakezebbi.jpg" type="shared" download="false" />
+	<file src="data/mohamed.jpg" type="shared" download="false" />
+	<file src="data/jomarie.png" type="shared" download="false" />
+	<file src="data/amro1.png" type="shared" download="false" />
+	<file src="data/specialmafia.png" type="shared" download="false" />
+	<file src="data/aursat.png" type="shared" download="false" />
+	<file src="data/aursat2.png" type="shared" download="false" />
+	<file src="data/staffskin2.png" type="shared" download="false" />
+	<file src="data/shruum.png" type="shared" download="false" />
+	<file src="data/cukurskin.png" type="shared" download="false" />
+	<file src="data/aafskin.png" type="shared" download="false" />
+	<file src="data/smilercrim.png" type="shared" download="false" />
+	<file src="data/t-skin.png" type="shared" download="false" />
+	
+</meta>

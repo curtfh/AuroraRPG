@@ -1,0 +1,24 @@
+<meta>
+	<info name ="06BillBoardEffects" description="06BillBoardEffects" version="1.0.0" type="script" author=""/>
+	<min_mta_version client="1.4" server="1.4"/>
+
+	<!-- client scripts -->
+	<script src="BillBoardsC.luac" type="client" cache="false"/>
+
+
+	<!-- textures -->
+	<file src="res/Textures/ad1.png" type="client" download="false" />
+	<file src="res/Textures/ad2.png" type="client" download="false" />
+	<file src="res/Textures/ad3.png" type="client" download="false" />
+	<file src="res/Textures/ad4.png" type="client" download="false" />
+	<file src="res/Textures/ad6.png" type="client" download="false" />
+	<file src="res/Textures/ad7.png" type="client" download="false" />
+	<file src="res/Textures/ad8.png" type="client" download="false" />
+	<file src="res/Textures/ad9.png" type="client" download="false" />
+	<file src="res/Textures/ad10.png" type="client" download="false" />
+	<file src="res/Textures/ad11.png" type="client" download="false" />
+	<file src="res/Textures/ad12.png" type="client" download="false" />
+
+	<file src="texreplace.fx"></file>
+
+</meta>

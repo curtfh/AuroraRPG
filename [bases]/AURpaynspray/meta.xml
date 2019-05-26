@@ -1,0 +1,7 @@
+<meta>
+	<info author="Derek" version="1.0" name="PayNSpray" decription="Pay 'n' Spray" type="script" />
+
+	<script src="server.lua" type="server" />
+	<script src="client.luac" type="client" />
+</meta>
+

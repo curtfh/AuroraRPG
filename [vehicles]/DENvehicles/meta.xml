@@ -1,0 +1,5 @@
+<meta>
+    <info author="Dennis" version="2.0" type="script" />
+	<script src="server.lua" type="server" />
+	<export function="reloadFreeVehicleMarkers" type="server" />
+</meta>

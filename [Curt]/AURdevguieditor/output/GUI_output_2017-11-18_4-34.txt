@@ -1,0 +1,34 @@
+
+GUIEditor = {
+    tab = {},
+    label = {},
+    tabpanel = {},
+    edit = {},
+    button = {},
+    window = {},
+    scrollbar = {},
+    combobox = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+local screenW, screenH = guiGetScreenSize()
+        GUIEditor.window[1] = guiCreateWindow((screenW - 865) / 2, (screenH - 497) / 2, 865, 497, "AuroraRPG - Settings", false)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.tabpanel[1] = guiCreateTabPanel(9, 24, 846, 439, false, GUIEditor.window[1])
+
+        GUIEditor.tab[1] = guiCreateTab("General", GUIEditor.tabpanel[1])
+
+        GUIEditor.label[1] = guiCreateLabel(8, 22, 798, 37, "General Things:\nThis option allows you...", false, GUIEditor.tab[1])
+        guiSetFont(GUIEditor.label[1], "default-bold-small")
+        GUIEditor.scrollbar[1] = guiCreateScrollBar(816, 12, 20, 400, false, false, GUIEditor.tab[1])
+        GUIEditor.combobox[1] = guiCreateComboBox(23, 64, 192, 101, "", false, GUIEditor.tab[1])
+        GUIEditor.label[2] = guiCreateLabel(10, 101, 798, 37, "General Things 2:\nThis option allows you...", false, GUIEditor.tab[1])
+        guiSetFont(GUIEditor.label[2], "default-bold-small")
+        GUIEditor.edit[1] = guiCreateEdit(25, 143, 190, 27, "", false, GUIEditor.tab[1])
+
+
+        GUIEditor.button[1] = guiCreateButton(744, 467, 101, 20, "Appy", false, GUIEditor.window[1])
+        GUIEditor.button[2] = guiCreateButton(9, 467, 101, 20, "Close", false, GUIEditor.window[1])    
+    end
+)

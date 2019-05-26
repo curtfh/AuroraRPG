@@ -1,0 +1,20 @@
+
+GUIEditor = {
+    tab = {},
+    window = {},
+    tabpanel = {},
+    gridlist = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+        GUIEditor.window[1] = guiCreateWindow(0.30, 0.27, 0.40, 0.47, "AuroraRPG - Report", true)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.tabpanel[1] = guiCreateTabPanel(0.02, 0.06, 0.96, 0.91, true, GUIEditor.window[1])
+
+        GUIEditor.tab[1] = guiCreateTab("Screenshot Report", GUIEditor.tabpanel[1])
+
+        GUIEditor.gridlist[1] = guiCreateGridList(0.03, 0.04, 0.28, 0.93, true, GUIEditor.tab[1])
+        guiGridListAddColumn(GUIEditor.gridlist[1], "Pictures", 0.9)    
+    end
+)

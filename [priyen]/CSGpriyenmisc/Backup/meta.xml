@@ -1,0 +1,20 @@
+<meta>
+    <info type="script" version="1.0.0" name="priyen misc" description="exports" />
+    <script src="exports_c.lua" type="client" />
+    <script src="lvradiotowers.lua" type="server" />
+    <script src="exports_s.lua" type="server" />
+    <script src="stream_c.lua" type="client" />
+    <script src="stream_s.lua" type="server" />
+    <script src="ppTrans_s.lua" type="server" />
+    <script src="bmxMap.lua" type="client" />
+    <script src="lvnorthturffix.lua" type="client" />
+
+    <export function="dxDrawColorText" type="client" />
+    <export function="isWithinCityBoundary" type="client" />
+    <export function="getTimeStampYYYYMMDD" type="server" />
+    <export function="getTimeStampYYYYMMDD" type="client" />
+    <export function="playCustomSound" type="client" />
+    <!-- <file src="complete.mp3"/>
+	<file src="fail.mp3"/> -->
+    <min_mta_version client="1.3.0-9.03783"></min_mta_version>
+</meta>

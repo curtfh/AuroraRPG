@@ -1,0 +1,607 @@
+local max_member = 5
+local max_money_bonus = 15000
+local max_bonus_percentage = 20
+local unitBlips = {}
+local connection = dbConnect("sqlite", "units.db")
+dbExec(connection, "CREATE TABLE IF NOT EXISTS civilian_units(unit TEXT, memberCount INT, founder TEXT)")
+dbExec(connection, "CREATE TABLE IF NOT EXISTS civilian_units_members(unit TEXT, member TEXT)")
+dbExec(connection, "CREATE TABLE IF NOT EXISTS civilian_units_invites(unit TEXT, player TEXT)")
+
+function getAccountPlayer(acc)
+	for i, v in ipairs(getElementsByType("player")) do
+		if (exports.server:getPlayerAccountName(v) == acc) then
+			return v
+		end
+	end
+end
+
+function createUnit(unitName, founder)
+	if (isUnit(unitName)) then
+		return false 
+	end
+
+	if (not isElement(founder)) then
+		return false 
+	end
+
+	if (isMemberInUnit(exports.server:getPlayerAccountName(founder))) then
+		return false 
+	end
+	dbExec(connection, "INSERT INTO civilian_units(unit, memberCount, founder) VALUES(?,?,?)", unitName, 1, exports.server:getPlayerAccountName(founder))
+	dbExec(connection, "INSERT INTO civilian_units_members(unit, member) VALUES(?,?)", unitName, exports.server:getPlayerAccountName(founder))
+	dbExec(connection, "DELETE FROM civilian_units_invites WHERE player=?", exports.server:getPlayerAccountName(founder))
+end
+
+function isUnit(unitName)
+	local q = dbPoll(dbQuery(connection, "SELECT * FROM civilian_units WHERE unit=?", unitName), -1)
+
+	if (#q == 0) then
+		return false
+	end
+
+	return true
+end
+
+function isMemberInUnit(member)
+	local q = dbPoll(dbQuery(connection, "SELECT * FROM civilian_units_members WHERE member=?", member), -1)
+
+	return (#q > 0 and true or false)
+end
+
+function getUnitMembers(unitName)
+	if (not isUnit(unitName)) then
+		return {}
+	end
+	return dbPoll(dbQuery(connection, "SELECT * FROM civilian_units_members WHERE unit=?", unitName), -1)
+end
+
+function getUnitCreationDate(unitName)
+	if (not isUnit(unitName)) then
+		return {}
+	end
+	return dbPoll(dbQuery(connection, "SELECT * FROM civilian_units WHERE unit=?", unitName), -1)[1]
+end
+
+function getUnitMemberCount(unitName)
+	if (not isUnit(unitName)) then
+		return {}
+	end
+	return dbPoll(dbQuery(connection, "SELECT * FROM civilian_units WHERE unit=?", unitName), -1)[1].memberCount
+end
+
+function getUnitFounder(unitName)
+	if (not isUnit(unitName)) then
+		return {}
+	end
+	return dbPoll(dbQuery(connection, "SELECT * FROM civilian_units WHERE unit=?", unitName), -1)[1].founder
+end
+
+function setUnitFounder(unitName, member)
+	if (not isUnit(unitName)) then
+		return {}
+	end
+	return dbExec(connection, "UPDATE civilian_units SET founder=? WHERE unit=?", member, unitName)
+end
+
+function updateMemberCount(unit)
+	if (not isUnit(unit)) then
+		return false, 1
+	end
+	dbExec(connection, "UPDATE civilian_units SET memberCount=? WHERE unit=?", #getUnitMembers(unit), unit)
+end
+
+function deleteUnit(unitName)
+	if (not isUnit(unitName)) then
+		return false, 1
+	end
+	dbExec(connection, "DELETE FROM civilian_units WHERE unit=?", unitName)
+	dbExec(connection, "DELETE FROM civilian_units_members WHERE unit=?", unitName)
+	dbExec(connection, "DELETE FROM civilian_units_invites WHERE unit=?", unitName)
+end
+
+function addMember2(unit, member)
+	if (isMemberInUnit(member)) then
+		return false 
+	end
+	dbExec(connection, "INSERT INTO civilian_units_members(unit, member) VALUES(?,?)", unit, member)
+	dbExec(connection, "DELETE FROM civilian_units_invites WHERE player=?", member)
+	updateMemberCount(unit)
+end
+
+function addMember(unit, member)
+	if (not isElement(member)) then
+		return false 
+	end
+	if (not isUnit(unit)) then
+		return false, 1
+	end
+	if (isMemberInUnit(exports.server:getPlayerAccountName(member))) then
+		return false 
+	end
+	dbExec(connection, "INSERT INTO civilian_units_members(unit, member) VALUES(?,?)", unit, exports.server:getPlayerAccountName(member))
+	dbExec(connection, "DELETE FROM civilian_units_invites WHERE player=?", exports.server:getPlayerAccountName(member))
+	updateMemberCount(unit)
+end
+
+function removeMember(unit, member)
+	if (not isElement(member)) then
+		return false 
+	end
+	if (not isUnit(unit)) then
+		return false, 1
+	end
+	if (not isMemberInUnit(exports.server:getPlayerAccountName(member))) then
+		return false 
+	end
+	dbExec(connection, "DELETE FROM civilian_units_members WHERE member=? AND unit=?", exports.server:getPlayerAccountName(member), unit)
+	updateMemberCount(unit)
+end
+
+function removeMember2(unit, member)
+	if (not isMemberInUnit(member)) then
+		return false 
+	end
+	if (not isUnit(unit)) then
+		return false, 1
+	end
+	dbExec(connection, "DELETE FROM civilian_units_members WHERE member=? AND unit=?", member, unit)
+	updateMemberCount(unit)
+end
+
+function getPlayerUnit(plr)
+	if (not isElement(plr)) then
+		return false 
+	end
+	local p = dbPoll(dbQuery(connection, "SELECT * FROM civilian_units_members WHERE member=?", exports.server:getPlayerAccountName(plr)) ,-1)
+
+	if (#p > 0) then
+		return p[1].unit
+	end
+
+	return ""
+end
+
+function getPlayerUnit2(plr)
+	local p = dbPoll(dbQuery(connection, "SELECT * FROM civilian_units_members WHERE member=?", plr),-1)
+
+	if (#p > 0) then
+		return p[1].unit
+	end
+
+	return ""
+end
+
+function updatePlayerUnit(plr)
+	if (not isElement(plr)) then
+		return false 
+	end
+	setElementData(plr, "Unit Name", getPlayerUnit(plr))
+end
+
+function onPlrLogin()
+	local unit = getPlayerUnit(source)
+	if (unitBlips[unit]) then
+		setElementVisibleTo(unitBlips[unit], source, true)
+	end
+	setElementData(source, "Unit Name", unit)
+end
+addEvent("onServerPlayerLogin", true)
+addEventHandler("onServerPlayerLogin", root, onPlrLogin)
+addEventHandler("onPlayerLogin", root, onPlrLogin)
+
+function getUnitMembersGUI(unit)
+	local members = getUnitMembers(unit)
+
+	for i, v in ipairs(members) do
+		if (getAccountPlayer(v['member'])) then
+			members[i]['member2'] = "#00ff00"..getPlayerName(getAccountPlayer(v['member']))
+		else
+			members[i]['member2'] = "#ff0000"..v['member']
+		end
+	end
+
+	return members
+end
+
+function getUnitMembersMGUI(unit)
+	local members = getUnitMembers(unit)
+	local founder = getUnitFounder(unit)
+	local newTable = {}
+
+	for i, v in ipairs(members) do
+		if (v['member'] ~= founder) then
+			if (getAccountPlayer(v['member'])) then
+				members[i]['member2'] = getPlayerName(getAccountPlayer(v['member']))
+				members[i]['rgb'] = "0,255,0"
+			else
+				members[i]['member2'] = v['member']
+				members[i]['rgb'] = "255,0,0"
+			end
+			newTable[#newTable+1] = members[i]
+		end
+	end
+
+	return newTable
+end
+
+function outputUnit(unit, msg)
+	for i, v in ipairs(getElementsByType("player")) do
+		if (getElementData(v, "Unit Name") == unit) then
+			outputChatBox(msg, v, 255, 255, 0, true)
+		end
+	end
+end
+
+function addInvite(unit, member)
+	if (not isUnit(unit)) then
+		return false 
+	end
+
+	if (isMemberInUnit(exports.server:getPlayerAccountName(member))) then
+		return nil
+	end
+
+	dbExec(connection, "INSERT INTO civilian_units_invites(unit, player) VALUES(?,?)", unit, exports.server:getPlayerAccountName(member))
+end
+
+function addInvite2(unit, member)
+	if (not isUnit(unit)) then
+		return false 
+	end
+
+	if (isMemberInUnit(member)) then
+		return nil
+	end
+
+	dbExec("INSERT INTO civilian_units_invites(unit, player) VALUES(?,?)", unit, member)
+end
+
+function getInvites(member)
+	return dbPoll(dbQuery(connection, "SELECT * FROM civilian_units_invites WHERE player=?", exports.server:getPlayerAccountName(member)), -1)
+end
+
+function getInvites2(member)
+	return dbPoll(dbQuery(connection, "SELECT * FROM civilian_units_invites WHERE player=?", member), -1)
+end
+
+function onResStart()
+	local plrs = getElementsByType("player")
+
+	for i=1, #plrs do 
+		updatePlayerUnit(plrs[i])
+	end
+end
+addEventHandler("onResourceStart", resourceRoot, onResStart)
+
+function calculateBonus(plr, cOcc)
+	local unit = getPlayerUnit(plr)
+
+	if (unit == "") then
+		return 0
+	end
+
+	local canGetBonus = true 
+	local bonus = 0
+	local occupation = exports.server:getPlayerOccupation(plr)
+
+	for i, v in ipairs(getElementsByType("player")) do
+		if (getPlayerUnit(v) == unit and getPlayerIdleTime(v) < 30000 and getTeamName(getPlayerTeam(v)) == "Civilian Workers") then
+			if ((occupation == exports.server:getPlayerOccupation(v)) or (cOcc and exports.server:getPlayerOccupation(v):find(cOcc))) then
+ 				bonus = bonus + 10
+ 			end
+ 		end
+	end
+
+	if (not canGetBonus) then
+		return 0
+	end
+
+	if (bonus == 10) then
+		return 0 
+	end
+
+	return bonus
+end
+
+function openUnit(plr)
+	if (exports.server:isPlayerLoggedIn(plr)) then 
+		local unit = getPlayerUnit(plr)
+		triggerLatentClientEvent(plr, "AURunits.loadUnitPanel", 50000, false, resourceRoot, unit, getUnitMembersGUI(unit), getUnitFounder(unit), exports.server:getPlayerAccountName(plr), getInvites(plr), calculateBonus(plr))
+	end
+end
+addCommandHandler("unit", openUnit)
+addCommandHandler("units", openUnit)
+
+function triggerCreateUnit(txt)
+	if (isUnit(txt)) then
+		outputChatBox("A unit with this name already exists :(", client, 255, 255, 0)
+		local unit = getElementData(client, "Unit Name")		
+		triggerLatentClientEvent(client, "AURunits.loadUnitPanel", 50000, false, resourceRoot, unit, getUnitMembersGUI(unit), getUnitFounder(unit), exports.server:getPlayerAccountName(client), getInvites(client), calculateBonus(client))
+		return false
+	end
+
+	if (getPlayerUnit(client) ~= "") then
+		outputChatBox("You are already in a unit!", client, 255, 255, 0)
+		updatePlayerUnit(client)
+		local unit = getElementData(client, "Unit Name")		
+		triggerLatentClientEvent(client, "AURunits.loadUnitPanel", 50000, false, resourceRoot, unit, getUnitMembersGUI(unit), getUnitFounder(unit), exports.server:getPlayerAccountName(client), getInvites(client), calculateBonus(client))
+		return false
+	end
+
+	if (#txt < 3) then
+		outputChatBox("Unit name must be more than 3 or 3 characters!", client, 255, 255, 0)
+		local unit = getElementData(client, "Unit Name")		
+		triggerLatentClientEvent(client, "AURunits.loadUnitPanel", 50000, false, resourceRoot, unit, getUnitMembersGUI(unit), getUnitFounder(unit), exports.server:getPlayerAccountName(client), getInvites(client), calculateBonus(client))
+		return false
+	end
+	createUnit(txt, client)
+	updatePlayerUnit(client)
+
+	outputChatBox("You have sucessfully created a unit named "..txt, client, 255, 255, 0)
+	exports.CSGlogging:createLogRow(client, "unit", getPlayerName(client).." created a unit named: "..txt, txt)
+end
+addEvent("AURunits.createUnit", true)
+addEventHandler("AURunits.createUnit", resourceRoot, triggerCreateUnit)
+
+function triggerDeleteUnit()
+	local unit = getPlayerUnit(client)
+	if (unit == "") then
+		outputChatBox("You are not in a unit", client, 255, 255, 0)
+		updatePlayerUnit(client)	
+		triggerLatentClientEvent(client, "AURunits.loadUnitPanel", 50000, false, resourceRoot, unit, getUnitMembersGUI(unit), getUnitFounder(unit), exports.server:getPlayerAccountName(client), getInvites(client), calculateBonus(client))
+		return false
+	end
+
+	if (getUnitFounder(unit) ~= exports.server:getPlayerAccountName(client)) then
+		removeMember(unit, client)
+		updatePlayerUnit(client)
+		outputUnit(unit, getPlayerName(client).." has left the unit")
+		outputChatBox("You left the unit", client, 255, 255, 0)
+
+		return true		
+	end
+
+	outputUnit(unit, "Your unit ("..unit..") has been deleted by "..getPlayerName(client))
+	deleteUnit(unit, client)
+	exports.CSGlogging:createLogRow(client, "unit", getPlayerName(client).." deleted a unit named: "..unit, unit)
+	outputChatBox("You have sucessfully deleted a unit named "..unit, client, 255, 255, 0)
+end
+addEvent("AURunits.deleteUnit", true)
+addEventHandler("AURunits.deleteUnit", resourceRoot, triggerDeleteUnit)
+
+function openManagement()
+	local unit = getPlayerUnit(client)
+
+	if (getUnitFounder(unit) ~= exports.server:getPlayerAccountName(client)) then
+		return false
+	end
+
+	local inviteMembers = {}
+
+	for i, v in ipairs(getElementsByType("player")) do
+		if (exports.server:isPlayerLoggedIn(v)) then 
+			if (getPlayerUnit(v) == "") then
+				table.insert(inviteMembers, v)
+			end
+		end
+	end
+
+	local k = getUnitMembersMGUI(unit)
+
+	triggerClientEvent(client, "AURunits.toggleManagement", resourceRoot, unit, k, inviteMembers)
+end
+addEvent("AURunits.manageMembers", true)
+addEventHandler("AURunits.manageMembers", resourceRoot, openManagement)
+
+function kickMember(member)
+	local unit = getPlayerUnit(client)
+
+	if (getUnitFounder(unit) ~= exports.server:getPlayerAccountName(client)) then
+		return outputChatBox("You are not the unit founder!", client, 255, 255, 0) 
+	end
+
+	if (getPlayerFromName(member)) then
+		local member = getPlayerFromName(member)
+
+		if (not isMemberInUnit(exports.server:getPlayerAccountName(member))) then
+			return outputChatBox("The member is not in a unit", client, 255, 255, 0) 
+		end
+
+		removeMember(unit, member)
+
+		outputUnit(unit, getPlayerName(member).." has been kicked from the unit by "..getPlayerName(member))
+		outputChatBox(getPlayerName(client).." kicked you from the unit", member, 255, 255, 0)
+		updatePlayerUnit(member)
+	else
+		if (not isMemberInUnit(member)) then
+			return outputChatBox("The member is not in a unit", client, 255, 255, 0) 
+		end
+
+		removeMember2(unit, member)
+
+		outputUnit(unit, member.." has been kicked from the unit by "..getPlayerName(client))
+	end
+
+	exports.CSGlogging:createLogRow(client, "unit", getPlayerName(client).." kicked a member: "..member, unit)
+end
+addEvent("AURunits.kickMember", true)
+addEventHandler("AURunits.kickMember", resourceRoot, kickMember)
+
+function setFounder(member)
+	local unit = getPlayerUnit(client)
+	
+	if (getUnitFounder(unit) ~= exports.server:getPlayerAccountName(client)) then
+		return false
+	end
+	
+	if (getPlayerFromName(member)) then
+		local member = getPlayerFromName(member)
+
+		if (not isMemberInUnit(exports.server:getPlayerAccountName(member))) then
+			return false 
+		end
+
+		dbExec(connection, "UPDATE civilian_units SET founder=? WHERE unit=?", exports.server:getPlayerAccountName(member), unit)
+		outputUnit(unit, getPlayerName(member).." has been given the foundership by "..getPlayerName(client))
+
+		outputChatBox("You have been given the foundership by "..getPlayerName(client), member, 255, 255, 0)
+	else
+		if (not isMemberInUnit(member)) then
+			return false 
+		end
+
+		dbExec(connection, "UPDATE civilian_units SET founder=? WHERE unit=?", member, unit)
+		outputUnit(unit, member.." has been given the foundership by "..getPlayerName(client))
+	end
+
+	exports.CSGlogging:createLogRow(client, "unit", getPlayerName(client).." gave the foundership to: "..member, unit)
+end
+addEvent("AURunits.setFounder", true)
+addEventHandler("AURunits.setFounder", resourceRoot, setFounder)
+
+function acceptInvite(unit)	
+	if (isMemberInUnit(exports.server:getPlayerAccountName(client))) then
+		return false 
+	end
+
+	local invites = getInvites(client)
+	local found = false
+
+	for i, v in ipairs(invites) do
+		if (v['unit'] == unit) then
+			found = true 
+		end
+	end
+
+	if (not found) then
+		return false
+	end
+
+	if (not isUnit(unit)) then
+		return outputChatBox("This unit does not exist anymore - sorry!", client, 255, 255, 0)
+	end
+
+	local members = getUnitMembers(unit)
+
+	if (#members >= 5) then
+		return outputChatBox("This unit is full - you cannot join it!", client, 255, 255, 0)
+	end
+
+	triggerLatentClientEvent(client, "AURunits.loadUnitPanel", 50000, false, resourceRoot, unit, getUnitMembersGUI(unit), getUnitFounder(unit), exports.server:getPlayerAccountName(client), getInvites(client), calculateBonus(client))
+	addMember(unit, client)
+	updatePlayerUnit(client)
+	outputUnit(unit, getPlayerName(client).." has joined the unit!")
+	exports.CSGlogging:createLogRow(client, "unit", getPlayerName(client).." joined the unit: "..unit, unit)
+end
+addEvent("AURunits.acceptInvite", true)
+addEventHandler("AURunits.acceptInvite", resourceRoot, acceptInvite)
+
+function invitePlayer(plr)
+	local unit = getPlayerUnit(client)
+
+	if (getUnitFounder(unit) ~= exports.server:getPlayerAccountName(client)) then
+		return false
+	end
+
+	if (not getPlayerFromName(plr)) then
+		return outputChatBox("This player went offline!", client, 255, 255, 0)
+	end
+
+	local plr = getPlayerFromName(plr)
+
+	if (isMemberInUnit(exports.server:getPlayerAccountName(plr))) then
+		return outputChatBox("This player is already in a unit!", client, 255, 255, 0) 
+	end
+
+	local found = false
+	local invites = getInvites(plr)
+
+	for i, v in ipairs(invites) do
+		if (v['unit'] == unit) then
+			found = true 
+		end
+	end
+
+	if (found) then
+		return outputChatBox("This player is already invited to the unit!", client, 255, 255, 0)
+	end
+
+	addInvite(unit, plr)
+	outputUnit(unit, getPlayerName(client).." has invited "..getPlayerName(plr))
+	exports.CSGlogging:createLogRow(client, "unit", getPlayerName(client).." invited ".. getPlayerName(plr) .." the unit: "..unit, unit)
+	outputChatBox("You were invited to the unit '"..unit.."'!" , plr, 255, 255, 0)
+end
+addEvent("AURunits.invitePlayer", true)
+addEventHandler("AURunits.invitePlayer", resourceRoot, invitePlayer)
+
+local antiSpam = {}
+
+function unitChat(plr, _, ...)
+	if (not exports.server:isPlayerLoggedIn(plr)) then 
+		return false 
+	end
+
+	if (not isMemberInUnit(exports.server:getPlayerAccountName(plr))) then
+		return outputChatBox("You are not in a unit!", plr, 255, 255, 0)
+	end
+
+	if (antiSpam[plr]) then
+		if ((getTickCount() - antiSpam[plr]) < 2500) then
+			return outputChatBox("Please wait for at least "..tostring( (getTickCount() - antiSpam[plr]) / 1000 ).." seconds more to send a message!", plr, 255, 255, 0)
+		end 
+	else
+		antiSpam[plr] = getTickCount()
+	end
+
+	local msg = table.concat({...}, " ")
+
+	if (msg:gsub("%s+", "") == "") then
+		outputChatBox("Please enter a message!", plr, 255, 255, 0)
+		return false 
+	end
+
+	antiSpam[plr] = getTickCount()
+
+	outputUnit(getPlayerUnit(plr), "("..getPlayerUnit(plr)..") "..getPlayerName(plr)..": #ffffff"..msg:gsub("#%x%x%x%x%x%x", ""))
+	exports.CSGlogging:createLogRow(client, "unit", "("..getPlayerUnit(plr)..") "..getPlayerName(plr)..": "..msg:gsub("#%x%x%x%x%x%x", ""), getPlayerUnit(plr), getPlayerUnit(plr))
+end
+addCommandHandler("unitchat", unitChat)
+addCommandHandler("uc", unitChat)
+addCommandHandler("unitc", unitChat)
+addCommandHandler("uchat", unitChat)
+
+function giveUnitMoney(plr, money, occ, customOccupation)
+	local bonus = calculateBonus(plr, customOccupation)
+
+	if (bonus == 0) then
+		return nil
+	end
+
+	return exports.AURpayments:addMoney(plr, ((bonus / 100) * money), "Custom", "Misc", 0, "AURunits "..occ)
+end
+
+function createUnitBlip(plr)
+	if (getPlayerUnit(plr) == "") then
+		return false
+	end
+	triggerClientEvent(plr, "AURunits.selectMapBlip", resourceRoot)
+end
+addCommandHandler("ublip", createUnitBlip)
+
+function chosenBlip(x, y)
+	local unit = getPlayerUnit(client)
+	if (unit == "") then
+		return false
+	end
+	if (unitBlips[unit]) then
+		destroyElement(unitBlips[unit])
+	end
+	unitBlips[unit] = createBlip(x, y, 0, 49, 5, 255, 0, 0, 255, 0, 50000, client)
+	for i, v in ipairs(getElementsByType("player")) do
+		if (getPlayerUnit(v) == unit) then
+			setElementVisibleTo(unitBlips[unit], v, true)
+		end
+	end
+end
+addEvent("AURunits.markMapLocation", true)
+addEventHandler("AURunits.markMapLocation", resourceRoot, chosenBlip)

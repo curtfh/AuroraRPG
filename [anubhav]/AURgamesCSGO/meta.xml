@@ -1,0 +1,92 @@
+<meta>
+
+	<script src="csgo.lua" type="server" />
+	<script src="maps.lua" type="server" />
+	<script src="client.luac" type="client" protected="true"/>
+	<file src="images/go.png" type="client" />
+	<file src="images/1.png" type="client" />
+	<file src="images/2.png" type="client" />
+	<file src="images/3.png" type="client" />
+
+	<file src="skins/c1.dff" type="client" download="false" />
+    <file src="skins/c1.txd" type="client"  download="false" />
+	<file src="skins/c2.dff" type="client" download="false" />
+    <file src="skins/c2.txd" type="client"  download="false" />
+	<file src="skins/t1.dff" type="client" download="false" />
+    <file src="skins/t1.txd" type="client"  download="false" />
+	<file src="skins/t2.dff" type="client" download="false" />
+    <file src="skins/t2.txd" type="client"  download="false" />
+
+	<file src="maps/dust2.dff" type="client"  />
+    <file src="maps/dust2.txd" type="client"   />
+    <file src="maps/dust2.col" type="client"   />
+
+	<file src="maps/assault.dff" type="client"  />
+    <file src="maps/assault.txd" type="client"   />
+    <file src="maps/assault.col" type="client"   />
+
+	<file src="maps/train.dff" type="client"  />
+    <file src="maps/train.txd" type="client"   />
+    <file src="maps/train.col" type="client"   />
+
+	<file src="maps/cbble.dff" type="client"  />
+    <file src="maps/cbble.txd" type="client"   />
+    <file src="maps/cbble.col" type="client"   />
+
+	<file src="maps/aztec.dff" type="client"  />
+    <file src="maps/aztec.txd" type="client"   />
+    <file src="maps/aztec.col" type="client"   />
+	<file src="misc/cterrorists_win.mp3"/>
+	<file src="misc/terrorists_win.mp3"/>
+	<file src="misc/letsgo.mp3"/>
+	<file src="FONT.ttf" />
+	<file src="Time.png" />
+	<file src="armor.png" />
+	<file src="Heart.png" />
+	<file src="icons/0.png" />
+	<file src="icons/1.png" />
+	<file src="icons/2.png" />
+	<file src="icons/3.png" />
+	<file src="icons/4.png" />
+	<file src="icons/5.png" />
+	<file src="icons/6.png" />
+	<file src="icons/7.png" />
+	<file src="icons/8.png" />
+	<file src="icons/9.png" />
+	<file src="icons/10.png" />
+	<file src="icons/11.png" />
+	<file src="icons/12.png" />
+	<file src="icons/14.png" />
+	<file src="icons/15.png" />
+	<file src="icons/16.png" />
+	<file src="icons/17.png" />
+	<file src="icons/18.png" />
+	<file src="icons/22.png" />
+	<file src="icons/23.png" />
+	<file src="icons/24.png" />
+	<file src="icons/25.png" />
+	<file src="icons/26.png" />
+	<file src="icons/27.png" />
+	<file src="icons/28.png" />
+	<file src="icons/29.png" />
+	<file src="icons/30.png" />
+	<file src="icons/31.png" />
+	<file src="icons/32.png" />
+	<file src="icons/33.png" />
+	<file src="icons/34.png" />
+	<file src="icons/35.png" />
+	<file src="icons/36.png" />
+	<file src="icons/37.png" />
+	<file src="icons/38.png" />
+	<file src="icons/39.png" />
+	<file src="icons/40.png" />
+	<file src="icons/41.png" />
+	<file src="icons/42.png" />
+	<file src="icons/43.png" />
+	<file src="icons/44.png" />
+	<file src="icons/45.png" />
+	<file src="icons/46.png" />
+
+	<export function="isPlayerInCSGO" type="server" />
+	<min_mta_version server="1.3.9-0.00000" client="1.3.9-0.00000"/>
+</meta>

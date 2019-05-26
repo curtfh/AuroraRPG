@@ -1,0 +1,10 @@
+<meta>
+    <script src="server.lua" type="server" />
+    <script src="client.luac" type="client" cache="false" />
+
+
+	<file src="fuel.png" type="client" />
+	<file src="fuel2.png" type="client" />
+	<file src="blip.png" type="client" />
+	<file src="logo.png" type="client" />
+</meta>

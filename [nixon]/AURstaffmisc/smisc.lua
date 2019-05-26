@@ -1,0 +1,96 @@
+stuff = {
+    gridlist = {},
+    staticimage = {},
+    window = {},
+    label = {}
+}		
+        window = guiCreateWindow(55, 34, 925, 693, "AuroraRPG ~ Staff Knowledge", false)
+
+        image = guiCreateStaticImage(45, 25, 803, 123, ":AURstaffmisc/aurora.png", false, window)
+        label = guiCreateLabel(201, 158, 803, 95, "Welcome to staff team knowledge panel, If you are a new staff in staff team then welcome.\nIn this panel, You will see the most useful commands you can use while managing your duty. Good Luck!", false, window)
+		guiSetFont(label, "default-bold-small")
+        guiLabelSetColor(label, 254, 254, 254)
+        guiLabelSetHorizontalAlign(label, "left", true)
+        gridlist = guiCreateGridList(9, 204, 906, 479, false, window)
+        guiGridListAddColumn(gridlist, "Commands", 0.5)
+        guiGridListAddColumn(gridlist, "Usage", 0.5)
+        for i = 1, 31 do
+            guiGridListAddRow(gridlist)
+        end
+        guiGridListSetItemText(gridlist, 0, 1, "/staff", false, false)
+        guiGridListSetItemText(gridlist, 0, 2, "Moves you to staff duty", false, false)
+        guiGridListSetItemText(gridlist, 1, 1, "/invis", false, false)
+        guiGridListSetItemText(gridlist, 1, 2, "Makes/Removes you from invisible mode", false, false)
+        guiGridListSetItemText(gridlist, 2, 1, "/vehinvis", false, false)
+        guiGridListSetItemText(gridlist, 2, 2, "Makes/Removes your vehicle from invisible mode", false, false)
+        guiGridListSetItemText(gridlist, 3, 1, "/glue", false, false)
+        guiGridListSetItemText(gridlist, 3, 2, "Makes you glue at vehicle", false, false)
+        guiGridListSetItemText(gridlist, 4, 1, "/unglue", false, false)
+        guiGridListSetItemText(gridlist, 4, 2, "Makes you free from vehicle", false, false)
+        guiGridListSetItemText(gridlist, 5, 1, "/dmgproof", false, false)
+        guiGridListSetItemText(gridlist, 5, 2, "Makes your vehicle unable to get damaged", false, false)
+        guiGridListSetItemText(gridlist, 6, 1, "/stream", false, false)
+        guiGridListSetItemText(gridlist, 6, 2, "To stream music in your area", false, false)
+        guiGridListSetItemText(gridlist, 7, 1, "/aur", false, false)
+        guiGridListSetItemText(gridlist, 7, 2, "To talk privately with staff team", false, false)
+        guiGridListSetItemText(gridlist, 8, 1, "/sup", false, false)
+        guiGridListSetItemText(gridlist, 8, 2, "To talk privately with supporters team", false, false)
+        guiGridListSetItemText(gridlist, 9, 1, "/setjob", false, false)
+        guiGridListSetItemText(gridlist, 9, 2, "To set any player job", false, false)
+        guiGridListSetItemText(gridlist, 10, 1, "/note", false, false)
+        guiGridListSetItemText(gridlist, 10, 2, "To write staff note", false, false)
+        guiGridListSetItemText(gridlist, 11, 1, "/wp", false, false)
+        guiGridListSetItemText(gridlist, 11, 2, "To transport easily to most popular places", false, false)
+        guiGridListSetItemText(gridlist, 12, 1, "/viewwep", false, false)
+        guiGridListSetItemText(gridlist, 12, 2, "To see all player weapons", false, false)
+        guiGridListSetItemText(gridlist, 13, 1, "/viewhouseweps", false, false)
+        guiGridListSetItemText(gridlist, 13, 2, "To check all player house's weapons", false, false)
+        guiGridListSetItemText(gridlist, 14, 1, "/staffhelp", false, false)
+        guiGridListSetItemText(gridlist, 14, 2, "Makes yourself available for help", false, false)
+        guiGridListSetItemText(gridlist, 15, 1, "/sbs", false, false)
+        guiGridListSetItemText(gridlist, 15, 2, "Super brakes for vehicles", false, false)
+        guiGridListSetItemText(gridlist, 16, 1, "/opendoor34", false, false)
+        guiGridListSetItemText(gridlist, 16, 2, "To open/close dice event gates", false, false)
+        guiGridListSetItemText(gridlist, 18, 1, "/vehfly", false, false)
+        guiGridListSetItemText(gridlist, 18, 2, "To fly using your vehicle", false, false)
+        guiGridListSetItemText(gridlist, 19, 1, "/superman", false, false)
+        guiGridListSetItemText(gridlist, 19, 2, "To use staff superman", false, false)
+        guiGridListSetItemText(gridlist, 20, 1, "P", false, false)
+        guiGridListSetItemText(gridlist, 20, 2, "To open staff panel", false, false)
+        guiGridListSetItemText(gridlist, 21, 1, "L", false, false)
+        guiGridListSetItemText(gridlist, 21, 2, "To speed up your vehicle", false, false)
+        guiGridListSetItemText(gridlist, 22, 1, "SHIFT", false, false)
+        guiGridListSetItemText(gridlist, 22, 2, "To jump using your vehicle", false, false) 
+        guiGridListSetItemText(gridlist, 23, 1, "/flip", false, false) 
+        guiGridListSetItemText(gridlist, 23, 2, "To flip your vehicle", false, false) 
+        guiGridListSetItemText(gridlist, 24, 1, "/openmaze", false, false) 
+        guiGridListSetItemText(gridlist, 24, 2, "To open the maze gate", false, false)
+        guiGridListSetItemText(gridlist, 25, 1, "/dj", false, false) 
+        guiGridListSetItemText(gridlist, 25, 2, "To use public streamer", false, false)
+        guiGridListSetItemText(gridlist, 26, 1, "/cskin 1/2", false, false) 
+        guiGridListSetItemText(gridlist, 26, 2, "To change your skin to Batman or superman, New staff(L2)+", false, false)
+        guiGridListSetItemText(gridlist, 27, 1, "/wandpower", false, false) 
+        guiGridListSetItemText(gridlist, 27, 2, "To move players/vehicles", false, false)
+        guiGridListSetItemText(gridlist, 28, 1, "/dmmsgs", false, false) 
+        guiGridListSetItemText(gridlist, 28, 2, "To open Deathmatch messages panel", false, false) 	
+        guiGridListSetItemText(gridlist, 29, 1, "/forcerules", false, false) 
+        guiGridListSetItemText(gridlist, 29, 2, "To force someone to read the rules", false, false)
+        guiGridListSetItemText(gridlist, 30, 1, "/coc", false, false) 
+        guiGridListSetItemText(gridlist, 30, 2, "To read staff code of conduct ingame", false, false) 		
+		guiWindowSetSizable(window, false)
+		guiSetVisible( window, false )
+		
+		
+bindKey( "F5", "down",
+	function ()
+	if (getTeamName(getPlayerTeam(localPlayer)) == "Staff") then
+		if ( guiGetVisible( window ) ) then
+			guiSetVisible( window, false )
+			showCursor( false )
+		else
+			guiSetVisible( window, true )
+			showCursor( true )
+			end
+		end
+	end
+)

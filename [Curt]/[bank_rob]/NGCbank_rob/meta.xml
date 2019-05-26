@@ -1,0 +1,9 @@
+<meta>
+	<file src="bank_alrm.mp3" />
+	<map src="map/bankRob.map" />
+	<map src="map/br_marker.map" />
+    <script src="br_shared.lua" type="shared"/>
+    <script src="br_client.lua" type="client" />
+	<script src="br_server.lua" type="server"/>
+	<export function="isInvolved" type="server"/>
+</meta>

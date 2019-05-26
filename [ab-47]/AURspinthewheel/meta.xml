@@ -1,0 +1,8 @@
+<meta>
+	<script src="wheel.lua" type="client"/>
+	<script src="server.slua" type="server"/>
+	<file src="img/wheel.png"/>
+	<export function="givePlayerTries" type="server"/>
+	<export function="takePlayerTries" type="server"/>
+	<export function="getPlayerTries" type="server"/>
+</meta>

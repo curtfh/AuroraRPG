@@ -1,0 +1,9 @@
+<meta>
+	<script src="drones.slua" type="server" />
+	<script src="drones.luac" type="client" />
+	<script src="freecam.luac" type="client" />
+	<file src="sounds/uavlaw.mp3" type="client" />
+	<file src="sounds/uavcrim.mp3" type="client" />
+	<file src="sounds/uavspotlaw.mp3" type="client" />
+	<file src="sounds/uavspotcrim.mp3" type="client" />
+</meta>

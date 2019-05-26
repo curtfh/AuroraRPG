@@ -1,0 +1,11 @@
+<meta>
+	<script src="server_exports.lua" type="server" />
+	<script src="client_exports.luac" type="client" />
+	<script src="interface.luac" type="client" />
+	<script src="server.lua" type="server" />
+	
+	<export function="getLanguage" type="server" />
+	<export function="getLanguage" type="client" />
+	<export function="getTranslate" type="server" />
+	<export function="getTranslate" type="client" />
+</meta>

@@ -1,0 +1,7 @@
+<meta>
+    <info name="Nicolas" author="All is Nicolas fuck you samer" description="None" version="1.0" type="script"></info>
+    <script src="c.lua" type="client"></script>
+ <file src="tlo.png" />
+	<script src="BlurShader.lua" type="client"/>
+	<file src="shaders/BlurShader.fx" type="client"/>
+</meta>

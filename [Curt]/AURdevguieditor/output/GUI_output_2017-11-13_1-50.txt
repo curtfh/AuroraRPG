@@ -1,0 +1,29 @@
+
+GUIEditor = {
+    label = {},
+    edit = {},
+    button = {},
+    window = {},
+    gridlist = {},
+    memo = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+local screenW, screenH = guiGetScreenSize()
+        GUIEditor.window[1] = guiCreateWindow((screenW - 1138) / 2, (screenH - 633) / 2, 1138, 633, "AuroraRPG - Information", false)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.gridlist[1] = guiCreateGridList(10, 123, 249, 500, false, GUIEditor.window[1])
+        guiGridListAddColumn(GUIEditor.gridlist[1], "Title", 0.9)
+        GUIEditor.label[1] = guiCreateLabel(8, 66, 107, 18, "Search a keyword:", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[1], "default-bold-small")
+        GUIEditor.edit[1] = guiCreateEdit(9, 84, 250, 29, "", false, GUIEditor.window[1])
+        GUIEditor.memo[1] = guiCreateMemo(270, 126, 858, 481, "", false, GUIEditor.window[1])
+        GUIEditor.button[1] = guiCreateButton(1016, 21, 112, 30, "Close", false, GUIEditor.window[1])
+        GUIEditor.button[2] = guiCreateButton(1016, 61, 112, 30, "Edit", false, GUIEditor.window[1])
+        GUIEditor.button[3] = guiCreateButton(894, 21, 112, 30, "Save", false, GUIEditor.window[1])
+        GUIEditor.button[4] = guiCreateButton(894, 61, 112, 30, "Add", false, GUIEditor.window[1])
+        GUIEditor.label[2] = guiCreateLabel(970, 608, 152, 15, "AuroraRPG - aurorarpg.com", false, GUIEditor.window[1])
+        GUIEditor.edit[2] = guiCreateEdit(896, 96, 227, 25, "A title for article. Edit me", false, GUIEditor.window[1])    
+    end
+)

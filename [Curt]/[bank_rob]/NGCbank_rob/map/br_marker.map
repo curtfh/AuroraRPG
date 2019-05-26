@@ -1,0 +1,6 @@
+<map>
+	<interiorEntry_	id="BANKROBBERY_FRONT"	posX="1466.97790"	posY="-1012.0236"	posZ="25.84375"	rotation="180"	dimension="0"	interior="0"	/>
+	<interiorReturn_	refid="BANKROBBERY_FRONT"	posX="1439.27395"	posY="-991.91094"	posZ="3153.13286"	rotation="90"	interior="4"	dimension="15"	/>
+	<interiorEntry_	id="BANKROBBERY_COP"	posX="1426.77282"	posY="-966.98425"	posZ="36.42571"	rotation="0"	dimension="0"	interior="0"	/>
+	<interiorReturn_	refid="BANKROBBERY_COP"	posX="1381.72766"	posY="-977.89886"	posZ="3141.35986"	rotation="180"	interior="4"	dimension="15"	/>
+</map>

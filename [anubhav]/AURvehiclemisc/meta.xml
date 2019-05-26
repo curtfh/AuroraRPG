@@ -1,0 +1,27 @@
+<meta>
+    <info author="Dennis" version="2.0" type="script" />
+	<file src="carAlarm.mp3" />
+	<script src="client.luac" type="client" />
+	<script src="server.lua" type="server" />
+
+
+    <file src="models/Wheels/wheel_gn1.dff" type="client" download="false" />
+    <file src="models/Wheels/wheel_gn2.dff" type="client" download="false" />
+    <file src="models/Wheels/wheel_gn3.dff" type="client" download="false" />
+    <file src="models/Wheels/wheel_gn4.dff" type="client" download="false" />
+    <file src="models/Wheels/wheel_gn5.dff" type="client" download="false" />
+    <file src="models/Wheels/wheel_lr1.dff" type="client" download="false" />
+    <file src="models/Wheels/wheel_lr2.dff" type="client" download="false" />
+    <file src="models/Wheels/wheel_lr3.dff" type="client" download="false" />
+    <file src="models/Wheels/wheel_lr4.dff" type="client" download="false" />
+    <file src="models/Wheels/wheel_lr5.dff" type="client" download="false" />
+    <file src="models/Wheels/wheel_or1.dff" type="client" download="false" />
+    <file src="models/Wheels/wheel_sr1.dff" type="client" download="false" />
+    <file src="models/Wheels/wheel_sr2.dff" type="client" download="false" />
+    <file src="models/Wheels/wheel_sr3.dff" type="client" download="false" />
+    <file src="models/Wheels/wheel_sr4.dff" type="client" download="false" />
+    <file src="models/Wheels/wheel_sr5.dff" type="client" download="false" />
+    <file src="models/Wheels/wheel_sr6.dff" type="client" download="false" />
+    <file src="models/Wheels/vehicle.txd" type="client"  />
+
+</meta>

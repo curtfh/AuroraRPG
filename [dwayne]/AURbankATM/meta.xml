@@ -1,0 +1,12 @@
+<meta>
+	<info author="Dennis" version="1.0" type="script" name="DENbanking" description="Banking System" />
+
+	<script src="client.luac" type="client"/>
+	<script src="client_hackatm.luac" type="client"/>
+	<script src="server_hackatm.lua" type="server"/>
+	<script src="server.lua" type="server"/>
+	  <export function="openATMPin" type="client" />
+	<file src="bankMoney.png" />
+	<file src="logo.png" />
+	<file src="blip.png" />
+</meta>

@@ -1,0 +1,9 @@
+<meta>
+    <info type="script" version="1.0.0" author="" name="" />
+	<script src="client.luac" type="client" />
+	<script src="server.lua" type="server" />
+	<export function="isPlayerLagging" type="client" />
+	<export function="isPlayerLagging" type="server" />
+	<export function="GPM" type="server" />
+	<export function="RPM" type="server" />
+</meta>

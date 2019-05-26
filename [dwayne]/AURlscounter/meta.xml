@@ -1,0 +1,9 @@
+<meta>
+	<info author="" type="script" version="1.0"/>
+	<script src="client.luac" type="client" cache="false"/>
+	<script src="server.lua" />
+	<file src="crim.png" />
+	<file src="law.png" />
+	<file src="noone.png" />
+
+</meta>

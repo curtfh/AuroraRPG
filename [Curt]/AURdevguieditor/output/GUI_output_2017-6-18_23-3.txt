@@ -1,0 +1,82 @@
+--[[-------------------------------------------------
+Notes:
+
+> This code is using a relative image filepath. This will only work as long as the location it is from always exists, and the resource it is part of is running.
+    To ensure it does not break, it is highly encouraged to move images into your local resource and reference them there.
+--]]-------------------------------------------------
+
+
+GUIEditor = {
+    staticimage = {},
+    label = {},
+    gridlist = {},
+    window = {},
+    button = {}
+}
+addEventHandler("onClientResourceStart", resourceRoot,
+    function()
+local screenW, screenH = guiGetScreenSize()
+        GUIEditor.window[1] = guiCreateWindow((screenW - 834) / 2, (screenH - 506) / 2, 834, 506, "Aurora ~ User Panel", false)
+        guiWindowSetSizable(GUIEditor.window[1], false)
+
+        GUIEditor.staticimage[1] = guiCreateStaticImage(307, 27, 211, 46, ":server/Images/disc.png", false, GUIEditor.window[1])
+        GUIEditor.staticimage[2] = guiCreateStaticImage(10, 73, 92, 80, ":AURuserpanel/home.png", false, GUIEditor.window[1])
+        GUIEditor.label[1] = guiCreateLabel(20, 228, 71, 15, "Scoreboard", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[1], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[1], "center", false)
+        GUIEditor.staticimage[3] = guiCreateStaticImage(10, 167, 92, 80, ":AURuserpanel/user.png", false, GUIEditor.window[1])
+        GUIEditor.label[2] = guiCreateLabel(36, 132, 40, 15, "Home", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[2], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[2], "center", false)
+        GUIEditor.staticimage[4] = guiCreateStaticImage(10, 257, 91, 80, ":AURuserpanel/vehicle_addon.png", false, GUIEditor.window[1])
+        GUIEditor.label[3] = guiCreateLabel(30, 318, 51, 15, "Addons", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[3], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[3], "center", false)
+        GUIEditor.staticimage[5] = guiCreateStaticImage(10, 352, 90, 74, ":AURuserpanel/heart.png", false, GUIEditor.window[1])
+        GUIEditor.label[4] = guiCreateLabel(37, 411, 40, 15, "Music", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[4], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[4], "center", false)
+        GUIEditor.gridlist[1] = guiCreateGridList(102, 24, 15, 472, false, GUIEditor.window[1])
+        GUIEditor.label[5] = guiCreateLabel(10, 45, 88, 18, "Menu Section", false, GUIEditor.window[1])
+        guiSetFont(GUIEditor.label[5], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[5], "center", false)
+        GUIEditor.label[6] = guiCreateLabel(141, 99, 237, 15, "Current Room:", false, GUIEditor.window[1])
+        guiSetAlpha(GUIEditor.label[6], 0.00)
+        guiSetFont(GUIEditor.label[6], "default-bold-small")
+        GUIEditor.label[7] = guiCreateLabel(141, 124, 237, 15, "Total Wins:", false, GUIEditor.window[1])
+        guiSetAlpha(GUIEditor.label[7], 0.00)
+        guiSetFont(GUIEditor.label[7], "default-bold-small")
+        GUIEditor.label[8] = guiCreateLabel(141, 149, 237, 15, "Total Loses:", false, GUIEditor.window[1])
+        guiSetAlpha(GUIEditor.label[8], 0.00)
+        guiSetFont(GUIEditor.label[8], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[8], "left", true)
+        GUIEditor.label[9] = guiCreateLabel(141, 174, 237, 15, "Level:", false, GUIEditor.window[1])
+        guiSetAlpha(GUIEditor.label[9], 0.00)
+        guiSetFont(GUIEditor.label[9], "default-bold-small")
+        GUIEditor.label[10] = guiCreateLabel(141, 199, 237, 15, "VIP Status:", false, GUIEditor.window[1])
+        guiSetAlpha(GUIEditor.label[10], 0.00)
+        guiSetFont(GUIEditor.label[10], "default-bold-small")
+        GUIEditor.gridlist[2] = guiCreateGridList(120, 72, 704, 424, false, GUIEditor.window[1])
+        guiGridListAddColumn(GUIEditor.gridlist[2], "#", 0.3)
+        guiGridListAddColumn(GUIEditor.gridlist[2], "Name", 0.3)
+        guiGridListAddColumn(GUIEditor.gridlist[2], "Level", 0.3)
+        guiSetAlpha(GUIEditor.gridlist[2], 0.00)
+        GUIEditor.gridlist[3] = guiCreateGridList(130, 76, 295, 420, false, GUIEditor.window[1])
+        guiGridListAddColumn(GUIEditor.gridlist[3], "Item", 0.5)
+        guiGridListAddColumn(GUIEditor.gridlist[3], "Price", 0.5)
+        guiSetAlpha(GUIEditor.gridlist[3], 0.00)
+        GUIEditor.label[11] = guiCreateLabel(449, 100, 272, 14, "Item Name:", false, GUIEditor.window[1])
+        guiSetAlpha(GUIEditor.label[11], 0.00)
+        guiSetFont(GUIEditor.label[11], "default-bold-small")
+        GUIEditor.label[12] = guiCreateLabel(449, 125, 272, 14, "Price:", false, GUIEditor.window[1])
+        guiSetAlpha(GUIEditor.label[12], 0.00)
+        guiSetFont(GUIEditor.label[12], "default-bold-small")
+        GUIEditor.label[13] = guiCreateLabel(449, 150, 272, 79, "Description:", false, GUIEditor.window[1])
+        guiSetAlpha(GUIEditor.label[13], 0.00)
+        guiSetFont(GUIEditor.label[13], "default-bold-small")
+        guiLabelSetHorizontalAlign(GUIEditor.label[13], "left", true)
+        GUIEditor.button[1] = guiCreateButton(509, 239, 122, 31, "Buy", false, GUIEditor.window[1])
+        guiSetAlpha(GUIEditor.button[1], 0.00)
+        GUIEditor.button[2] = guiCreateButton(11, 447, 81, 35, "Close", false, GUIEditor.window[1])    
+    end
+)

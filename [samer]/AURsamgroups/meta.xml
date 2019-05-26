@@ -1,0 +1,15 @@
+<meta>
+    <info author="AUR Scripting Team" type="script" name="groups" description="Groups system" />
+	
+	<script src="client.luac" type="client" />
+	<script src="server.lua" type="server" />
+	
+	<export function="getGroupColor" />
+	<export function="getGroupName" />
+	<export function="getOnlineGroupMembers" />
+	<export function="getChattingGroupMembers" />
+	<export function="addXP" type="server" />
+	
+	<file src="font.ttf" />
+	<file src="msg.png" />
+</meta>

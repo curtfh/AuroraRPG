@@ -1,0 +1,17 @@
+<meta>
+    <info type="script" version="1.0.0" name="priyen misc" description="exports" />
+    <script src="exports_c.lua" type="client" />
+    <script src="exports_s.lua" type="server" />
+
+
+
+    <script src="bmxMap.lua" type="client" />
+    <script src="lvradiotowers.lua" type="server" />
+
+    <export function="dxDrawColorText" type="client" />
+    <export function="isWithinCityBoundary" type="client" />
+    <export function="getTimeStampYYYYMMDD" type="server" />
+    <export function="getTimeStampYYYYMMDD" type="client" />
+    <export function="playCustomSound" type="client" />
+
+</meta>

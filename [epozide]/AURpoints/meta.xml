@@ -1,0 +1,9 @@
+<meta>
+	<oop>true</oop>
+	<script src="server.lua" type="server"></script>
+	<script src="client.luac" type="client"></script>	
+	<export function="getAuroraPoints" type="server"/>
+	<export function="getAuroraPoints" type="client"/>
+	<export function="givePlayerAPS" type="server"/>	
+	<export function="setPlayerAPS" type="server"/>	
+</meta>

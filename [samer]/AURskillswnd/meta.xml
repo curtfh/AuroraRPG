@@ -1,0 +1,6 @@
+<meta>
+    <info author="AUR Scripting Team" type="script" name="skills" description="Skills system" />
+	
+	<script src="server.lua" type="server" />
+	<script src="skills_wnd.luac" type="client" />
+</meta>

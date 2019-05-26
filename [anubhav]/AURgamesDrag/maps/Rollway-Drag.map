@@ -1,0 +1,5 @@
+<map>
+	<theMap name="Rollway-Drag" author="Unknown"></theMap>
+    <spawnpoint id="spawnpoint (Turismo) (1)" vehicle="451" posX="-1659.4" posY="-166.7" posZ="13.8" rotX="0" rotY="0" rotZ="316"></spawnpoint>
+    <checkpoint id="checkpoint () (6)" type="checkpoint" color="#00F9" size="15" posX="-1084.2" posY="409.5" posZ="13.2" rotX="0" rotY="0" rotZ="0"></checkpoint>
+</map>

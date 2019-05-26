@@ -23,4 +23,4 @@ This server resources was updated on 2016-2019. This open source resources might
  - **If you are not on this list, please contact me.**
 # Server Exports
 
-> **Note:** Coming Soon
+https://pastebin.com/2Nbd7tYa
